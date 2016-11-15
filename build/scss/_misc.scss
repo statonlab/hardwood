@@ -1,0 +1,73 @@
+.margin-top-1 {
+  margin-top: 5rem;
+}
+
+.remove-margin {
+  margin: 0;
+}
+
+.main-search-form {
+  .input-group-addon {
+    background: #fff;
+    border-color: $input-border-color;
+  }
+  .form-control {
+    //border-color: #fff;
+  }
+}
+
+.bg-gray {
+  background-color: #f7f7f7;
+}
+
+.img-max-h100 {
+  max-height: 100px;
+}
+
+.textarea-lg {
+  min-height: 200px;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.node-teaser {
+  margin-bottom: 3rem;
+}
+
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+
+.links.inline {
+  margin-left: 0;
+  padding-left: 0;
+  > li {
+    display: inline-block;
+    margin-right: $spacer;
+  }
+}
+
+textarea.form-control {
+  min-height: 150px;
+}
+
+fieldset {
+  border: 1px groove $card-border-color !important;
+  padding: 0 $spacer-x $spacer-y $spacer-x !important;
+  margin: 0 0 $spacer-y 0 !important;
+  box-shadow:  none;
+}
+
+legend {
+  width: inherit;
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  padding: $spacer-x;
+}

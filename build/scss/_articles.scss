@@ -1,0 +1,11 @@
+.submitted {
+  @extend .text-muted;
+  margin-bottom: ($spacer);
+}
+
+.field-type-image {
+  margin: $spacer 0;
+  img {
+    @extend .img-fluid;
+  }
+}

@@ -1,0 +1,12 @@
+ul.tabs {
+  margin-bottm: -1px;
+  @extend .nav;
+  @extend .nav-tabs;
+
+  > li {
+    @extend .nav-item;
+    > a {
+      @extend .nav-link;
+    }
+  }
+}

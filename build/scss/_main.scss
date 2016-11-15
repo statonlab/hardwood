@@ -1,0 +1,80 @@
+// Main
+body {
+  background: #2a2730;
+}
+
+.secondary-footer {
+  padding: 20px 0;
+  background: #2a2730;
+  &,
+  a {
+    color: lighten(#2a2730, 70%);
+  }
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.section {
+  background: #fff;
+  padding: 30px 0;
+}
+
+.section-header {
+  display: inline-block;
+  margin-bottom: 40px;
+  position: relative;
+
+  &,
+  > a {
+    color: $body-color;
+  }
+
+  > a {
+    &:hover {
+      text-decoration: none;
+      color: #999;
+    }
+  }
+
+  &:after {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    content: ' ';
+    height: 3px;
+    background: $brand-success;
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 1.5rem;
+  }
+
+  .sidebar & {
+    display: block;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $card-border-color;
+    &:after{
+      display: none;
+    }
+  }
+}
+
+.page-header {
+  background: $brand-success;
+  color: #eee;
+  h1,
+  a {
+    color: #fefefe;
+  }
+  a {
+    font-weight: normal;
+  }
+  //border-bottom: 1px solid darken(#f7f7f7, 2%);
+}

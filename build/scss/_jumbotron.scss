@@ -1,0 +1,13 @@
+.jumbotron {
+  border-radius: 0;
+  &.front-page {
+    padding: 0;
+    background: url('../images/trees3.jpeg') top center fixed;
+    color: #f9f9f9;
+    margin-bottom: 0;
+  }
+  .jumbotron-inner {
+    padding: $jumbotron-padding * 2;
+    background-color: rgba(#222, .7);
+  }
+}
