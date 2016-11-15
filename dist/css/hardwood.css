@@ -5082,7 +5082,7 @@ body {
   background-color: #f7f7f7; }
 
 .bg-inverse {
-  background: #2a2730; }
+  background: #2a2730 !important; }
 
 .img-max-h100 {
   max-height: 100px; }
