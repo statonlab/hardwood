@@ -5081,6 +5081,9 @@ body {
 .bg-gray {
   background-color: #f7f7f7; }
 
+.bg-inverse {
+  background: #2a2730; }
+
 .img-max-h100 {
   max-height: 100px; }
 
