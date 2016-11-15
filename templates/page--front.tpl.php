@@ -93,25 +93,6 @@
             'links' => $main_menu,
             'attributes' => array(
               'id' => 'main-menu',
-              'class' => array('nav', 'navbar-nav')
-            )
-          ));
-        endif;
-        ?>
-
-        <?php if (!user_is_logged_in()): ?>
-          <ul class="nav navbar-nav float-xs-right">
-            <li class="nav-item">
-              <a href="/?q=user/login" class="nav-link">Login</a></li>
-          </ul>
-        <?php endif; ?>
-
-        <?php
-        if ($secondary_menu):
-          print theme('links__system_secondary_menu', array(
-            'links' => $secondary_menu,
-            'attributes' => array(
-              'id' => 'secondary-menu',
               'class' => array('nav', 'navbar-nav', 'float-xs-right')
             )
           ));
