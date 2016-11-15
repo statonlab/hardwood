@@ -93,14 +93,6 @@
             'links' => $main_menu,
             'attributes' => array(
               'id' => 'main-menu',
-              'class' => array('nav', 'navbar-nav')
-            )
-          )); ?>
-
-          <?php print theme('links__system_secondary_menu', array(
-            'links' => $secondary_menu,
-            'attributes' => array(
-              'id' => 'secondary-menu',
               'class' => array('nav', 'navbar-nav', 'float-xs-right')
             )
           )); ?>
