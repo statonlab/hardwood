@@ -99,6 +99,12 @@
         endif;
         ?>
 
+        <?php if (!user_is_logged_in()): ?>
+          <ul class="nav navbar-nav float-xs-right">
+            <li class="nav-item"><a href="/?q=user/login" class="nav-link">Login</a></li>
+          </ul>
+        <?php endif; ?>
+
         <?php
         if ($secondary_menu):
           print theme('links__system_secondary_menu', array(
@@ -262,7 +268,6 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <h2 class="section-header">Recent Articles</h2>
               <div class="card">
                 <div class="card-block">
                   <?php print render($page['content']); ?>
@@ -277,7 +282,6 @@
     <div class="section bg-gray">
       <div class="container">
         <div class="col-sm-4">
-          <h5>Sponsors</h5>
           <img src="<?php print base_path() . path_to_theme() . '/dist/images/ut2.png'; ?>" alt="UTK Logo" class="img-fluid img-max-h100">
         </div>
         <div class="col-sm-4 text-xs-center">

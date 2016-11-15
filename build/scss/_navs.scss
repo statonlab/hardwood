@@ -10,3 +10,9 @@ ul.tabs {
     }
   }
 }
+
+.tabs {
+  + .card {
+    border-top: 0!important;
+  }
+}

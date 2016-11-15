@@ -67,7 +67,7 @@ body {
 }
 
 .page-header {
-  background: $brand-success;
+  background: darken($brand-success, 7.5%);
   color: #eee;
   h1,
   a {

@@ -118,6 +118,20 @@ function hardwood_textarea($variables) {
   return $output;
 }
 
+/**
+ * Implements theme_password()
+ *
+ * @param $variables
+ * @return string
+ */
+function hardwood_password($variables) {
+  $element = $variables['element'];
+  $element['#attributes']['type'] = 'password';
+  element_set_attributes($element, array('id', 'name', 'size', 'maxlength'));
+  _form_set_class($element, array('form-control'));
+
+  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+}
 
 /**
  * Implement theme_form_search_block_form_alter()
@@ -125,6 +139,8 @@ function hardwood_textarea($variables) {
  */
 function hardwood_form_search_block_form_alter(&$form) {
   $form['search_block_form']['#attributes']['placeholder'] = "Search...";
+  $form['search_block_form']['#field_prefix'] = false;
+  $form['search_block_form']['#field_suffix'] = false;
 }
 
 /**
@@ -151,33 +167,33 @@ function hardwood_form_element($variables) {
   if (!isset($element['#title'])) {
     $element['#title_display'] = 'none';
   }
-  $prefix = isset($element['#field_prefix']) ? $element['#field_prefix'] : '';
-  $suffix = isset($element['#field_suffix']) ? $element['#field_suffix'] : '';
+  $prefix = isset($element['#field_prefix']) ? $element['#field_prefix'] : '<div class="form-group">';
+  $suffix = isset($element['#field_suffix']) ? $element['#field_suffix'] : '</div>';
 
   switch ($element['#title_display']) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      $output .= ' ' . $element['#children'] . "\n";
       break;
 
     case 'after':
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
+      $output .= ' ' . $element['#children'];
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
       break;
 
     case 'none':
     case 'attribute':
       // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      $output .= ' ' . $element['#children'] . "\n";
       break;
   }
 
   if (!empty($element['#description'])) {
-    $output .= '<div class="help-block">' . $element['#description'] . "</div>\n";
+    $output .= '<div class="form-text text-muted">' . $element['#description'] . "</div>\n";
   }
 
-  return $output;
+  return $prefix . $output . $suffix;
 }
 
 /**
