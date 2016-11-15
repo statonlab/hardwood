@@ -287,29 +287,6 @@
         <div class="col-sm-4 text-xs-center">
           <img src="<?php print base_path() . path_to_theme() . '/dist/images/nsf.gif'; ?>" alt="NSF Logo" class="img-fluid img-max-h100">
         </div>
-        <div class="col-sm-4">
-          <h5>Sitemap</h5>
-          <div class="row">
-            <div class="col-sm-6">
-              <?php print theme('links__system_main_menu', array(
-                'links' => $main_menu,
-                'attributes' => array(
-                  'id' => 'main-menu',
-                  'class' => array('list-unstyled')
-                )
-              )); ?>
-            </div>
-            <div class="col-sm-6">
-              <?php print theme('links__system_secondary_menu', array(
-                'links' => $secondary_menu,
-                'attributes' => array(
-                  'id' => 'secondary-menu',
-                  'class' => array('list-unstyled')
-                )
-              )); ?>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
