@@ -101,7 +101,8 @@
 
         <?php if (!user_is_logged_in()): ?>
           <ul class="nav navbar-nav float-xs-right">
-            <li class="nav-item"><a href="/?q=user/login" class="nav-link">Login</a></li>
+            <li class="nav-item">
+              <a href="/?q=user/login" class="nav-link">Login</a></li>
           </ul>
         <?php endif; ?>
 
@@ -176,6 +177,7 @@
 
     <div id="main-wrapper">
       <div id="main" class="clearfix">
+        <?php /*
         <div class="section">
           <div class="container">
             <div class="row">
@@ -260,6 +262,7 @@
 
           </div><!-- /.container -->
         </div> <!-- /.section -->
+ */?>
       </div>
     </div> <!-- /#main, /#main-wrapper -->
 
@@ -287,7 +290,8 @@
           </div>
         </div>
       </div>
-    </div> <!-- /.section, /#footer -->
+    </div> <!-- /#footer -->
+
     <div class="section bg-inverse">
       <div class="container">
         <div class="col-sm-4">
@@ -298,6 +302,6 @@
         </div>
       </div>
     </div>
-  </div>
+
   </div>
 </div> <!-- /#page, /#page-wrapper -->
