@@ -270,13 +270,38 @@
       <div class="section bg-gray">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12">
+            <div class="col-sm-8 col-md-9">
               <div class="card">
                 <div class="card-block">
                   <?php print render($page['content']); ?>
                 </div>
               </div>
             </div>
+
+            <div class="col-sm-4 col-md-3">
+              <?php if ($page['sidebar_first']): ?>
+                <div class="card">
+                  <div class="card-block">
+                    <div id="sidebar-first" class="column sidebar">
+                      <?php print render($page['sidebar_first']); ?>
+                    </div> <!-- /#sidebar-first -->
+                  </div>
+                </div>
+
+              <?php endif; ?>
+
+              <?php if ($page['sidebar_second']): ?>
+                <div class="card">
+                  <div class="card-block">
+                    <div id="sidebar-second" class="column sidebar">
+                      <?php print render($page['sidebar_second']); ?>
+                    </div> <!-- /#sidebar-second -->
+                  </div>
+                </div>
+
+              <?php endif; ?>
+            </div>
+
           </div>
         </div>
       </div>
