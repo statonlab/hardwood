@@ -27,26 +27,3 @@ function hardwood_preprocess_page(&$variables) {
     $variables['secondary_nav']['#theme_wrappers'] = array('menu_tree__secondary');
   }*/
 }
-
-/**
- * Overrides theme_menu_tree() for book module.
- */
-function hardwood_menu_tree__book_toc(&$variables) {
-  $output = '<div class="book-toc btn-group pull-right">';
-  $output .= '  <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">';
-  $output .= t('!icon Outline !caret', array(
-    '!icon' => '<span class="fa fa-list"></span>',
-    '!caret' => '<span class="caret"></span>',
-  ));
-  $output .= '</button>';
-  $output .= '<div class="dropdown-menu" role="menu">' . $variables['tree'] . '</div>';
-  $output .= '</div>';
-  return $output;
-}
-
-/**
- * Overrides theme_menu_tree() for book module.
- */
-function hardwood_menu_tree__book_toc__sub_menu(&$variables) {
-  return '<div class="dropdown-menu" role="menu">' . $variables['tree'] . '</div>';
-}

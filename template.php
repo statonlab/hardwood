@@ -1,33 +1,5 @@
 <?php
 /**
- * Implements theme_preprocess_page
- *
- * @param $variables
- *
-function hardwood_preprocess_page(&$variables) {
-  // Add Bootstrap classes to menu elements in both main menu and secondary menu
-  if ($variables['main_menu']) {
-    $main_menu = array();
-    foreach ($variables['main_menu'] as $key => $item) {
-      $item['attributes']['class'][] = 'nav-link';
-      $main_menu[$key . ' nav-item'] = $item;
-
-    }
-    $variables['main_menu'] = $main_menu;
-  }
-
-  if ($variables['secondary_menu']) {
-    $secondary_menu = array();
-    foreach ($variables['secondary_menu'] as $key => $item) {
-      $item['attributes']['class'][] = 'nav-link';
-      $secondary_menu[$key . ' nav-item'] = $item;
-
-    }
-    $variables['secondary_menu'] = $secondary_menu;
-  }
-}*/
-
-/**
  * Add `btn` class to all buttons.
  * @param $variables
  */
@@ -139,8 +111,8 @@ function hardwood_password($variables) {
  */
 function hardwood_form_search_block_form_alter(&$form) {
   $form['search_block_form']['#attributes']['placeholder'] = "Search...";
-  $form['search_block_form']['#field_prefix'] = false;
-  $form['search_block_form']['#field_suffix'] = false;
+  $form['search_block_form']['#field_prefix'] = FALSE;
+  $form['search_block_form']['#field_suffix'] = FALSE;
 }
 
 /**
@@ -268,47 +240,59 @@ function hardwood_menu_tree__primary(array &$variables) {
   return '<ul class="menu nav navbar-nav float-xs-right">' . $variables['tree'] . '</ul>';
 }
 
-function hardwood_menu_link__main_menu(&$variables) {
+/**
+ * Returns HTML for a menu link and submenu.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - element: Structured array data for a menu link.
+ *
+ * @return string
+ *   The constructed HTML.
+ *
+ * @see theme_menu_link()
+ *
+ * @ingroup theme_functions
+ */
+function hardwood_menu_link__main_menu(array $variables) {
   $element = $variables['element'];
-  //$sub_menu = drupal_render($element);
+  $sub_menu = '';
 
   $title = $element['#title'];
   $href = $element['#href'];
   $options = !empty($element['#localized_options']) ? $element['#localized_options'] : array();
   $attributes = !empty($element['#attributes']) ? $element['#attributes'] : array();
-  $attributes['role'] = 'presentation';
   $attributes['class'][] = 'nav-item';
-
-  // Header.
-  $link = TRUE;
-  if ($title && $href === FALSE) {
-    $attributes['class'][] = 'dropdown-header';
-    $link = FALSE;
-  }
-  // Divider.
-  elseif ($title === FALSE && $href === FALSE) {
-    $attributes['class'][] = 'dropdown-divider';
-    $link = FALSE;
-  }
-  // Active.
-  elseif (($href == $_GET['q'] || ($href == '<front>' && drupal_is_front_page())) && (empty($options['language']))) {
-    $attributes['class'][] = 'active';
-  }
-
-  // Filter the title if the "html" is set, otherwise l() will automatically
-  // sanitize using check_plain(), so no need to call that here.
-  //if (!empty($options['html'])) {
-    //$title = _bootstrap_filter_xss($title);
-  //}
-
-  // Convert to a link.
   $options['attributes']['class'][] = 'nav-link';
- if ($link) {
-    $title = l($title, $href, $options);
-  }
-  $sub_menu = '';
 
-  return '<li' . drupal_attributes($attributes) . '>' . $title . $sub_menu . "</li>\n";
+  if ($element['#below']) {
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] == 1)) {
+      // Add our own wrapper.
+      $element['#below']['#theme_wrappers'] = array('menu_tree__sub_menu');
+      $sub_menu = '<div class="dropdown-menu">' . drupal_render($element['#below']). '</div>';
+
+      // Generate as standard dropdown.
+      $attributes['class'][] = 'dropdown';
+
+      $options['html'] = TRUE;
+
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      //$options['attributes']['data-target'] = '#';
+      $options['attributes']['class'][] = 'dropdown-toggle';
+      $options['attributes']['data-toggle'] = 'dropdown';
+    }
+  }
+  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
+}
+
+function hardwood_menu_tree__sub_menu(array &$variables) {
+  return '<div class="dropdown-menu">' . $variables['tree'] . '</div>';
 }
 
 /**

@@ -88,34 +88,12 @@
         </a>
 
         <?php
-        /*if ($main_menu):
-          print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'id' => 'main-menu',
-              'class' => array('nav', 'navbar-nav', 'float-xs-right')
-            )
-          ));
-        endif;*/
         if (!empty($primary_nav)):
           print render($primary_nav);
         endif;
         ?>
       </div>
     </nav> <!-- /.section, /#navigation -->
-
-    <?php /*
-        if (breadcrumb)
-        <div id="breadcrumb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <?php print breadcrumb; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-        */ ?>
 
     <!-- FRONT PAGE JUMBOTRON -->
     <div class="jumbotron front-page">
