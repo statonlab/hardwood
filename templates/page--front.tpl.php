@@ -125,8 +125,8 @@
             We house transcriptome and genome resources for hardwood trees
           </p>
           <div class="margin-top-1 text-xs-center">
-            <a href="#" class="btn btn-success">Contribute Data</a>
-            <a href="#" class="btn btn-outline-secondary">Contact Us</a>
+            <a href="/contact" class="btn btn-success">Contribute Data</a>
+            <a href="/contact" class="btn btn-outline-secondary">Contact Us</a>
           </div>
         </div>
       </div>
