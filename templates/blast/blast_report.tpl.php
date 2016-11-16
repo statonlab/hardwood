@@ -91,7 +91,7 @@ $no_hits = TRUE;
         );
       }
       ?>
-      <div class="blast-download-info"><strong>Download</strong>:
+      <div class="blast-download-info"><strong>Download -- test</strong>:
         <?php
         $i = 0;
         foreach ($output_files as $file) {
@@ -100,8 +100,7 @@ $no_hits = TRUE;
           if (sizeof($output_files) != $i) {
             print ', ';
           }
-        }
-        ?>
+        } ?>
       </div>
     <?php endif; ?>
     <br/>
@@ -146,7 +145,7 @@ $no_hits = TRUE;
         'data' => 'Query Name  (Click for alignment & visualization)',
         'class' => array('query')
       ),
-      'hit' => array('data' => 'HERE', 'class' => array('hit')),
+      'hit' => array('data' => 'Target Name', 'class' => array('hit')),
       'evalue' => array('data' => 'E-Value', 'class' => array('evalue')),
     );
 
@@ -354,11 +353,11 @@ $no_hits = TRUE;
     }//handle no hits
   }//XML exists
   elseif ($too_many_results) {
-    print '<div class="alert alert-danger">Your BLAST resulted in ' . number_format(floatval($num_results)) . ' results which is too many to reasonably display. We have provided the result files for Download at the top of this page; however, we suggest you re-submit your query using a more stringent e-value (i.e. a smaller number).</div>';
+    print '<div class="messages error">Your BLAST resulted in ' . number_format(floatval($num_results)) . ' results which is too many to reasonably display. We have provided the result files for Download at the top of this page; however, we suggest you re-submit your query using a more stringent e-value (i.e. a smaller number).</div>';
   }
   else {
     drupal_set_title('BLAST: Error Encountered');
-    print '<div class="alert alert-danger">We encountered an error and are unable to load your BLAST results.</div>';
+    print '<div class="messages error">We encountered an error and are unable to load your BLAST results.</div>';
   }
   ?>
 
