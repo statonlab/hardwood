@@ -130,7 +130,8 @@
         <div class="section bg-gray">
           <div class="container">
             <div class="row">
-              <div class="col-sm-8 col-md-9">
+              <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) ? 'col-sm-8 col-md-9' : 'col-xs-12'; ?>
+              <div class="<?php print $main_content_classes ?>">
                 <?php if ($page['highlighted']): ?>
                   <div id="highlighted"><?php print render($page['highlighted']); ?></div>
                 <?php endif; ?>
@@ -159,6 +160,8 @@
                 <?php print $feed_icons; ?>
               </div>
 
+              <?php if ($page['sidebar_first'] || $page['sidebar_second']): ?>
+
               <div class="col-sm-4 col-md-3">
                 <?php if ($page['sidebar_first']): ?>
                   <div class="card">
@@ -183,6 +186,7 @@
                 <?php endif; ?>
               </div>
             </div><!-- /.row, .col-sm -->
+            <?php endif; ?>
 
           </div><!-- /.container -->
         </div> <!-- /.section -->
