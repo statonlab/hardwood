@@ -241,8 +241,8 @@ textarea {
     .table td, table td,
     .table th, table th {
       background-color: #fff !important; }
-  .table-bordered th, table th,
-  .table-bordered td, table td {
+  .table-bordered th,
+  .table-bordered td {
     border: 1px solid #ddd !important; } }
 
 html {
@@ -1311,13 +1311,13 @@ pre {
 .table-sm td {
   padding: 0.3rem; }
 
-.table-bordered, table {
+.table-bordered {
   border: 1px solid #eceeef; }
-  .table-bordered th, table th,
-  .table-bordered td, table td {
+  .table-bordered th,
+  .table-bordered td {
     border: 1px solid #eceeef; }
-  .table-bordered thead th, table thead th,
-  .table-bordered thead td, table thead td {
+  .table-bordered thead th,
+  .table-bordered thead td {
     border-bottom-width: 2px; }
 
 .table-striped tbody tr:nth-of-type(odd) {
@@ -1396,7 +1396,7 @@ pre {
   .table-inverse td,
   .table-inverse thead th {
     border-color: #55595c; }
-  .table-inverse.table-bordered, table.table-inverse {
+  .table-inverse.table-bordered {
     border: 0; }
 
 .table-responsive {
