@@ -226,9 +226,9 @@ function hardwood_status_messages($variables) {
   return $output;
 }
 
-function hardwood_menu_tree($variables) {
-  return '<ul class="list-unstyled">' . $variables['tree'] . '</ul>';
-}
+//function hardwood_menu_tree($variables) {
+  //return '<ul class="list-unstyled">' . $variables['tree'] . '</ul>';
+//}
 
 /**
  * Add the menu menu wrapper.
@@ -273,7 +273,7 @@ function hardwood_menu_link__main_menu(array $variables) {
     }
     elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] == 1)) {
       // Add our own wrapper.
-      $element['#below']['#theme_wrappers'] = array('menu_tree__sub_menu');
+      //$element['#below']['#theme_wrappers'] = array('menu_tree__sub_menu');
       $sub_menu = '<div class="dropdown-menu">' . drupal_render($element['#below']). '</div>';
 
       // Generate as standard dropdown.
@@ -283,7 +283,6 @@ function hardwood_menu_link__main_menu(array $variables) {
 
       // Set dropdown trigger element to # to prevent inadvertant page loading
       // when a submenu link is clicked.
-      //$options['attributes']['data-target'] = '#';
       $options['attributes']['class'][] = 'dropdown-toggle';
       $options['attributes']['data-toggle'] = 'dropdown';
     }
@@ -291,7 +290,7 @@ function hardwood_menu_link__main_menu(array $variables) {
   return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
 }
 
-function hardwood_menu_tree__sub_menu(array &$variables) {
+function hardwood_menu_tree_link__sub_menu(array &$variables) {
   return '<div class="dropdown-menu">' . $variables['tree'] . '</div>';
 }
 
