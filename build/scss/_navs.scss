@@ -29,6 +29,7 @@ ul.tabs {
         width: 100%;
       }
       > li > a {
+        font-size: $font-size-sm;
         margin: 0;
         padding: $nav-link-padding;
         &:hover {
