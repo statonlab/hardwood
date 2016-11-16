@@ -64,6 +64,7 @@ $no_hits = TRUE;
 
   <!-- Provide Information to the user about their blast job -->
   <div class="blast-job-info">
+    <p><strong>Is This modifiable?</strong></p>
     <?php if ($xml):
       $output_files = array();
       if (file_exists($blast_job->files->result->html)) {
@@ -209,7 +210,7 @@ $no_hits = TRUE;
                   'data' => $query_name,
                   'class' => array('query')
                 ),
-                'hit' => array('data' => 'TESTING NAME', 'class' => array('hit')),//$hit_name
+                'hit' => array('data' => $hit_name, 'class' => array('hit')),
                 'evalue' => array(
                   'data' => $rounded_evalue,
                   'class' => array('evalue')
