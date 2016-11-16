@@ -3,7 +3,7 @@
  * Implements theme_preprocess_page
  *
  * @param $variables
- */
+ *
 function hardwood_preprocess_page(&$variables) {
   // Add Bootstrap classes to menu elements in both main menu and secondary menu
   if ($variables['main_menu']) {
@@ -25,7 +25,7 @@ function hardwood_preprocess_page(&$variables) {
     }
     $variables['secondary_menu'] = $secondary_menu;
   }
-}
+}*/
 
 /**
  * Add `btn` class to all buttons.
@@ -258,7 +258,60 @@ function hardwood_menu_tree($variables) {
   return '<ul class="list-unstyled">' . $variables['tree'] . '</ul>';
 }
 
-function hardwood_preprocess_menu_tree(&$variables) {
-  //kpr($variables);
+/**
+ * Add the menu menu wrapper.
+ *
+ * @param $variables
+ * @return string
+ */
+function hardwood_menu_tree__primary(array &$variables) {
+  return '<ul class="menu nav navbar-nav float-xs-right">' . $variables['tree'] . '</ul>';
 }
 
+function hardwood_menu_link__main_menu(&$variables) {
+  $element = $variables['element'];
+  //$sub_menu = drupal_render($element);
+
+  $title = $element['#title'];
+  $href = $element['#href'];
+  $options = !empty($element['#localized_options']) ? $element['#localized_options'] : array();
+  $attributes = !empty($element['#attributes']) ? $element['#attributes'] : array();
+  $attributes['role'] = 'presentation';
+  $attributes['class'][] = 'nav-item';
+
+  // Header.
+  $link = TRUE;
+  if ($title && $href === FALSE) {
+    $attributes['class'][] = 'dropdown-header';
+    $link = FALSE;
+  }
+  // Divider.
+  elseif ($title === FALSE && $href === FALSE) {
+    $attributes['class'][] = 'dropdown-divider';
+    $link = FALSE;
+  }
+  // Active.
+  elseif (($href == $_GET['q'] || ($href == '<front>' && drupal_is_front_page())) && (empty($options['language']))) {
+    $attributes['class'][] = 'active';
+  }
+
+  // Filter the title if the "html" is set, otherwise l() will automatically
+  // sanitize using check_plain(), so no need to call that here.
+  //if (!empty($options['html'])) {
+    //$title = _bootstrap_filter_xss($title);
+  //}
+
+  // Convert to a link.
+  $options['attributes']['class'][] = 'nav-link';
+ if ($link) {
+    $title = l($title, $href, $options);
+  }
+  $sub_menu = '';
+
+  return '<li' . drupal_attributes($attributes) . '>' . $title . $sub_menu . "</li>\n";
+}
+
+/**
+ * Include all necessary files.
+ */
+include_once path_to_theme() . '/templates/system/page.vars.php';

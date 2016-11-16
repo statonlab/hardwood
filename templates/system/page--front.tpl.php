@@ -88,7 +88,7 @@
         </a>
 
         <?php
-        if ($main_menu):
+        /*if ($main_menu):
           print theme('links__system_main_menu', array(
             'links' => $main_menu,
             'attributes' => array(
@@ -96,6 +96,9 @@
               'class' => array('nav', 'navbar-nav', 'float-xs-right')
             )
           ));
+        endif;*/
+        if (!empty($primary_nav)):
+          print render($primary_nav);
         endif;
         ?>
       </div>
@@ -243,7 +246,7 @@
 
           </div><!-- /.container -->
         </div> <!-- /.section -->
- */?>
+ */ ?>
       </div>
     </div> <!-- /#main, /#main-wrapper -->
 

@@ -1,7 +1,3 @@
 .idea
-node_modules
 .DS_Store
-about.php
-contact.php
-index.php
-includes
+node_modules
