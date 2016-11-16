@@ -1,3 +1,4 @@
+<script>alert('testing why the tpl file is not working');</script>
 <?php
 /**
  * Display the results of a BLAST job execution
@@ -91,7 +92,7 @@ $no_hits = TRUE;
         );
       }
       ?>
-      <div class="blast-download-info"><strong>Download -- test</strong>:
+      <div class="blast-download-info"><strong>Download</strong>:
         <?php
         $i = 0;
         foreach ($output_files as $file) {
