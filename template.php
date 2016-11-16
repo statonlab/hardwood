@@ -294,10 +294,6 @@ function hardwood_menu_tree_link__sub_menu(array &$variables) {
   return '<div class="dropdown-menu">' . $variables['tree'] . '</div>';
 }
 
-function hardwood_theme_registry_alter(&$theme_registry) {
-  dpm($theme_registry);
-}
-
 /**
  * Include all necessary files.
  */
