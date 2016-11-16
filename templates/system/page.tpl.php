@@ -89,13 +89,11 @@
             </div>
           </a>
 
-          <?php print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'id' => 'main-menu',
-              'class' => array('nav', 'navbar-nav', 'float-xs-right')
-            )
-          )); ?>
+          <?php
+          if (!empty($primary_nav)):
+            print render($primary_nav);
+          endif;
+          ?>
         </div>
       </nav> <!-- /.section, /#navigation -->
     <?php endif; ?>
