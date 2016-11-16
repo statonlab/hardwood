@@ -182,7 +182,7 @@ $no_hits = TRUE;
             // to makeblastdb did a really poor job. In thhis case we want to use
             // the def to provide the original FASTA header.
             // @todo Deepak changed this to use just the hit_def; inquire as to why.
-            $hit_name = (preg_match('/BL_ORD_ID/', $hit->{'Hit_id'})) ? $hit->{'Hit_def'} : $hit->{'Hit_id'};
+            $hit_name = $hit->{'Hit_def'}; //(preg_match('/BL_ORD_ID/', $hit->{'Hit_id'})) ? $hit->{'Hit_def'} : $hit->{'Hit_id'};
             // Used for the hit visualization to ensure the name isn't truncated.
             $hit_name_short = (preg_match('/^([^\s]+)/', $hit_name, $matches)) ? $matches[1] : $hit_name;
 
