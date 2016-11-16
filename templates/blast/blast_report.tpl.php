@@ -1,4 +1,3 @@
-<script>alert('testing why the tpl file is not working');</script>
 <?php
 /**
  * Display the results of a BLAST job execution
