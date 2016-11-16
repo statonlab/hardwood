@@ -10,7 +10,7 @@
 ?>
 
 <div class="alignment-row-section hit-visualization" title="Your query sequence is shown at the bottom and the target sequence it aligned to is shown at the top. The shape connecting them indicates how much of the target and query are represented by the hit.">
-  <div class="title">Hit Visualization</div>
+  <div class="title">Hit Visualization TEST</div>
   <img src="data:image/png;base64,<?php print $hit_visualization;?>"/>
   <p>The image above shows the relationship between query and target for this 
     particular BLAST hit.</p>

@@ -1,4 +1,14 @@
 <?php
+
+/*function hardwood_theme() {
+  $path = path_to_theme();
+
+  $items['show_blast_report'] = array(
+    'template' => 'blast_report',
+    'path' => "$path/templates",
+  );
+}*/
+
 /**
  * Add `btn` class to all buttons.
  * @param $variables
