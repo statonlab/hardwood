@@ -11,8 +11,29 @@ ul.tabs {
   }
 }
 
-.tabs {
-  + .card {
-    border-top: 0!important;
+//.tabs {
+//  + .card {
+//    border-top: 0!important;
+//  }
+//}
+
+.navbar {
+  .dropdown-menu {
+    > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      > li {
+        display: block;
+        width: 100%;
+      }
+      > li > a {
+        margin: 0;
+        padding: $nav-link-padding;
+        &:hover {
+          background: $dropdown-link-hover-bg;
+        }
+      }
+    }
   }
 }

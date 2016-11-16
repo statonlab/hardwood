@@ -5165,5 +5165,15 @@ legend {
 ul.tabs {
   margin-bottm: -1px; }
 
-.tabs + .card {
-  border-top: 0 !important; }
+.navbar .dropdown-menu > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .navbar .dropdown-menu > ul > li {
+    display: block;
+    width: 100%; }
+  .navbar .dropdown-menu > ul > li > a {
+    margin: 0;
+    padding: 0.5em 1em; }
+    .navbar .dropdown-menu > ul > li > a:hover {
+      background: #f5f5f5; }
