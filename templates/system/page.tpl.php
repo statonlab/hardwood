@@ -88,10 +88,10 @@
               </div>
             </div>
           </a>
-          <button class="navbar-toggler hidden-md-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-list"></i>
+          <button class="navbar-toggler hidden-xl-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            &nbsp;
           </button>
-          <div class="collapse navbar-toggleable-sm" id="navbar-collapse">
+          <div class="collapse navbar-toggleable-lg" id="navbar-collapse">
             <?php
             if (!empty($primary_nav)):
               print render($primary_nav);
