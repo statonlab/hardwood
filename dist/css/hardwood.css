@@ -5031,7 +5031,9 @@ body {
   border-top: 6px solid #5cb85c;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125); }
   .main-header .nav-link, .main-header ul.tabs > li > a {
-    padding: 1rem .25rem; }
+    padding: 1rem .4rem; }
+  .main-header .nav-item, .main-header ul.tabs > li {
+    margin: 0 !important; }
   .main-header .logo-icon {
     font-size: 30px;
     display: block;
