@@ -75,25 +75,31 @@
 <div id="page-wrapper">
   <div id="page">
 
-    <nav id="navigation" class="main-header navbar navbar-light bg-faded navbar-sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <span class="logo-icon"><i class="fa fa-leaf"></i></span>
-          <div class="logo-wrapper">
-            <span class="logo-text"><?php print variable_get('site_name'); ?></span>
-            <div class="text-muted text-xs hidden-xs-down">
-              <?php print variable_get('site_slogan'); ?>
+    <?php if ($main_menu || $secondary_menu): ?>
+      <nav id="navigation" class="main-header navbar navbar-light bg-faded navbar-sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <span class="logo-icon"><i class="fa fa-leaf"></i></span>
+            <div class="logo-wrapper">
+              <span class="logo-text"><?php print variable_get('site_name') ?></span>
+              <div class="text-muted text-xs hidden-xs-down">
+                <?php print variable_get('site_slogan') ?>
+              </div>
             </div>
+          </a>
+          <button class="navbar-toggler hidden-xl-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            &nbsp;
+          </button>
+          <div class="collapse navbar-toggleable-lg" id="navbar-collapse">
+            <?php
+            if (!empty($primary_nav)):
+              print render($primary_nav);
+            endif;
+            ?>
           </div>
-        </a>
-
-        <?php
-        if (!empty($primary_nav)):
-          print render($primary_nav);
-        endif;
-        ?>
-      </div>
-    </nav> <!-- /.section, /#navigation -->
+        </div>
+      </nav> <!-- /.section, /#navigation -->
+    <?php endif; ?>
 
     <!-- FRONT PAGE JUMBOTRON -->
     <div class="jumbotron front-page">

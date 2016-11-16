@@ -37,3 +37,19 @@
 .admin-menu-position-fixed {
   z-index: 999999!important;
 }
+
+[class*="navbar-toggleable"] {
+  @include media-breakpoint-down(lg) {
+    padding-top: 50px;
+    > .navbar-nav {
+      position: relative;
+      width: 100%;
+      display: block;
+      float: none!important;
+      .nav-item {
+        display: block;
+        float: none;
+      }
+    }
+  }
+}

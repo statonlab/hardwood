@@ -88,12 +88,16 @@
               </div>
             </div>
           </a>
-
-          <?php
-          if (!empty($primary_nav)):
-            print render($primary_nav);
-          endif;
-          ?>
+          <button class="navbar-toggler hidden-md-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-list"></i>
+          </button>
+          <div class="collapse navbar-toggleable-sm" id="navbar-collapse">
+            <?php
+            if (!empty($primary_nav)):
+              print render($primary_nav);
+            endif;
+            ?>
+          </div>
         </div>
       </nav> <!-- /.section, /#navigation -->
     <?php endif; ?>
