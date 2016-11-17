@@ -300,17 +300,29 @@ function hardwood_menu_link__main_menu(array $variables) {
   return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
 }
 
+/**
+ * Generates dropdown menu wrapper.
+ *
+ * @param array $variables
+ * @return string
+ */
 function hardwood_menu_tree_link__sub_menu(array &$variables) {
   return '<div class="dropdown-menu">' . $variables['tree'] . '</div>';
 }
 
+/**
+ * Implements hook_theme_registry_alter().
+ *
+ * @param $theme_registry
+ */
 function hardwood_theme_registry_alter(&$theme_registry) {
   $path = path_to_theme();
-  // tell the theme system to look in the "templates" subdirectory within our module directory
+
+  // Tell the theme system to look in the "templates" subdirectory within our theme directory
+  // Force tripal_blast to use our blast_report template
   $theme_registry['show_blast_report']['theme paths'] = array(0 => $path . '/templates');
   $theme_registry['show_blast_report']['theme path'] = $path.'/templates';
   $theme_registry['show_blast_report']['path'] = $path . '/templates';
-  // tell the theme system to use 'search-results.tpl.php' as the template file. Note that you do not include 'tpl.php'
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
 }
 

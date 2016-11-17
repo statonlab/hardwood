@@ -46,10 +46,15 @@ $no_hits = TRUE;
 
     // When a results summary row is clicked then show the next row in the table
     // which should be corresponding the alignment information
-    $("#blast_report tr.result-summary").click(function () {
+    $(".arrow-col").click(function () {
+      var tr = $(this).parents('tr').first();
+      tr.next('tr').toggle();
+      tr.find('.arrow').toggleClass('up');
+    });
+    /*$("#blast_report tr.result-summary").click(function () {
       $(this).next("tr").toggle();
       $(this).find(".arrow").toggleClass("up");
-    });
+    });*/
   });
 </script>
 
@@ -91,7 +96,7 @@ $no_hits = TRUE;
         );
       }
       ?>
-      <div class="blast-download-info"><strong>Download TEST</strong>:
+      <div class="blast-download-info"><strong>Download</strong>:
         <?php
         $i = 0;
         foreach ($output_files as $file) {
@@ -100,7 +105,8 @@ $no_hits = TRUE;
           if (sizeof($output_files) != $i) {
             print ', ';
           }
-        } ?>
+        }
+        ?>
       </div>
     <?php endif; ?>
     <br/>
