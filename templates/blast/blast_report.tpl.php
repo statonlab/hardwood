@@ -211,11 +211,16 @@ $no_hits = TRUE;
               $rounded_evalue = $evalue;
             }
 
-            $hit_link = l($hit_name, "/feature/$hit_name_short", array(
-              'attributes' => array(
-                'target' => '_blank'
-              )
-            ));
+
+            if (drupal_lookup_path('alias', "feature/$hit_name_short")) {
+              $hit_link = l($hit_name, "/feature/$hit_name_short", array(
+                'attributes' => array(
+                  'target' => '_blank'
+                )
+              ));
+            } else {
+              $hit_link = $hit_name;
+            }
 
             // State what should be in the summary row for theme_table() later.
             $summary_row = array(
@@ -368,7 +373,7 @@ $no_hits = TRUE;
         print theme('table', array(
           'header' => $header,
           'rows' => $rows,
-          'attributes' => array('id' => 'blast_report', 'class'=>'table'),
+          'attributes' => array('id' => 'blast_report', 'class' => 'table'),
           'sticky' => FALSE
         ));
         print "</div>";
