@@ -34,11 +34,11 @@ $no_hits = TRUE;
 ?>
 <style>
   .open .arrow-col .btn .fa {
-    -webkit-transform: rotate(90deg) !important;
-    -moz-transform: rotate(90deg) !important;
-    -ms-transform: rotate(90deg) !important;
-    -o-transform: rotate(90deg) !important;
-    transform: rotate(90deg) !important;
+    -webkit-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    -o-transform: rotate(180deg) !important;
+    transform: rotate(180deg) !important;
   }
 </style>
 <script type="text/javascript">
