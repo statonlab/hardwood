@@ -50,7 +50,7 @@ $no_hits = TRUE;
       'cursor': 'normal'
     });
 
-    $(".arrow-col").parents('td').first().click(function () {
+    $(".arrow-col").click(function () {
       var tr = $(this).parents('tr').first();
       tr.next('tr').toggle();
       tr.find('.arrow').toggleClass('up');
