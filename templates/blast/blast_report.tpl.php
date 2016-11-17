@@ -121,15 +121,22 @@ $no_hits = TRUE;
       </div>
     <?php endif; ?>
     <br/>
-    <div class="blast-query-info"><strong>Query Information</strong>:
-      <?php print $blast_job->files->query; ?></div>
-    <div class="blast-target-info"><strong>Search Target</strong>:
-      <?php print $blast_job->blastdb->db_name; ?></div>
-    <div class="blast-date-info"><strong>Submission Date</strong>:
-      <?php print format_date($blast_job->date_submitted, 'medium'); ?></div>
-    <div class="blast-cmd-info"><strong>BLAST Command executed</strong>:
-      <?php print $blast_job->blast_cmd; ?></div>
-
+    <div class="blast-query-info">
+      <strong>Query Information</strong>:
+      <?php print $blast_job->files->query; ?>
+    </div>
+    <div class="blast-target-info">
+      <strong>Search Target</strong>:
+      <?php print $blast_job->blastdb->db_name; ?>
+    </div>
+    <div class="blast-date-info">
+      <strong>Submission Date</strong>:
+      <?php print format_date($blast_job->date_submitted, 'medium'); ?>
+    </div>
+    <div class="blast-cmd-info">
+      <strong>BLAST Command executed</strong>:
+      <?php print $blast_job->blast_cmd; ?>
+    </div>
     <br/>
     <div class="num-results"><strong>Number of
         Results</strong>: <?php print $num_results; ?></div>
@@ -225,7 +232,7 @@ $no_hits = TRUE;
                   'data' => $query_name,
                   'class' => array('query')
                 ),
-                'hit' => array('data' => $hit_name, 'class' => array('hit')),
+                'hit' => array('data' => 'TEST', 'class' => array('hit')),
                 'evalue' => array(
                   'data' => $rounded_evalue,
                   'class' => array('evalue')
