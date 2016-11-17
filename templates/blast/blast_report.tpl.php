@@ -46,7 +46,7 @@ $no_hits = TRUE;
 
     // When a results summary row is clicked then show the next row in the table
     // which should be corresponding the alignment information
-    $("#blast_report > tbody > tr > td").css({
+    $("table#blast_report tr.odd td").css({
       'cursor': 'normal'
     });
 
