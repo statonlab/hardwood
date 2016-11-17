@@ -9,7 +9,7 @@ $organism = chado_expand_var($organism,'field','organism.comment'); ?>
 $image = '';
 $image_url = tripal_get_organism_image_url($organism); 
 if ($image_url) {
-  $image = "<img class=\"tripal-organism-img\" src=\"$image_url\">";
+  $image = "<img class=\"tripal-organism-img img-fluid\" src=\"$image_url\">";
 }
 
 // the $headers array is an array of fields to use as the colum headers. 
@@ -98,5 +98,12 @@ $table = array(
 // once we have our table array structure defined, we call Drupal's theme_table()
 // function to generate the table.
 print theme_table($table); ?>
-<?php print $organism->comment;?>
-<div style="text-align: justify"><?php print $image; ?></div>
+
+<div class="row">
+  <div class="col-md-5">
+    <?php print $image; ?>
+  </div>
+  <div class="col-md-7">
+    <?php print $organism->comment;?>
+  </div>
+</div>
