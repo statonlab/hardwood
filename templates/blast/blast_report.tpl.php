@@ -32,7 +32,15 @@ $query_with_no_hits = array();
 $no_hits = TRUE;
 
 ?>
-
+<style>
+  .btn.up > .fa {
+    -webkit-transform: rotate(90deg) !important;
+    -moz-transform: rotate(90deg) !important;
+    -ms-transform: rotate(90deg) !important;
+    -o-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important;
+  }
+</style>
 <script type="text/javascript">
 
   // JQuery controlling display of the alignment information (hidden by default)
@@ -209,7 +217,7 @@ $no_hits = TRUE;
             $summary_row = array(
               'data' => array(
                 'arrow-col' => array(
-                  'data' => '<button class="btn btn-info btn-sm" type="button"><i class="fa fa-caret-down"></i></button>',
+                  'data' => '<button class="arrow btn btn-info btn-sm" type="button"><i class="fa fa-caret-down"></i></button>',
                   'class' => array('arrow-col')
                 ),
                 'number' => array('data' => $count, 'class' => array('number')),
