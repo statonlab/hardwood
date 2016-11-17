@@ -364,12 +364,14 @@ $no_hits = TRUE;
 
       // Actually print the table.
       if (!empty($rows)) {
+        print "<div class='table-responsve'>";
         print theme('table', array(
           'header' => $header,
           'rows' => $rows,
           'attributes' => array('id' => 'blast_report'),
           'sticky' => FALSE
         ));
+        print "</div>";
       }
     }//handle no hits
   }//XML exists
