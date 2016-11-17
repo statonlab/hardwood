@@ -220,6 +220,8 @@ $no_hits = TRUE;
               $rounded_evalue = $evalue;
             }
 
+            //$first_hist_name = explode($hit_name)
+
             // State what should be in the summary row for theme_table() later.
             $summary_row = array(
               'data' => array(
@@ -232,7 +234,7 @@ $no_hits = TRUE;
                   'data' => $query_name,
                   'class' => array('query')
                 ),
-                'hit' => array('data' => 'TEST', 'class' => array('hit')),
+                'hit' => array('data' => $hit_name_short, 'class' => array('hit')),
                 'evalue' => array(
                   'data' => $rounded_evalue,
                   'class' => array('evalue')
