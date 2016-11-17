@@ -209,7 +209,7 @@ $no_hits = TRUE;
             $summary_row = array(
               'data' => array(
                 'arrow-col' => array(
-                  'data' => '<div class="arrow"></div>',
+                  'data' => '<button class="btn btn-danger" type="button"><i class="fa fa-caret-down"></i></button>',
                   'class' => array('arrow-col')
                 ),
                 'number' => array('data' => $count, 'class' => array('number')),
