@@ -337,7 +337,9 @@ function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
 }
 
 function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
-  kpr($form);
+
+  $form['cid']['#attributes']['class'][] = 'form-control';
+
 }
 
 /**
