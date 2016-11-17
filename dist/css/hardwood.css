@@ -5239,9 +5239,10 @@ ul.tabs {
 
 #edit-search-submit {
   height: auto !important;
-  width: 100%; }
+  width: 100%;
+  margin: 0 !important; }
 
-#edit-search-box:hover {
+#edit-search-box, #edit-search-box:hover {
   border-right: 0; }
 
 #edit-search {
