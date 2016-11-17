@@ -237,7 +237,7 @@ function hardwood_status_messages($variables) {
 }
 
 //function hardwood_menu_tree($variables) {
-  //return '<ul class="list-unstyled">' . $variables['tree'] . '</ul>';
+//return '<ul class="list-unstyled">' . $variables['tree'] . '</ul>';
 //}
 
 /**
@@ -284,7 +284,7 @@ function hardwood_menu_link__main_menu(array $variables) {
     elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] == 1)) {
       // Add our own wrapper.
       //$element['#below']['#theme_wrappers'] = array('menu_tree__sub_menu');
-      $sub_menu = '<div class="dropdown-menu">' . drupal_render($element['#below']). '</div>';
+      $sub_menu = '<div class="dropdown-menu">' . drupal_render($element['#below']) . '</div>';
 
       // Generate as standard dropdown.
       $attributes['class'][] = 'dropdown';
@@ -302,6 +302,15 @@ function hardwood_menu_link__main_menu(array $variables) {
 
 function hardwood_menu_tree_link__sub_menu(array &$variables) {
   return '<div class="dropdown-menu">' . $variables['tree'] . '</div>';
+}
+
+function hardwood_theme_registry_alter(&$theme_registry) {
+  // tell the theme system to look in the "templates" subdirectory within our module directory
+  $theme_registry['show_blast_report']['theme paths'] = array(0 => drupal_get_path('module', 'hardwood') . '/templates');
+  $theme_registry['show_blast_report']['theme path'] = drupal_get_path('module', 'hardwood') . '/templates';
+  $theme_registry['show_blast_report']['path'] = drupal_get_path('module', 'hardwood') . '/templates';
+  // tell the theme system to use 'search-results.tpl.php' as the template file. Note that you do not include 'tpl.php'
+  $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
 }
 
 /**

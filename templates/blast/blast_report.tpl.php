@@ -91,7 +91,7 @@ $no_hits = TRUE;
         );
       }
       ?>
-      <div class="blast-download-info"><strong>Download</strong>:
+      <div class="blast-download-info"><strong>Download TEST</strong>:
         <?php
         $i = 0;
         foreach ($output_files as $file) {
