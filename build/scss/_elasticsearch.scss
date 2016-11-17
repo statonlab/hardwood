@@ -6,6 +6,9 @@
 
 #edit-search-box {
   @extend .form-control;
+  &:hover {
+    border-right: 0;
+  }
 }
 
 #edit-search {
