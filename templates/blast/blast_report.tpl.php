@@ -220,6 +220,12 @@ $no_hits = TRUE;
               $rounded_evalue = $evalue;
             }
 
+            $hit_link = l($hit_name, "/feature/$hit_name_short", array(
+              'attributes' => array(
+                'target' => '_blank'
+              )
+            ));
+
             // State what should be in the summary row for theme_table() later.
             $summary_row = array(
               'data' => array(
@@ -232,7 +238,7 @@ $no_hits = TRUE;
                   'data' => $query_name,
                   'class' => array('query')
                 ),
-                'hit' => array('data' => l($hit_name, "/feature/$hit_name_short", array()), 'class' => array('hit')),
+                'hit' => array('data' => $hit_link, 'class' => array('hit')),
                 'evalue' => array(
                   'data' => $rounded_evalue,
                   'class' => array('evalue')
