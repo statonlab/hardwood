@@ -145,135 +145,54 @@
 
     <div id="main-wrapper">
       <div id="main" class="clearfix">
-        <?php /*
-        <div class="section">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
 
-                <a id="main-content"></a>
 
-                <?php if ($tabs): ?>
-                  <div class="tabs"><?php print render($tabs); ?></div>
-                <?php endif; ?>
-
-                <?php if ($action_links): ?>
-                  <ul class="action-links"><?php print render($action_links); ?>
-                    ?>
-                  </ul>
-                <?php endif; ?>
-
-                <!-- Main Content Goes Here -->
-                <div class="col-xs-12">
-                  <h2 class="section-header">
-                    Species and Resources
-                  </h2>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="col-sm-6 col-md-4">
+        <?php if ($page['content']): ?>
+          <div class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8 col-md-9">
+                  <a id="main-content"></a>
+                  <?php if ($tabs): ?>
+                    <?php print render($tabs); ?>
+                  <?php endif; ?>
                   <div class="card">
-                    <img class="card-img-top img-fluid" src="<?php print base_path() . path_to_theme() . '/dist/images/castanea-crenata-leaf.jpg'; ?>" alt="Card image cap">
                     <div class="card-block">
-                      <h4 class="card-title">
-                        <a href="#">Chinese Chestnut</a>
-                      </h4>
-                      <p class="card-text">Some quick example text to build on
-                        the card title and
-                        make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-outline-success">Go
-                        somewhere</a>
+                      <?php print render($page['content']); ?>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4">
-                  <div class="card">
-                    <img class="card-img-top img-fluid" src="<?php print base_path() . path_to_theme() . '/dist/images/american_beech_leaves.jpg'; ?>" alt="Card image cap">
-                    <div class="card-block">
-                      <h4 class="card-title"><a href="#">American Beech</a></h4>
-                      <p class="card-text">Some quick example text to build on
-                        the card title and
-                        make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-outline-success">Go
-                        somewhere</a>
+                <div class="col-sm-4 col-md-3">
+                  <?php if ($page['sidebar_first']): ?>
+                    <div class="card">
+                      <div class="card-block">
+                        <div id="sidebar-first" class="column sidebar">
+                          <?php print render($page['sidebar_first']); ?>
+                        </div> <!-- /#sidebar-first -->
+                      </div>
                     </div>
-                  </div>
-                </div>
 
-                <div class="clearfix hidden-md-up"></div>
+                  <?php endif; ?>
 
-                <div class="col-sm-6 col-md-4">
-                  <div class="card">
-                    <img class="card-img-top img-fluid" src="<?php print base_path() . path_to_theme() . '/dist/images/American-chestnut-allen-breed-ap.jpg'; ?>?>" alt="Card image cap">
-                    <div class="card-block">
-                      <h4 class="card-title"><a href="#">American Chestnut</a>
-                      </h4>
-                      <p class="card-text">Some quick example text to build on
-                        the card title and
-                        make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-outline-success">Go
-                        somewhere</a>
+                  <?php if ($page['sidebar_second']): ?>
+                    <div class="card">
+                      <div class="card-block">
+                        <div id="sidebar-second" class="column sidebar">
+                          <?php print render($page['sidebar_second']); ?>
+                        </div> <!-- /#sidebar-second -->
+                      </div>
                     </div>
-                  </div>
-                </div>
 
-                <div class="clearfix"></div>
-
-                <div class="col-xs-12">
-                  <a href="#" class="btn btn-link btn-lg">See All</a>
+                  <?php endif; ?>
                 </div>
 
               </div>
-            </div><!-- /.row, .col-sm -->
-
-          </div><!-- /.container -->
-        </div> <!-- /.section -->
- */ ?>
+            </div>
+          </div>
+        <?php endif; ?>
       </div>
     </div> <!-- /#main, /#main-wrapper -->
-
-    <?php if ($page['content']): ?>
-      <div class="section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-9">
-              <div class="card">
-                <div class="card-block">
-                  <?php print render($page['content']); ?>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-4 col-md-3">
-              <?php if ($page['sidebar_first']): ?>
-                <div class="card">
-                  <div class="card-block">
-                    <div id="sidebar-first" class="column sidebar">
-                      <?php print render($page['sidebar_first']); ?>
-                    </div> <!-- /#sidebar-first -->
-                  </div>
-                </div>
-
-              <?php endif; ?>
-
-              <?php if ($page['sidebar_second']): ?>
-                <div class="card">
-                  <div class="card-block">
-                    <div id="sidebar-second" class="column sidebar">
-                      <?php print render($page['sidebar_second']); ?>
-                    </div> <!-- /#sidebar-second -->
-                  </div>
-                </div>
-
-              <?php endif; ?>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    <?php endif; ?>
 
     <div id="footer" class="secondary-footer">
       <div class="container">
