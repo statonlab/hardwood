@@ -103,3 +103,7 @@ legend {
   @extend .btn;
   @extend .btn-link;
 }
+
+.tripal-contents-table-td {
+  border-right-color: $card-border-color;
+}

@@ -5201,6 +5201,9 @@ legend {
   .form-file + .btn, .form-file + #edit-cancel, .form-file + #edit-search-submit {
     margin-left: 15px; }
 
+.tripal-contents-table-td {
+  border-right-color: rgba(0, 0, 0, 0.125); }
+
 .pager > li.pager-current {
   cursor: default; }
   .pager > li.pager-current:hover {
