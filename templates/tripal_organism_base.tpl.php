@@ -9,7 +9,7 @@ $organism = chado_expand_var($organism,'field','organism.comment'); ?>
 $image = '';
 $image_url = tripal_get_organism_image_url($organism); 
 if ($image_url) {
-  $image = "<img class=\"tripal-organism-img\" src=\"$image_url\" style='max-width: 200px;'>";
+  $image = "<img class=\"tripal-organism-img\" src=\"$image_url\">";
 }
 
 // the $headers array is an array of fields to use as the colum headers. 
