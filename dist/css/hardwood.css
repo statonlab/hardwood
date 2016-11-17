@@ -5202,7 +5202,7 @@ legend {
     margin-left: 15px; }
 
 .tripal-contents-table-td {
-  border-right-color: rgba(0, 0, 0, 0.125); }
+  border-right-color: rgba(0, 0, 0, 0.125) !important; }
 
 .pager > li.pager-current {
   cursor: default; }
