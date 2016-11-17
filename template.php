@@ -126,7 +126,8 @@ function hardwood_form_search_block_form_alter(&$form) {
 }
 
 /**
- * Implements theme_form_element
+ * Implements theme_form_element().
+ *
  * @param $variables
  * @return string
  */
@@ -324,6 +325,16 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['show_blast_report']['theme path'] = $path.'/templates';
   $theme_registry['show_blast_report']['path'] = $path . '/templates';
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
+}
+
+
+function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
+  $form['#theme_wrappers'] = false;
+  $form['search']['#attributes'] = array();
+  $form['search']['search_box']['#field_prefix'] = '<div class="input-group input-group-lg">';
+  $form['search']['search_box']['#field_suffix'] = '';
+  $form['search']['search_submit']['#prefix'] = '<div class="input-group-btn">';
+  $form['search']['search_submit']['#suffix'] = '</div></div>';
 }
 
 /**

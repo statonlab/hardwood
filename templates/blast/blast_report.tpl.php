@@ -30,17 +30,8 @@ $query_with_no_hits = array();
 // Furthermore, if no query sequences have hits we don't want to bother listing
 // them all but just want to give a single, all-include "No Results" message.
 $no_hits = TRUE;
-
 ?>
-<style>
-  .open .arrow-col .btn .fa {
-    -webkit-transform: rotate(180deg) !important;
-    -moz-transform: rotate(180deg) !important;
-    -ms-transform: rotate(180deg) !important;
-    -o-transform: rotate(180deg) !important;
-    transform: rotate(180deg) !important;
-  }
-</style>
+
 <script type="text/javascript">
 
   // JQuery controlling display of the alignment information (hidden by default)
