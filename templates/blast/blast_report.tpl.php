@@ -33,7 +33,7 @@ $no_hits = TRUE;
 
 ?>
 <style>
-  .btn.up > .fa {
+  .open .arrow-col .btn .fa {
     -webkit-transform: rotate(90deg) !important;
     -moz-transform: rotate(90deg) !important;
     -ms-transform: rotate(90deg) !important;
@@ -59,7 +59,7 @@ $no_hits = TRUE;
     $(".arrow-col").click(function () {
       var tr = $(this).parents('tr').first();
       tr.next('tr').toggle();
-      tr.find('.arrow').toggleClass('up');
+      tr.toggleClass('open')
     }).css('cursor', 'pointer');
 
     /*$("#blast_report tr.result-summary").click(function () {
