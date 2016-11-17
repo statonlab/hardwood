@@ -5201,7 +5201,7 @@ legend {
   .form-file + .btn, .form-file + #edit-cancel, .form-file + #edit-search-submit {
     margin-left: 15px; }
 
-.tripal-contents-table-td {
+.tripal-contents-table-td.tripal-contents-table-td-toc {
   border-right-color: rgba(0, 0, 0, 0.125) !important; }
 
 .pager > li.pager-current {
