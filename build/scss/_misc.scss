@@ -104,6 +104,7 @@ legend {
   @extend .btn-link;
 }
 
-.tripal-contents-table-td.tripal-contents-table-td-toc {
+table > tbody > tr > td.tripal-contents-table-td.tripal-contents-table-td-toc{
   border-right-color: $card-border-color!important;
+  border-top: 0!important;
 }
