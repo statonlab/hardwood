@@ -5192,3 +5192,6 @@ ul.tabs {
       padding: 0.5em 1em; }
       .navbar .dropdown-menu > ul > li > a:hover {
         background: #f5f5f5; }
+
+.alignment-subrow {
+  font-size: 0.875rem; }
