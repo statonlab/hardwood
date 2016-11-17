@@ -336,6 +336,10 @@ function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
   $form['search']['search_submit']['#suffix'] = '</div></div>';
 }
 
+function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
+  kpr($form);
+}
+
 /**
  * Include all necessary files.
  */
