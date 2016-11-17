@@ -5060,6 +5060,12 @@ body {
   .page-header a {
     font-weight: normal; }
 
+.form-group:last-of-type {
+  margin-bottom: 0; }
+
+.form-wrapper {
+  padding: 0 !important; }
+
 .main-header {
   background-color: #fff;
   border-top: 6px solid #5cb85c;
@@ -5107,7 +5113,7 @@ body {
     color: #f9f9f9;
     margin-bottom: 0; }
   .jumbotron .jumbotron-inner {
-    padding: 4rem;
+    padding: 4rem 0;
     background-color: rgba(34, 34, 34, 0.7); }
 
 #breadcrumb {

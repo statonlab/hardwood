@@ -329,7 +329,7 @@ function hardwood_theme_registry_alter(&$theme_registry) {
 
 
 function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
-  $form['search']['search_box']['#field_prefix'] = '<div class="input-group input-group-lg">';
+  $form['search']['search_box']['#field_prefix'] = '<div class="input-group">';
   $form['search']['search_box']['#field_suffix'] = '';
   $form['search']['search_box']['#attributes']['placeholder'] = 'Search...';
   $form['search']['search_submit']['#prefix'] = '<div class="input-group-btn">';
