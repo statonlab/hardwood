@@ -212,7 +212,7 @@ $no_hits = TRUE;
             }
 
 
-            if (drupal_lookup_path('alias', "feature/$hit_name_short")) {
+            if (menu_get_item("feature/$hit_name_short")) {
               $hit_link = l($hit_name, "/feature/$hit_name_short", array(
                 'attributes' => array(
                   'target' => '_blank'
