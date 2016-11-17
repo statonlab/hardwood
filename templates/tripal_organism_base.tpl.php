@@ -107,3 +107,12 @@ print theme_table($table); ?>
     <?php print $organism->comment;?>
   </div>
 </div>
+
+<div class="media">
+  <div class="media-left">
+    <?php print $image; ?>
+  </div>
+  <div class="media-body">
+    <?php print $organism->comment;?>
+  </div>
+</div>
