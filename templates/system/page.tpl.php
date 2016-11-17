@@ -132,10 +132,10 @@
         <?php endif; ?>
 
         <?php if ($page['front_search']): ?>
-          <div class="section">
+          <div class="section bg-gray">
             <div class="container">
               <div class="row">
-                <div class="col-xs-12 col-sm-8 col-md-6 offset-md-3">
+                <div class="col-xs-12 col-sm-8 col-md-6 offset-md-3 offset-sm-2">
                   <?php print render($page['front_search']); ?>
                 </div>
               </div>
@@ -143,7 +143,7 @@
           </div>
         <?php endif; ?>
 
-        <div class="section bg-gray">
+        <div class="section">
           <div class="container">
             <div class="row">
               <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) ? 'col-sm-8 col-md-9' : 'col-xs-12'; ?>
