@@ -305,10 +305,11 @@ function hardwood_menu_tree_link__sub_menu(array &$variables) {
 }
 
 function hardwood_theme_registry_alter(&$theme_registry) {
+  $path = path_to_theme();
   // tell the theme system to look in the "templates" subdirectory within our module directory
-  $theme_registry['show_blast_report']['theme paths'] = array(0 => drupal_get_path('module', 'hardwood') . '/templates');
-  $theme_registry['show_blast_report']['theme path'] = drupal_get_path('module', 'hardwood') . '/templates';
-  $theme_registry['show_blast_report']['path'] = drupal_get_path('module', 'hardwood') . '/templates';
+  $theme_registry['show_blast_report']['theme paths'] = array(0 => $path . '/templates');
+  $theme_registry['show_blast_report']['theme path'] = $path.'/templates';
+  $theme_registry['show_blast_report']['path'] = $path . '/templates';
   // tell the theme system to use 'search-results.tpl.php' as the template file. Note that you do not include 'tpl.php'
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
 }
