@@ -368,7 +368,7 @@ $no_hits = TRUE;
         print theme('table', array(
           'header' => $header,
           'rows' => $rows,
-          'attributes' => array('id' => 'blast_report'),
+          'attributes' => array('id' => 'blast_report', 'class'=>'table'),
           'sticky' => FALSE
         ));
         print "</div>";
