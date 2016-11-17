@@ -87,7 +87,7 @@ $table = array(
   'rows' => $rows, 
   'attributes' => array(
     'id' => 'tripal_organism-table-base',
-    'class' => 'tripal-organism-data-table tripal-data-table',
+    'class' => 'tripal-organism-data-table tripal-data-table table table-striped',
   ), 
   'sticky' => FALSE,
   'caption' => '',
