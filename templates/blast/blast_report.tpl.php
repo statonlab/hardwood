@@ -46,15 +46,20 @@ $no_hits = TRUE;
 
     // When a results summary row is clicked then show the next row in the table
     // which should be corresponding the alignment information
-    $(".arrow-col").click(function () {
+    $("#blast_report tr > td").css({
+      'cursor': 'normal'
+    });
+
+    $(".arrow-col").parents('td').first().click(function () {
       var tr = $(this).parents('tr').first();
       tr.next('tr').toggle();
       tr.find('.arrow').toggleClass('up');
-    });
+    }).css('cursor', 'pointer');
+
     /*$("#blast_report tr.result-summary").click(function () {
-      $(this).next("tr").toggle();
-      $(this).find(".arrow").toggleClass("up");
-    });*/
+     $(this).next("tr").toggle();
+     $(this).find(".arrow").toggleClass("up");
+     });*/
   });
 </script>
 
