@@ -5217,6 +5217,9 @@ legend {
 ul.tabs {
   margin-bottm: -1px; }
 
+.tabs + .card {
+  border-top: 0 !important; }
+
 .navbar .dropdown-menu {
   padding: 0; }
   .navbar .dropdown-menu > ul {

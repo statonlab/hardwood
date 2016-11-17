@@ -11,11 +11,11 @@ ul.tabs {
   }
 }
 
-//.tabs {
-//  + .card {
-//    border-top: 0!important;
-//  }
-//}
+.tabs {
+  + .card {
+    border-top: 0!important;
+  }
+}
 
 .navbar {
   .dropdown-menu {
