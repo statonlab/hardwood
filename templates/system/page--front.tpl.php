@@ -235,7 +235,7 @@
     </div> <!-- /#main, /#main-wrapper -->
 
     <?php if ($page['content']): ?>
-      <div class="section bg-gray">
+      <div class="section">
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-md-9">
