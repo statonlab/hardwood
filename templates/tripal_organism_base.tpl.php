@@ -99,15 +99,6 @@ $table = array(
 // function to generate the table.
 print theme_table($table); ?>
 
-<div class="row">
-  <div class="col-md-5">
-    <?php print $image; ?>
-  </div>
-  <div class="col-md-7">
-    <?php print $organism->comment;?>
-  </div>
-</div>
-
 <div class="media">
   <div class="media-left">
     <?php print $image; ?>
