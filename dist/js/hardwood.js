@@ -1,5 +1,5 @@
-jQuery.ready(function($) {
-
+jQuery.ready(function() {
+    var $ = jQuery;
     $("#elasticsearch_hits_table tr td:last-of-type").each(function() {
         var text = $(this).html();
         var array = text.split("<br>");
@@ -31,4 +31,4 @@ jQuery.ready(function($) {
         }
     });
 
-}(jQuery));
+});
