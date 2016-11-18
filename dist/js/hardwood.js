@@ -1,4 +1,4 @@
-jQuery.ready(function() {
+jQuery(function() {
     var $ = jQuery;
     $("#elasticsearch_hits_table tr td:last-of-type").each(function() {
         var text = $(this).html();
