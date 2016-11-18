@@ -5178,6 +5178,9 @@ legend {
   text-align: left !important;
   padding: 1rem; }
 
+.fieldset-wrapper {
+  padding: 10px 15px; }
+
 .form-file {
   display: inline-block;
   height: 38px;
