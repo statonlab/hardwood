@@ -341,6 +341,12 @@ function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
   $form['search']['search_submit']['#suffix'] = '</div></div>';
 }
 
+/**
+ * Add `form-control` class to the category <select> element in the contact page.
+ *
+ * @param $form
+ * @param $form_state
+ */
 function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
   $form['cid']['#attributes']['class'][] = 'form-control';
 }
