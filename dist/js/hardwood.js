@@ -17,7 +17,7 @@ $(function() {
             }).html('Show More').click(function(e) {
                 e.preventDefault();
 
-                var hidden_hit = $(this).closest('.hidden-hit');
+                var hidden_hit = hidden;
                 if(hidden_hit.hasClass('is_open')) {
                     hidden_hit.removeClass('is_open');
                     hidden_hit.slideUp();
