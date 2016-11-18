@@ -1,5 +1,4 @@
-jQuery(function() {
-    var $ = jQuery;
+$(function() {
     $("#elasticsearch_hits_table tr td:last-of-type").each(function() {
         var text = $(this).html();
         var array = text.split("<br>");
