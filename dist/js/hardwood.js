@@ -26,6 +26,7 @@ $(function() {
                 }
             });
             div.append(btn);
+            $(this).html(div);
         }
     });
 
