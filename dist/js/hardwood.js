@@ -13,7 +13,7 @@ $(function() {
             var btn = $("<button />", {
                 'type': 'button',
                 'class': 'btn btn-secondary btn-sm'
-            }).click(function(e) {
+            }).html('Show More').click(function(e) {
                 e.preventDefault();
 
                 var hidden_hit = $(this).closest('.hidden-hit');
