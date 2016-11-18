@@ -37,3 +37,4 @@ stylesheets[all][] = dist/css/font-awesome.min.css
 scripts[] = dist/js/jquery.min.js
 scripts[] = dist/js/tether.min.js
 scripts[] = dist/js/bootstrap.min.js
+scripts[] = dist/js/hardwood.js
