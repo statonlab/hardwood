@@ -10,6 +10,7 @@ $(function() {
             var hidden = $('<div />', {'class':'hidden-hit'}).css('display', 'none');
             hidden.append(array.join('<br>'));
             div.append(hidden);
+            div.append('<br>');
             var btn = $("<button />", {
                 'type': 'button',
                 'class': 'btn btn-secondary btn-sm'
