@@ -333,6 +333,7 @@ function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
   $form['search']['search_box']['#field_suffix'] = '';
   $form['search']['search_box']['#attributes']['placeholder'] = 'Search...';
   $form['search']['search_submit']['#prefix'] = '<div class="input-group-btn">';
+  // Close both the .input-group-btn and .input-group divs
   $form['search']['search_submit']['#suffix'] = '</div></div>';
 }
 
