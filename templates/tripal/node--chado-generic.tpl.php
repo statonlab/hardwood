@@ -70,6 +70,24 @@ else {
       </div>
       <div class="col-sm-9 tripal-contents-table-td-data" id="tripal_<?php print $node_type?>_contents">
         <?php print render($content); ?>
+      </div>
+    </div><!-- /. row -->
 
-  <?php
+  <!--/div-->
+  <?php /*
+    <table id="tripal-<?php print $node_type ?>-contents-table" class="tripal-contents-table">
+      <tr class="tripal-contents-table-tr">
+        <td nowrap class="tripal-contents-table-td tripal-contents-table-td-toc" align="left"><?php
+
+           ?>
+
+        </td>
+        <td class="tripal-contents-table-td-data" align="left" width="100%"> <?php
+
+          // print the rendered content
+          print render($content); ?>
+        </td>
+      </tr>
+    </table>
+  </div> */ ?><?php
 }

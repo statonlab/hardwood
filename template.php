@@ -326,10 +326,10 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['show_blast_report']['path'] = $path . '/templates';
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
 
-  $theme_registry['node__chado_organism']['theme paths'] = array(0 => $path . '/templates');
+  /*$theme_registry['node__chado_organism']['theme paths'] = array(0 => $path . '/templates');
   $theme_registry['node__chado_organism']['theme path'] = $path.'/templates';
   $theme_registry['node__chado_organism']['path'] = $path.'/templates';
-  $theme_registry['node__chado_organism']['template'] = 'tripal/node--chado-generic';
+  $theme_registry['node__chado_organism']['template'] = 'tripal/node--chado-generic';*/
 }
 
 /**
