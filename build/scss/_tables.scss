@@ -1,3 +1,4 @@
 table {
-  //@extend .table;
+  @extend .table;
+  max-width: 100% !important;
 }
