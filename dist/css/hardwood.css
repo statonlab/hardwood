@@ -5209,7 +5209,7 @@ table > tbody > tr > td.tripal-contents-table-td.tripal-contents-table-td-toc {
   border-top: 0 !important; }
 
 #page-title {
-  font-size: 22px !important; }
+  font-size: 2rem; }
 
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
