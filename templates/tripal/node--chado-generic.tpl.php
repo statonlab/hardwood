@@ -49,7 +49,7 @@ else {
     });
   </script>
 
-  <div id="tripal_<?php print $node_type ?>_contents" class="tripal-contents">
+  <!--div id="tripal_<?php print $node_type ?>_contents" class="tripal-contents"-->
 
     <div class="row">
       <div class="col-sm-3">
@@ -68,12 +68,12 @@ else {
         }
         ?>
       </div>
-      <div class="col-sm-9 tripal-contents-table-td-data">
+      <div class="col-sm-9 tripal-contents-table-td-data" id="tripal_<?php print $node_type?>_contents">
         <?php print render($content); ?>
       </div>
     </div><!-- /. row -->
 
-  </div>
+  <!--/div-->
   <?php /*
     <table id="tripal-<?php print $node_type ?>-contents-table" class="tripal-contents-table">
       <tr class="tripal-contents-table-tr">
