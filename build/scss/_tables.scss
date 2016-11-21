@@ -6,4 +6,8 @@ table {
     white-space: normal;
     word-wrap: normal;
   }
+
+  .tripal-contents-table-td {
+    white-space: nowrap;
+  }
 }
