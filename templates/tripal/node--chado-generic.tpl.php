@@ -63,12 +63,12 @@ else {
 
           // remove the table of contents and links so they don't show up in the
           // data section when the rest of the $content array is rendered
-          hide($content['tripal_toc']);
-          hide($content['links']);
+          unset($content['tripal_toc']);
+          unset($content['links']);
         }
         ?>
       </div>
-      <div class="col-sm-9">
+      <div class="col-sm-9 tripal-contents-table-td-data">
         <?php print render($content); ?>
       </div>
     </div><!-- /. row -->
