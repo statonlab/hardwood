@@ -61,10 +61,10 @@ else {
           // we may want to add the links portion of the contents to the sidebar
           //print render($content['links']);
 
-          // remove the table of contents and links so thye doent show up in the
+          // remove the table of contents and links so they don't show up in the
           // data section when the rest of the $content array is rendered
-          unset($content['tripal_toc']);
-          unset($content['links']);
+          hide($content['tripal_toc']);
+          hide($content['links']);
         }
         ?>
       </div>
@@ -72,7 +72,9 @@ else {
         <?php print render($content); ?>
       </div>
     </div><!-- /. row -->
-<?php /*
+
+  </div>
+  <?php /*
     <table id="tripal-<?php print $node_type ?>-contents-table" class="tripal-contents-table">
       <tr class="tripal-contents-table-tr">
         <td nowrap class="tripal-contents-table-td tripal-contents-table-td-toc" align="left"><?php
@@ -87,5 +89,5 @@ else {
         </td>
       </tr>
     </table>
-  </div> */?><?php
+  </div> */ ?><?php
 }
