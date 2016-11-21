@@ -237,10 +237,10 @@ textarea {
     border-top-color: #000 !important; }
   .tag {
     border: 1px solid #000; }
-  .table, table {
+  .table {
     border-collapse: collapse !important; }
-    .table td, table td,
-    .table th, table th {
+    .table td,
+    .table th {
       background-color: #fff !important; }
   .table-bordered th,
   .table-bordered td {
@@ -1291,21 +1291,21 @@ pre {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
-.table, table {
+.table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem; }
-  .table th, table th,
-  .table td, table td {
+  .table th,
+  .table td {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #eceeef; }
-  .table thead th, table thead th {
+  .table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #eceeef; }
-  .table tbody + tbody, table tbody + tbody {
+  .table tbody + tbody {
     border-top: 2px solid #eceeef; }
-  .table .table, table .table, .table table, table table {
+  .table .table {
     background-color: #fff; }
 
 .table-sm th,
