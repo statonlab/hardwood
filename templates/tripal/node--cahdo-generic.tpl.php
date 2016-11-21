@@ -72,7 +72,7 @@ else {
         <?php print render($content); ?>
       </div>
     </div>
-
+<?php /*
     <table id="tripal-<?php print $node_type ?>-contents-table" class="tripal-contents-table">
       <tr class="tripal-contents-table-tr">
         <td nowrap class="tripal-contents-table-td tripal-contents-table-td-toc" align="left"><?php
@@ -87,5 +87,5 @@ else {
         </td>
       </tr>
     </table>
-  </div> <?php
+  </div> */?><?php
 }
