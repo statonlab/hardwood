@@ -325,6 +325,9 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['show_blast_report']['theme path'] = $path.'/templates';
   $theme_registry['show_blast_report']['path'] = $path . '/templates';
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
+
+  $theme_registry['node__chado_analysis_expression']['path'] = $path.'/templates';
+  $theme_registry['node__chado_analysis_expression']['template'] = 'tripal/node--chado-generic';
 }
 
 
