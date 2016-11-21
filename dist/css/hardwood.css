@@ -3435,27 +3435,27 @@ tbody.collapse.in {
 
 .page-item, .pager > li {
   display: inline; }
-  .page-item:first-child .page-link, .pager > li:first-child .page-link, .page-item:first-child .pager > li > a, .pager > li:first-child .pager > li > a, .page-item:first-child .pager > li.pager-current, .pager > li:first-child .pager > li.pager-current {
+  .page-item:first-child .page-link, .pager > li:first-child .page-link, .page-item:first-child .pager > li > a, .pager > li:first-child .pager > li > a, .page-item:first-child .pager > li.pager-current, .pager > li:first-child .pager > li.pager-current, .page-item:first-child .pager > li.pager-ellipsis, .pager > li:first-child .pager > li.pager-ellipsis {
     margin-left: 0;
     border-bottom-left-radius: 0.25rem;
     border-top-left-radius: 0.25rem; }
-  .page-item:last-child .page-link, .pager > li:last-child .page-link, .page-item:last-child .pager > li > a, .pager > li:last-child .pager > li > a, .page-item:last-child .pager > li.pager-current, .pager > li:last-child .pager > li.pager-current {
+  .page-item:last-child .page-link, .pager > li:last-child .page-link, .page-item:last-child .pager > li > a, .pager > li:last-child .pager > li > a, .page-item:last-child .pager > li.pager-current, .pager > li:last-child .pager > li.pager-current, .page-item:last-child .pager > li.pager-ellipsis, .pager > li:last-child .pager > li.pager-ellipsis {
     border-bottom-right-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
-  .page-item.active .page-link, .pager > li.active .page-link, .page-item.active .pager > li > a, .pager > li.active .pager > li > a, .page-item.active .pager > li.pager-current, .pager > li.active .pager > li.pager-current, .page-item.active .page-link:focus, .pager > li.active .page-link:focus, .page-item.active .pager > li > a:focus, .pager > li.active .pager > li > a:focus, .page-item.active .pager > li.pager-current:focus, .pager > li.active .pager > li.pager-current:focus, .page-item.active .page-link:hover, .pager > li.active .page-link:hover, .page-item.active .pager > li > a:hover, .pager > li.active .pager > li > a:hover, .page-item.active .pager > li.pager-current:hover, .pager > li.active .pager > li.pager-current:hover {
+  .page-item.active .page-link, .pager > li.active .page-link, .page-item.active .pager > li > a, .pager > li.active .pager > li > a, .page-item.active .pager > li.pager-current, .pager > li.active .pager > li.pager-current, .page-item.active .pager > li.pager-ellipsis, .pager > li.active .pager > li.pager-ellipsis, .page-item.active .page-link:focus, .pager > li.active .page-link:focus, .page-item.active .pager > li > a:focus, .pager > li.active .pager > li > a:focus, .page-item.active .pager > li.pager-current:focus, .pager > li.active .pager > li.pager-current:focus, .page-item.active .pager > li.pager-ellipsis:focus, .pager > li.active .pager > li.pager-ellipsis:focus, .page-item.active .page-link:hover, .pager > li.active .page-link:hover, .page-item.active .pager > li > a:hover, .pager > li.active .pager > li > a:hover, .page-item.active .pager > li.pager-current:hover, .pager > li.active .pager > li.pager-current:hover, .page-item.active .pager > li.pager-ellipsis:hover, .pager > li.active .pager > li.pager-ellipsis:hover {
     z-index: 2;
     color: #fff;
     cursor: default;
     background-color: #5cb85c;
     border-color: #5cb85c; }
-  .page-item.disabled .page-link, .pager > li.disabled .page-link, .page-item.disabled .pager > li > a, .pager > li.disabled .pager > li > a, .page-item.disabled .pager > li.pager-current, .pager > li.disabled .pager > li.pager-current, .page-item.disabled .page-link:focus, .pager > li.disabled .page-link:focus, .page-item.disabled .pager > li > a:focus, .pager > li.disabled .pager > li > a:focus, .page-item.disabled .pager > li.pager-current:focus, .pager > li.disabled .pager > li.pager-current:focus, .page-item.disabled .page-link:hover, .pager > li.disabled .page-link:hover, .page-item.disabled .pager > li > a:hover, .pager > li.disabled .pager > li > a:hover, .page-item.disabled .pager > li.pager-current:hover, .pager > li.disabled .pager > li.pager-current:hover {
+  .page-item.disabled .page-link, .pager > li.disabled .page-link, .page-item.disabled .pager > li > a, .pager > li.disabled .pager > li > a, .page-item.disabled .pager > li.pager-current, .pager > li.disabled .pager > li.pager-current, .page-item.disabled .pager > li.pager-ellipsis, .pager > li.disabled .pager > li.pager-ellipsis, .page-item.disabled .page-link:focus, .pager > li.disabled .page-link:focus, .page-item.disabled .pager > li > a:focus, .pager > li.disabled .pager > li > a:focus, .page-item.disabled .pager > li.pager-current:focus, .pager > li.disabled .pager > li.pager-current:focus, .page-item.disabled .pager > li.pager-ellipsis:focus, .pager > li.disabled .pager > li.pager-ellipsis:focus, .page-item.disabled .page-link:hover, .pager > li.disabled .page-link:hover, .page-item.disabled .pager > li > a:hover, .pager > li.disabled .pager > li > a:hover, .page-item.disabled .pager > li.pager-current:hover, .pager > li.disabled .pager > li.pager-current:hover, .page-item.disabled .pager > li.pager-ellipsis:hover, .pager > li.disabled .pager > li.pager-ellipsis:hover {
     color: #818a91;
     pointer-events: none;
     cursor: not-allowed;
     background-color: #fff;
     border-color: #ddd; }
 
-.page-link, .pager > li > a, .pager > li.pager-current {
+.page-link, .pager > li > a, .pager > li.pager-current, .pager > li.pager-ellipsis {
   position: relative;
   float: left;
   padding: 0.5rem 0.75rem;
@@ -3464,32 +3464,32 @@ tbody.collapse.in {
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #ddd; }
-  .page-link:focus, .pager > li > a:focus, .pager > li.pager-current:focus, .page-link:hover, .pager > li > a:hover, .pager > li.pager-current:hover {
+  .page-link:focus, .pager > li > a:focus, .pager > li.pager-current:focus, .pager > li.pager-ellipsis:focus, .page-link:hover, .pager > li > a:hover, .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
     color: #3d8b3d;
     background-color: #eceeef;
     border-color: #ddd; }
 
-.pagination-lg .page-link, .pagination-lg .pager > li > a, .pagination-lg .pager > li.pager-current {
+.pagination-lg .page-link, .pagination-lg .pager > li > a, .pagination-lg .pager > li.pager-current, .pagination-lg .pager > li.pager-ellipsis {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem; }
 
-.pagination-lg .page-item:first-child .page-link, .pagination-lg .pager > li:first-child .page-link, .pagination-lg .page-item:first-child .pager > li > a, .pagination-lg .pager > li:first-child .pager > li > a, .pagination-lg .page-item:first-child .pager > li.pager-current, .pagination-lg .pager > li:first-child .pager > li.pager-current {
+.pagination-lg .page-item:first-child .page-link, .pagination-lg .pager > li:first-child .page-link, .pagination-lg .page-item:first-child .pager > li > a, .pagination-lg .pager > li:first-child .pager > li > a, .pagination-lg .page-item:first-child .pager > li.pager-current, .pagination-lg .pager > li:first-child .pager > li.pager-current, .pagination-lg .page-item:first-child .pager > li.pager-ellipsis, .pagination-lg .pager > li:first-child .pager > li.pager-ellipsis {
   border-bottom-left-radius: 0.3rem;
   border-top-left-radius: 0.3rem; }
 
-.pagination-lg .page-item:last-child .page-link, .pagination-lg .pager > li:last-child .page-link, .pagination-lg .page-item:last-child .pager > li > a, .pagination-lg .pager > li:last-child .pager > li > a, .pagination-lg .page-item:last-child .pager > li.pager-current, .pagination-lg .pager > li:last-child .pager > li.pager-current {
+.pagination-lg .page-item:last-child .page-link, .pagination-lg .pager > li:last-child .page-link, .pagination-lg .page-item:last-child .pager > li > a, .pagination-lg .pager > li:last-child .pager > li > a, .pagination-lg .page-item:last-child .pager > li.pager-current, .pagination-lg .pager > li:last-child .pager > li.pager-current, .pagination-lg .page-item:last-child .pager > li.pager-ellipsis, .pagination-lg .pager > li:last-child .pager > li.pager-ellipsis {
   border-bottom-right-radius: 0.3rem;
   border-top-right-radius: 0.3rem; }
 
-.pagination-sm .page-link, .pagination-sm .pager > li > a, .pagination-sm .pager > li.pager-current {
+.pagination-sm .page-link, .pagination-sm .pager > li > a, .pagination-sm .pager > li.pager-current, .pagination-sm .pager > li.pager-ellipsis {
   padding: 0.275rem 0.75rem;
   font-size: 0.875rem; }
 
-.pagination-sm .page-item:first-child .page-link, .pagination-sm .pager > li:first-child .page-link, .pagination-sm .page-item:first-child .pager > li > a, .pagination-sm .pager > li:first-child .pager > li > a, .pagination-sm .page-item:first-child .pager > li.pager-current, .pagination-sm .pager > li:first-child .pager > li.pager-current {
+.pagination-sm .page-item:first-child .page-link, .pagination-sm .pager > li:first-child .page-link, .pagination-sm .page-item:first-child .pager > li > a, .pagination-sm .pager > li:first-child .pager > li > a, .pagination-sm .page-item:first-child .pager > li.pager-current, .pagination-sm .pager > li:first-child .pager > li.pager-current, .pagination-sm .page-item:first-child .pager > li.pager-ellipsis, .pagination-sm .pager > li:first-child .pager > li.pager-ellipsis {
   border-bottom-left-radius: 0.2rem;
   border-top-left-radius: 0.2rem; }
 
-.pagination-sm .page-item:last-child .page-link, .pagination-sm .pager > li:last-child .page-link, .pagination-sm .page-item:last-child .pager > li > a, .pagination-sm .pager > li:last-child .pager > li > a, .pagination-sm .page-item:last-child .pager > li.pager-current, .pagination-sm .pager > li:last-child .pager > li.pager-current {
+.pagination-sm .page-item:last-child .page-link, .pagination-sm .pager > li:last-child .page-link, .pagination-sm .page-item:last-child .pager > li > a, .pagination-sm .pager > li:last-child .pager > li > a, .pagination-sm .page-item:last-child .pager > li.pager-current, .pagination-sm .pager > li:last-child .pager > li.pager-current, .pagination-sm .page-item:last-child .pager > li.pager-ellipsis, .pagination-sm .pager > li:last-child .pager > li.pager-ellipsis {
   border-bottom-right-radius: 0.2rem;
   border-top-right-radius: 0.2rem; }
 
@@ -5208,11 +5208,11 @@ table > tbody > tr > td.tripal-contents-table-td.tripal-contents-table-td-toc {
   border-right-color: rgba(0, 0, 0, 0.125) !important;
   border-top: 0 !important; }
 
-.pager > li.pager-current {
+.pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
-  .pager > li.pager-current:hover {
+  .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
     background: #fff; }
-  .pager > li.pager-current, .pager > li.pager-current:hover {
+  .pager > li.pager-current, .pager > li.pager-current:hover, .pager > li.pager-ellipsis, .pager > li.pager-ellipsis:hover {
     color: #444; }
 
 .submitted {

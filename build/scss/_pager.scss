@@ -6,7 +6,8 @@
     > a {
       @extend .page-link;
     }
-    &.pager-current {
+    &.pager-current,
+    &.pager-ellipsis {
       @extend .page-link;
       cursor: default;
       &:hover {
