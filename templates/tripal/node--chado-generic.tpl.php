@@ -71,7 +71,7 @@ else {
       <div class="col-sm-9">
         <?php print render($content); ?>
       </div>
-    </div>
+    </div><!-- /. row -->
 <?php /*
     <table id="tripal-<?php print $node_type ?>-contents-table" class="tripal-contents-table">
       <tr class="tripal-contents-table-tr">
