@@ -326,13 +326,18 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['show_blast_report']['path'] = $path . '/templates';
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
 
-  $theme_registry['node__chado_analysis_expression']['theme paths'] = array(0 => $path . '/templates');
-  $theme_registry['node__chado_analysis_expression']['theme path'] = $path.'/templates';
-  $theme_registry['node__chado_analysis_expression']['path'] = $path.'/templates';
-  $theme_registry['node__chado_analysis_expression']['template'] = 'tripal/node--chado-generic';
+  $theme_registry['node__chado_analysis']['theme paths'] = array(0 => $path . '/templates');
+  $theme_registry['node__chado_analysis']['theme path'] = $path.'/templates';
+  $theme_registry['node__chado_analysis']['path'] = $path.'/templates';
+  $theme_registry['node__chado_analysis']['template'] = 'tripal/node--chado-generic';
 }
 
-
+/**
+ * Alter the search form to use Bootstrap fields.
+ *
+ * @param $form
+ * @param $form_state
+ */
 function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
   $input_group_classes = "input-group";
   if(drupal_is_front_page()) {
