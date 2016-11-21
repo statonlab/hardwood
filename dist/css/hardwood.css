@@ -5208,7 +5208,7 @@ table > tbody > tr > td.tripal-contents-table-td.tripal-contents-table-td-toc {
   border-right-color: rgba(0, 0, 0, 0.125) !important;
   border-top: 0 !important; }
 
-.page-title {
+#page-title {
   font-size: 22px; }
 
 .pager > li.pager-current, .pager > li.pager-ellipsis {
