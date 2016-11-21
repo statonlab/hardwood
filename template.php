@@ -76,6 +76,8 @@ function hardwood_textfield($variables) {
 /**
  * Implements theme_textarea()
  *
+ * Add .form-control to textarea fields
+ *
  * @param $variables
  * @return string
  */
@@ -103,6 +105,8 @@ function hardwood_textarea($variables) {
 /**
  * Implements theme_password()
  *
+ * Add .form-control to password fields
+ *
  * @param $variables
  * @return string
  */
@@ -116,7 +120,10 @@ function hardwood_password($variables) {
 }
 
 /**
- * Implement theme_form_search_block_form_alter()
+ * Implements theme_form_search_block_form_alter()
+ *
+ * Alter the search form.
+ *
  * @param $form
  */
 function hardwood_form_search_block_form_alter(&$form) {
@@ -127,6 +134,8 @@ function hardwood_form_search_block_form_alter(&$form) {
 
 /**
  * Implements theme_form_element().
+ *
+ * Apply bootstrap wrappings and classes on all form elements.
  *
  * @param $variables
  * @return string
@@ -197,6 +206,12 @@ function hardwood_button($variables) {
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
+/**
+ * Alter status messages to use bootstrap alerts.
+ *
+ * @param $variables
+ * @return string
+ */
 function hardwood_status_messages($variables) {
   $display = $variables['display'];
   $output = '';
@@ -325,11 +340,6 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['show_blast_report']['theme path'] = $path.'/templates';
   $theme_registry['show_blast_report']['path'] = $path . '/templates';
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
-
-  /*$theme_registry['node__chado_organism']['theme paths'] = array(0 => $path . '/templates');
-  $theme_registry['node__chado_organism']['theme path'] = $path.'/templates';
-  $theme_registry['node__chado_organism']['path'] = $path.'/templates';
-  $theme_registry['node__chado_organism']['template'] = 'tripal/node--chado-generic';*/
 }
 
 /**
