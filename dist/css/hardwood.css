@@ -5056,8 +5056,7 @@ body {
 
 .page-header {
   background: #48a648;
-  color: #eee;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+  color: #eee; }
   .page-header h1,
   .page-header a {
     color: #fefefe; }
@@ -5065,7 +5064,8 @@ body {
     font-weight: normal; }
 
 .form-wrapper {
-  padding: 0 !important; }
+  padding: 0 !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important; }
 
 .main-header {
   background-color: #fff;

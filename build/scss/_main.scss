@@ -73,7 +73,6 @@ body {
 .page-header {
   background: darken($brand-success, 7.5%);
   color: #eee;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
 
   h1,
   a {
@@ -86,4 +85,5 @@ body {
 
 .form-wrapper {
   padding: 0!important;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5)!important;
 }
