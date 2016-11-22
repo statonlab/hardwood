@@ -3,9 +3,7 @@ var gulp       = require('gulp'),
     $          = require('gulp-load-plugins')({rename: {'gulp-concat-util': 'concat'}});
 
 
-/**
- * Compile SCSS files to CSS.
- */
+// Compile SCSS files to CSS.
 gulp.task('sass', function () {
   return gulp.src('./build/scss/hardwood.scss')
     .pipe($.sass())
@@ -13,20 +11,9 @@ gulp.task('sass', function () {
     .pipe($.notify("Sass Compiled!"));
 });
 
-/**
- * Watch source files for changes and compile them.
- */
+// Watch source files for changes and compile them.
 gulp.task('watch', function () {
   gulp.watch('./build/scss/**/*.scss', ['sass']);
-});
-
-/**
- * Grouped Tasks.
- */
-
-// Compile JS
-gulp.task('js', function () {
-  sequence(['js:dev', 'concat:js', 'js:production']);
 });
 
 // Copy required libraries to our dist files
