@@ -5064,8 +5064,7 @@ body {
     font-weight: normal; }
 
 .form-wrapper {
-  padding: 0 !important;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important; }
+  padding: 0 !important; }
 
 .main-header {
   background-color: #fff;
@@ -5210,7 +5209,8 @@ table > tbody > tr > td.tripal-contents-table-td.tripal-contents-table-td-toc {
   border-top: 0 !important; }
 
 #page-title {
-  font-size: 2rem; }
+  font-size: 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important; }
 
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
