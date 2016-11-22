@@ -8,7 +8,7 @@ This theme utilizes multiple technologies to be fully customizable. This is a li
 - [NPM](https://www.npmjs.com/) - Node Package Management to manage all dependencies.
 - [SASS](http://sass-lang.com/) - css preprocessor that allows the use of variables, conditionals, etc.
 - [Gulp](http://gulpjs.com/) - to automate the workflow.
-- For a list of dependencies, review the package.json file.
+- For a list of dependencies, review the [package.json](https://github.com/statonlab/hardwood/blob/master/package.json) file.
 
 #### Gulp Commands
 - ```gulp sass``` Compile sass files that are located in build/scss to css files dist/css.
