@@ -5255,6 +5255,8 @@ table {
     white-space: nowrap; }
   table .tripal-data-pane {
     width: 95%; }
+  table.tripal-organism-data-table th {
+    min-width: 10px; }
 
 .alignment-subrow {
   font-size: 0.875rem; }

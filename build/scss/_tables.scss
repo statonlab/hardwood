@@ -14,4 +14,10 @@ table {
   .tripal-data-pane {
     width: 95%;
   }
+
+  &.tripal-organism-data-table {
+    th {
+      min-width: 10px;
+    }
+  }
 }
