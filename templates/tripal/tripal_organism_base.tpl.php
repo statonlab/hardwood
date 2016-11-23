@@ -1,13 +1,13 @@
 <?php
 
-$organism  = $variables['node']->organism;
-$organism = chado_expand_var($organism,'field','organism.comment'); ?>
+$organism = $variables['node']->organism;
+$organism = chado_expand_var($organism, 'field', 'organism.comment'); ?>
 
-<div class="tripal_organism-data-block-desc tripal-data-block-desc"></div><?php
+  <div class="tripal_organism-data-block-desc tripal-data-block-desc"></div><?php
 
 // generate the image tag
 $image = '';
-$image_url = tripal_get_organism_image_url($organism); 
+$image_url = tripal_get_organism_image_url($organism);
 if ($image_url) {
   $image = "<img class=\"tripal-organism-img img-fluid\" src=\"$image_url\">";
 }
@@ -28,7 +28,7 @@ $rows = array();
 // genus row
 $rows[] = array(
   array(
-    'data' => 'Genus', 
+    'data' => 'Genus',
     'header' => TRUE
   ),
   '<i>' . $organism->genus . '</i>'
@@ -37,9 +37,9 @@ $rows[] = array(
 // species row
 $rows[] = array(
   array(
-    'data' => 'Species', 
+    'data' => 'Species',
     'header' => TRUE
-  ), 
+  ),
   '<i>' . $organism->species . '</i>'
 );
 
@@ -55,7 +55,7 @@ $rows[] = array(
 // abbreviation row
 $rows[] = array(
   array(
-    'data' => 'Abbreviation', 
+    'data' => 'Abbreviation',
     'header' => TRUE
   ),
   $organism->abbreviation
@@ -66,13 +66,13 @@ if (user_access('view ids')) {
   // Organism ID
   $rows[] = array(
     array(
-      'data'   => 'Organism ID',
+      'data' => 'Organism ID',
       'header' => TRUE,
-      'class'  => 'tripal-site-admin-only-table-row',
+      'class' => 'tripal-site-admin-only-table-row',
     ),
     array(
-     'data'  => $organism->organism_id,
-     'class' => 'tripal-site-admin-only-table-row',
+      'data' => $organism->organism_id,
+      'class' => 'tripal-site-admin-only-table-row',
     ),
   );
 }
@@ -82,29 +82,33 @@ if (user_access('view ids')) {
 // documentation can be found here:
 // https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7
 $table = array(
-  'header' => $headers, 
-  'rows' => $rows, 
+  'header' => $headers,
+  'rows' => $rows,
   'attributes' => array(
     'id' => 'tripal_organism-table-base',
     'class' => 'tripal-organism-data-table tripal-data-table table table-striped',
-  ), 
+  ),
   'sticky' => FALSE,
   'caption' => '',
-  'colgroups' => array(), 
-  'empty' => '', 
-); 
+  'colgroups' => array(),
+  'empty' => '',
+);
 
 // once we have our table array structure defined, we call Drupal's theme_table()
 // function to generate the table.
-?>
-
-<div class="row">
-  <div class="col-lg-8">
-    <?php print theme_table($table); ?>
+if (empty($image)) {
+  print theme_table($table);
+  print $organism->comment;
+}
+else {
+  ?>
+  <div class="row">
+    <div class="col-lg-8">
+      <?php print theme_table($table); ?>
+      <?php print $organism->comment; ?>
+    </div>
+    <div class="col-lg-4">
+      <?php print $image; ?>
+    </div>
   </div>
-  <div class="col-lg-4">
-    <?php print $image; ?>
-  </div>
-</div>
-
-<?php print $organism->comment;?>
+<?php } ?>
