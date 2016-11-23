@@ -16,7 +16,6 @@
 function hardwood_preprocess_button(&$variables) {
   $variables['element']['#attributes']['class'][] = 'btn';
 
-
   // Special styles for Delete/Destructive Buttons.
   if (stristr($variables['element']['#value'], 'Delete') !== FALSE) {
     $variables['element']['#attributes']['class'][] = 'btn-danger';
@@ -251,10 +250,6 @@ function hardwood_status_messages($variables) {
   }
   return $output;
 }
-
-//function hardwood_menu_tree($variables) {
-//return '<ul class="list-unstyled">' . $variables['tree'] . '</ul>';
-//}
 
 /**
  * Add the menu menu wrapper.
