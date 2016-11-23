@@ -100,10 +100,10 @@ $table = array(
 ?>
 
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-lg-8">
     <?php print theme_table($table); ?>
   </div>
-  <div class="col-md-5">
+  <div class="col-lg-4">
     <?php print $image; ?>
   </div>
 </div>
