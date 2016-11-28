@@ -91,7 +91,7 @@ legend {
   @extend .btn-link;
 }
 
-table > tbody > tr > td.tripal-contents-table-td.tripal-contents-table-td-toc{
+.tripal-contents-table-td.tripal-contents-table-td-toc{
   border-right: 1px solid $card-border-color!important;
   border-top: 0!important;
 }

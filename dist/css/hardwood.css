@@ -5193,7 +5193,7 @@ legend {
 .form-file + .btn, .form-file + #edit-cancel, .form-file + #edit-search-submit {
   margin-top: 10px; }
 
-table > tbody > tr > td.tripal-contents-table-td.tripal-contents-table-td-toc {
+.tripal-contents-table-td.tripal-contents-table-td-toc {
   border-right: 1px solid rgba(0, 0, 0, 0.125) !important;
   border-top: 0 !important; }
 
