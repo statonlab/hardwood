@@ -5231,6 +5231,7 @@ ul.tabs {
   border-top: 0 !important; }
 
 .navbar .dropdown-menu {
+  margin-top: 0;
   padding: 0; }
   .navbar .dropdown-menu > ul {
     list-style: none;

@@ -1,13 +1,9 @@
 <?php
 
-/*function hardwood_theme() {
-  $path = path_to_theme();
-
-  $items['show_blast_report'] = array(
-    'template' => 'blast_report',
-    'path' => "$path/templates",
-  );
-}*/
+/**
+ * Include all necessary files.
+ */
+include_once path_to_theme() . '/templates/system/page.vars.php';
 
 /**
  * Add `btn` class to all buttons.
@@ -365,8 +361,3 @@ function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
 function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
   $form['cid']['#attributes']['class'][] = 'form-control';
 }
-
-/**
- * Include all necessary files.
- */
-include_once path_to_theme() . '/templates/system/page.vars.php';
