@@ -5194,7 +5194,7 @@ legend {
   margin-top: 10px; }
 
 .tripal-contents-table-td.tripal-contents-table-td-toc {
-  border-right: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-right: 1px solid #eceeef !important;
   border-top: 0 !important; }
 
 #page-title {
