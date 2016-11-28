@@ -165,8 +165,8 @@
 
                 <div class="col-sm-4 col-md-3">
                   <?php if ($page['sidebar_first']): ?>
-                    <div class="card">
-                      <div class="card-block">
+                    <div>
+                      <div>
                         <div id="sidebar-first" class="column sidebar">
                           <?php print render($page['sidebar_first']); ?>
                         </div> <!-- /#sidebar-first -->
