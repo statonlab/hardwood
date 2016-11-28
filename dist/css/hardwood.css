@@ -5090,7 +5090,7 @@ body {
     letter-spacing: 2px;
     font-weight: bold; }
   .main-header .dropdown-menu {
-    min-width: 250px; }
+    min-width: 200px; }
 
 .admin-menu-position-fixed {
   z-index: 999999 !important; }
