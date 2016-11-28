@@ -1,14 +1,8 @@
 (function ($) {
-    console.log($('.collapsible .fieldset-legend').first().text());
-    $('.collapsed > .fieldset-wrapper').addClass('collapse');
-})(jQuery);
-/*
-
-(function ($) {
 
     /**
      * Toggle the visibility of a fieldset using smooth animations.
-     *
+     */
     Drupal.toggleFieldset = function (fieldset) {
         var $fieldset = $(fieldset);
         if ($fieldset.is('.collapsed')) {
@@ -44,7 +38,7 @@
 
     /**
      * Scroll a given fieldset into view as much as possible.
-     *
+     */
     Drupal.collapseScrollIntoView = function (node) {
         var h = document.documentElement.clientHeight || document.body.clientHeight || 0;
         var offset = document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -106,4 +100,4 @@
         }
     };
 
-})(jQuery);*/
+})(jQuery);
