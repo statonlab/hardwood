@@ -31,18 +31,20 @@ $(function () {
     });
 });
 
-$(function () {
-    $('.navbar [data-toggle="dropdown"]').click(function (e) {
-        e.preventDefault();
-        var href = $(this).attr('href');
-        if (href != '#') {
-            window.location.href = href;
-        }
-    });
+/*
+ $(function () {
+ $('.navbar [data-toggle="dropdown"]').click(function (e) {
+ e.preventDefault();
+ var href = $(this).attr('href');
+ if (href != '#') {
+ window.location.href = href;
+ }
+ });
 
-    $('.navbar [data-toggle="dropdown"]').parent('.dropdown').hover(function () {
-        $(this).find('[data-toggle="dropdown"]').first().dropdown('toggle');
-    }, function () {
-        $(this).find('[data-toggle="dropdown"]').first().dropdown('toggle');
-    });
-});
+ $('.navbar [data-toggle="dropdown"]').parent('.dropdown').hover(function () {
+ $(this).find('[data-toggle="dropdown"]').first().dropdown('toggle');
+ }, function () {
+ $(this).find('[data-toggle="dropdown"]').first().dropdown('toggle');
+ });
+ });
+ */
