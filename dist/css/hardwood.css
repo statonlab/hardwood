@@ -5093,7 +5093,7 @@ body {
     min-width: 200px; }
     @media (min-width: 992px) {
       .main-header .dropdown-menu {
-        max-height: 300px;
+        max-height: 500px;
         overflow: auto; } }
 
 .admin-menu-position-fixed {
