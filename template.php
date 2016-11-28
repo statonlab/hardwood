@@ -377,5 +377,5 @@ function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
  */
 function hardwood_js_alter(&$javascript) {
   $javascript['misc/collapse.js']['data'] = drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js';
-  $javascript['misc/collapse.js']['scope'] = 'head';
+  $javascript['misc/collapse.js']['footer'] = 'head';
 }
