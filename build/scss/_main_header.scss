@@ -35,6 +35,10 @@
 
   .dropdown-menu {
     min-width: 200px;
+    @include media-breakpoint-up(lg) {
+      max-height: 300px;
+      overflow: auto;
+    }
   }
 }
 

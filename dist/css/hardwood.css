@@ -5091,6 +5091,10 @@ body {
     font-weight: bold; }
   .main-header .dropdown-menu {
     min-width: 200px; }
+    @media (min-width: 992px) {
+      .main-header .dropdown-menu {
+        max-height: 300px;
+        overflow: auto; } }
 
 .admin-menu-position-fixed {
   z-index: 999999 !important; }
