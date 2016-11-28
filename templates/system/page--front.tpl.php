@@ -156,17 +156,15 @@
                   <?php if ($tabs): ?>
                     <?php print render($tabs); ?>
                   <?php endif; ?>
-                  <div class="card">
-                    <div class="card-block">
-                      <?php print render($page['content']); ?>
-                    </div>
-                  </div>
+                  
+                  <?php print render($page['content']); ?>
+
                 </div>
 
                 <div class="col-sm-4 col-md-3">
                   <?php if ($page['sidebar_first']): ?>
-                    <div>
-                      <div>
+                    <div class="card">
+                      <div class="card-block">
                         <div id="sidebar-first" class="column sidebar">
                           <?php print render($page['sidebar_first']); ?>
                         </div> <!-- /#sidebar-first -->
