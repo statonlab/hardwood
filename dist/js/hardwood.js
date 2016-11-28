@@ -31,18 +31,17 @@ $(function () {
     });
 });
 
-/*$(function () {
-    $('.navbar [data-toggle="dropdown"]').click(function (e) {
-        e.preventDefault();
+$(function () {
+    $('.navbar .dropdown > .nav-link').click(function(e) {
         var href = $(this).attr('href');
-        if (href != '#') {
-            window.location.href = href;
+        if(href != '#') {
+            return window.location.href = href;
         }
     });
 
-    $('.navbar [data-toggle="dropdown"]').parent('.dropdown').hover(function () {
-        $(this).find('[data-toggle="dropdown"]').first().dropdown('toggle');
+    $('.navbar .dropdown').hover(function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
     }, function () {
-        $(this).find('[data-toggle="dropdown"]').first().dropdown('toggle');
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
-});*/
+});
