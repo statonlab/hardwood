@@ -40,7 +40,7 @@
      * Scroll a given fieldset into view as much as possible.
      */
     Drupal.collapseScrollIntoView = function (node) {
-        var h = document.documentElement.clientHeight || document.body.clientHeight || 0;
+        /*var h = document.documentElement.clientHeight || document.body.clientHeight || 0;
         var offset = document.documentElement.scrollTop || document.body.scrollTop || 0;
         var posY = $(node).offset().top;
         var fudge = 55;
@@ -51,7 +51,7 @@
             else {
                 window.scrollTo(0, posY + node.offsetHeight - h + fudge);
             }
-        }
+        }*/
     };
 
     Drupal.behaviors.collapse = {
