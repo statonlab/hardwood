@@ -32,13 +32,13 @@ $(function () {
 });
 
 $(function () {
-    $(document).on('click', '.navbar [data-toggle="dropdown"]', function (e) {
-        if ($(this).attr('href') == '#') {
-            //return e.preventDefault();
+    $('.navbar [data-toggle="dropdown"]').click(function (e) {
+        e.preventDefault();
+        var href = $(this).attr('href');
+        if (href != '#') {
+            window.location.href = href;
         }
-        else {
-            window.location.href = $(this).attr('href');
-        }
+        console.log(href);
     });
 
     $('.navbar [data-toggle="dropdown"]').parents('.dropdown').first().hover(function () {
