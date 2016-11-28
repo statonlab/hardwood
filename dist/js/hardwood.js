@@ -34,7 +34,7 @@ $(function () {
 $(function () {
     $(document).on('click', '.navbar [data-toggle="dropdown"]', function (e) {
         if ($(this).attr('href') == '#') {
-            return e.preventDefault();
+            //return e.preventDefault();
         }
         else {
             window.location.href = $(this).attr('href');
