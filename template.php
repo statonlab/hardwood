@@ -30,6 +30,14 @@ function hardwood_preprocess_textfield(&$variables) {
 }
 
 /**
+ * Add class `form-control` to file fields
+ * @param $variables
+ */
+function hardwood_preprocess_file(&$variables) {
+  $variables['element']['#attributes']['class'][] = 'form-control';
+}
+
+/**
  * Implements theme_textfield()
  *
  * The only reason we need this is to remove the default
@@ -360,4 +368,13 @@ function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
  */
 function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
   $form['cid']['#attributes']['class'][] = 'form-control';
+}
+
+/**
+ * Update the collapse JS to use Bootstrap's collapse.
+ *
+ * @param $javascript
+ */
+function hardwood_js_alter(&$javascript) {
+  $javascript['misc/collapse.js']['data'] = drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js';
 }
