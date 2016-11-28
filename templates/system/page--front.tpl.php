@@ -146,17 +146,17 @@
     <div id="main-wrapper">
       <div id="main" class="clearfix">
 
-
+        <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) ? 'col-sm-8 col-md-9' : 'col-xs-12'; ?>
         <?php if ($page['content']): ?>
           <div class="section">
             <div class="container">
               <div class="row">
-                <div class="col-sm-8 col-md-9">
+                <div class="<?php print $main_content_classes; ?>">
                   <a id="main-content"></a>
                   <?php if ($tabs): ?>
                     <?php print render($tabs); ?>
                   <?php endif; ?>
-                  
+
                   <?php print render($page['content']); ?>
 
                 </div>
