@@ -336,7 +336,7 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   // Tell the theme system to look in the "templates" subdirectory within our theme directory
   // Force tripal_blast to use our blast_report template
   $theme_registry['show_blast_report']['theme paths'] = array(0 => $path . '/templates');
-  $theme_registry['show_blast_report']['theme path'] = $path.'/templates';
+  $theme_registry['show_blast_report']['theme path'] = $path . '/templates';
   $theme_registry['show_blast_report']['path'] = $path . '/templates';
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
 }
@@ -349,10 +349,10 @@ function hardwood_theme_registry_alter(&$theme_registry) {
  */
 function hardwood_form_main_search_box_form_alter(&$form, &$form_state) {
   $input_group_classes = "input-group";
-  if(drupal_is_front_page()) {
+  if (drupal_is_front_page()) {
     $input_group_classes .= ' input-group-lg';
   }
-  $form['search']['search_box']['#field_prefix'] = '<div class="'.$input_group_classes.'">';
+  $form['search']['search_box']['#field_prefix'] = '<div class="' . $input_group_classes . '">';
   $form['search']['search_box']['#field_suffix'] = '';
   $form['search']['search_box']['#attributes']['placeholder'] = 'Search...';
   $form['search']['search_submit']['#prefix'] = '<div class="input-group-btn">';
@@ -376,6 +376,12 @@ function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
  * @param $javascript
  */
 function hardwood_js_alter(&$javascript) {
+  unset($javascript['misc/collapse.js']);
+
+  drupal_add_js(drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js', array());
+  /*
   $javascript['misc/collapse.js']['data'] = drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js';
-  $javascript['misc/collapse.js']['footer'] = 'head';
+  $javascript['misc/collapse.js']['scope'] = 'footer';
+  $javascript['misc/collapse.js']['type'] = 'js';
+ */
 }
