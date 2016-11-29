@@ -5115,9 +5115,15 @@ body {
   border-radius: 0; }
   .jumbotron.front-page {
     padding: 0;
-    background: url("../images/trees3.jpeg") top center fixed;
+    background: url("../images/tree4.jpg") center center fixed;
     color: #f9f9f9;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    .jumbotron.front-page .jumbotron-inner {
+      padding: 6rem 0; }
   .jumbotron .jumbotron-inner {
     padding: 4rem 0;
     background-color: rgba(34, 34, 34, 0.7); }

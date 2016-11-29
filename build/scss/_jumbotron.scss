@@ -2,9 +2,16 @@
   border-radius: 0;
   &.front-page {
     padding: 0;
-    background: url('../images/trees3.jpeg') top center fixed;
+    background: url('../images/tree4.jpg') center center fixed;
     color: #f9f9f9;
     margin-bottom: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .jumbotron-inner {
+      padding: 6rem 0;
+    }
   }
   .jumbotron-inner {
     padding: 4rem 0;

@@ -371,17 +371,11 @@ function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
 }
 
 /**
- * Update the collapse JS to use Bootstrap's collapse.
+ * Alter or add JS files to pages.
  *
  * @param $javascript
  */
 function hardwood_js_alter(&$javascript) {
   unset($javascript['misc/collapse.js']);
-
   drupal_add_js(drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js', array());
-  /*
-  $javascript['misc/collapse.js']['data'] = drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js';
-  $javascript['misc/collapse.js']['scope'] = 'footer';
-  $javascript['misc/collapse.js']['type'] = 'js';
- */
 }
