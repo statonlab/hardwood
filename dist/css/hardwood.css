@@ -5100,16 +5100,14 @@ body {
   z-index: 999999 !important; }
 
 @media (max-width: 1199px) {
-  [class*="navbar-toggleable"] {
-    padding-top: 50px; }
-    [class*="navbar-toggleable"] > .navbar-nav {
-      position: relative;
-      width: 100%;
+  [class*="navbar-toggleable"] > .navbar-nav {
+    position: relative;
+    width: 100%;
+    display: block;
+    float: none !important; }
+    [class*="navbar-toggleable"] > .navbar-nav .nav-item, [class*="navbar-toggleable"] > .navbar-nav ul.tabs > li {
       display: block;
-      float: none !important; }
-      [class*="navbar-toggleable"] > .navbar-nav .nav-item, [class*="navbar-toggleable"] > .navbar-nav ul.tabs > li {
-        display: block;
-        float: none; } }
+      float: none; } }
 
 .jumbotron {
   border-radius: 0; }

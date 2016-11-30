@@ -87,9 +87,8 @@
               </div>
             </div>
           </a>
-          <button class="navbar-toggler hidden-xl-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-            &nbsp;
-          </button>
+          <button class="navbar-toggler hidden-xl-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">&nbsp;</button>
+          <div class="clearfix hidden-xl-up"></div>
           <div class="collapse navbar-toggleable-lg" id="navbar-collapse">
             <?php
             if (!empty($primary_nav)):

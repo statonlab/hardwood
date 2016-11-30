@@ -48,7 +48,6 @@
 
 [class*="navbar-toggleable"] {
   @include media-breakpoint-down(lg) {
-    padding-top: 50px;
     > .navbar-nav {
       position: relative;
       width: 100%;
