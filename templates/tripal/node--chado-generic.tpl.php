@@ -72,7 +72,6 @@ else {
         <?php print render($content); ?>
       </div>
     </div><!-- /. row -->
-
   <!--/div-->
   <?php /*
     <table id="tripal-<?php print $node_type ?>-contents-table" class="tripal-contents-table">
