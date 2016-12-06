@@ -88,8 +88,8 @@
             </div>
           </a>
           <button class="navbar-toggler hidden-xl-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">&nbsp;</button>
-          <div class="clearfix hidden-xl-up"></div>
-          <div class="collapse navbar-toggleable-lg" id="navbar-collapse">
+          <div class="clearfix hidden-lg-up"></div>
+          <div class="collapse navbar-toggleable-md" id="navbar-collapse">
             <?php
             if (!empty($primary_nav)):
               print render($primary_nav);
@@ -108,7 +108,7 @@
             Welcome to the Hardwood Genomics Project
           </h1>
           <p class="lead text-xs-center">
-            We house transcriptome and genome resources for hardwood trees
+            Genomic resources for hardwood trees
           </p>
           <div class="margin-top-1 text-xs-center">
             <a href="/contact" class="btn btn-success">Contribute Data</a>
