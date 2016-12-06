@@ -47,7 +47,7 @@
 }
 
 [class*="navbar-toggleable"] {
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(md) {
     > .navbar-nav {
       position: relative;
       width: 100%;

@@ -5099,7 +5099,7 @@ body {
 .admin-menu-position-fixed {
   z-index: 999999 !important; }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   [class*="navbar-toggleable"] > .navbar-nav {
     position: relative;
     width: 100%;
