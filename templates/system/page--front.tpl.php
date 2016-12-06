@@ -82,7 +82,7 @@
             <span class="logo-icon"><i class="fa fa-leaf"></i></span>
             <div class="logo-wrapper">
               <span class="logo-text"><?php print variable_get('site_name') ?></span>
-              <div class="text-muted text-xs hidden-xs-down">
+              <div class="text-muted text-xs">
                 <?php print variable_get('site_slogan') ?>
               </div>
             </div>
