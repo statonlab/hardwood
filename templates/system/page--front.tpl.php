@@ -122,7 +122,7 @@
       <div class="section bg-gray">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-sm-8 col-md-6 offset-md-3 input-group-lg">
+            <div class="col-xs-12 col-lg-10 offset-lg-1 col-xl-6 offset-xl-3 input-group-lg">
               <?php print render($page['front_search']); ?>
             </div>
           </div>
