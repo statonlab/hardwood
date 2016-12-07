@@ -1,0 +1,38 @@
+; Hardwood General Info
+; ---------------------
+name = Hardwood Theme
+description = Bootstrap Based Drupal 7 Theme
+core = 7.x
+screenshot = screenshot.png
+
+; Regions
+; ---------------------
+regions[header] = Header
+regions[content] = Main Content
+regions[highlighted] = Highlighted
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Secondary Sidebar
+regions[sponsors] = Sponsors
+regions[footer] = Footer
+
+; Front Page Regions
+; ---------------------
+regions[font_jumbotron] = Front Page Jumbotron
+regions[front_search] = Front Page Search Block
+
+
+; Hardwood Stylesheets
+; ---------------------
+stylesheets[all][] = system.base.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.theme.css
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = dist/css/hardwood.css
+stylesheets[all][] = dist/css/font-awesome.min.css
+
+; Hardwood Javascript
+; ---------------------
+scripts[] = dist/js/jquery.min.js
+scripts[] = dist/js/tether.min.js
+scripts[] = dist/js/bootstrap.min.js
+scripts[] = dist/js/hardwood.js

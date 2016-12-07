@@ -1,0 +1,62 @@
+// Main Header Component
+.main-header {
+  background-color: #fff;
+  border-top: 6px solid $brand-success;
+  box-shadow: 0 2px 3px rgba(#000, .125);
+
+  .nav-link {
+    padding: 1rem .4rem;
+  }
+
+  .nav-item {
+    margin: 0!important;
+  }
+
+  .logo-icon {
+    font-size: 30px;
+    display: block;
+    float: left;
+    color: $brand-success;
+    height: 48px;
+    line-height: 48px;
+    border: 2px solid $brand-success;
+    padding: 0 5px;
+    border-radius: $border-radius;
+  }
+
+  .logo-wrapper {
+    margin-left: 50px;
+  }
+
+  .logo-text {
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  .dropdown-menu {
+    min-width: 200px;
+    @include media-breakpoint-up(lg) {
+      max-height: 500px;
+      overflow: auto;
+    }
+  }
+}
+
+.admin-menu-position-fixed {
+  z-index: 999999!important;
+}
+
+[class*="navbar-toggleable"] {
+  @include media-breakpoint-down(md) {
+    > .navbar-nav {
+      position: relative;
+      width: 100%;
+      display: block;
+      float: none!important;
+      .nav-item {
+        display: block;
+        float: none;
+      }
+    }
+  }
+}

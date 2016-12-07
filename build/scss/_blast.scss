@@ -1,0 +1,11 @@
+.alignment-subrow {
+  font-size: $font-size-sm;
+}
+
+.open .arrow-col .btn .fa {
+  -webkit-transform: rotate(180deg) !important;
+  -moz-transform: rotate(180deg) !important;
+  -ms-transform: rotate(180deg) !important;
+  -o-transform: rotate(180deg) !important;
+  transform: rotate(180deg) !important;
+}

@@ -1,0 +1,25 @@
+#edit-search-submit {
+  height: auto!important;
+  width: 100%;
+  @extend .btn;
+  margin: 0 !important;
+}
+
+#edit-search-box {
+  @extend .form-control;
+  &,
+  &:hover {
+    border-right: 0;
+  }
+}
+
+#edit-search {
+  border: none!important;
+  width: 100%!important;
+  margin: 0!important;
+}
+
+#block-tripal-elasticsearch-main-search-box {
+  margin: 0!important;
+  width: 100%!important;
+}

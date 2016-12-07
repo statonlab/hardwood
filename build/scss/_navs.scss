@@ -1,0 +1,42 @@
+ul.tabs {
+  margin-bottm: -1px;
+  @extend .nav;
+  @extend .nav-tabs;
+
+  > li {
+    @extend .nav-item;
+    > a {
+      @extend .nav-link;
+    }
+  }
+}
+
+.tabs {
+  + .card {
+    border-top: 0!important;
+  }
+}
+
+.navbar {
+  .dropdown-menu {
+    margin-top: 0;
+    padding: 0;
+    > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      > li {
+        display: block;
+        width: 100%;
+      }
+      > li > a {
+        font-size: $font-size-sm;
+        margin: 0;
+        padding: $nav-link-padding;
+        &:hover {
+          background: $dropdown-link-hover-bg;
+        }
+      }
+    }
+  }
+}
