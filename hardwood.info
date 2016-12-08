@@ -19,8 +19,6 @@ regions[footer] = Footer
 ; ---------------------
 regions[font_jumbotron] = Front Page Jumbotron
 regions[front_search] = Front Page Search Block
-regions[front_content] = Front Page Content
-regions[front_excerpt] = Front Page Content Excerpt
 
 
 ; Hardwood Stylesheets
