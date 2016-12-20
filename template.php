@@ -3,7 +3,7 @@
 /**
  * Include all necessary files.
  */
-include_once path_to_theme() . '/templates/system/page.vars.php';
+include_once drupal_get_path('theme', 'hardwood') . '/templates/system/page.vars.php';
 
 /**
  * Add `btn` class to all buttons.
