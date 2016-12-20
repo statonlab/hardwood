@@ -42,7 +42,7 @@ $(function () {
  * Allow dropdown menus to open by hover on bigger devices.
  */
 $(function () {
-    if ($(window).width() > 992) {
+    if ($(window).width() > 1200) {
         $('.navbar .dropdown > .nav-link').click(function (e) {
             var href = $(this).attr('href');
             if (href != '#') {
@@ -51,11 +51,11 @@ $(function () {
         });
 
         $('.navbar .dropdown').hover(function () {
-            if ($(window).width() > 992) {
+            if ($(window).width() > 1200) {
                 $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
             }
         }, function () {
-            if ($(window).width() > 992) {
+            if ($(window).width() > 1200) {
                 $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
             }
         });
