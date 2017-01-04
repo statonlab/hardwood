@@ -44,7 +44,7 @@ $(function () {
 $(function () {
 
     $('.navbar .dropdown > .nav-link').click(function (e) {
-        if ($(window).width() > 768) {
+        if ($(window).width() > 992) {
             var href = $(this).attr('href');
             if (href != '#') {
                 return window.location.href = href;
@@ -53,11 +53,11 @@ $(function () {
     });
 
     $('.navbar .dropdown').hover(function () {
-        if ($(window).width() > 768) {
+        if ($(window).width() > 992) {
             $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
         }
     }, function () {
-        if ($(window).width() > 768) {
+        if ($(window).width() > 992) {
             $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
         }
     });
