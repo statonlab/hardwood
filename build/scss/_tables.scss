@@ -1,8 +1,9 @@
 table {
   @extend .table;
   max-width: 100% !important;
+
+  &,
   td {
-    white-space: normal;
     word-wrap: break-word;
   }
 
