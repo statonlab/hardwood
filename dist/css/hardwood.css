@@ -5244,7 +5244,7 @@ table {
   max-width: 100% !important; }
   table td {
     white-space: normal;
-    word-wrap: normal; }
+    word-wrap: break-word; }
   table .tripal-contents-table-td {
     white-space: nowrap; }
   table .tripal-data-pane {
