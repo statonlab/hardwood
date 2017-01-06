@@ -1,7 +1,7 @@
 table {
   @extend .table;
   max-width: 100% !important;
-
+  table-layout: fixed;
   td {
     white-space: normal;
     word-wrap: normal;
