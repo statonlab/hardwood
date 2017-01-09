@@ -4825,7 +4825,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-3 {
   margin-right: 1rem !important; }
 
-.mb-3 {
+.mb-3, .card {
   margin-bottom: 1rem !important; }
 
 .ml-3 {
@@ -6274,8 +6274,8 @@ legend {
 #edit-submit-d7-organism {
   margin-top: 32px; }
 
-.in {
-  display: block !important; }
+.collapse.in {
+  display: block; }
 
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }

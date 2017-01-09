@@ -104,6 +104,10 @@ legend {
   margin-top: 32px;
 }
 
-.in {
-  display: block !important;
+.collapse.in {
+  display: block;
+}
+
+.card {
+  @extend .mb-3;
 }
