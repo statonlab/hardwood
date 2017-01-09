@@ -41,6 +41,10 @@ Drupal.progressBar.prototype.setProgress = function (percentage, message) {
   if (this.updateCallback) {
     this.updateCallback(percentage, message, this);
   }
+
+  if(percentage == 100) {
+    $('div.progress-bar', this.element).removeClass('progress-bar-animated');
+  }
 };
 
 /**
