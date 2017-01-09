@@ -393,9 +393,9 @@ function hardwood_progress_bar($variables) {
   $output .= "<div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"{$variables['percent']}\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>";
   $output .= "</div>";
 
-  $output .= '<div id="progress" class="progress">';
+  $output .= '<div id="progress" class="progress">just a check';
   $output .= '<div class="bar"><div class="filled" style="width: ' . $variables['percent'] . '%"></div></div>';
-  $output .= '<div class="percentage">' . $variables['percent'] . '% just a check</div>';
+  $output .= '<div class="percentage">' . $variables['percent'] . '%</div>';
   $output .= '<div class="message">' . $variables['message'] . '</div>';
   $output .= '</div>';
 
