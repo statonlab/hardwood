@@ -262,7 +262,7 @@ function hardwood_status_messages($variables) {
  * @return string
  */
 function hardwood_menu_tree__primary(array &$variables) {
-  return '<ul class="menu nav navbar-nav float-lg-right">' . $variables['tree'] . '</ul>';
+  return '<ul class="navbar-nav float-right ml-auto">' . $variables['tree'] . '</ul>';
 }
 
 /**
