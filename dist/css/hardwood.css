@@ -5286,3 +5286,6 @@ table {
 
 .collapsed > .fieldset-wrapper {
   display: none; }
+
+.download-page {
+  margin-top: 0 !important; }
