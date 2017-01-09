@@ -388,7 +388,7 @@ function hardwood_js_alter(&$javascript) {
  * @param $variables
  * @return string
  */
-function theme_progress_bar($variables) {
+function hardwood_progress_bar($variables) {
   $output = "<div class=\"progress\">";
   $output .= "<div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"{$variables['percent']}\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>";
   $output .= "</div>";
