@@ -36,3 +36,4 @@ scripts[] = dist/js/jquery.min.js
 scripts[] = dist/js/tether.min.js
 scripts[] = dist/js/bootstrap.min.js
 scripts[] = dist/js/hardwood.js
+scripts[] = dist/js/_progress.js
