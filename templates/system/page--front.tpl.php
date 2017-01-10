@@ -73,127 +73,118 @@
 ?>
 
 <div id="page-wrapper">
-  <div id="page">
+ <div id="page">
 
-    <?php include_once "navbar.inc.php"; ?>
+   <?php include_once "navbar.inc.php"; ?>
 
-    <!-- FRONT PAGE JUMBOTRON -->
-    <div class="jumbotron front-page">
-      <div class="jumbotron-inner">
-        <div class="container">
-         <div class="row">
-          <div class="col-12">
+  <!-- FRONT PAGE JUMBOTRON -->
+  <div class="jumbotron front-page">
+   <div class="jumbotron-inner">
+    <div class="container">
+     <div class="row">
+      <div class="col-12">
 
-           <h1 class="text-center">
-            Welcome to the Hardwood Genomics Project
-           </h1>
-           <p class="lead text-center">
-            Genomic resources for hardwood trees
-           </p>
-           <div class="margin-top-1 text-center">
-            <a href="/contact" class="btn btn-success">Contribute Data</a>
-            <a href="/contact" class="btn btn-outline-secondary">Contact Us</a>
-           </div>
+       <h1 class="text-center">
+        Welcome to the Hardwood Genomics Project
+       </h1>
+       <p class="lead text-center">
+        Genomic resources for hardwood trees
+       </p>
+       <div class="margin-top-1 text-center">
+        <a href="/contact" class="btn btn-success">Contribute Data</a>
+        <a href="/contact" class="btn btn-outline-secondary">Contact Us</a>
+       </div>
 
-          </div>
-         </div>
-        </div>
       </div>
+     </div>
     </div>
-
-    <?php if ($page['front_search']): ?>
-      <div class="section bg-gray">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-10 offset-lg-1 col-xl-6 offset-xl-3 input-group-lg">
-              <?php print render($page['front_search']); ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if ($messages): ?>
-      <div class="section">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <?php print $messages; ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <div id="main-wrapper">
-      <div id="main" class="clearfix">
-
-        <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) ? 'col-sm-8 col-md-9' : 'col-12'; ?>
-        <?php if ($page['content']): ?>
-          <div class="section">
-            <div class="container">
-              <div class="row">
-                <div class="<?php print $main_content_classes; ?>">
-                  <a id="main-content"></a>
-                  <?php if ($tabs): ?>
-                    <?php print render($tabs); ?>
-                  <?php endif; ?>
-
-                  <?php print render($page['content']); ?>
-
-                </div>
-
-                <div class="col-sm-4 col-md-3">
-                  <?php if ($page['sidebar_first']): ?>
-                    <div class="card">
-                      <div class="card-block">
-                        <div id="sidebar-first" class="column sidebar">
-                          <?php print render($page['sidebar_first']); ?>
-                        </div> <!-- /#sidebar-first -->
-                      </div>
-                    </div>
-
-                  <?php endif; ?>
-
-                  <?php if ($page['sidebar_second']): ?>
-                    <div class="card">
-                      <div class="card-block">
-                        <div id="sidebar-second" class="column sidebar">
-                          <?php print render($page['sidebar_second']); ?>
-                        </div> <!-- /#sidebar-second -->
-                      </div>
-                    </div>
-
-                  <?php endif; ?>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        <?php endif; ?>
-      </div>
-    </div> <!-- /#main, /#main-wrapper -->
-
-    <div id="footer" class="secondary-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <?php print render($page['footer']); ?>
-          </div>
-        </div>
-      </div>
-    </div> <!-- /#footer -->
-
-    <div class="section bg-inverse">
-      <div class="container">
-        <div class="col-sm-4">
-          <img src="<?php print base_path() . path_to_theme() . '/dist/images/ut3.png'; ?>" alt="UTK Logo" class="img-fluid img-max-h100">
-        </div>
-        <div class="col-sm-4 text-center">
-          <img src="<?php print base_path() . path_to_theme() . '/dist/images/nsf.gif'; ?>" alt="NSF Logo" class="img-fluid img-max-h100">
-        </div>
-      </div>
-    </div>
-
+   </div>
   </div>
+
+   <?php if ($page['front_search']): ?>
+    <div class="section bg-gray">
+     <div class="container">
+      <div class="row">
+       <div class="col-12 col-lg-10 offset-lg-1 col-xl-6 offset-xl-3 input-group-lg">
+         <?php print render($page['front_search']); ?>
+       </div>
+      </div>
+     </div>
+    </div>
+   <?php endif; ?>
+
+   <?php if ($messages): ?>
+    <div class="section">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+         <?php print $messages; ?>
+       </div>
+      </div>
+     </div>
+    </div>
+   <?php endif; ?>
+
+  <div id="main-wrapper">
+   <div id="main" class="clearfix">
+
+     <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) ? 'col-sm-8 col-md-9' : 'col-12'; ?>
+     <?php if ($page['content']): ?>
+      <div class="section">
+       <div class="container">
+        <div class="row">
+         <div class="<?php print $main_content_classes; ?>">
+          <a id="main-content"></a>
+           <?php if ($tabs): ?>
+             <?php print render($tabs); ?>
+           <?php endif; ?>
+
+           <?php print render($page['content']); ?>
+
+         </div>
+
+         <div class="col-sm-4 col-md-3">
+           <?php if ($page['sidebar_first']): ?>
+            <div class="card">
+             <div class="card-block">
+              <div id="sidebar-first" class="column sidebar">
+                <?php print render($page['sidebar_first']); ?>
+              </div> <!-- /#sidebar-first -->
+             </div>
+            </div>
+
+           <?php endif; ?>
+
+           <?php if ($page['sidebar_second']): ?>
+            <div class="card">
+             <div class="card-block">
+              <div id="sidebar-second" class="column sidebar">
+                <?php print render($page['sidebar_second']); ?>
+              </div> <!-- /#sidebar-second -->
+             </div>
+            </div>
+
+           <?php endif; ?>
+         </div>
+
+        </div>
+       </div>
+      </div>
+     <?php endif; ?>
+   </div>
+  </div> <!-- /#main, /#main-wrapper -->
+
+  <div id="footer" class="secondary-footer">
+   <div class="container">
+    <div class="row">
+     <div class="col-12">
+       <?php print render($page['footer']); ?>
+     </div>
+    </div>
+   </div>
+  </div> <!-- /#footer -->
+
+  <?php include_once "footer.inc.php"; ?>
+
+ </div>
 </div> <!-- /#page, /#page-wrapper -->
