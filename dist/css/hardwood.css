@@ -6318,7 +6318,6 @@ table {
   /*.tripal-data-pane {
     width: 95%;
   }*/ }
-  table,
   table td {
     word-wrap: break-word;
     word-break: break-all; }
