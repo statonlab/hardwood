@@ -6318,6 +6318,8 @@ table {
   /*.tripal-data-pane {
     width: 95%;
   }*/ }
+  table th {
+    word-break: normal; }
   table td {
     word-wrap: break-word;
     word-break: break-all; }
