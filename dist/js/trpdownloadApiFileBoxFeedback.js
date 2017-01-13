@@ -42,7 +42,7 @@
 
             // If our progress is complete then stop checking.
             if (progress.percentage == 100) {
-              btn.removeAttr("disabled");
+              btn.removeAttr("disabled").removeClass('disabled');
               return;
             }
             // Only if our progress is not complete, disable link

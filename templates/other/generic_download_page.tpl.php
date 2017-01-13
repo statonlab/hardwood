@@ -36,22 +36,24 @@ $info = $variables['download_args']['type_info'];
    </div>
    <div class="progress-pane"></div>
 
-   <div class="text-center">
-     <?php print l(
-       '<i class="fa fa-download"></i> ' . t('Download'),
-       $variables['file_download_url'],
-       array(
-         'attributes' => array(
-           'download' => $variables['download_args']['filename'],
-           'target' => '_blank',
-           'class' => array('btn', 'btn-primary', 'btn-lg'),
-           'disabled' => 'disabled',
-           'id' => 'download-btn'
-         ),
-         'html' => TRUE
-       )
-     ); ?>
-   </div>
+    <div class="row">
+     <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-4">
+       <?php print l(
+         '<i class="fa fa-download"></i> ' . t('Download'),
+         $variables['file_download_url'],
+         array(
+           'attributes' => array(
+             'download' => $variables['download_args']['filename'],
+             'target' => '_blank',
+             'class' => array('btn', 'btn-primary', 'btn-lg', 'disabled', 'btn-block'),
+             'disabled' => 'disabled',
+             'id' => 'download-btn'
+           ),
+           'html' => TRUE
+         )
+       ); ?>
+     </div>
+    </div>
 
    <div class="inner-pane summary">
      <?php if (isset($info['functions']['summarize']) AND function_exists($info['functions']['summarize'])) { ?>
