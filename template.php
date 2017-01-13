@@ -339,6 +339,9 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['show_blast_report']['theme path'] = $path . '/templates';
   $theme_registry['show_blast_report']['path'] = $path . '/templates';
   $theme_registry['show_blast_report']['template'] = 'blast/blast_report';
+
+  $theme_registry['trpdownload_page']['path'] = $path . '/templates';
+  $theme_registry['trpdownload_page']['template'] = 'other/generic_download_page';
 }
 
 /**
