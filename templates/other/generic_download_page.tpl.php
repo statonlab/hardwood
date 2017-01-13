@@ -38,7 +38,7 @@ $info = $variables['download_args']['type_info'];
 
    <div class="download-pane">
     <div class="inner-pane file">
-     <h2>File:</h2>
+     <h5>File:</h5>
      <div class="file-link">
       <div class="text-center">
         <?php print l(
@@ -55,7 +55,8 @@ $info = $variables['download_args']['type_info'];
       </div>
      </div>
      <div class="file-format">
-      Format: <?php print $variables['download_args']['format_name'] ?></div>
+      Format: <?php print $variables['download_args']['format_name'] ?>
+     </div>
     </div>
     <div class="inner-pane summary">
       <?php if (isset($info['functions']['summarize']) AND function_exists($info['functions']['summarize'])) { ?>
