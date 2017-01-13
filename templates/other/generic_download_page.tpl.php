@@ -36,23 +36,25 @@ $info = $variables['download_args']['type_info'];
    </div>
    <div class="progress-pane"></div>
 
+   <div class="text-center">
+     <?php print l(
+       '<i class="fa fa-download"></i> '.t('Download'),
+       $variables['file_download_url'],
+       array(
+         'attributes' => array(
+           'download' => $variables['download_args']['filename'],
+           'target' => '_blank',
+           'class' => array('btn', 'btn-primary')
+         )
+       )
+     ); ?>
+   </div>
+
    <div class="download-pane">
     <div class="inner-pane file">
      <h5>File:</h5>
      <div class="file-link">
-      <div class="text-center">
-        <?php print l(
-          $variables['download_args']['filename'],
-          $variables['file_download_url'],
-          array(
-            'attributes' => array(
-              'download' => $variables['download_args']['filename'],
-              'target' => '_blank',
-              'class' => array('btn', 'btn-primary')
-            )
-          )
-        ); ?>
-      </div>
+
      </div>
      <div class="file-format">
       Format: <?php print $variables['download_args']['format_name'] ?>
