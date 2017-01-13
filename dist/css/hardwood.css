@@ -6337,11 +6337,11 @@ table {
   /*.tripal-data-pane {
     width: 95%;
   }*/ }
-  table th {
+  table th,
+  table td {
     word-break: normal; }
   table td {
-    word-wrap: break-word;
-    word-break: break-all; }
+    word-wrap: break-word; }
   table .tripal-contents-table-td {
     white-space: nowrap; }
   table.tripal-organism-data-table th {

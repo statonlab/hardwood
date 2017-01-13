@@ -2,12 +2,12 @@ table {
   @extend .table;
   max-width: 100% !important;
 
-  th {
+  th,
+  td {
     word-break: normal;
   }
   td {
     word-wrap: break-word;
-    word-break: break-all;
   }
 
   .tripal-contents-table-td {
