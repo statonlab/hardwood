@@ -53,14 +53,16 @@ $info = $variables['download_args']['type_info'];
          )
        ); ?>
      </div>
-    </div>
 
-   <div class="inner-pane summary">
-     <?php if (isset($info['functions']['summarize']) AND function_exists($info['functions']['summarize'])) { ?>
-      <h2>Summary:</h2>
-       <?php print call_user_func($info['functions']['summarize'], $variables, drupal_get_query_parameters());
-     } ?>
-   </div>
+     <div class="clearfix"></div>
+
+     <div class="col-12">
+       <?php if (isset($info['functions']['summarize']) AND function_exists($info['functions']['summarize'])) { ?>
+        <h2>Summary:</h2>
+         <?php print call_user_func($info['functions']['summarize'], $variables, drupal_get_query_parameters());
+       } ?>
+     </div>
+    </div>
 
   <?php }
   else { ?>
