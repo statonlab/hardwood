@@ -22,6 +22,11 @@
     border: 2px solid $brand-success;
     padding: 0 5px;
     border-radius: $border-radius;
+    @include media-breakpoint-down(xs) {
+      height: 40px;
+      line-height: 40px;
+      font-size: 24px;
+    }
   }
 
   .logo-wrapper {
@@ -31,6 +36,10 @@
   .logo-text {
     letter-spacing: 2px;
     font-weight: bold;
+    @include media-breakpoint-down(xs) {
+      margin-top: 7px;
+      display: inline-block;
+    }
   }
 
   .dropdown-menu {
@@ -38,6 +47,23 @@
     @include media-breakpoint-up(lg) {
       max-height: 500px;
       overflow: auto;
+    }
+  }
+
+  .dropdown.open > .dropdown-menu {
+    display: block;
+  }
+
+  > .container {
+    @include media-breakpoint-down(xs) {
+      margin: 0 5px;
+    }
+  }
+
+  .navbar-toggler {
+    margin-top: 8px;
+    @include media-breakpoint-down(xs) {
+      margin-top: 4px;
     }
   }
 }
