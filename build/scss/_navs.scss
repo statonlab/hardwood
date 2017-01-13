@@ -13,7 +13,7 @@ ul.tabs {
 
 .tabs {
   + .card {
-    border-top: 0!important;
+    border-top: 0 !important;
   }
 }
 
@@ -39,4 +39,8 @@ ul.tabs {
       }
     }
   }
+}
+
+.dropdown.open > .dropdown-menu {
+  display: block;
 }

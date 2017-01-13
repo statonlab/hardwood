@@ -6313,6 +6313,9 @@ ul.tabs {
       .navbar .dropdown-menu > ul > li > a:hover {
         background: #f7f7f9; }
 
+.dropdown.open > .dropdown-menu {
+  display: block; }
+
 table {
   max-width: 100% !important;
   /*.tripal-data-pane {
