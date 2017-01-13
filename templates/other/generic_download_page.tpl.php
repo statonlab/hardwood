@@ -38,14 +38,15 @@ $info = $variables['download_args']['type_info'];
 
    <div class="text-center">
      <?php print l(
-       '<i class="fa fa-download"></i> '.t('Download'),
+       '<i class="fa fa-download"></i> ' . t('Download'),
        $variables['file_download_url'],
        array(
          'attributes' => array(
            'download' => $variables['download_args']['filename'],
            'target' => '_blank',
            'class' => array('btn', 'btn-primary')
-         )
+         ),
+         'html' => TRUE
        )
      ); ?>
    </div>
