@@ -35,10 +35,10 @@
               return;
             }
             // Update display.
-            pane.removeClass('file-not-ready');
+            /*pane.removeClass('file-not-ready');
             pane.removeClass('file-ready');
             pane.removeClass('file-error');
-            pane.addClass(progress.file_class);
+            pane.addClass(progress.file_class);*/
 
             // If our progress is complete then stop checking.
             if (progress.percentage == 100) {
