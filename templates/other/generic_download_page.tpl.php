@@ -44,7 +44,9 @@ $info = $variables['download_args']['type_info'];
          'attributes' => array(
            'download' => $variables['download_args']['filename'],
            'target' => '_blank',
-           'class' => array('btn', 'btn-primary', 'btn-lg')
+           'class' => array('btn', 'btn-primary', 'btn-lg'),
+           'disabled' => 'disabled',
+           'id' => 'download-btn'
          ),
          'html' => TRUE
        )
