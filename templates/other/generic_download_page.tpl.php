@@ -22,44 +22,55 @@ $info = $variables['download_args']['type_info'];
 <!-- Change the URL to include the job code and remove the query parameters.
       This is done via javascript/HTML5 in order to avoid the page refresh. -->
 <?php if (isset($variables['path'])) : ?>
-  <script>
-    window.history.replaceState('', 'Download: Job Submitted', "<?php print $variables['path'];?>");
-  </script>
+ <script>
+     window.history.replaceState('', 'Download: Job Submitted', "<?php print $variables['path'];?>");
+ </script>
 <?php endif; ?>
 
 <div class="download-page">
 
-<?php if (isset($variables['job_id'])) { ?>
+  <?php if (isset($variables['job_id'])) { ?>
 
-  <div class="context-text">We are working on generating the file you requested. Refer to the progress bar below for status.</div>
-  <div class="progress-pane"></div>
-  <div class="download-pane">
-    <?php print theme_image(array(
-      'path' => drupal_get_path('module','trpdownload_api').'/theme/icons/file_generic.128.png',
-      'alt' => 'file download icon',
-      'attributes' => array()
-    ));?>
+   <div class="context-text">We are working on generating the file you
+    requested. Refer to the progress bar below for status.
+   </div>
+   <div class="progress-pane"></div>
+
+   <div class="download-pane">
     <div class="inner-pane file">
-      <h2>File:</h2>
-      <div class="file-link">
+     <h2>File:</h2>
+     <div class="file-link">
+      <div class="text-center">
         <?php print l(
           $variables['download_args']['filename'],
           $variables['file_download_url'],
-          array('attributes' => array('download' => $variables['download_args']['filename'], 'target' => '_blank'))
-        );?></div>
-      <div class="file-format">Format: <?php print $variables['download_args']['format_name']?></div>
+          array(
+            'attributes' => array(
+              'download' => $variables['download_args']['filename'],
+              'target' => '_blank',
+              'class' => 'btn btn-lg btn-primary'
+            )
+          )
+        ); ?>
+      </div>
+     </div>
+     <div class="file-format">
+      Format: <?php print $variables['download_args']['format_name'] ?></div>
     </div>
     <div class="inner-pane summary">
       <?php if (isset($info['functions']['summarize']) AND function_exists($info['functions']['summarize'])) { ?>
-      <h2>Summary:</h2>
+       <h2>Summary:</h2>
         <?php print call_user_func($info['functions']['summarize'], $variables, drupal_get_query_parameters());
       } ?>
     </div>
-  </div>
+   </div>
 
-<?php } else { ?>
+  <?php }
+  else { ?>
 
-  <div class="messages error">We are unable to generate the file you requested. Please contact the Site Administrator.</div>
+   <div class="messages error">We are unable to generate the file you requested.
+    Please contact the Site Administrator.
+   </div>
 
-<?php } ?>
+  <?php } ?>
 </div>
