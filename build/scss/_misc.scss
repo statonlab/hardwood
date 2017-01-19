@@ -21,7 +21,7 @@
 }
 
 .bg-inverse {
-  background: #2a2730!important;
+  background: #2a2730 !important;
 }
 
 .img-max-h100 {
@@ -65,7 +65,7 @@ fieldset {
   border: 1px groove $card-border-color !important;
   padding: 0 $spacer-x $spacer-y $spacer-x !important;
   margin: 0 0 $spacer-y 0 !important;
-  box-shadow:  none;
+  box-shadow: none;
 }
 
 legend {
@@ -91,9 +91,9 @@ legend {
   @extend .btn-link;
 }
 
-.tripal-contents-table-td.tripal-contents-table-td-toc{
+.tripal-contents-table-td.tripal-contents-table-td-toc {
   border-right: 1px solid $table-border-color !important;
-  border-top: 0!important;
+  border-top: 0 !important;
 }
 
 #page-title {
@@ -117,6 +117,14 @@ legend {
   width: 60px;
   > i {
     margin-top: 5px;
+  }
+}
+
+.table-valign-middle {
+  > tbody > tr > td,
+  > tbody > tr > th,
+  > thead > tr > th {
+    vertical-align: middle;
   }
 }
 

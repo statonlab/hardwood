@@ -6302,6 +6302,11 @@ legend {
   .download-td > i {
     margin-top: 5px; }
 
+.table-valign-middle > tbody > tr > td,
+.table-valign-middle > tbody > tr > th,
+.table-valign-middle > thead > tr > th {
+  vertical-align: middle; }
+
 .font-normal {
   font-weight: normal; }
 
