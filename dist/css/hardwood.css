@@ -6300,11 +6300,6 @@ legend {
   font-size: 40px;
   width: 60px; }
 
-.table-valign-middle > tbody > tr > td,
-.table-valign-middle > tbody > tr > th,
-.table-valign-middle > thead > tr > th {
-  vertical-align: middle; }
-
 .font-normal {
   font-weight: normal; }
 
@@ -6358,6 +6353,15 @@ table {
     white-space: nowrap; }
   table.tripal-organism-data-table th {
     min-width: 10px; }
+
+.table-valign-middle > tbody > tr > td,
+.table-valign-middle > tbody > tr > th,
+.table-valign-middle > thead > tr > th {
+  vertical-align: middle; }
+
+.table tr.no-border > td, table tr.no-border > td,
+.table tr.no-border > th, table tr.no-border > th {
+  border: 0; }
 
 .alignment-subrow {
   font-size: 0.875rem; }

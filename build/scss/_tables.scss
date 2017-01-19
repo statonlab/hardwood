@@ -24,3 +24,18 @@ table {
     }
   }
 }
+
+.table-valign-middle {
+  > tbody > tr > td,
+  > tbody > tr > th,
+  > thead > tr > th {
+    vertical-align: middle;
+  }
+}
+
+.table tr.no-border {
+  > td,
+  > th {
+    border: 0;
+  }
+}
