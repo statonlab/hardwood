@@ -6301,6 +6301,9 @@ legend {
   margin-top: 5px;
   width: 60px; }
 
+.font-normal {
+  font-weight: normal; }
+
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
   .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
