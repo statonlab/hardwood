@@ -6296,6 +6296,11 @@ legend {
 .collapse.in {
   display: block; }
 
+.download-td {
+  font-size: 40px;
+  margin-top: 5px;
+  width: 60px; }
+
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
   .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
