@@ -6298,8 +6298,9 @@ legend {
 
 .download-td {
   font-size: 40px;
-  margin-top: 5px;
   width: 60px; }
+  .download-td > i {
+    margin-top: 5px; }
 
 .font-normal {
   font-weight: normal; }

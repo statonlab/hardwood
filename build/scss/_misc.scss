@@ -114,8 +114,10 @@ legend {
 
 .download-td {
   font-size: 40px;
-  margin-top: 5px;
   width: 60px;
+  > i {
+    margin-top: 5px;
+  }
 }
 
 .font-normal {
