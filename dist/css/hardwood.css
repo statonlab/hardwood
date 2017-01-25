@@ -6215,6 +6215,9 @@ body {
 #breadcrumb {
   margin-top: 15px; }
 
+body {
+  font-size: 16px; }
+
 .text-xs {
   font-size: 0.75rem; }
 
