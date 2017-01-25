@@ -47,18 +47,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 
 <head profile="<?php print $grddl_profile; ?>">
-    <?php print $head; ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?php print $head_title; ?></title>
-    <?php print $styles; ?>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet">
+  <?php print $head; ?>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta http-equiv="x-ua-compatible" content="ie=edge">
+ <title><?php print $head_title; ?></title>
+  <?php print $styles; ?>
+ <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700" rel="stylesheet">
 
-    <?php print $scripts; ?>
+  <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
 <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+ <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 </div>
 <?php print $page_top; ?>
 <?php print $page; ?>
