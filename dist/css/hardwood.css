@@ -6299,10 +6299,6 @@ legend {
 .collapse.in {
   display: block; }
 
-.download-td {
-  font-size: 40px;
-  width: 60px; }
-
 .font-normal {
   font-weight: normal; }
 
@@ -6368,6 +6364,10 @@ table {
 .table tr.no-border > td, table tr.no-border > td,
 .table tr.no-border > th, table tr.no-border > th {
   border: 0; }
+
+.download-td {
+  font-size: 40px;
+  width: 45px; }
 
 .alignment-subrow {
   font-size: 0.875rem; }
