@@ -52,9 +52,9 @@
  <meta http-equiv="x-ua-compatible" content="ie=edge">
  <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
 
-  <?php print $scripts; ?>
+ <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
 <div id="skip-link">
