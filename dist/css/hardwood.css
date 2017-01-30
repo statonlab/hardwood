@@ -6169,10 +6169,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-white {
   color: #fff !important; }
 
-.text-muted, .submitted {
+.text-muted, .submitted, td .description {
   color: #636c72 !important; }
 
-a.text-muted:focus, a.submitted:focus, a.text-muted:hover, a.submitted:hover {
+a.text-muted:focus, a.submitted:focus, td a.description:focus, a.text-muted:hover, a.submitted:hover, td a.description:hover {
   color: #4b5257 !important; }
 
 .text-primary {

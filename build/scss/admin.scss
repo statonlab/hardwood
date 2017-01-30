@@ -85,3 +85,7 @@
     font-size: 12px;
   }
 }
+
+td .description {
+  @extend .text-muted;
+}
