@@ -1,8 +1,10 @@
 ul.tabs {
-  margin-bottm: -1px;
   @extend .nav;
-  @extend .nav-tabs;
-
+  @extend .nav-pills;
+  margin-bottom: 1rem;
+  border: 1px solid $card-border-color;
+  padding: .5rem;
+  border-radius: $card-border-radius;
   > li {
     @extend .nav-item;
     > a {
@@ -12,9 +14,7 @@ ul.tabs {
 }
 
 .tabs {
-  + .card {
-    border-top: 0 !important;
-  }
+
 }
 
 .navbar {

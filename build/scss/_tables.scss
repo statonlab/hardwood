@@ -8,8 +8,8 @@ table {
   }
   td {
     word-wrap: break-word;
-    @include media-breakpoint-down(lg) {
-      word-break: break-all;
+    @include media-breakpoint-down(md) {
+      //word-break: break-all;
     }
   }
 
@@ -46,4 +46,25 @@ table {
 .download-td {
   font-size: 40px;
   width: 45px;
+}
+
+#menu-overview {
+  @extend .table-sm;
+  td, th {
+    vertical-align: middle;
+  }
+}
+
+.action-links {
+  @extend .nav;
+  @extend .nav-pills;
+  @extend .flex-column;
+  @extend .flex-sm-row;
+
+  > li {
+    @extend .nav-item;
+    > a {
+      @extend .nav-link;
+    }
+  }
 }

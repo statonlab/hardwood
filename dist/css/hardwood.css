@@ -1384,8 +1384,8 @@ pre {
   .table .table, table .table, .table table, table table {
     background-color: #fff; }
 
-.table-sm th,
-.table-sm td {
+.table-sm th, #menu-overview th,
+.table-sm td, #menu-overview td {
   padding: 0.3rem; }
 
 .table-bordered {
@@ -2629,65 +2629,199 @@ tbody.collapse.show {
   .custom-file-control:lang(en)::before {
     content: "Browse"; }
 
-.nav, ul.tabs {
+.nav, ul.tabs, .action-links, #block-system-management .menu,
+#block-system-management .menu ul {
   display: flex;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
 
-.nav-link, ul.tabs > li > a {
+.nav-link, ul.tabs > li > a, .action-links > li > a, #block-system-management .menu > li > a,
+#block-system-management .menu ul > li > a {
   display: block;
   padding: 0.5em 1em; }
-  .nav-link:focus, ul.tabs > li > a:focus, .nav-link:hover, ul.tabs > li > a:hover {
+  .nav-link:focus, ul.tabs > li > a:focus, .action-links > li > a:focus, #block-system-management .menu > li > a:focus,
+  #block-system-management .menu ul > li > a:focus, .nav-link:hover, ul.tabs > li > a:hover, .action-links > li > a:hover, #block-system-management .menu > li > a:hover,
+  #block-system-management .menu ul > li > a:hover {
     text-decoration: none; }
-  .nav-link.disabled, ul.tabs > li > a.disabled {
+  .nav-link.disabled, ul.tabs > li > a.disabled, .action-links > li > a.disabled, #block-system-management .menu > li > a.disabled,
+  #block-system-management .menu ul > li > a.disabled {
     color: #636c72;
     cursor: not-allowed; }
 
-.nav-tabs, ul.tabs {
+.nav-tabs {
   border-bottom: 1px solid #ddd; }
-  .nav-tabs .nav-item, ul.tabs .nav-item, .nav-tabs ul.tabs > li, ul.tabs > li {
+  .nav-tabs .nav-item, .nav-tabs ul.tabs > li, .nav-tabs .action-links > li, .nav-tabs #block-system-management .menu > li, #block-system-management .nav-tabs .menu > li, .nav-tabs
+  #block-system-management .menu ul > li,
+  #block-system-management .menu .nav-tabs ul > li {
     margin-bottom: -1px; }
-  .nav-tabs .nav-link, ul.tabs .nav-link, .nav-tabs ul.tabs > li > a, ul.tabs > li > a {
+  .nav-tabs .nav-link, .nav-tabs ul.tabs > li > a, .nav-tabs .action-links > li > a, .nav-tabs #block-system-management .menu > li > a, #block-system-management .nav-tabs .menu > li > a, .nav-tabs
+  #block-system-management .menu ul > li > a,
+  #block-system-management .menu .nav-tabs ul > li > a {
     border: 1px solid transparent;
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 0.25rem; }
-    .nav-tabs .nav-link:focus, ul.tabs .nav-link:focus, .nav-tabs ul.tabs > li > a:focus, ul.tabs > li > a:focus, .nav-tabs .nav-link:hover, ul.tabs .nav-link:hover, .nav-tabs ul.tabs > li > a:hover, ul.tabs > li > a:hover {
+    .nav-tabs .nav-link:focus, .nav-tabs ul.tabs > li > a:focus, .nav-tabs .action-links > li > a:focus, .nav-tabs #block-system-management .menu > li > a:focus, #block-system-management .nav-tabs .menu > li > a:focus, .nav-tabs
+    #block-system-management .menu ul > li > a:focus,
+    #block-system-management .menu .nav-tabs ul > li > a:focus, .nav-tabs .nav-link:hover, .nav-tabs ul.tabs > li > a:hover, .nav-tabs .action-links > li > a:hover, .nav-tabs #block-system-management .menu > li > a:hover, #block-system-management .nav-tabs .menu > li > a:hover, .nav-tabs
+    #block-system-management .menu ul > li > a:hover,
+    #block-system-management .menu .nav-tabs ul > li > a:hover {
       border-color: #eceeef #eceeef #ddd; }
-    .nav-tabs .nav-link.disabled, ul.tabs .nav-link.disabled, .nav-tabs ul.tabs > li > a.disabled, ul.tabs > li > a.disabled {
+    .nav-tabs .nav-link.disabled, .nav-tabs ul.tabs > li > a.disabled, .nav-tabs .action-links > li > a.disabled, .nav-tabs #block-system-management .menu > li > a.disabled, #block-system-management .nav-tabs .menu > li > a.disabled, .nav-tabs
+    #block-system-management .menu ul > li > a.disabled,
+    #block-system-management .menu .nav-tabs ul > li > a.disabled {
       color: #636c72;
       background-color: transparent;
       border-color: transparent; }
-  .nav-tabs .nav-link.active, ul.tabs .nav-link.active, .nav-tabs ul.tabs > li > a.active, ul.tabs > li > a.active,
-  .nav-tabs .nav-item.show .nav-link, ul.tabs .nav-item.show .nav-link,
-  .nav-tabs ul.tabs > li.show .nav-link, ul.tabs > li.show .nav-link,
-  .nav-tabs .nav-item.show ul.tabs > li > a, ul.tabs .nav-item.show ul.tabs > li > a,
-  .nav-tabs ul.tabs > li.show ul.tabs > li > a, ul.tabs > li.show ul.tabs > li > a {
+  .nav-tabs .nav-link.active, .nav-tabs ul.tabs > li > a.active, .nav-tabs .action-links > li > a.active, .nav-tabs #block-system-management .menu > li > a.active, #block-system-management .nav-tabs .menu > li > a.active, .nav-tabs
+  #block-system-management .menu ul > li > a.active,
+  #block-system-management .menu .nav-tabs ul > li > a.active,
+  .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs ul.tabs > li.show .nav-link,
+  .nav-tabs .action-links > li.show .nav-link,
+  .nav-tabs #block-system-management .menu > li.show .nav-link, #block-system-management
+  .nav-tabs .menu > li.show .nav-link,
+  .nav-tabs
+  #block-system-management .menu ul > li.show .nav-link,
+  #block-system-management .menu
+  .nav-tabs ul > li.show .nav-link,
+  .nav-tabs .nav-item.show ul.tabs > li > a,
+  .nav-tabs ul.tabs > li.show ul.tabs > li > a,
+  .nav-tabs .action-links > li.show ul.tabs > li > a,
+  .nav-tabs .nav-item.show .action-links > li > a,
+  .nav-tabs ul.tabs > li.show .action-links > li > a,
+  .nav-tabs .action-links > li.show .action-links > li > a,
+  .nav-tabs #block-system-management .menu > li.show .action-links > li > a, #block-system-management
+  .nav-tabs .menu > li.show .action-links > li > a,
+  .nav-tabs
+  #block-system-management .menu ul > li.show .action-links > li > a,
+  #block-system-management .menu
+  .nav-tabs ul > li.show .action-links > li > a,
+  .nav-tabs .nav-item.show #block-system-management .menu > li > a, #block-system-management
+  .nav-tabs .nav-item.show .menu > li > a,
+  .nav-tabs ul.tabs > li.show #block-system-management .menu > li > a, #block-system-management
+  .nav-tabs ul.tabs > li.show .menu > li > a,
+  .nav-tabs .action-links > li.show #block-system-management .menu > li > a, #block-system-management
+  .nav-tabs .action-links > li.show .menu > li > a,
+  .nav-tabs #block-system-management .menu > li.show .menu > li > a, #block-system-management
+  .nav-tabs .menu > li.show .menu > li > a,
+  .nav-tabs #block-system-management .menu ul > li.show .menu > li > a, #block-system-management .menu
+  .nav-tabs ul > li.show .menu > li > a,
+  .nav-tabs .nav-item.show
+  #block-system-management .menu ul > li > a,
+  #block-system-management .menu
+  .nav-tabs .nav-item.show ul > li > a,
+  .nav-tabs ul.tabs > li.show
+  #block-system-management .menu ul > li > a,
+  .nav-tabs .action-links > li.show
+  #block-system-management .menu ul > li > a,
+  #block-system-management .menu
+  .nav-tabs .action-links > li.show ul > li > a,
+  .nav-tabs #block-system-management .menu > li.show ul > li > a, #block-system-management
+  .nav-tabs .menu > li.show ul > li > a,
+  .nav-tabs #block-system-management .menu ul > li.show ul > li > a, #block-system-management .menu
+  .nav-tabs ul > li.show ul > li > a {
     color: #464a4c;
     background-color: #fff;
     border-color: #ddd #ddd #fff; }
-  .nav-tabs .dropdown-menu, ul.tabs .dropdown-menu {
+  .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-right-radius: 0;
     border-top-left-radius: 0; }
 
-.nav-pills .nav-link, .nav-pills ul.tabs > li > a {
+.nav-pills .nav-link, ul.tabs .nav-link, .action-links .nav-link, .nav-pills ul.tabs > li > a, ul.tabs > li > a, .action-links ul.tabs > li > a, .nav-pills .action-links > li > a, ul.tabs .action-links > li > a, .action-links > li > a, .nav-pills #block-system-management .menu > li > a, #block-system-management .nav-pills .menu > li > a, ul.tabs #block-system-management .menu > li > a, #block-system-management ul.tabs .menu > li > a, .action-links #block-system-management .menu > li > a, #block-system-management .action-links .menu > li > a, .nav-pills
+#block-system-management .menu ul > li > a,
+#block-system-management .menu .nav-pills ul > li > a, ul.tabs
+#block-system-management .menu ul > li > a,
+#block-system-management .menu ul.tabs ul > li > a, .action-links
+#block-system-management .menu ul > li > a,
+#block-system-management .menu .action-links ul > li > a {
   border-radius: 0.25rem; }
 
-.nav-pills .nav-link.active, .nav-pills ul.tabs > li > a.active,
-.nav-pills .nav-item.show .nav-link,
-.nav-pills ul.tabs > li.show .nav-link,
-.nav-pills .nav-item.show ul.tabs > li > a,
-.nav-pills ul.tabs > li.show ul.tabs > li > a {
+.nav-pills .nav-link.active, ul.tabs .nav-link.active, .action-links .nav-link.active, .nav-pills ul.tabs > li > a.active, ul.tabs > li > a.active, .action-links ul.tabs > li > a.active, .nav-pills .action-links > li > a.active, ul.tabs .action-links > li > a.active, .action-links > li > a.active, .nav-pills #block-system-management .menu > li > a.active, #block-system-management .nav-pills .menu > li > a.active, ul.tabs #block-system-management .menu > li > a.active, #block-system-management ul.tabs .menu > li > a.active, .action-links #block-system-management .menu > li > a.active, #block-system-management .action-links .menu > li > a.active, .nav-pills
+#block-system-management .menu ul > li > a.active,
+#block-system-management .menu .nav-pills ul > li > a.active, ul.tabs
+#block-system-management .menu ul > li > a.active,
+#block-system-management .menu ul.tabs ul > li > a.active, .action-links
+#block-system-management .menu ul > li > a.active,
+#block-system-management .menu .action-links ul > li > a.active,
+.nav-pills .nav-item.show .nav-link, ul.tabs .nav-item.show .nav-link, .action-links .nav-item.show .nav-link,
+.nav-pills ul.tabs > li.show .nav-link, ul.tabs > li.show .nav-link, .action-links ul.tabs > li.show .nav-link,
+.nav-pills .action-links > li.show .nav-link, ul.tabs .action-links > li.show .nav-link, .action-links > li.show .nav-link,
+.nav-pills #block-system-management .menu > li.show .nav-link, #block-system-management
+.nav-pills .menu > li.show .nav-link, ul.tabs #block-system-management .menu > li.show .nav-link, #block-system-management ul.tabs .menu > li.show .nav-link, .action-links #block-system-management .menu > li.show .nav-link, #block-system-management .action-links .menu > li.show .nav-link,
+.nav-pills
+#block-system-management .menu ul > li.show .nav-link,
+#block-system-management .menu
+.nav-pills ul > li.show .nav-link, ul.tabs
+#block-system-management .menu ul > li.show .nav-link,
+#block-system-management .menu ul.tabs ul > li.show .nav-link, .action-links
+#block-system-management .menu ul > li.show .nav-link,
+#block-system-management .menu .action-links ul > li.show .nav-link,
+.nav-pills .nav-item.show ul.tabs > li > a, ul.tabs .nav-item.show ul.tabs > li > a, .action-links .nav-item.show ul.tabs > li > a,
+.nav-pills ul.tabs > li.show ul.tabs > li > a, ul.tabs > li.show ul.tabs > li > a, .action-links ul.tabs > li.show ul.tabs > li > a,
+.nav-pills .action-links > li.show ul.tabs > li > a, ul.tabs .action-links > li.show ul.tabs > li > a, .action-links > li.show ul.tabs > li > a,
+.nav-pills .nav-item.show .action-links > li > a, ul.tabs .nav-item.show .action-links > li > a, .action-links .nav-item.show .action-links > li > a,
+.nav-pills ul.tabs > li.show .action-links > li > a, ul.tabs > li.show .action-links > li > a, .action-links ul.tabs > li.show .action-links > li > a,
+.nav-pills .action-links > li.show .action-links > li > a, ul.tabs .action-links > li.show .action-links > li > a, .action-links > li.show .action-links > li > a,
+.nav-pills #block-system-management .menu > li.show .action-links > li > a, #block-system-management
+.nav-pills .menu > li.show .action-links > li > a, ul.tabs #block-system-management .menu > li.show .action-links > li > a, #block-system-management ul.tabs .menu > li.show .action-links > li > a, .action-links #block-system-management .menu > li.show .action-links > li > a, #block-system-management .action-links .menu > li.show .action-links > li > a,
+.nav-pills
+#block-system-management .menu ul > li.show .action-links > li > a,
+#block-system-management .menu
+.nav-pills ul > li.show .action-links > li > a, ul.tabs
+#block-system-management .menu ul > li.show .action-links > li > a,
+#block-system-management .menu ul.tabs ul > li.show .action-links > li > a, .action-links
+#block-system-management .menu ul > li.show .action-links > li > a,
+#block-system-management .menu .action-links ul > li.show .action-links > li > a,
+.nav-pills .nav-item.show #block-system-management .menu > li > a, #block-system-management
+.nav-pills .nav-item.show .menu > li > a, ul.tabs .nav-item.show #block-system-management .menu > li > a, #block-system-management ul.tabs .nav-item.show .menu > li > a, .action-links .nav-item.show #block-system-management .menu > li > a, #block-system-management .action-links .nav-item.show .menu > li > a,
+.nav-pills ul.tabs > li.show #block-system-management .menu > li > a, #block-system-management
+.nav-pills ul.tabs > li.show .menu > li > a, ul.tabs > li.show #block-system-management .menu > li > a, #block-system-management ul.tabs > li.show .menu > li > a, .action-links ul.tabs > li.show #block-system-management .menu > li > a, #block-system-management .action-links ul.tabs > li.show .menu > li > a,
+.nav-pills .action-links > li.show #block-system-management .menu > li > a, #block-system-management
+.nav-pills .action-links > li.show .menu > li > a, ul.tabs .action-links > li.show #block-system-management .menu > li > a, #block-system-management ul.tabs .action-links > li.show .menu > li > a, .action-links > li.show #block-system-management .menu > li > a, #block-system-management .action-links > li.show .menu > li > a,
+.nav-pills #block-system-management .menu > li.show .menu > li > a, #block-system-management
+.nav-pills .menu > li.show .menu > li > a, ul.tabs #block-system-management .menu > li.show .menu > li > a, #block-system-management ul.tabs .menu > li.show .menu > li > a, .action-links #block-system-management .menu > li.show .menu > li > a, #block-system-management .action-links .menu > li.show .menu > li > a,
+.nav-pills #block-system-management .menu ul > li.show .menu > li > a, #block-system-management .menu
+.nav-pills ul > li.show .menu > li > a, ul.tabs #block-system-management .menu ul > li.show .menu > li > a, #block-system-management .menu ul.tabs ul > li.show .menu > li > a, .action-links #block-system-management .menu ul > li.show .menu > li > a, #block-system-management .menu .action-links ul > li.show .menu > li > a,
+.nav-pills .nav-item.show
+#block-system-management .menu ul > li > a,
+#block-system-management .menu
+.nav-pills .nav-item.show ul > li > a, ul.tabs .nav-item.show
+#block-system-management .menu ul > li > a,
+#block-system-management .menu ul.tabs .nav-item.show ul > li > a, .action-links .nav-item.show
+#block-system-management .menu ul > li > a,
+#block-system-management .menu .action-links .nav-item.show ul > li > a,
+.nav-pills ul.tabs > li.show
+#block-system-management .menu ul > li > a, ul.tabs > li.show
+#block-system-management .menu ul > li > a,
+#block-system-management .menu ul.tabs > li.show ul > li > a, .action-links ul.tabs > li.show
+#block-system-management .menu ul > li > a,
+.nav-pills .action-links > li.show
+#block-system-management .menu ul > li > a,
+#block-system-management .menu
+.nav-pills .action-links > li.show ul > li > a, ul.tabs .action-links > li.show
+#block-system-management .menu ul > li > a,
+#block-system-management .menu ul.tabs .action-links > li.show ul > li > a, .action-links > li.show
+#block-system-management .menu ul > li > a,
+#block-system-management .menu .action-links > li.show ul > li > a,
+.nav-pills #block-system-management .menu > li.show ul > li > a, #block-system-management
+.nav-pills .menu > li.show ul > li > a, ul.tabs #block-system-management .menu > li.show ul > li > a, #block-system-management ul.tabs .menu > li.show ul > li > a, .action-links #block-system-management .menu > li.show ul > li > a, #block-system-management .action-links .menu > li.show ul > li > a,
+.nav-pills #block-system-management .menu ul > li.show ul > li > a, #block-system-management .menu
+.nav-pills ul > li.show ul > li > a, ul.tabs #block-system-management .menu ul > li.show ul > li > a, #block-system-management .menu ul.tabs ul > li.show ul > li > a, .action-links #block-system-management .menu ul > li.show ul > li > a, #block-system-management .menu .action-links ul > li.show ul > li > a {
   color: #fff;
   cursor: default;
   background-color: #5cb85c; }
 
-.nav-fill .nav-item, .nav-fill ul.tabs > li {
+.nav-fill .nav-item, .nav-fill ul.tabs > li, .nav-fill .action-links > li, .nav-fill #block-system-management .menu > li, #block-system-management .nav-fill .menu > li, .nav-fill
+#block-system-management .menu ul > li,
+#block-system-management .menu .nav-fill ul > li {
   flex: 1 1 auto;
   text-align: center; }
 
-.nav-justified .nav-item, .nav-justified ul.tabs > li {
+.nav-justified .nav-item, .nav-justified ul.tabs > li, .nav-justified .action-links > li, .nav-justified #block-system-management .menu > li, #block-system-management .nav-justified .menu > li, .nav-justified
+#block-system-management .menu ul > li,
+#block-system-management .menu .nav-justified ul > li {
   flex: 1 1 100%;
   text-align: center; }
 
@@ -2720,7 +2854,9 @@ tbody.collapse.show {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
-  .navbar-nav .nav-link, .navbar-nav ul.tabs > li > a {
+  .navbar-nav .nav-link, .navbar-nav ul.tabs > li > a, .navbar-nav .action-links > li > a, .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-nav .menu > li > a, .navbar-nav
+  #block-system-management .menu ul > li > a,
+  #block-system-management .menu .navbar-nav ul > li > a {
     padding-right: 0;
     padding-left: 0; }
 
@@ -2772,7 +2908,9 @@ tbody.collapse.show {
     align-items: center; }
     .navbar-toggleable .navbar-nav {
       flex-direction: row; }
-      .navbar-toggleable .navbar-nav .nav-link, .navbar-toggleable .navbar-nav ul.tabs > li > a {
+      .navbar-toggleable .navbar-nav .nav-link, .navbar-toggleable .navbar-nav ul.tabs > li > a, .navbar-toggleable .navbar-nav .action-links > li > a, .navbar-toggleable .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-toggleable .navbar-nav .menu > li > a, .navbar-toggleable .navbar-nav
+      #block-system-management .menu ul > li > a,
+      #block-system-management .menu .navbar-toggleable .navbar-nav ul > li > a {
         padding-right: .5rem;
         padding-left: .5rem; }
     .navbar-toggleable > .container {
@@ -2800,7 +2938,9 @@ tbody.collapse.show {
     align-items: center; }
     .navbar-toggleable-sm .navbar-nav {
       flex-direction: row; }
-      .navbar-toggleable-sm .navbar-nav .nav-link, .navbar-toggleable-sm .navbar-nav ul.tabs > li > a {
+      .navbar-toggleable-sm .navbar-nav .nav-link, .navbar-toggleable-sm .navbar-nav ul.tabs > li > a, .navbar-toggleable-sm .navbar-nav .action-links > li > a, .navbar-toggleable-sm .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-toggleable-sm .navbar-nav .menu > li > a, .navbar-toggleable-sm .navbar-nav
+      #block-system-management .menu ul > li > a,
+      #block-system-management .menu .navbar-toggleable-sm .navbar-nav ul > li > a {
         padding-right: .5rem;
         padding-left: .5rem; }
     .navbar-toggleable-sm > .container {
@@ -2828,7 +2968,9 @@ tbody.collapse.show {
     align-items: center; }
     .navbar-toggleable-md .navbar-nav {
       flex-direction: row; }
-      .navbar-toggleable-md .navbar-nav .nav-link, .navbar-toggleable-md .navbar-nav ul.tabs > li > a {
+      .navbar-toggleable-md .navbar-nav .nav-link, .navbar-toggleable-md .navbar-nav ul.tabs > li > a, .navbar-toggleable-md .navbar-nav .action-links > li > a, .navbar-toggleable-md .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-toggleable-md .navbar-nav .menu > li > a, .navbar-toggleable-md .navbar-nav
+      #block-system-management .menu ul > li > a,
+      #block-system-management .menu .navbar-toggleable-md .navbar-nav ul > li > a {
         padding-right: .5rem;
         padding-left: .5rem; }
     .navbar-toggleable-md > .container {
@@ -2856,7 +2998,9 @@ tbody.collapse.show {
     align-items: center; }
     .navbar-toggleable-lg .navbar-nav {
       flex-direction: row; }
-      .navbar-toggleable-lg .navbar-nav .nav-link, .navbar-toggleable-lg .navbar-nav ul.tabs > li > a {
+      .navbar-toggleable-lg .navbar-nav .nav-link, .navbar-toggleable-lg .navbar-nav ul.tabs > li > a, .navbar-toggleable-lg .navbar-nav .action-links > li > a, .navbar-toggleable-lg .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-toggleable-lg .navbar-nav .menu > li > a, .navbar-toggleable-lg .navbar-nav
+      #block-system-management .menu ul > li > a,
+      #block-system-management .menu .navbar-toggleable-lg .navbar-nav ul > li > a {
         padding-right: .5rem;
         padding-left: .5rem; }
     .navbar-toggleable-lg > .container {
@@ -2881,7 +3025,9 @@ tbody.collapse.show {
     padding-left: 0; }
   .navbar-toggleable-xl .navbar-nav {
     flex-direction: row; }
-    .navbar-toggleable-xl .navbar-nav .nav-link, .navbar-toggleable-xl .navbar-nav ul.tabs > li > a {
+    .navbar-toggleable-xl .navbar-nav .nav-link, .navbar-toggleable-xl .navbar-nav ul.tabs > li > a, .navbar-toggleable-xl .navbar-nav .action-links > li > a, .navbar-toggleable-xl .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-toggleable-xl .navbar-nav .menu > li > a, .navbar-toggleable-xl .navbar-nav
+    #block-system-management .menu ul > li > a,
+    #block-system-management .menu .navbar-toggleable-xl .navbar-nav ul > li > a {
       padding-right: .5rem;
       padding-left: .5rem; }
   .navbar-toggleable-xl > .container {
@@ -2902,20 +3048,51 @@ tbody.collapse.show {
   .navbar-light .navbar-toggler:hover {
     color: rgba(0, 0, 0, 0.9); }
 
-.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav ul.tabs > li > a {
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav ul.tabs > li > a, .navbar-light .navbar-nav .action-links > li > a, .navbar-light .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-light .navbar-nav .menu > li > a, .navbar-light .navbar-nav
+#block-system-management .menu ul > li > a,
+#block-system-management .menu .navbar-light .navbar-nav ul > li > a {
   color: rgba(0, 0, 0, 0.5); }
-  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav ul.tabs > li > a:focus, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav ul.tabs > li > a:hover {
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav ul.tabs > li > a:focus, .navbar-light .navbar-nav .action-links > li > a:focus, .navbar-light .navbar-nav #block-system-management .menu > li > a:focus, #block-system-management .navbar-light .navbar-nav .menu > li > a:focus, .navbar-light .navbar-nav
+  #block-system-management .menu ul > li > a:focus,
+  #block-system-management .menu .navbar-light .navbar-nav ul > li > a:focus, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav ul.tabs > li > a:hover, .navbar-light .navbar-nav .action-links > li > a:hover, .navbar-light .navbar-nav #block-system-management .menu > li > a:hover, #block-system-management .navbar-light .navbar-nav .menu > li > a:hover, .navbar-light .navbar-nav
+  #block-system-management .menu ul > li > a:hover,
+  #block-system-management .menu .navbar-light .navbar-nav ul > li > a:hover {
     color: rgba(0, 0, 0, 0.7); }
-  .navbar-light .navbar-nav .nav-link.disabled, .navbar-light .navbar-nav ul.tabs > li > a.disabled {
+  .navbar-light .navbar-nav .nav-link.disabled, .navbar-light .navbar-nav ul.tabs > li > a.disabled, .navbar-light .navbar-nav .action-links > li > a.disabled, .navbar-light .navbar-nav #block-system-management .menu > li > a.disabled, #block-system-management .navbar-light .navbar-nav .menu > li > a.disabled, .navbar-light .navbar-nav
+  #block-system-management .menu ul > li > a.disabled,
+  #block-system-management .menu .navbar-light .navbar-nav ul > li > a.disabled {
     color: rgba(0, 0, 0, 0.3); }
 
-.navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav ul.tabs > li.open > a,
+.navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav ul.tabs > li.open > a, .navbar-light .navbar-nav .action-links > li.open > a, .navbar-light .navbar-nav #block-system-management .menu > li.open > a, #block-system-management .navbar-light .navbar-nav .menu > li.open > a, .navbar-light .navbar-nav
+#block-system-management .menu ul > li.open > a,
+#block-system-management .menu .navbar-light .navbar-nav ul > li.open > a,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav ul.tabs > li.active > a,
+.navbar-light .navbar-nav .action-links > li.active > a,
+.navbar-light .navbar-nav #block-system-management .menu > li.active > a, #block-system-management
+.navbar-light .navbar-nav .menu > li.active > a,
+.navbar-light .navbar-nav
+#block-system-management .menu ul > li.active > a,
+#block-system-management .menu
+.navbar-light .navbar-nav ul > li.active > a,
 .navbar-light .navbar-nav .nav-link.open,
 .navbar-light .navbar-nav ul.tabs > li > a.open,
+.navbar-light .navbar-nav .action-links > li > a.open,
+.navbar-light .navbar-nav #block-system-management .menu > li > a.open, #block-system-management
+.navbar-light .navbar-nav .menu > li > a.open,
+.navbar-light .navbar-nav
+#block-system-management .menu ul > li > a.open,
+#block-system-management .menu
+.navbar-light .navbar-nav ul > li > a.open,
 .navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav ul.tabs > li > a.active {
+.navbar-light .navbar-nav ul.tabs > li > a.active,
+.navbar-light .navbar-nav .action-links > li > a.active,
+.navbar-light .navbar-nav #block-system-management .menu > li > a.active, #block-system-management
+.navbar-light .navbar-nav .menu > li > a.active,
+.navbar-light .navbar-nav
+#block-system-management .menu ul > li > a.active,
+#block-system-management .menu
+.navbar-light .navbar-nav ul > li > a.active {
   color: rgba(0, 0, 0, 0.9); }
 
 .navbar-light .navbar-toggler {
@@ -2935,20 +3112,51 @@ tbody.collapse.show {
   .navbar-inverse .navbar-toggler:hover {
     color: white; }
 
-.navbar-inverse .navbar-nav .nav-link, .navbar-inverse .navbar-nav ul.tabs > li > a {
+.navbar-inverse .navbar-nav .nav-link, .navbar-inverse .navbar-nav ul.tabs > li > a, .navbar-inverse .navbar-nav .action-links > li > a, .navbar-inverse .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-inverse .navbar-nav .menu > li > a, .navbar-inverse .navbar-nav
+#block-system-management .menu ul > li > a,
+#block-system-management .menu .navbar-inverse .navbar-nav ul > li > a {
   color: rgba(255, 255, 255, 0.5); }
-  .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav ul.tabs > li > a:focus, .navbar-inverse .navbar-nav .nav-link:hover, .navbar-inverse .navbar-nav ul.tabs > li > a:hover {
+  .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav ul.tabs > li > a:focus, .navbar-inverse .navbar-nav .action-links > li > a:focus, .navbar-inverse .navbar-nav #block-system-management .menu > li > a:focus, #block-system-management .navbar-inverse .navbar-nav .menu > li > a:focus, .navbar-inverse .navbar-nav
+  #block-system-management .menu ul > li > a:focus,
+  #block-system-management .menu .navbar-inverse .navbar-nav ul > li > a:focus, .navbar-inverse .navbar-nav .nav-link:hover, .navbar-inverse .navbar-nav ul.tabs > li > a:hover, .navbar-inverse .navbar-nav .action-links > li > a:hover, .navbar-inverse .navbar-nav #block-system-management .menu > li > a:hover, #block-system-management .navbar-inverse .navbar-nav .menu > li > a:hover, .navbar-inverse .navbar-nav
+  #block-system-management .menu ul > li > a:hover,
+  #block-system-management .menu .navbar-inverse .navbar-nav ul > li > a:hover {
     color: rgba(255, 255, 255, 0.75); }
-  .navbar-inverse .navbar-nav .nav-link.disabled, .navbar-inverse .navbar-nav ul.tabs > li > a.disabled {
+  .navbar-inverse .navbar-nav .nav-link.disabled, .navbar-inverse .navbar-nav ul.tabs > li > a.disabled, .navbar-inverse .navbar-nav .action-links > li > a.disabled, .navbar-inverse .navbar-nav #block-system-management .menu > li > a.disabled, #block-system-management .navbar-inverse .navbar-nav .menu > li > a.disabled, .navbar-inverse .navbar-nav
+  #block-system-management .menu ul > li > a.disabled,
+  #block-system-management .menu .navbar-inverse .navbar-nav ul > li > a.disabled {
     color: rgba(255, 255, 255, 0.25); }
 
-.navbar-inverse .navbar-nav .open > .nav-link, .navbar-inverse .navbar-nav ul.tabs > li.open > a,
+.navbar-inverse .navbar-nav .open > .nav-link, .navbar-inverse .navbar-nav ul.tabs > li.open > a, .navbar-inverse .navbar-nav .action-links > li.open > a, .navbar-inverse .navbar-nav #block-system-management .menu > li.open > a, #block-system-management .navbar-inverse .navbar-nav .menu > li.open > a, .navbar-inverse .navbar-nav
+#block-system-management .menu ul > li.open > a,
+#block-system-management .menu .navbar-inverse .navbar-nav ul > li.open > a,
 .navbar-inverse .navbar-nav .active > .nav-link,
 .navbar-inverse .navbar-nav ul.tabs > li.active > a,
+.navbar-inverse .navbar-nav .action-links > li.active > a,
+.navbar-inverse .navbar-nav #block-system-management .menu > li.active > a, #block-system-management
+.navbar-inverse .navbar-nav .menu > li.active > a,
+.navbar-inverse .navbar-nav
+#block-system-management .menu ul > li.active > a,
+#block-system-management .menu
+.navbar-inverse .navbar-nav ul > li.active > a,
 .navbar-inverse .navbar-nav .nav-link.open,
 .navbar-inverse .navbar-nav ul.tabs > li > a.open,
+.navbar-inverse .navbar-nav .action-links > li > a.open,
+.navbar-inverse .navbar-nav #block-system-management .menu > li > a.open, #block-system-management
+.navbar-inverse .navbar-nav .menu > li > a.open,
+.navbar-inverse .navbar-nav
+#block-system-management .menu ul > li > a.open,
+#block-system-management .menu
+.navbar-inverse .navbar-nav ul > li > a.open,
 .navbar-inverse .navbar-nav .nav-link.active,
-.navbar-inverse .navbar-nav ul.tabs > li > a.active {
+.navbar-inverse .navbar-nav ul.tabs > li > a.active,
+.navbar-inverse .navbar-nav .action-links > li > a.active,
+.navbar-inverse .navbar-nav #block-system-management .menu > li > a.active, #block-system-management
+.navbar-inverse .navbar-nav .menu > li > a.active,
+.navbar-inverse .navbar-nav
+#block-system-management .menu ul > li > a.active,
+#block-system-management .menu
+.navbar-inverse .navbar-nav ul > li > a.active {
   color: white; }
 
 .navbar-inverse .navbar-toggler {
@@ -2960,7 +3168,7 @@ tbody.collapse.show {
 .navbar-inverse .navbar-text {
   color: rgba(255, 255, 255, 0.5); }
 
-.card {
+.card, .admin-panel {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2988,11 +3196,11 @@ tbody.collapse.show {
 .card-link + .card-link {
   margin-left: 1.25rem; }
 
-.card > .list-group:first-child .list-group-item:first-child {
+.card > .list-group:first-child .list-group-item:first-child, .admin-panel > .list-group:first-child .list-group-item:first-child {
   border-top-right-radius: 0.25rem;
   border-top-left-radius: 0.25rem; }
 
-.card > .list-group:last-child .list-group-item:last-child {
+.card > .list-group:last-child .list-group-item:last-child, .admin-panel > .list-group:last-child .list-group-item:last-child {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
 
@@ -3127,49 +3335,50 @@ tbody.collapse.show {
   .card-deck {
     display: flex;
     flex-flow: row wrap; }
-    .card-deck .card {
+    .card-deck .card, .card-deck .admin-panel {
       display: flex;
       flex: 1 0 0;
       flex-direction: column; }
-      .card-deck .card:not(:first-child) {
+      .card-deck .card:not(:first-child), .card-deck .admin-panel:not(:first-child) {
         margin-left: 15px; }
-      .card-deck .card:not(:last-child) {
+      .card-deck .card:not(:last-child), .card-deck .admin-panel:not(:last-child) {
         margin-right: 15px; } }
 
 @media (min-width: 576px) {
   .card-group {
     display: flex;
     flex-flow: row wrap; }
-    .card-group .card {
+    .card-group .card, .card-group .admin-panel {
       flex: 1 0 0; }
-      .card-group .card + .card {
+      .card-group .card + .card, .card-group .admin-panel + .card, .card-group .card + .admin-panel, .card-group .admin-panel + .admin-panel {
         margin-left: 0;
         border-left: 0; }
-      .card-group .card:first-child {
+      .card-group .card:first-child, .card-group .admin-panel:first-child {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0; }
-        .card-group .card:first-child .card-img-top {
+        .card-group .card:first-child .card-img-top, .card-group .admin-panel:first-child .card-img-top {
           border-top-right-radius: 0; }
-        .card-group .card:first-child .card-img-bottom {
+        .card-group .card:first-child .card-img-bottom, .card-group .admin-panel:first-child .card-img-bottom {
           border-bottom-right-radius: 0; }
-      .card-group .card:last-child {
+      .card-group .card:last-child, .card-group .admin-panel:last-child {
         border-bottom-left-radius: 0;
         border-top-left-radius: 0; }
-        .card-group .card:last-child .card-img-top {
+        .card-group .card:last-child .card-img-top, .card-group .admin-panel:last-child .card-img-top {
           border-top-left-radius: 0; }
-        .card-group .card:last-child .card-img-bottom {
+        .card-group .card:last-child .card-img-bottom, .card-group .admin-panel:last-child .card-img-bottom {
           border-bottom-left-radius: 0; }
-      .card-group .card:not(:first-child):not(:last-child) {
+      .card-group .card:not(:first-child):not(:last-child), .card-group .admin-panel:not(:first-child):not(:last-child) {
         border-radius: 0; }
-        .card-group .card:not(:first-child):not(:last-child) .card-img-top,
-        .card-group .card:not(:first-child):not(:last-child) .card-img-bottom {
+        .card-group .card:not(:first-child):not(:last-child) .card-img-top, .card-group .admin-panel:not(:first-child):not(:last-child) .card-img-top,
+        .card-group .card:not(:first-child):not(:last-child) .card-img-bottom,
+        .card-group .admin-panel:not(:first-child):not(:last-child) .card-img-bottom {
           border-radius: 0; } }
 
 @media (min-width: 576px) {
   .card-columns {
     column-count: 3;
     column-gap: 1.25rem; }
-    .card-columns .card {
+    .card-columns .card, .card-columns .admin-panel {
       display: inline-block;
       width: 100%;
       margin-bottom: 0.75rem; } }
@@ -4291,7 +4500,8 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .flex-row {
   flex-direction: row !important; }
 
-.flex-column {
+.flex-column, .action-links, #block-system-management .menu,
+#block-system-management .menu ul {
   flex-direction: column !important; }
 
 .flex-row-reverse {
@@ -4382,7 +4592,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     order: 1; }
   .flex-sm-unordered {
     order: 0; }
-  .flex-sm-row {
+  .flex-sm-row, .action-links {
     flex-direction: row !important; }
   .flex-sm-column {
     flex-direction: column !important; }
@@ -4825,7 +5035,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .mr-3 {
   margin-right: 1rem !important; }
 
-.mb-3, .card {
+.mb-3, .card, .admin-panel {
   margin-bottom: 1rem !important; }
 
 .ml-3 {
@@ -6137,9 +6347,13 @@ body {
   background-color: #fff;
   border-top: 6px solid #5cb85c;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125); }
-  .main-header .nav-link, .main-header ul.tabs > li > a {
+  .main-header .nav-link, .main-header ul.tabs > li > a, .main-header .action-links > li > a, .main-header #block-system-management .menu > li > a, #block-system-management .main-header .menu > li > a, .main-header
+  #block-system-management .menu ul > li > a,
+  #block-system-management .menu .main-header ul > li > a {
     padding: 1rem .4rem; }
-  .main-header .nav-item, .main-header ul.tabs > li {
+  .main-header .nav-item, .main-header ul.tabs > li, .main-header .action-links > li, .main-header #block-system-management .menu > li, #block-system-management .main-header .menu > li, .main-header
+  #block-system-management .menu ul > li,
+  #block-system-management .menu .main-header ul > li {
     margin: 0 !important; }
   .main-header .logo-icon {
     font-size: 30px;
@@ -6191,7 +6405,9 @@ body {
     width: 100%;
     display: block;
     float: none !important; }
-    [class*="navbar-toggleable"] > .navbar-nav .nav-item, [class*="navbar-toggleable"] > .navbar-nav ul.tabs > li {
+    [class*="navbar-toggleable"] > .navbar-nav .nav-item, [class*="navbar-toggleable"] > .navbar-nav ul.tabs > li, [class*="navbar-toggleable"] > .navbar-nav .action-links > li, [class*="navbar-toggleable"] > .navbar-nav #block-system-management .menu > li, #block-system-management [class*="navbar-toggleable"] > .navbar-nav .menu > li, [class*="navbar-toggleable"] > .navbar-nav
+    #block-system-management .menu ul > li,
+    #block-system-management .menu [class*="navbar-toggleable"] > .navbar-nav ul > li {
       display: block;
       float: none; } }
 
@@ -6316,10 +6532,10 @@ legend {
   margin: 1rem 0; }
 
 ul.tabs {
-  margin-bottm: -1px; }
-
-.tabs + .card {
-  border-top: 0 !important; }
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: .5rem;
+  border-radius: 0.25rem; }
 
 .navbar .dropdown-menu {
   margin-top: 0;
@@ -6348,9 +6564,6 @@ table {
     word-break: normal; }
   table td {
     word-wrap: break-word; }
-    @media (max-width: 1199px) {
-      table td {
-        word-break: break-all; } }
   table .tripal-contents-table-td {
     white-space: nowrap; }
   table.tripal-organism-data-table th {
@@ -6368,6 +6581,9 @@ table {
 .download-td {
   font-size: 40px;
   width: 45px; }
+
+#menu-overview td, #menu-overview th {
+  vertical-align: middle; }
 
 .alignment-subrow {
   font-size: 0.875rem; }
@@ -6404,3 +6620,66 @@ table {
 
 .download-pane {
   margin-top: 30px; }
+
+.admin-page .section.page-header {
+  padding: 1rem 0; }
+  .admin-page .section.page-header h1 {
+    margin-bottom: 0; }
+
+.main-content-wrapper {
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem; }
+
+.admin-panel {
+  padding: 0 !important; }
+  .admin-panel > h3 {
+    background: #f7f7f7;
+    padding: 10px;
+    margin: 0 0 .5rem 0;
+    font-size: 1.3rem;
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+
+#block-system-management > h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #444; }
+
+#block-system-management .menu > li > a,
+#block-system-management .menu ul > li > a {
+  padding-left: 0;
+  color: #99979c; }
+  #block-system-management .menu > li > a.active, #block-system-management .menu > li > a.active-trail,
+  #block-system-management .menu ul > li > a.active,
+  #block-system-management .menu ul > li > a.active-trail {
+    font-weight: bold;
+    color: #292b2c; }
+  #block-system-management .menu > li > a:hover:not(.active),
+  #block-system-management .menu ul > li > a:hover:not(.active) {
+    color: #5cb85c; }
+
+#block-system-management .menu .expanded,
+#block-system-management .menu ul .expanded {
+  margin: .5rem 0; }
+
+@media (max-width: 1199px) {
+  #block-system-management .menu ul {
+    display: none; } }
+
+#block-system-management .menu ul {
+  padding-left: 20px; }
+  #block-system-management .menu ul ul {
+    background: #f7f7f7;
+    border-radius: 0.25rem; }
+  #block-system-management .menu ul > li > a {
+    padding: 3px; }
+
+#edit-modules-core td {
+  font-size: 14px; }
+
+#edit-modules-core td.help,
+#edit-modules-core td.permissions,
+#edit-modules-core td.configure {
+  font-size: 12px; }

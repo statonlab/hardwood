@@ -1,0 +1,87 @@
+.admin-page .section.page-header {
+  padding: 1rem 0;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.main-content-wrapper {
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+  border-radius: $card-border-radius;
+}
+
+.admin-panel {
+  @extend .card;
+  padding: 0 !important;
+  > h3 {
+    background: #f7f7f7;
+    padding: 10px;
+    margin: 0 0 .5rem 0;
+    font-size: 1.3rem;
+    @include border-top-radius($border-radius);
+    border-bottom: 1px solid $card-border-color;
+  }
+}
+
+#block-system-management {
+  > h2 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #444;
+  }
+  .menu,
+  .menu ul {
+    @extend .nav;
+    @extend .flex-column;
+    > li {
+      @extend .nav-item;
+      > a {
+        @extend .nav-link;
+        padding-left: 0;
+        color: #99979c;
+        &.active,
+        &.active-trail {
+          font-weight: bold;
+          color: #292b2c;
+        }
+        &:hover:not(.active) {
+          color: $brand-primary;
+        }
+      }
+    }
+    .expanded {
+      margin: .5rem 0;
+    }
+  }
+
+  .menu {
+    @include media-breakpoint-down(lg) {
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  .menu ul {
+    padding-left: 20px;
+    ul {
+      background: #f7f7f7;
+      @include border-radius($card-border-radius);
+    }
+    > li > a {
+      padding: 3px;
+    }
+  }
+}
+
+#edit-modules-core {
+  td {
+    font-size: 14px;
+  }
+  td.help,
+  td.permissions,
+  td.configure {
+    font-size: 12px;
+  }
+}
