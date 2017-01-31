@@ -6585,6 +6585,9 @@ table {
 #menu-overview td, #menu-overview th {
   vertical-align: middle; }
 
+tr.error {
+  background-color: #f2dede; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 

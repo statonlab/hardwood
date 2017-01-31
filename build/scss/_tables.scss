@@ -68,3 +68,7 @@ table {
     }
   }
 }
+
+tr.error {
+  background-color: $state-danger-bg;
+}
