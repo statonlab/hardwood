@@ -6588,6 +6588,9 @@ table {
 tr.error {
   background-color: #f2dede; }
 
+tr.warning {
+  background: #fcf8e3; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 

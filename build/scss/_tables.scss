@@ -72,3 +72,6 @@ table {
 tr.error {
   background-color: $state-danger-bg;
 }
+tr.warning {
+  background: $state-warning-bg;
+}
