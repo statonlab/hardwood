@@ -6674,7 +6674,7 @@ tr.warning {
 #block-system-management .menu ul .expanded {
   margin: .5rem 0; }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   #block-system-management .menu ul {
     display: none; } }
 

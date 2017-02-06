@@ -56,7 +56,7 @@
   }
 
   .menu {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       ul {
         display: none;
       }
