@@ -624,19 +624,19 @@ pre {
       padding-left: 15px; } }
   @media (min-width: 576px) {
     .container {
-      width: 570px;
+      width: 576px;
       max-width: 100%; } }
   @media (min-width: 768px) {
     .container {
-      width: 760px;
+      width: 768px;
       max-width: 100%; } }
   @media (min-width: 992px) {
     .container {
-      width: 990px;
+      width: 992px;
       max-width: 100%; } }
   @media (min-width: 1200px) {
     .container {
-      width: 1190px;
+      width: 1200px;
       max-width: 100%; } }
 
 .container-fluid {
