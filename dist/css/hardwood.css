@@ -6282,7 +6282,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 body {
-  background: #2a2730; }
+  background: #2a2730;
+  font-size: 14px; }
 
 .secondary-footer {
   padding: 20px 0;
@@ -6590,10 +6591,6 @@ tr.error {
 
 tr.warning {
   background: #fcf8e3; }
-
-table td,
-table th {
-  font-size: 14px; }
 
 .alignment-subrow {
   font-size: 0.875rem; }
