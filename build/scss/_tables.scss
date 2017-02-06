@@ -8,8 +8,8 @@ table {
   }
   td {
     word-wrap: break-word;
-    @include media-breakpoint-down(md) {
-      //word-break: break-all;
+    @include media-breakpoint-down(lg) {
+      word-break: break-all;
     }
   }
 
@@ -74,11 +74,4 @@ tr.error {
 }
 tr.warning {
   background: $state-warning-bg;
-}
-
-table {
-  td,
-  th {
-    //font-size: 14px;
-  }
 }
