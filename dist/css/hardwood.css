@@ -6340,6 +6340,8 @@ body {
     color: #fefefe; }
   .page-header a {
     font-weight: normal; }
+  .page-header h1 {
+    margin-bottom: 0; }
 
 .form-wrapper {
   padding: 0 !important; }
