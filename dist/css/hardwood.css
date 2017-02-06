@@ -6591,6 +6591,10 @@ tr.error {
 tr.warning {
   background: #fcf8e3; }
 
+table td,
+table th {
+  font-size: 12px; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 

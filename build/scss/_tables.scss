@@ -75,3 +75,10 @@ tr.error {
 tr.warning {
   background: $state-warning-bg;
 }
+
+table {
+  td,
+  th {
+    font-size: 12px;
+  }
+}
