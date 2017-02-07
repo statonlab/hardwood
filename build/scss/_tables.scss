@@ -9,7 +9,7 @@ table {
   td {
     word-wrap: break-word;
     @include media-breakpoint-down(lg) {
-      word-break: break-all;
+      //word-break: break-all;
     }
   }
 

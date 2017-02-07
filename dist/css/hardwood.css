@@ -6567,9 +6567,6 @@ table {
     word-break: normal; }
   table td {
     word-wrap: break-word; }
-    @media (max-width: 1199px) {
-      table td {
-        word-break: break-all; } }
   table .tripal-contents-table-td {
     white-space: nowrap; }
   table.tripal-organism-data-table th {
