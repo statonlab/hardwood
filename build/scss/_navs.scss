@@ -9,6 +9,7 @@ ul.tabs {
     @extend .nav-item;
     > a {
       @extend .nav-link;
+      padding: .5em .5em;
     }
   }
 }

@@ -6539,6 +6539,8 @@ ul.tabs {
   border: 1px solid rgba(0, 0, 0, 0.125);
   padding: .5rem;
   border-radius: 0.25rem; }
+  ul.tabs > li > a {
+    padding: .5em .5em; }
 
 .navbar .dropdown-menu {
   margin-top: 0;
