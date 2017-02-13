@@ -3,11 +3,9 @@
  * and allow for a show more button.
  */
 $(function () {
-    $("#elasticsearch_hits_table tr td:nth-of-type(1)").each(function () {
+    $("#elasticsearch_hits_table tr td:nth-of-type(2)").each(function () {
         var text = $(this).html();
         var array = text.split("<br>");
-
-        console.log(text);
 
         if (array.length > 2) {
             var div = $("<div />", {});
