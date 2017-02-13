@@ -3,7 +3,7 @@
  * and allow for a show more button.
  */
 $(function () {
-    $("#elasticsearch_hits_table tr td:last-of-type").each(function () {
+    $("#elasticsearch_hits_table tr td:nth-of-type(1)").each(function () {
         var text = $(this).html();
         var array = text.split("<br>");
 
