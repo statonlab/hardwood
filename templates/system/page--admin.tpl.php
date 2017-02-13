@@ -138,7 +138,7 @@
 
         <?php endif; ?>
 
-        <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) || !empty($page['admin_menu']) ? 'col-lg-8 col-xl-9' : 'col-12'; ?>
+        <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) || !empty($page['admin_menu']) ? 'col-lg-10' : 'col-12'; ?>
        <div class="<?php print $main_content_classes ?>">
 
          <?php if ($page['highlighted']): ?>
