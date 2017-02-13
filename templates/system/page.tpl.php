@@ -144,13 +144,7 @@
         <div class="card">
          <div class="card-block">
            <?php if ($messages): ?>
-            <div class="container">
-             <div class="row">
-              <div class="col-12">
-                <?php print $messages; ?>
-              </div>
-             </div>
-            </div>
+             <?php print $messages; ?>
            <?php endif; ?>
 
            <?php print render($page['content']); ?>
@@ -204,7 +198,7 @@
    </div>
   </div> <!-- /#footer -->
 
-  <?php include_once "footer.inc.php"; ?>
+   <?php include_once "footer.inc.php"; ?>
 
  </div>
 </div> <!-- /#page, /#page-wrapper -->

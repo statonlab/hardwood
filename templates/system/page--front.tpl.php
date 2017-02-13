@@ -113,18 +113,6 @@
     </div>
    <?php endif; ?>
 
-   <?php if ($messages): ?>
-    <div class="section">
-     <div class="container">
-      <div class="row">
-       <div class="col-12">
-         <?php print $messages; ?>
-       </div>
-      </div>
-     </div>
-    </div>
-   <?php endif; ?>
-
   <div id="main-wrapper">
    <div id="main" class="clearfix">
 
@@ -134,6 +122,9 @@
        <div class="container">
         <div class="row">
          <div class="<?php print $main_content_classes; ?>">
+           <?php if ($messages): ?>
+             <?php print $messages; ?>
+           <?php endif; ?>
           <a id="main-content"></a>
            <?php if ($tabs): ?>
              <?php print render($tabs); ?>
@@ -184,7 +175,7 @@
    </div>
   </div> <!-- /#footer -->
 
-  <?php include_once "footer.inc.php"; ?>
+   <?php include_once "footer.inc.php"; ?>
 
  </div>
 </div> <!-- /#page, /#page-wrapper -->
