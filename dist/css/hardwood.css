@@ -6687,10 +6687,10 @@ tr.warning {
   #block-system-management .menu ul > li > a {
     padding: 3px; }
 
-#edit-modules-core td {
+table[class^="edit-modules-"] td {
   font-size: 14px; }
 
-#edit-modules-core td.help,
-#edit-modules-core td.permissions,
-#edit-modules-core td.configure {
+table[class^="edit-modules-"] td.help,
+table[class^="edit-modules-"] td.permissions,
+table[class^="edit-modules-"] td.configure {
   font-size: 12px; }
