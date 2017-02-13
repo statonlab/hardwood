@@ -118,7 +118,7 @@
       <div class="row">
         <?php if ($page['sidebar_first'] || $page['sidebar_second'] || $page['admin_menu']): ?>
 
-         <div class="col-lg-4 col-xl-3">
+         <div class="col-lg-2">
           <?php if($page['admin_menu']): ?>
           <?php print render($page['admin_menu']); ?>
           <?php endif; ?>
