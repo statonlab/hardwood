@@ -6,8 +6,8 @@
 }
 
 .main-content-wrapper {
-    padding: 1rem;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
   border-radius: $card-border-radius;
 }
 
@@ -76,13 +76,15 @@
 }
 
 table[class^="edit-modules-"] {
-  td {
-    font-size: 14px;
-  }
-  td.help,
-  td.permissions,
-  td.configure {
-    font-size: 12px;
+  tbody > tr {
+    > td {
+      font-size: 14px;
+    }
+    > td.help,
+    > td.permissions,
+    > td.configure {
+      font-size: 12px;
+    }
   }
 }
 
