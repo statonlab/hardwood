@@ -7,6 +7,8 @@ $(function () {
         var text = $(this).html();
         var array = text.split("<br>");
 
+        console.log(text);
+
         if (array.length > 2) {
             var div = $("<div />", {});
             div.append(array.shift() + '<br>' + array.shift());
