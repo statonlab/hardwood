@@ -105,7 +105,7 @@
     <div class="section bg-gray">
      <div class="container">
       <div class="row">
-       <div class="col-12 col-lg-10 offset-lg-1 col-xl-6 offset-xl-3 input-group-lg">
+       <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3 input-group-lg">
          <?php print render($page['front_search']); ?>
        </div>
       </div>
