@@ -51,7 +51,7 @@
               $('.progress-wrapper .message').addClass('text-danger');
               btn.removeClass('btn-primary').addClass('btn-danger');
               btn.html('Error!');
-              btn.parent().append('<p class="text-danger">'
+              btn.parent().prepend('<p class="text-danger">'
                 + 'An error occurred while processing your request. '
                 + 'Please <a href="/contact">contact us</a> to resolve this issue. '
                 + 'We apologize for any inconvenience this may have caused.</p>')
