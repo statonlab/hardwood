@@ -49,12 +49,11 @@
             // If we encountered an error, stop checking
             if (progress.file_class == 'file-error') {
               $('.progress-wrapper .message').addClass('text-danger');
-              btn.removeClass('btn-primary').addClass('btn-danger');
-              btn.html('Error!');
               btn.parent().prepend('<p class="text-danger">'
                 + 'An error occurred while processing your request. '
                 + 'Please <a href="/contact">contact us</a> to resolve this issue. '
-                + 'We apologize for any inconvenience this may have caused.</p>')
+                + 'We apologize for any inconvenience this may have caused.</p>');
+              btn.remove()
               return;
             }
 
