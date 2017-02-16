@@ -6,14 +6,14 @@
  * preprocess hook for your download template. This is already taken
  * care of for you if you use the generic_download_page.tpl.php
  * @code
-     drupal_add_js(
-       array(
-         'trpdownloadApiProgressBar' => array(
-           'progressPath' => url('/tripal/progress/job/'.$trpdownload_key.'/'.$variables['job_id'])
-         )
-       ),
-       'setting'
-     );
+ drupal_add_js(
+ array(
+ 'trpdownloadApiProgressBar' => array(
+ 'progressPath' => url('/tripal/progress/job/'.$trpdownload_key.'/'.$variables['job_id'])
+ )
+ ),
+ 'setting'
+ );
  * @endcode
  */
 (function ($) {
@@ -36,15 +36,28 @@
             }
             // Update display.
             /*pane.removeClass('file-not-ready');
-            pane.removeClass('file-ready');
-            pane.removeClass('file-error');
-            pane.addClass(progress.file_class);*/
+             pane.removeClass('file-ready');
+             pane.removeClass('file-error');
+             pane.addClass(progress.file_class);*/
 
             // If our progress is complete then stop checking.
             if (progress.percentage == 100) {
               btn.removeAttr("disabled").removeClass('disabled');
               return;
             }
+
+            // If we encountered an error, stop checking
+            if (progress.file_class == 'file-error') {
+              $('.progress-wrapper .message').addClass('text-danger');
+              btn.removeClass('btn-primary').addClass('btn-danger');
+              btn.html('Error!');
+              btn.parent().append('<p class="text-danger">'
+                + 'An error occurred while processing your request. '
+                + 'Please <a href="/contact">contact us</a> to resolve this issue. '
+                + 'We apologize for any inconvenience this may have caused.</p>')
+              return;
+            }
+
             // Only if our progress is not complete, disable link
             // and, of course, schedule when to check again.
             else {
