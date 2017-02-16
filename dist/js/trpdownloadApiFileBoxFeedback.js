@@ -20,7 +20,7 @@
   Drupal.behaviors.trpdownloadApiFileBoxFeedback = {
     attach: function (context, settings) {
 
-      setTimeout(trpdownloadapiUpdateStatus, 1000);
+      setTimeout(trpdownloadapiUpdateStatus, 300);
 
       function trpdownloadapiUpdateStatus() {
         var btn = $('#download-btn');
