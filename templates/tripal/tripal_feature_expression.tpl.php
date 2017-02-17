@@ -63,7 +63,7 @@ else {
 
     <script>
      $(function() {
-       $('.figure-tripal-data-pane-title.tripal-data-pane-title').html('Expression <?php $feature->name?>')
+       $('.figure-tripal-data-pane-title.tripal-data-pane-title').html('Expression <?php echo $feature->name?>')
      })
     </script>
 
