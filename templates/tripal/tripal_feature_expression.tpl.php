@@ -61,6 +61,11 @@ else {
 
    <a href="#expression-top">back to top</a>
 
+    <script>
+     $(function() {
+       $('.figure-tripal-data-pane-title.tripal-data-pane-title').html('Expression <?php $feature->name?>')
+     })
+    </script>
 
     <?php
   }
