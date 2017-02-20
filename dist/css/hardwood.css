@@ -6510,7 +6510,7 @@ legend {
   border-top: 0 !important; }
 
 #page-title {
-  font-size: 2rem; }
+  font-size: 1.6rem; }
 
 #edit-submit-d7-organism {
   margin-top: 32px; }
@@ -6560,13 +6560,7 @@ ul.tabs {
         background: #f7f7f9; }
 
 table {
-  max-width: 100% !important;
-  /*.tripal-data-pane {
-    width: 95%;
-  }*/ }
-  table th,
-  table td {
-    word-break: normal; }
+  max-width: 100% !important; }
   table .tripal-contents-table-td {
     white-space: nowrap; }
   table.tripal-organism-data-table th {
