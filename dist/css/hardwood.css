@@ -6521,6 +6521,28 @@ legend {
 .font-normal {
   font-weight: normal; }
 
+#autocomplete {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #eceeef;
+  border-radius: 0.25rem; }
+  #autocomplete ul, #autocomplete ol {
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    max-height: 300px;
+    overflow: auto; }
+    #autocomplete ul > li, #autocomplete ol > li {
+      padding: 10px 10px;
+      margin: 0 10px 5px 10px;
+      cursor: pointer;
+      border-radius: 0.25rem;
+      background-color: #eceeef;
+      color: #666; }
+      #autocomplete ul > li:hover, #autocomplete ol > li:hover {
+        background: #5cb85c;
+        color: #fff; }
+
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
   .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {

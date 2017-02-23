@@ -115,3 +115,29 @@ legend {
 .font-normal {
   font-weight: normal;
 }
+
+#autocomplete {
+  position: absolute;
+  background: #fff;
+  border: 1px solid $gray-lighter;
+  border-radius: $border-radius;
+  ul, ol {
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    max-height: 300px;
+    overflow: auto;
+    > li {
+      padding: 10px 10px;
+      margin: 0 10px 5px 10px;
+      cursor: pointer;
+      border-radius: $border-radius;
+      background-color: $gray-lighter;
+      color: #666;
+      &:hover {
+        background: $brand-primary;
+        color: #fff;
+      }
+    }
+  }
+}
