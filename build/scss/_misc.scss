@@ -116,6 +116,11 @@ legend {
   font-weight: normal;
 }
 
+.marker {
+  @extend .badge;
+  @extend .badge-success;
+}
+
 #autocomplete {
   position: absolute;
   background: #fff;

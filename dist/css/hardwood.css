@@ -241,7 +241,7 @@ template {
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .badge {
+  .badge, .marker {
     border: 1px solid #000; }
   .table, table {
     border-collapse: collapse !important; }
@@ -3476,7 +3476,7 @@ tbody.collapse.show {
   border-bottom-right-radius: 0.2rem;
   border-top-right-radius: 0.2rem; }
 
-.badge {
+.badge, .marker {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -3487,14 +3487,14 @@ tbody.collapse.show {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem; }
-  .badge:empty {
+  .badge:empty, .marker:empty {
     display: none; }
 
-.btn .badge, #edit-cancel .badge, #edit-search-submit .badge {
+.btn .badge, #edit-cancel .badge, #edit-search-submit .badge, .btn .marker, #edit-cancel .marker, #edit-search-submit .marker {
   position: relative;
   top: -1px; }
 
-a.badge:focus, a.badge:hover {
+a.badge:focus, a.marker:focus, a.badge:hover, a.marker:hover {
   color: #fff;
   text-decoration: none;
   cursor: pointer; }
@@ -3514,9 +3514,9 @@ a.badge:focus, a.badge:hover {
   .badge-primary[href]:focus, .badge-primary[href]:hover {
     background-color: #449d44; }
 
-.badge-success {
+.badge-success, .marker {
   background-color: #5cb85c; }
-  .badge-success[href]:focus, .badge-success[href]:hover {
+  .badge-success[href]:focus, [href].marker:focus, .badge-success[href]:hover, [href].marker:hover {
     background-color: #449d44; }
 
 .badge-info {
