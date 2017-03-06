@@ -76,25 +76,25 @@ $no_hits = TRUE;
       if (file_exists($blast_job->files->result->html)) {
         $output_files['html'] = array(
           'path' => $blast_job->files->result->html,
-          'title' => 'Alignment'
+          'title' => 'Alignment',
         );
       }
       if (file_exists($blast_job->files->result->tsv)) {
         $output_files['tsv'] = array(
           'path' => $blast_job->files->result->tsv,
-          'title' => 'Tab-Delimited'
+          'title' => 'Tab-Delimited',
         );
       }
       if (file_exists($blast_job->files->result->gff)) {
         $output_files['gff'] = array(
           'path' => $blast_job->files->result->gff,
-          'title' => 'GFF3'
+          'title' => 'GFF3',
         );
       }
       if (file_exists($blast_job->files->result->xml)) {
         $output_files['xml'] = array(
           'path' => $blast_job->files->result->xml,
-          'title' => 'XML'
+          'title' => 'XML',
         );
       }
       ?>
@@ -158,7 +158,7 @@ $no_hits = TRUE;
       'number' => array('data' => '#', 'class' => array('number')),
       'query' => array(
         'data' => 'Query Name  (Click for alignment & visualization)',
-        'class' => array('query')
+        'class' => array('query'),
       ),
       'hit' => array('data' => 'Target Name', 'class' => array('hit')),
       'evalue' => array('data' => 'E-Value', 'class' => array('evalue')),
@@ -196,9 +196,16 @@ $no_hits = TRUE;
             // to makeblastdb did a really poor job. In thhis case we want to use
             // the def to provide the original FASTA header.
             // @todo Deepak changed this to use just the hit_def; inquire as to why.
-            $hit_name = (preg_match('/BL_ORD_ID/', $hit->{'Hit_id'})) ? $hit->{'Hit_def'} : $hit->{'Hit_id'};
+            $hit_name = (preg_match(
+              '/BL_ORD_ID/',
+              $hit->{'Hit_id'}
+            )) ? $hit->{'Hit_def'} : $hit->{'Hit_id'};
             // Used for the hit visualization to ensure the name isn't truncated.
-            $hit_name_short = (preg_match('/^([^\s]+)/', $hit_name, $matches)) ? $matches[1] : $hit_name;
+            $hit_name_short = (preg_match(
+              '/^([^\s]+)/',
+              $hit_name,
+              $matches
+            )) ? $matches[1] : $hit_name;
 
             // Round e-value to two decimal values.
             $rounded_evalue = '';
@@ -213,12 +220,17 @@ $no_hits = TRUE;
 
 
             if (menu_get_item("feature/$hit_name_short")) {
-              $hit_link = l($hit_name, "/feature/$hit_name_short", array(
-                'attributes' => array(
-                  'target' => '_blank'
+              $hit_link = strstr($blast_job->blast_cmd, 'blastp') == 0 ? l(
+                $hit_name,
+                "/feature/$hit_name_short",
+                array(
+                  'attributes' => array(
+                    'target' => '_blank',
+                  ),
                 )
-              ));
-            } else {
+              ) : $hit_name_short;
+            }
+            else {
               $hit_link = $hit_name;
             }
 
@@ -227,20 +239,20 @@ $no_hits = TRUE;
               'data' => array(
                 'arrow-col' => array(
                   'data' => '<button class="btn btn-info btn-sm" type="button"><i class="fa fa-caret-down"></i></button>',
-                  'class' => array('arrow-col')
+                  'class' => array('arrow-col'),
                 ),
                 'number' => array('data' => $count, 'class' => array('number')),
                 'query' => array(
                   'data' => $query_name,
-                  'class' => array('query')
+                  'class' => array('query'),
                 ),
                 'hit' => array('data' => $hit_link, 'class' => array('hit')),
                 'evalue' => array(
                   'data' => $rounded_evalue,
-                  'class' => array('evalue')
+                  'class' => array('evalue'),
                 ),
               ),
-              'class' => array('result-summary')
+              'class' => array('result-summary'),
             );
 
             // ALIGNMENT ROW (collapsed by default)
@@ -272,10 +284,7 @@ $no_hits = TRUE;
               // The BLAST visualization code requires the hsps to be formatted in a
               // very specific manner. Here we build up the strings to be submitted.
               // hits=4263001_4262263_1_742;4260037_4259524_895_1411;&scores=722;473;
-              $hit_hsps .= $hsp_xml->{'Hsp_hit-from'} . '_' .
-                $hsp_xml->{'Hsp_hit-to'} . '_' .
-                $hsp_xml->{'Hsp_query-from'} . '_' . $hsp_xml->{'Hsp_query-to'} .
-                ';';
+              $hit_hsps .= $hsp_xml->{'Hsp_hit-from'} . '_' . $hsp_xml->{'Hsp_hit-to'} . '_' . $hsp_xml->{'Hsp_query-from'} . '_' . $hsp_xml->{'Hsp_query-to'} . ';';
               $Hsp_bit_score .= $hsp_xml->{'Hsp_bit-score'} . ';';
             }
             // Finally record the range.
@@ -289,23 +298,33 @@ $no_hits = TRUE;
 
 
             // Call the function to generate the hit image.
-            $hit_img = generate_blast_hit_image($target_name, $Hsp_bit_score, $hit_hsps,
-              $target_size, $query_size, $q_name, $hit_name_short);
+            $hit_img = generate_blast_hit_image(
+              $target_name,
+              $Hsp_bit_score,
+              $hit_hsps,
+              $target_size,
+              $query_size,
+              $q_name,
+              $hit_name_short
+            );
 
 
             // State what should be in the alignment row for theme_table() later.
             $alignment_row = array(
               'data' => array(
                 'arrow' => array(
-                  'data' => theme('blast_report_alignment_row', array(
-                    'HSPs' => $HSPs,
-                    'hit_visualization' => $hit_img
-                  )),
+                  'data' => theme(
+                    'blast_report_alignment_row',
+                    array(
+                      'HSPs' => $HSPs,
+                      'hit_visualization' => $hit_img,
+                    )
+                  ),
                   'colspan' => 5,
                 ),
               ),
               'class' => array('alignment-row', $zebra_class),
-              'no_striping' => TRUE
+              'no_striping' => TRUE,
             );
 
             // LINK-OUTS.
@@ -362,26 +381,32 @@ $no_hits = TRUE;
     else {
       // We want to warn the user if some of their query sequences had no hits.
       if (!empty($query_with_no_hits)) {
-        print '<p class="no-hits-message">Some of your query sequences did not '
-          . 'match to the database/template. They are: '
-          . implode(', ', $query_with_no_hits) . '.</p>';
+        print '<p class="no-hits-message">Some of your query sequences did not ' . 'match to the database/template. They are: ' . implode(
+            ', ',
+            $query_with_no_hits
+          ) . '.</p>';
       }
 
       // Actually print the table.
       if (!empty($rows)) {
         print "<div class='table-responsve'>";
-        print theme('table', array(
-          'header' => $header,
-          'rows' => $rows,
-          'attributes' => array('id' => 'blast_report', 'class' => 'table'),
-          'sticky' => FALSE
-        ));
+        print theme(
+          'table',
+          array(
+            'header' => $header,
+            'rows' => $rows,
+            'attributes' => array('id' => 'blast_report', 'class' => 'table'),
+            'sticky' => FALSE,
+          )
+        );
         print "</div>";
       }
     }//handle no hits
   }//XML exists
   elseif ($too_many_results) {
-    print '<div class="messages error">Your BLAST resulted in ' . number_format(floatval($num_results)) . ' results which is too many to reasonably display. We have provided the result files for Download at the top of this page; however, we suggest you re-submit your query using a more stringent e-value (i.e. a smaller number).</div>';
+    print '<div class="messages error">Your BLAST resulted in ' . number_format(
+        floatval($num_results)
+      ) . ' results which is too many to reasonably display. We have provided the result files for Download at the top of this page; however, we suggest you re-submit your query using a more stringent e-value (i.e. a smaller number).</div>';
   }
   else {
     drupal_set_title('BLAST: Error Encountered');
@@ -392,7 +417,8 @@ $no_hits = TRUE;
   <p><?php print l(
       'Edit this query and re-submit',
       $blast_form_url,
-      array('query' => array('resubmit' => blast_ui_make_secret($job_id))));
+      array('query' => array('resubmit' => blast_ui_make_secret($job_id)))
+    );
     ?></p>
 </div>
 
