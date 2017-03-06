@@ -221,7 +221,7 @@ $no_hits = TRUE;
 
             $hit_link = '';
             if (strpos($blast_job->blast_cmd, 'blastp') === FALSE) {
-              l(
+              $hit_link = l(
                 $hit_name,
                 "/feature/$hit_name_short",
                 array(
