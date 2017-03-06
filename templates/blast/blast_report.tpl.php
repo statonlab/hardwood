@@ -220,7 +220,7 @@ $no_hits = TRUE;
 
 
             $hit_link = '';
-            echo "<script>console.log('{$blast_job->blast_cmd}', '".strstr($blast_job->blast_cmd, 'blastp')."')</script>";
+            echo "<script>console.log('{$blast_job->blast_cmd}', '".var_dump(strstr($blast_job->blast_cmd, 'blastp'))."')</script>";
             if (strstr($blast_job->blast_cmd, 'blastp') === FALSE) {
               l(
                 $hit_name,
