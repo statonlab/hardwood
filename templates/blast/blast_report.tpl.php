@@ -220,7 +220,7 @@ $no_hits = TRUE;
 
 
             $hit_link = '';
-            if (strstr($blast_job->blast_cmd, 'blastp') !== FALSE) {
+            if (strpos($blast_job->blast_cmd, 'blastp') === FALSE) {
               l(
                 $hit_name,
                 "/feature/$hit_name_short",
@@ -232,7 +232,7 @@ $no_hits = TRUE;
               );
             }
             else {
-              $hit_name_short;
+              $hit_link = $hit_name_short;
             }
 
 
