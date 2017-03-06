@@ -232,7 +232,7 @@ $no_hits = TRUE;
               );
             }
             else {
-              $hit_link = $hit_name_short;
+              $hit_link = $hit_name;
             }
 
 
