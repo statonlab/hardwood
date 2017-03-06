@@ -219,8 +219,9 @@ $no_hits = TRUE;
             }
 
 
-            if (menu_get_item("feature/$hit_name_short")) {
-              $hit_link = strstr($blast_job->blast_cmd, 'blastp') == 0 ? l(
+            $hit_link = '';
+            if (strstr($blast_job->blast_cmd, 'blastp') === FALSE) {
+              l(
                 $hit_name,
                 "/feature/$hit_name_short",
                 array(
@@ -228,11 +229,12 @@ $no_hits = TRUE;
                     'target' => '_blank',
                   ),
                 )
-              ) : $hit_name_short;
+              );
             }
             else {
-              $hit_link = $hit_name;
+              $hit_name_short;
             }
+
 
             // State what should be in the summary row for theme_table() later.
             $summary_row = array(
