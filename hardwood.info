@@ -25,7 +25,7 @@ regions[admin_menu] = Admin Menu
 ; Hardwood Stylesheets
 ; ---------------------
 stylesheets[all][] = system.base.css
-stylesheets[all][] = system.messages.css
+;stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
 stylesheets[all][] = system.menus.css
 stylesheets[all][] = dist/css/hardwood.css
