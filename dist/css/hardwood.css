@@ -6346,6 +6346,13 @@ body {
 /*.form-wrapper {
   //padding: 0!important;
 }*/
+#tripal-pane-close-button {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
 .main-header {
   background-color: #fff;
   border-top: 6px solid #5cb85c;
