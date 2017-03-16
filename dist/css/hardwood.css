@@ -6353,6 +6353,17 @@ body {
   width: 1px;
   overflow: hidden; }
 
+.tabledrag-handle .handle {
+  margin-right: 10px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .tabledrag-handle .handle:before {
+    content: "\f047"; }
+
 .main-header {
   background-color: #fff;
   border-top: 6px solid #5cb85c;

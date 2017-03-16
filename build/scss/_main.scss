@@ -98,3 +98,16 @@ body {
   width: 1px;
   overflow: hidden;
 }
+
+.tabledrag-handle .handle {
+  margin-right: 10px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:before {
+    content: "\f047";
+  }
+}

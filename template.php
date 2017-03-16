@@ -11,6 +11,16 @@ include_once drupal_get_path('theme', 'hardwood') . '/templates/system/page.vars
  */
 function hardwood_preprocess_button(&$variables) {
   $variables['element']['#attributes']['class'][] = 'btn';
+  $variables['element']['#attributes']['class'][] = 'mb-2';
+
+  if (is_array($variables['element']['#attributes']['class'])) {
+    if (in_array('btn-default', $variables['element']['#attributes']['class'])
+    || in_array('btn-danger', $variables['element']['#attributes']['class'])
+    || in_array('btn-warning', $variables['element']['#attributes']['class'])
+    || in_array('btn-info', $variables['element']['#attributes']['class'])) {
+      return;
+    }
+  }
 
   // Special styles for Delete/Destructive Buttons.
   if (stristr($variables['element']['#value'], 'Delete') !== FALSE) {
