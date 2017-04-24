@@ -6650,6 +6650,9 @@ tr.warning {
   #elasticsearch_hits_table th img {
     margin-left: 5px; }
 
+table.table, table {
+  table-layout: auto !important; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 
