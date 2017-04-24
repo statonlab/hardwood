@@ -20,6 +20,10 @@
   Drupal.behaviors.trpdownloadApiFileBoxFeedback = {
     attach: function (context, settings) {
 
+      if (typeof Drupal.settings.trpdownloadApiProgressBar === 'undefined') {
+        return;
+      }
+
       setTimeout(trpdownloadapiUpdateStatus, 1000);
 
       function trpdownloadapiUpdateStatus() {
