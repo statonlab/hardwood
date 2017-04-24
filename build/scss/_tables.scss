@@ -13,13 +13,6 @@ table {
   }
 }
 
-table.views-table {
-  td.views-field.short-column,
-  th.views-field.short-column {
-    word-break: normal !important;
-  }
-}
-
 td.views-field.extra-short-column, th.views-field.extra-short-column {
   width: 25px;
   word-wrap: normal;
@@ -43,6 +36,12 @@ td.views-field.short-column, th.views-field.short-column {
   > th {
     border: 0;
   }
+}
+
+td.views-ui-path {
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .download-td {
