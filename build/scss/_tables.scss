@@ -91,9 +91,14 @@ tr.warning {
 }
 
 table.table {
-  table-layout: auto!important;
+  table-layout: auto !important;
 }
 
 #page-wrapper {
   overflow-x: hidden;
+}
+
+.indentation {
+  display: inline-block;
+  margin-right: 20px;
 }

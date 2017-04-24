@@ -6656,6 +6656,10 @@ table.table, table {
 #page-wrapper {
   overflow-x: hidden; }
 
+.indentation {
+  display: inline-block;
+  margin-right: 20px; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 
