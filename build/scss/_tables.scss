@@ -82,3 +82,10 @@ tr.warning {
 .sticky-header th {
   background-color: #fff;
 }
+
+#elasticsearch_hits_table th {
+  white-space: nowrap;
+  img {
+    margin-left: 5px;
+  }
+}

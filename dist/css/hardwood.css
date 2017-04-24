@@ -6645,6 +6645,11 @@ tr.warning {
 .sticky-header th {
   background-color: #fff; }
 
+#elasticsearch_hits_table th {
+  white-space: nowrap; }
+  #elasticsearch_hits_table th img {
+    margin-left: 5px; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 
