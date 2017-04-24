@@ -6606,8 +6606,10 @@ table {
   table.tripal-organism-data-table th {
     min-width: 10px; }
 
-td.views-field.short-column,
-th.views-field.short-column {
+.views-table thead tr td.views-field.short-column,
+.views-table thead tr th.views-field.short-column,
+.views-table tbody tr td.views-field.short-column,
+.views-table tbody tr th.views-field.short-column {
   word-break: normal !important; }
 
 .table-valign-middle > tbody > tr > td,
