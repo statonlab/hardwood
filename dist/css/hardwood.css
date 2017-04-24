@@ -6610,6 +6610,14 @@ table.views-table td.views-field.short-column,
 table.views-table th.views-field.short-column {
   word-break: normal !important; }
 
+td.views-field.extra-short-column, th.views-field.extra-short-column {
+  width: 25px;
+  word-wrap: normal; }
+
+td.views-field.short-column, th.views-field.short-column {
+  width: 75px;
+  word-wrap: normal; }
+
 .table-valign-middle > tbody > tr > td,
 .table-valign-middle > tbody > tr > th,
 .table-valign-middle > thead > tr > th {
