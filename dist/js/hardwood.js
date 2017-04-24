@@ -2,7 +2,7 @@
  * Make elastic search tables display two rows of the last column
  * and allow for a show more button.
  */
-$(function () {
+(function ($) {
     $("#elasticsearch_hits_table tr td:nth-of-type(3)").each(function () {
         var text = $(this).html();
         var array = text.split("<br>");
@@ -36,12 +36,12 @@ $(function () {
             $(this).html(div);
         }
     });
-});
+})(jQuery);
 
 /**
  * Allow dropdown menus to open by hover on bigger devices.
  */
-$(function () {
+(function ($) {
 
     $('.navbar .dropdown > .nav-link').click(function (e) {
         if ($(window).width() > 992) {
@@ -62,4 +62,4 @@ $(function () {
         }
     });
 
-});
+})(jquery);
