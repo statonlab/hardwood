@@ -13,15 +13,10 @@ table {
   }
 }
 
-.views-table {
-  thead,
-  tbody {
-    tr {
-      td.views-field.short-column,
-      th.views-field.short-column {
-        word-break: normal !important;
-      }
-    }
+table.views-table {
+  td.views-field.short-column,
+  th.views-field.short-column {
+    word-break: normal !important;
   }
 }
 
