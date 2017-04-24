@@ -11,6 +11,11 @@ table {
       min-width: 10px;
     }
   }
+
+  .form-control {
+    display: inline-block;
+    max-width: 200px;
+  }
 }
 
 td.views-field.extra-short-column, th.views-field.extra-short-column {
