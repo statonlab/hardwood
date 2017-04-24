@@ -3,7 +3,9 @@
  * and allow for a show more button.
  */
 (function ($) {
-    $("#elasticsearch_hits_table tr td:nth-of-type(3)").each(function () {
+  console.log('executed 1');
+
+  $("#elasticsearch_hits_table tr td:nth-of-type(3)").each(function () {
         var text = $(this).html();
         var array = text.split("<br>");
 
@@ -42,7 +44,7 @@
  * Allow dropdown menus to open by hover on bigger devices.
  */
 (function ($) {
-
+console.log('executed');
     $('.navbar .dropdown > .nav-link').click(function (e) {
         if ($(window).width() > 992) {
             var href = $(this).attr('href');
