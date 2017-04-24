@@ -42,25 +42,25 @@
  * Allow dropdown menus to open by hover on bigger devices.
  */
 (function ($) {
-    console.log($)
-    $('.navbar .dropdown > .nav-link').click(function (e) {
+    $(function() {
+      $('.navbar .dropdown > .nav-link').click(function (e) {
         if ($(window).width() > 992) {
-            var href = $(this).attr('href');
-            if (href != '#') {
-                return window.location.href = href;
-            }
+          var href = $(this).attr('href');
+          if (href != '#') {
+            return window.location.href = href;
+          }
         }
-    });
+      });
 
-    $('.navbar .dropdown').hover(function () {
-        console.log('hover');
+      $('.navbar .dropdown').hover(function () {
+        console.log('hover in');
         if ($(window).width() > 992) {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
         }
-    }, function () {
+      }, function () {
         if ($(window).width() > 992) {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
         }
-    });
-
+      });
+    })
 })(jQuery);
