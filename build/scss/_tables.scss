@@ -102,3 +102,8 @@ table.table {
   display: inline-block!important;
   margin-right: 20px;
 }
+
+.main-content-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
