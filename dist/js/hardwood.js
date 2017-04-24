@@ -42,6 +42,7 @@
  * Allow dropdown menus to open by hover on bigger devices.
  */
 (function ($) {
+    console.log($)
     $('.navbar .dropdown > .nav-link').click(function (e) {
         if ($(window).width() > 992) {
             var href = $(this).attr('href');
