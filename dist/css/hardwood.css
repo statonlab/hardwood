@@ -6657,7 +6657,7 @@ table.table, table {
   overflow-x: hidden; }
 
 .indentation {
-  display: inline-block;
+  display: inline-block !important;
   margin-right: 20px; }
 
 .alignment-subrow {
