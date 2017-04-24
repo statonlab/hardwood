@@ -13,6 +13,10 @@ table {
   }
 }
 
+td.views-field.short-column {
+  word-break: normal!important;
+}
+
 .table-valign-middle {
   > tbody > tr > td,
   > tbody > tr > th,
