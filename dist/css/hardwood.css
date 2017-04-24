@@ -6642,6 +6642,9 @@ tr.error {
 tr.warning {
   background: #fcf8e3; }
 
+.sticky-header th {
+  background-color: #fff; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 
