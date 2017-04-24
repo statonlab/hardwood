@@ -1506,7 +1506,7 @@ pre {
     border-color: #b5dfb5;
     outline: none; }
   .form-control::placeholder, #edit-search-box::placeholder {
-    color: #636c72;
+    color: #aaa;
     opacity: 1; }
   .form-control:disabled, #edit-search-box:disabled, .form-control[readonly], [readonly]#edit-search-box {
     background-color: #eceeef;
