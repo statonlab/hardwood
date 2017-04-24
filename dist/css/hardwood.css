@@ -6605,7 +6605,8 @@ table {
     white-space: nowrap; }
   table.tripal-organism-data-table th {
     min-width: 10px; }
-  table .form-control, table #edit-search-box {
+  table .form-control, table #edit-search-box,
+  table .form-group {
     display: inline-block;
     max-width: 200px; }
 
