@@ -6698,6 +6698,19 @@ table.table, table {
 .collapsed > .fieldset-wrapper {
   display: none; }
 
+fieldset.collapsible legend {
+  position: relative;
+  padding-right: 2rem; }
+  fieldset.collapsible legend:before {
+    font-family: FontAwesome;
+    position: absolute;
+    content: '\f0d7';
+    color: #5cb85c;
+    right: 1rem; }
+
+fieldset.collapsible.collapsed legend:before {
+  content: '\f0d9'; }
+
 .download-page {
   margin-top: 0 !important; }
 

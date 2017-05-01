@@ -1,3 +1,23 @@
 .collapsed > .fieldset-wrapper {
   display: none;
 }
+
+fieldset.collapsible {
+  legend {
+    position: relative;
+    padding-right: 2rem;
+    &:before {
+      font-family: FontAwesome;
+      position: absolute;
+      content: '\f0d7'; // Left
+      color: $brand-primary;
+      right: 1rem;
+    }
+  }
+
+  &.collapsed {
+    legend:before {
+      content: '\f0d9'; // Down
+    }
+  }
+}
