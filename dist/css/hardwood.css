@@ -6600,15 +6600,18 @@ ul.tabs {
         background: #f7f7f9; }
 
 table {
-  max-width: 100% !important; }
+  max-width: 100% !important;
+  /* 
+  .form-control,
+  .form-group {
+    display: inline-block;
+    max-width: 200px;
+  }
+   */ }
   table .tripal-contents-table-td {
     white-space: nowrap; }
   table.tripal-organism-data-table th {
     min-width: 10px; }
-  table .form-control, table #edit-search-box,
-  table .form-group {
-    display: inline-block;
-    max-width: 200px; }
 
 td.views-field.extra-short-column, th.views-field.extra-short-column {
   width: 25px;
