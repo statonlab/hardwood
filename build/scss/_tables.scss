@@ -12,13 +12,12 @@ table {
     }
   }
 
-  /* 
+   
   .form-control,
   .form-group {
     display: inline-block;
-    max-width: 200px;
   }
-   */
+   
 }
 
 td.views-field.extra-short-column, th.views-field.extra-short-column {
@@ -114,4 +113,13 @@ table.table {
 .main-content-wrapper {
   overflow-x: auto;
   width: 100%;
+}
+
+a.tabledrag-handle { 
+  cursor: move!important;
+
+  ~ .form-group {
+    display: inline-block;
+    width: 70%;
+  }
 }

@@ -6364,6 +6364,9 @@ body {
   .tabledrag-handle .handle:before {
     content: "\f047"; }
 
+.form-group label {
+  font-weight: bold; }
+
 .main-header {
   background-color: #fff;
   border-top: 6px solid #5cb85c;
@@ -6600,18 +6603,14 @@ ul.tabs {
         background: #f7f7f9; }
 
 table {
-  max-width: 100% !important;
-  /* 
-  .form-control,
-  .form-group {
-    display: inline-block;
-    max-width: 200px;
-  }
-   */ }
+  max-width: 100% !important; }
   table .tripal-contents-table-td {
     white-space: nowrap; }
   table.tripal-organism-data-table th {
     min-width: 10px; }
+  table .form-control, table #edit-search-box,
+  table .form-group {
+    display: inline-block; }
 
 td.views-field.extra-short-column, th.views-field.extra-short-column {
   width: 25px;
@@ -6670,6 +6669,12 @@ table.table, table {
 .main-content-wrapper {
   overflow-x: auto;
   width: 100%; }
+
+a.tabledrag-handle {
+  cursor: move !important; }
+  a.tabledrag-handle ~ .form-group {
+    display: inline-block;
+    width: 70%; }
 
 .alignment-subrow {
   font-size: 0.875rem; }
