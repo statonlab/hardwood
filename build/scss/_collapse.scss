@@ -34,7 +34,7 @@ fieldset.collapsible {
       background-color: #f7f7f7;
     }
   }
-  a {
+  .tripal_toc_list_item_link {
     @extend .nav-link;
     padding: .5rem .3rem;
     margin-top: 0 !important;
