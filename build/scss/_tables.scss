@@ -12,20 +12,20 @@ table {
     }
   }
 
-   
   .form-control,
   .form-group {
     display: inline-block;
   }
-   
 }
 
-td.views-field.extra-short-column, th.views-field.extra-short-column {
+td.views-field.extra-short-column,
+th.views-field.extra-short-column {
   width: 25px;
   word-wrap: normal;
 }
 
-td.views-field.short-column, th.views-field.short-column {
+td.views-field.short-column,
+th.views-field.short-column {
   width: 75px;
   word-wrap: normal;
 }
@@ -106,7 +106,7 @@ table.table {
 }
 
 .indentation {
-  display: inline-block!important;
+  display: inline-block !important;
   margin-right: 20px;
 }
 
@@ -115,8 +115,8 @@ table.table {
   width: 100%;
 }
 
-a.tabledrag-handle { 
-  cursor: move!important;
+a.tabledrag-handle {
+  cursor: move !important;
 
   ~ .form-group {
     display: inline-block;
