@@ -6773,6 +6773,9 @@ th.views-field.short-column {
 .table tr.no-border > th, table tr.no-border > th {
   border: 0; }
 
+.tripal-data-pane {
+  overflow-x: auto; }
+
 td.views-ui-path {
   max-width: 100px;
   overflow: hidden;

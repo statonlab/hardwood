@@ -45,6 +45,10 @@ th.views-field.short-column {
   }
 }
 
+.tripal-data-pane {
+  overflow-x: auto;
+}
+
 td.views-ui-path {
   max-width: 100px;
   overflow: hidden;
