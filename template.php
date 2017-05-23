@@ -170,9 +170,7 @@ function hardwood_form_element($variables) {
 
   // This function is invoked as theme wrapper, but the rendered form element
   // may not necessarily have been processed by form_builder().
-  $element += [
-    '#title_display' => 'before',
-  ];
+  $element = array_merge($element, ['#title_display' => 'before']);
 
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
@@ -180,16 +178,16 @@ function hardwood_form_element($variables) {
   }
 
   // Add element #id for #type 'item'.
-  if (isset($element ['#markup']) && !empty($element ['#id'])) {
-    $attributes ['id'] = $element ['#id'];
+  if (isset($element['#markup']) && !empty($element['#id'])) {
+    $attributes['id'] = $element ['#id'];
   }
   // Add element's #type and #name as class to aid with JS/CSS selectors.
-  $attributes ['class'] = ['form-item'];
-  if (!empty($element ['#type'])) {
-    $attributes ['class'][] = 'form-type-' . strtr($element ['#type'], '_', '-');
+  $attributes['class'] = ['form-item'];
+  if (!empty($element['#type'])) {
+    $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
   }
-  if (!empty($element ['#name'])) {
-    $attributes ['class'][] = 'form-item-' . strtr($element ['#name'], [
+  if (!empty($element['#name'])) {
+    $attributes['class'][] = 'form-item-' . strtr($element['#name'], [
         ' ' => '-',
         '_' => '-',
         '[' => '-',
@@ -232,7 +230,7 @@ function hardwood_form_element($variables) {
 
   $output .= "</div>\n";
 
-  return '<div class="form-group">'. $output . '</div>';
+  return '<div class="form-group">' . $output . '</div>';
 }
 
 /**
@@ -247,6 +245,7 @@ function hardwood_button($variables) {
   $element['#attributes']['type'] = 'submit';
   element_set_attributes($element, ['id', 'name', 'value']);
 
+  $element ['#attributes']['class'][] = 'form-' . $element ['#button_type'];
   if (!empty($element['#attributes']['disabled'])) {
     $element['#attributes']['class'][] = 'disabled';
   }
