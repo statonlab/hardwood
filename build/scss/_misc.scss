@@ -163,23 +163,26 @@ pre {
 
 .progress-disabled {
   float: none;
-  display:inline;
+  display: inline;
 }
 
 .ajax-progress {
   float: none;
-  display:inline;
+  display: inline-block !important;
 }
+
 .ajax-progress .throbber {
   float: none;
   height: 15px;
   margin: 2px;
   width: 15px;
-  display:inline-block;
+  display: inline-block !important;
 }
+
 tr .ajax-progress .throbber {
   margin: 0 2px;
 }
+
 .ajax-progress-bar {
   width: 16em;
 }
