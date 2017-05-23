@@ -186,25 +186,25 @@ function hardwood_form_element($variables) {
     $element['#title_display'] = 'none';
   }
 
-  $prefix = isset($element['#field_prefix']) ? '<div class="form-group">' . $element['#field_prefix'] : '<div class="form-group">';
-  $suffix = isset($element['#field_suffix']) ? $element['#field_suffix'] . '</div>' : '</div>';
+  $prefix = isset($element['#field_prefix']) ? '<div class="form-group">'.$element['#field_prefix'] : '<div class="form-group">';
+  $suffix = isset($element['#field_suffix']) ? $element['#field_suffix'].'</div>' : '</div>';
 
   switch ($element['#title_display']) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      $output .= ' ' . $element['#children'] . "\n";
       break;
 
     case 'after':
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
+      $output .= ' ' . $element['#children'];
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
       break;
 
     case 'none':
     case 'attribute':
       // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      $output .= ' ' . $element['#children'] . "\n";
       break;
   }
 
@@ -212,7 +212,7 @@ function hardwood_form_element($variables) {
     $output .= '<div class="form-text text-muted">' . $element['#description'] . "</div>\n";
   }
 
-  return $output;
+  return $prefix . $output . $suffix;
 }
 
 /**
