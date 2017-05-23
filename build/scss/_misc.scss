@@ -162,7 +162,7 @@ pre {
 }
 
 .progress-disabled {
-  float: none;
+  float: left;
   display: inline;
 }
 
@@ -172,7 +172,7 @@ pre {
 }
 
 .ajax-progress .throbber {
-  float: none;
+  float: left;
   height: 15px;
   margin: 2px;
   width: 15px;
