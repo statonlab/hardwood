@@ -211,18 +211,18 @@ function hardwood_form_element($variables) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-      $output .= ' ' . $element['#children'] . "\n";
+      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
 
     case 'after':
-      $output .= ' ' . $element['#children'];
+      $output .= ' ' . $prefix . $element['#children'] . $suffix;
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
       break;
 
     case 'none':
     case 'attribute':
       // Output no label and no required marker, only the children.
-      $output .= ' ' . $element['#children'] . "\n";
+      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
   }
 
@@ -232,7 +232,7 @@ function hardwood_form_element($variables) {
 
   $output .= "</div>\n";
 
-  return $prefix . $output . $suffix;
+  return '<div class="form-group">'. $output . '</div>';
 }
 
 /**
