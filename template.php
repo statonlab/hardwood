@@ -202,8 +202,8 @@ function hardwood_form_element($variables) {
     $element['#title_display'] = 'none';
   }
 
-  $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span>' : '<div class="form-group">';
-  $suffix = isset($element['#field_suffix']) ? '<span class="field-prefix">' . $element['#field_suffix'] . '</span>' : '</div>';
+  $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span>' : '';
+  $suffix = isset($element['#field_suffix']) ? '<span class="field-prefix">' . $element['#field_suffix'] . '</span>' : '';
 
   switch ($element['#title_display']) {
     case 'before':
