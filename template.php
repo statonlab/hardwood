@@ -170,7 +170,7 @@ function hardwood_form_element($variables) {
 
   // This function is invoked as theme wrapper, but the rendered form element
   // may not necessarily have been processed by form_builder().
-  $element['#title_display'] = 'before';
+  //$element['#title_display'] = 'before';
 
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
