@@ -152,3 +152,11 @@ pre {
   padding: 1rem;
   border-radius: $border-radius;
 }
+
+.form-type-select,
+.form-select {
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}

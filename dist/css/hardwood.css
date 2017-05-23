@@ -6706,6 +6706,11 @@ pre {
   padding: 1rem;
   border-radius: 0.25rem; }
 
+.form-type-select label,
+.form-select label {
+  display: block;
+  margin-bottom: 0.5rem; }
+
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
   .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
