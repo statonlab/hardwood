@@ -410,6 +410,7 @@ function hardwood_theme_registry_alter(&$theme_registry) {
  * @param $form_state
  */
 function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
+  dpm($form);
   $input_group_classes = "input-group";
   if (drupal_is_front_page()) {
     $input_group_classes .= ' input-group-lg';
