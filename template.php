@@ -410,7 +410,6 @@ function hardwood_theme_registry_alter(&$theme_registry) {
  * @param $form_state
  */
 function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
-  dpm($form);
   $input_group_classes = "input-group";
   if (drupal_is_front_page()) {
     $input_group_classes .= ' input-group-lg';
@@ -423,6 +422,7 @@ function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
   $form['container']['submit']['#prefix'] = '<div class="input-group-btn">';
   // Close both the .input-group-btn and .input-group divs
   $form['container']['submit']['#suffix'] = '</div></div>';
+  dpm($form);
 }
 
 /**
