@@ -411,7 +411,7 @@ function hardwood_theme_registry_alter(&$theme_registry) {
  */
 function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
   $input_group_classes = "input-group";
-  $height = 43;
+  $height = 38;
   if (drupal_is_front_page()) {
     $input_group_classes .= ' input-group-lg';
     $height = 51;
