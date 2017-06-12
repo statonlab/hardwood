@@ -230,8 +230,6 @@ function hardwood_form_element($variables) {
 
   $output .= "</div>\n";
 
-  return $output;
-
   return '<div class="form-group">' . $output . '</div>';
 }
 
@@ -418,14 +416,15 @@ function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
   }
 
   $form['container']['#attributes']['class'][] = $input_group_classes;
+  $form['container']['search_box']['#theme_wrappers'] = [];
 
   //$form['container']['search_box']['#prefix'] = '<div class="' . $input_group_classes . '">';
   //$form['container']['search_box']['#suffix'] = '';
   $form['container']['search_box']['#attributes']['placeholder'] = 'Search...';
-  //['#prefix'] = '<div class="input-group-btn">';
-  $form['container']['submit']['#attributes']['class'][] = 'input-group-btn';
+  $form['container']['submit']['#prefix'] = '<div class="input-group-btn">';
   // Close both the .input-group-btn and .input-group divs
-  // $form['container']['submit']['#suffix'] = '</div>';
+  $form['container']['submit']['#suffix'] = '</div>';
+
 }
 
 /**
