@@ -172,32 +172,30 @@ function hardwood_form_element($variables) {
   // may not necessarily have been processed by form_builder().
   //$element['#title_display'] = 'before';
 
-  if (isset($element['#inline'])) {
-    // Add a class for disabled elements to facilitate cross-browser styling.
-    if (!empty($element['#attributes']['disabled'])) {
-      $attributes['class'][] = 'disabled';
-    }
-
-    // Add element #id for #type 'item'.
-    if (isset($element['#markup']) && !empty($element['#id'])) {
-      $attributes['id'] = $element ['#id'];
-    }
-    // Add element's #type and #name as class to aid with JS/CSS selectors.
-    $attributes['class'] = ['form-item'];
-    if (!empty($element['#type'])) {
-      $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
-    }
-    if (!empty($element['#name'])) {
-      $attributes['class'][] = 'form-item-' . strtr($element['#name'], [
-          ' ' => '-',
-          '_' => '-',
-          '[' => '-',
-          ']' => '',
-        ]);
-    }
-
-    $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
+  // Add a class for disabled elements to facilitate cross-browser styling.
+  if (!empty($element['#attributes']['disabled'])) {
+    $attributes['class'][] = 'disabled';
   }
+
+  // Add element #id for #type 'item'.
+  if (isset($element['#markup']) && !empty($element['#id'])) {
+    $attributes['id'] = $element ['#id'];
+  }
+  // Add element's #type and #name as class to aid with JS/CSS selectors.
+  $attributes['class'] = ['form-item'];
+  if (!empty($element['#type'])) {
+    $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
+  }
+  if (!empty($element['#name'])) {
+    $attributes['class'][] = 'form-item-' . strtr($element['#name'], [
+        ' ' => '-',
+        '_' => '-',
+        '[' => '-',
+        ']' => '',
+      ]);
+  }
+
+  $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
 
   // If #title is not set, we don't display any label or required marker.
   if (!isset($element['#title'])) {
@@ -231,6 +229,8 @@ function hardwood_form_element($variables) {
   }
 
   $output .= "</div>\n";
+
+  return $output;
 
   return '<div class="form-group">' . $output . '</div>';
 }
@@ -422,9 +422,10 @@ function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
   //$form['container']['search_box']['#prefix'] = '<div class="' . $input_group_classes . '">';
   //$form['container']['search_box']['#suffix'] = '';
   $form['container']['search_box']['#attributes']['placeholder'] = 'Search...';
-  //$form['container']['submit']['#prefix'] = '<div class="input-group-btn">';
+  //['#prefix'] = '<div class="input-group-btn">';
+  $form['container']['submit']['#attributes']['class'][] = 'input-group-btn';
   // Close both the .input-group-btn and .input-group divs
-  //$form['container']['submit']['#suffix'] = '</div>';
+  // $form['container']['submit']['#suffix'] = '</div>';
 }
 
 /**
