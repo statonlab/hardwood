@@ -412,21 +412,19 @@ function hardwood_theme_registry_alter(&$theme_registry) {
  * @param $form_state
  */
 function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
-  /*$input_group_classes = "input-group";
+  $input_group_classes = "input-group";
   if (drupal_is_front_page()) {
-    $input_group_classes .= ' input-group-lg';
+    $input_group_classes .= 'input-group-lg';
   }
-  $input_group_classes = '';
-  $form['container']['search_box']['#prefix'] = '<div class="' . $input_group_classes . '">';
-  $form['container']['search_box']['#suffix'] = '';
-  $form['container']['search_box']['#inline'] = TRUE;
 
+  $form['container']['#attributes']['class'][] = $input_group_classes;
+
+  //$form['container']['search_box']['#prefix'] = '<div class="' . $input_group_classes . '">';
+  //$form['container']['search_box']['#suffix'] = '';
   $form['container']['search_box']['#attributes']['placeholder'] = 'Search...';
   $form['container']['submit']['#prefix'] = '<div class="input-group-btn">';
-  $form['container']['submit']['#inline'] = TRUE;
   // Close both the .input-group-btn and .input-group divs
   $form['container']['submit']['#suffix'] = '</div></div>';
-  unset($form['container']['submit']);*/
 }
 
 /**
