@@ -6914,7 +6914,8 @@ fieldset.collapsible.collapsed legend:before {
 .ajax-progress-throbber {
   position: absolute;
   right: 10px;
-  top: 10px; }
+  top: 10px;
+  width: 100%; }
 
 .download-page {
   margin-top: 0 !important; }
