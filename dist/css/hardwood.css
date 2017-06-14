@@ -6926,6 +6926,9 @@ fieldset.collapsible.collapsed legend:before {
     -webkit-animation: fa-spin 2s infinite linear;
     animation: fa-spin 2s infinite linear;
     display: inline-block; }
+  .ajax-progress .message,
+  .ajax-progress-throbber .message {
+    display: none; }
 
 .download-page {
   margin-top: 0 !important; }
