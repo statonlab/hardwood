@@ -6923,7 +6923,8 @@ fieldset.collapsible.collapsed legend:before {
     content: '\f110';
     margin-right: 10px;
     -webkit-animation: fa-spin 2s infinite linear;
-    animation: fa-spin 2s infinite linear; }
+    animation: fa-spin 2s infinite linear;
+    display: inline-block; }
 
 .download-page {
   margin-top: 0 !important; }
