@@ -6917,6 +6917,9 @@ fieldset.collapsible.collapsed legend:before {
   top: 10px;
   width: 100%;
   text-align: right; }
+  .ajax-progress ::before,
+  .ajax-progress-throbber ::before {
+    content: '\f110'; }
 
 .download-page {
   margin-top: 0 !important; }
