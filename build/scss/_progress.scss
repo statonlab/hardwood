@@ -27,7 +27,7 @@
 }
 
 .form-control.progress-disabled {
-  float: none!important;
+  float: none !important;
 }
 
 select.progress-disabled {
@@ -35,5 +35,8 @@ select.progress-disabled {
   + .ajax-progress-throbber {
     float: left;
     position: relative;
+    left: 0;
+    top: 20px;
+    bottom: auto;
   }
 }

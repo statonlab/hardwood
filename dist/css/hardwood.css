@@ -6941,7 +6941,10 @@ select.progress-disabled {
   float: none !important; }
   select.progress-disabled + .ajax-progress-throbber {
     float: left;
-    position: relative; }
+    position: relative;
+    left: 0;
+    top: 20px;
+    bottom: auto; }
 
 .download-page {
   margin-top: 0 !important; }
