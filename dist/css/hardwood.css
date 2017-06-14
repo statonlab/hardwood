@@ -6711,6 +6711,27 @@ pre {
   display: block;
   margin-bottom: 0.5rem; }
 
+.progress-disabled {
+  float: left;
+  display: inline; }
+
+.ajax-progress {
+  float: none;
+  display: inline-block !important; }
+
+.ajax-progress .throbber {
+  float: left;
+  height: 15px;
+  margin: 2px;
+  width: 15px;
+  display: inline-block !important; }
+
+tr .ajax-progress .throbber {
+  margin: 0 2px; }
+
+.ajax-progress-bar {
+  width: 16em; }
+
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
   .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
@@ -6885,6 +6906,12 @@ fieldset.collapsible.collapsed legend:before {
       background-color: #fff;
       font-weight: bold;
       color: #444; }
+
+.ajax-progress,
+.ajax-progress-throbber {
+  position: absolute;
+  right: 10px;
+  top: 10px; }
 
 .download-page {
   margin-top: 0 !important; }
