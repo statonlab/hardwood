@@ -6917,8 +6917,8 @@ fieldset.collapsible.collapsed legend:before {
   top: 10px;
   width: 100%;
   text-align: right; }
-  .ajax-progress ::before,
-  .ajax-progress-throbber ::before {
+  .ajax-progress:after,
+  .ajax-progress-throbber:after {
     font-family: FontAwesome;
     content: '\f110';
     margin-right: 10px;
