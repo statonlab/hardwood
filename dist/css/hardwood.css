@@ -6924,7 +6924,8 @@ fieldset.collapsible.collapsed legend:before {
     margin-right: 10px;
     -webkit-animation: fa-spin 2s infinite linear;
     animation: fa-spin 2s infinite linear;
-    display: inline-block; }
+    display: inline-block;
+    float: left; }
 
 .download-page {
   margin-top: 0 !important; }
