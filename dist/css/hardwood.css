@@ -6935,7 +6935,7 @@ fieldset.collapsible.collapsed legend:before {
     display: none; }
 
 .form-control.progress-disabled, .progress-disabled#edit-search-box {
-  height: 38px; }
+  float: none !important; }
 
 .download-page {
   margin-top: 0 !important; }
