@@ -6909,6 +6909,10 @@ fieldset.collapsible.collapsed legend:before {
 
 .form-group {
   position: relative; }
+  .form-group::after {
+    display: block;
+    content: "";
+    clear: both; }
 
 .ajax-progress,
 .ajax-progress-throbber {
@@ -6929,6 +6933,9 @@ fieldset.collapsible.collapsed legend:before {
   .ajax-progress .message,
   .ajax-progress-throbber .message {
     display: none; }
+
+.form-control.progress-disabled, .progress-disabled#edit-search-box {
+  height: 50px; }
 
 .download-page {
   margin-top: 0 !important; }

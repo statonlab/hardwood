@@ -1,5 +1,6 @@
 .form-group {
   position: relative;
+  @include clearfix();
 }
 
 .ajax-progress,
@@ -23,4 +24,8 @@
   .message {
     display: none;
   }
+}
+
+.form-control.progress-disabled {
+  height: 50px;
 }
