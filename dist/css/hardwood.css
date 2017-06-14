@@ -6907,6 +6907,9 @@ fieldset.collapsible.collapsed legend:before {
       font-weight: bold;
       color: #444; }
 
+.form-group {
+  position: relative; }
+
 .ajax-progress,
 .ajax-progress-throbber {
   position: absolute;
