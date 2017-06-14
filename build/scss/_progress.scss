@@ -11,5 +11,8 @@
   ::before {
     font-family: FontAwesome;
     content: '\f110';
+    margin-right: 10px;
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
   }
 }
