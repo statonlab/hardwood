@@ -32,11 +32,4 @@
 
 select.progress-disabled {
   float: none !important;
-  + .ajax-progress-throbber {
-    float: left;
-    position: relative;
-    left: 0;
-    top: 20px;
-    bottom: -100%;
-  }
 }

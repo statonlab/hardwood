@@ -6939,12 +6939,6 @@ fieldset.collapsible.collapsed legend:before {
 
 select.progress-disabled {
   float: none !important; }
-  select.progress-disabled + .ajax-progress-throbber {
-    float: left;
-    position: relative;
-    left: 0;
-    top: 20px;
-    bottom: -100%; }
 
 .download-page {
   margin-top: 0 !important; }
