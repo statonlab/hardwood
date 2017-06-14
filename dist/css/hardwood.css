@@ -6915,7 +6915,8 @@ fieldset.collapsible.collapsed legend:before {
   position: absolute;
   right: 10px;
   top: 10px;
-  width: 100%; }
+  width: 100%;
+  text-align: right; }
 
 .download-page {
   margin-top: 0 !important; }
