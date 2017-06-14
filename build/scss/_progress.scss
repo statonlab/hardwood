@@ -8,6 +8,7 @@
   top: 10px;
   width: 100%;
   text-align: right;
+  display: inline-block;
   &:before {
     font-family: FontAwesome;
     content: '\f110';
@@ -15,6 +16,5 @@
     -webkit-animation: fa-spin 2s infinite linear;
     animation: fa-spin 2s infinite linear;
     display: inline-block;
-    float: left;
   }
 }

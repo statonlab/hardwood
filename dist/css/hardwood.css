@@ -6916,7 +6916,8 @@ fieldset.collapsible.collapsed legend:before {
   right: 10px;
   top: 10px;
   width: 100%;
-  text-align: right; }
+  text-align: right;
+  display: inline-block; }
   .ajax-progress:before,
   .ajax-progress-throbber:before {
     font-family: FontAwesome;
@@ -6924,8 +6925,7 @@ fieldset.collapsible.collapsed legend:before {
     margin-right: 10px;
     -webkit-animation: fa-spin 2s infinite linear;
     animation: fa-spin 2s infinite linear;
-    display: inline-block;
-    float: left; }
+    display: inline-block; }
 
 .download-page {
   margin-top: 0 !important; }
