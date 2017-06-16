@@ -20,8 +20,10 @@ function hardwood_preprocess_page(&$variables) {
 
   $cards = variable_get('hardwood_page_cards');
 
-  $variables['hardwood_set_page_card'] = true;
-  if (is_array($cards) && in_array($variables['node']->nid, $cards)) {
-    $variables['hardwood_set_page_card'] = false;
+  $variables['hardwood_set_page_card'] = TRUE;
+  if (isset($variables['node'])) {
+    if (is_array($cards) && in_array($variables['node']->nid, $cards)) {
+      $variables['hardwood_set_page_card'] = FALSE;
+    }
   }
 }
