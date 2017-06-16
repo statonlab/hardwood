@@ -497,6 +497,4 @@ function hardwood_from_node_submit(&$form, &$form_state) {
   }
 
   variable_set('hardwood_page_cards', $cards);
-
-  dpm($cards);
 }
