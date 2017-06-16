@@ -15,15 +15,13 @@ function hardwood_preprocess_page(&$variables) {
     // Build links.
     $variables['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
     // Provide default theme wrapper function.
-    $variables['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
+    $variables['primary_nav']['#theme_wrappers'] = ['menu_tree__primary'];
   }
 
-  /* Secondary nav.
-  $variables['secondary_nav'] = FALSE;
-  if ($variables['secondary_menu']) {
-    // Build links.
-    $variables['secondary_nav'] = menu_tree(variable_get('menu_secondary_links_source', 'user-menu'));
-    // Provide default theme wrapper function.
-    $variables['secondary_nav']['#theme_wrappers'] = array('menu_tree__secondary');
-  }*/
+  $cards = variable_get('hardwood_page_cards');
+
+  $variables['hardwood_set_page_card'] = true;
+  if (is_array($cards) && in_array($variables['node']->nid, $cards)) {
+    $variables['hardwood_set_page_card'] = false;
+  }
 }

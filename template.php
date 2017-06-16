@@ -3,8 +3,7 @@
 /**
  * Include all necessary files.
  */
-include_once drupal_get_path('theme',
-    'hardwood') . '/templates/system/page.vars.php';
+include_once drupal_get_path('theme', 'hardwood') . '/templates/system/page.vars.php';
 
 /**
  * Add `btn` class to all buttons.
@@ -16,12 +15,7 @@ function hardwood_preprocess_button(&$variables) {
   $variables['element']['#attributes']['class'][] = 'mb-2';
 
   if (is_array($variables['element']['#attributes']['class'])) {
-    if (in_array('btn-default',
-        $variables['element']['#attributes']['class']) || in_array('btn-danger',
-        $variables['element']['#attributes']['class']) || in_array('btn-warning',
-        $variables['element']['#attributes']['class']) || in_array('btn-info',
-        $variables['element']['#attributes']['class'])
-    ) {
+    if (in_array('btn-default', $variables['element']['#attributes']['class']) || in_array('btn-danger', $variables['element']['#attributes']['class']) || in_array('btn-warning', $variables['element']['#attributes']['class']) || in_array('btn-info', $variables['element']['#attributes']['class'])) {
       return;
     }
   }
@@ -360,8 +354,7 @@ function hardwood_menu_link__main_menu(array $variables) {
     }
   }
 
-  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href,
-      $options) . $sub_menu . "</li>\n";
+  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
 }
 
 /**
@@ -394,9 +387,7 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['trpdownload_page']['template'] = 'other/generic_download_page';
 
   foreach ($theme_registry as $key => $theme) {
-    if (isset($theme['template']) && strpos($theme['template'],
-        'node--chado-generic') !== FALSE
-    ) {
+    if (isset($theme['template']) && strpos($theme['template'], 'node--chado-generic') !== FALSE) {
       $theme_registry[$key]['path'] = $path . '/templates';
       $theme_registry[$key]['template'] = 'tripal/node--chado-generic';
     }
@@ -427,7 +418,6 @@ function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
   $form['container']['submit']['#prefix'] = '<div class="input-group-btn">';
   // Close both the .input-group-btn and .input-group divs
   $form['container']['submit']['#suffix'] = '</div>';
-
 }
 
 /**
@@ -448,8 +438,7 @@ function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
  */
 function hardwood_js_alter(&$javascript) {
   unset($javascript['misc/collapse.js']);
-  drupal_add_js(drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js',
-    []);
+  drupal_add_js(drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js', []);
 }
 
 /**
@@ -468,4 +457,46 @@ function hardwood_progress_bar($variables) {
   $output .= '<div class="message">' . $variables['message'] . '</div>';
 
   return $output;
+}
+
+function hardwood_form_node_form_alter(&$form, &$form_State, $form_id) {
+  $form['theme_options'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Theme Options'),
+    '#access' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'additional_settings',
+    '#tree' => TRUE,
+  ];
+
+  $form['theme_options']['display_card'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Display box borders around page content'),
+    '#value' => 1,
+    '#default_value' => 1,
+  ];
+
+  $form['#submit'][] = 'hardwood_from_node_submit';
+}
+
+function hardwood_from_node_submit(&$form, &$form_state) {
+  $values = $form_state['values'];
+  $nid = $form['#node']->nid;
+
+  $cards = variable_get('hardwood_page_cards');
+
+  if ($values['display_card'] !== 1) {
+    if (is_array($cards)) {
+      if (!in_array($nid, $cards)) {
+        $cards[] = $nid;
+      }
+    }
+    else {
+      $cards = [$nid];
+    }
+  }
+
+  variable_set('hardwood_page_cards', $cards);
+
+  dpm($cards);
 }
