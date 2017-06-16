@@ -127,3 +127,7 @@ a.tabledrag-handle {
     width: 70%;
   }
 }
+
+.table > thead > tr > th > a {
+  white-space: nowrap;
+}

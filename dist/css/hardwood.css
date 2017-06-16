@@ -6849,6 +6849,9 @@ a.tabledrag-handle {
     display: inline-block;
     width: 70%; }
 
+.table > thead > tr > th > a, table > thead > tr > th > a {
+  white-space: nowrap; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 
