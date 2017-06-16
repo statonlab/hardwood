@@ -6850,7 +6850,7 @@ a.tabledrag-handle {
     width: 70%; }
 
 .table > thead > tr > th > a, table > thead > tr > th > a {
-  white-space: nowrap; }
+  white-space: nowrap !important; }
 
 .alignment-subrow {
   font-size: 0.875rem; }
