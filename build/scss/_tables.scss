@@ -130,4 +130,7 @@ a.tabledrag-handle {
 
 .table > thead > tr > th > a {
   white-space: nowrap!important;
+  > img {
+    margin-left: 10px;
+  }
 }

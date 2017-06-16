@@ -6851,6 +6851,8 @@ a.tabledrag-handle {
 
 .table > thead > tr > th > a, table > thead > tr > th > a {
   white-space: nowrap !important; }
+  .table > thead > tr > th > a > img, table > thead > tr > th > a > img {
+    margin-left: 10px; }
 
 .alignment-subrow {
   font-size: 0.875rem; }
