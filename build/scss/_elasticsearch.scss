@@ -25,6 +25,10 @@
 }
 
 #block-tripal-elasticsearch-website-search-category {
+  .content > a:first-of-type {
+    font-size: 18px;
+  }
+
   ul {
     list-style: none;
     margin-left: 0;
@@ -32,8 +36,10 @@
     li {
       a {
         color: #777;
+        &.active,
         &:hover {
           color: $link-color;
+          text-decoration: none;
         }
       }
     }

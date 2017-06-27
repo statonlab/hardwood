@@ -6881,14 +6881,18 @@ a.tabledrag-handle {
   margin: 0 !important;
   width: 100% !important; }
 
+#block-tripal-elasticsearch-website-search-category .content > a:first-of-type {
+  font-size: 18px; }
+
 #block-tripal-elasticsearch-website-search-category ul {
   list-style: none;
   margin-left: 0;
   padding-left: 0; }
   #block-tripal-elasticsearch-website-search-category ul li a {
     color: #777; }
-    #block-tripal-elasticsearch-website-search-category ul li a:hover {
-      color: #5cb85c; }
+    #block-tripal-elasticsearch-website-search-category ul li a.active, #block-tripal-elasticsearch-website-search-category ul li a:hover {
+      color: #5cb85c;
+      text-decoration: none; }
 
 .collapsed > .fieldset-wrapper {
   display: none; }
