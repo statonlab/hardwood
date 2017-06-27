@@ -479,11 +479,10 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
 
   $nid = $form['#node']->nid;
   $cards = variable_get('hardwood_page_cards');
-  dpm($cards);
 
   if (is_array($cards)) {
     if (isset($cards[$nid])) {
-      $form['theme_options']['display_card']['#default_value'] = FALSE;
+      $form['theme_options']['display_card']['#default_value'] = 0;
     }
   }
 
