@@ -43,7 +43,7 @@
     $('div').has('table').last().addClass('table-responsive');
 
     $("#block-tripal-elasticsearch-website-search-category").each(function(block) {
-        
+
     })
 })(jQuery);
 
