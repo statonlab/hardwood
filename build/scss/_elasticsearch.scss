@@ -35,11 +35,16 @@
     padding-left: 0;
     li {
       a {
+        margin-bottom: 5px;
         color: #777;
         &.active,
         &:hover {
           color: $link-color;
           text-decoration: none;
+        }
+
+        &.active {
+          font-weight: bold;
         }
       }
     }
