@@ -42,13 +42,11 @@
     // Add table responsive to divs that contain tables as a direct child
     $('div').has('table').last().addClass('table-responsive');
 
-    console.log('I am hardwood')
-    $('#block-tripal-elasticsearch-website-search-category ul').each(function () {
-        $(this).find('a').each(function () {
+    $('#block-tripal-elasticsearch-website-search-category ul a').each(function () {
+        console.log('hi')
             var text = $(this).text().split(' ');
             var num = text.pop();
             console.log(num)
-        });
     });
 })(jQuery);
 
