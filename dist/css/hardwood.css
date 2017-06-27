@@ -6882,7 +6882,8 @@ a.tabledrag-handle {
   width: 100% !important; }
 
 #block-tripal-elasticsearch-website-search-category .content > a:first-of-type {
-  font-size: 18px; }
+  font-size: 18px;
+  margin-bottom: 10px; }
 
 #block-tripal-elasticsearch-website-search-category ul {
   list-style: none;
