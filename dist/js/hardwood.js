@@ -50,7 +50,8 @@
             span.css({
                 position: 'absolute',
                 right: 0,
-                top: '5px'
+                top: 0,
+                backgroundColor: '#fff'
             });
 
             $(this).html(text);
