@@ -43,9 +43,9 @@
 
         $('#block-tripal-elasticsearch-website-search-category a').each(function () {
             var text = $(this).text().split(' ');
-            var num = text.pop();
-            text = text.split('_').join(' ');
-            $(this).html(text.join());
+            var num = text.pop().join();
+            text = text.replace('_', ' ');
+            $(this).html(text);
             $(this).append($('<span />', {'class': 'float-right'}).text(num));
         });
     });
