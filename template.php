@@ -483,7 +483,7 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
 
   if (is_array($cards)) {
     if (isset($cards[$nid])) {
-      unset($form['theme_options']['display_card']['#default_value']);
+      $form['theme_options']['display_card']['#default_value'] = FALSE;
     }
   }
 
