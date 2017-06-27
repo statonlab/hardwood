@@ -37,6 +37,7 @@
       a {
         margin-bottom: 5px;
         color: #777;
+        display: block;
         &.active,
         &:hover {
           color: $link-color;
@@ -45,7 +46,7 @@
 
         &.active {
           font-weight: bold;
-          margin: 20px 0!important;
+          margin: 10px 0;
         }
       }
     }

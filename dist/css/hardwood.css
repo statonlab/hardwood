@@ -6890,13 +6890,14 @@ a.tabledrag-handle {
   padding-left: 0; }
   #block-tripal-elasticsearch-website-search-category ul li a {
     margin-bottom: 5px;
-    color: #777; }
+    color: #777;
+    display: block; }
     #block-tripal-elasticsearch-website-search-category ul li a.active, #block-tripal-elasticsearch-website-search-category ul li a:hover {
       color: #5cb85c;
       text-decoration: none; }
     #block-tripal-elasticsearch-website-search-category ul li a.active {
       font-weight: bold;
-      margin: 20px 0 !important; }
+      margin: 10px 0; }
 
 .collapsed > .fieldset-wrapper {
   display: none; }
