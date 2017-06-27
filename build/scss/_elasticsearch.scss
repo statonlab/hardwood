@@ -25,6 +25,10 @@
 }
 
 #block-tripal-elasticsearch-website-search-category {
+  a {
+    display: block;
+  }
+  
   .content > a:first-of-type {
     font-size: 18px;
     margin-bottom: 10px;
@@ -38,7 +42,6 @@
       a {
         margin-bottom: 5px;
         color: #777;
-        display: block;
         &.active,
         &:hover {
           color: $link-color;
