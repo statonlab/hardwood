@@ -500,7 +500,8 @@ function hardwood_from_node_submit(&$form, &$form_state) {
   $cards = variable_get('hardwood_page_cards');
 
   $nCards = $cards;
-  foreach ($cards as $card) {
+  foreach ($cards as $key => $card) {
+    unset($nCards[$key]);
     $nCards[$card] = $card;
   }
 
