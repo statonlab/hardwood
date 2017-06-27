@@ -6896,7 +6896,7 @@ a.tabledrag-handle {
       text-decoration: none; }
     #block-tripal-elasticsearch-website-search-category ul li a.active {
       font-weight: bold;
-      margin: 10px 0; }
+      margin: 20px 0; }
 
 .collapsed > .fieldset-wrapper {
   display: none; }
