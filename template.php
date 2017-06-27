@@ -472,8 +472,8 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
   $form['theme_options']['display_card'] = [
     '#type' => 'checkbox',
     '#title' => t('Display box borders around page content'),
-    '#value' => FALSE,
-    '#return_value' => TRUE,
+    '#value' => TRUE,
+    '#default_value' => false,
   ];
 
   $nid = $form['#node']->nid;
@@ -481,7 +481,7 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
   $cards = variable_get('hardwood_page_cards');
 
   if (is_array($cards)) {
-    $form['theme_options']['display_card']['#value'] = !isset($cards[$nid]);
+    //$form['theme_options']['display_card']['#default_value'] = !isset($cards[$nid]);
   }
 
   $form['#submit'][] = 'hardwood_from_node_submit';
