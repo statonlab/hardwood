@@ -475,8 +475,6 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
     '#default_value' => false,
   ];
 
-  $nid = $form['#node']->nid;
-  dpm($form['#node']->nid);
   $cards = variable_get('hardwood_page_cards');
 
   if (is_array($cards)) {
@@ -489,8 +487,6 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
 function hardwood_from_node_submit(&$form, &$form_state) {
   $values = $form_state['values'];
   $nid = $form['#node']->nid;
-
-  dpm($values['theme_options']);
 
   $cards = variable_get('hardwood_page_cards');
 
