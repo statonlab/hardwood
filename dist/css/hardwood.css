@@ -6881,6 +6881,15 @@ a.tabledrag-handle {
   margin: 0 !important;
   width: 100% !important; }
 
+#block-tripal-elasticsearch-website-search-category ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+  #block-tripal-elasticsearch-website-search-category ul li a {
+    color: #777; }
+    #block-tripal-elasticsearch-website-search-category ul li a:hover {
+      color: #5cb85c; }
+
 .collapsed > .fieldset-wrapper {
   display: none; }
 
