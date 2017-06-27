@@ -473,7 +473,6 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
     '#type' => 'checkbox',
     '#title' => t('Display box borders around page content'),
     '#value' => TRUE,
-    '#default_value' => TRUE,
   ];
 
 
@@ -483,8 +482,6 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
   if (is_array($cards)) {
     $form['theme_options']['display_card']['#default_value'] = !isset($cards[$nid]);
   }
-
-  dpm(isset($cards[$nid]));
 
   $form['#submit'][] = 'hardwood_from_node_submit';
 }
