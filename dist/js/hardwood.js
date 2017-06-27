@@ -42,8 +42,8 @@
     // Add table responsive to divs that contain tables as a direct child
     $('div').has('table').last().addClass('table-responsive');
 
-    $('#block-tripal-elasticsearch-website-search-category').each(function () {
-        block.find('ul a').each(function () {
+    $('#block-tripal-elasticsearch-website-search-category ul').each(function () {
+        $(this).find('a').each(function () {
             var text = $(this).text().split(' ');
             var num = text.pop();
             console.log(num)
