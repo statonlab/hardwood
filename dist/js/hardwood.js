@@ -42,10 +42,9 @@
         $('div').has('table').last().addClass('table-responsive');
 
         $('#block-tripal-elasticsearch-website-search-category ul a').each(function () {
-            console.log('hi');
             var text = $(this).text().split(' ');
             var num = text.pop();
-            console.log(num);
+            console.log(text, num);
         });
     });
 })(jQuery);
