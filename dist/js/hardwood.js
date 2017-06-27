@@ -43,8 +43,8 @@
 
         $('#block-tripal-elasticsearch-website-search-category a').each(function () {
             var text = $(this).text().split(' ');
-            var num = text.pop().join();
-            text = text.replace('_', ' ');
+            var num = text.pop();
+            text = text.join(' ').replace('_', ' ');
             $(this).html(text);
             $(this).append($('<span />', {'class': 'float-right'}).text(num));
         });
