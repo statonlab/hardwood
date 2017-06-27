@@ -502,10 +502,17 @@ function hardwood_from_node_submit(&$form, &$form_state) {
 
   $cards = variable_get('hardwood_page_cards');
 
+  $nCards = $cards;
+  foreach ($cards as $card) {
+    $nCards[$card] = $card;
+  }
+
+  $cards = $nCards;
+
   if (!isset($values['display_card'])) {
     if (is_array($cards)) {
       if (!in_array($nid, $cards)) {
-        $cards[] = $nid;
+        $cards[$nid] = $nid;
       }
     }
     else {
@@ -514,11 +521,8 @@ function hardwood_from_node_submit(&$form, &$form_state) {
   }
   else {
     if (is_array($cards)) {
-      foreach ($cards as $key => $card) {
-        if ($card === $nid) {
-          unset($cards[$key]);
-          break;
-        }
+      if (isset($cards[$nid])) {
+        unset($cards[$nid]);
       }
     }
   }
