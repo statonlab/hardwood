@@ -473,7 +473,6 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
     '#type' => 'checkbox',
     '#title' => t('Display box borders around page content'),
     '#value' => 1,
-    '#default_value' => false,
   ];
 
 
