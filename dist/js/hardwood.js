@@ -42,11 +42,19 @@
         $('div').has('table').last().addClass('table-responsive');
 
         $('#block-tripal-elasticsearch-website-search-category a').each(function () {
+            $(this).css('position', 'relative');
             var text = $(this).text().split(' ');
             var num = text.pop();
             text = text.join(' ').split('_').join(' ');
+            var span = $('<span />', {'class': 'float-right'}).text(num);
+            span.css({
+                position: 'absolute',
+                right: 0,
+                top: '5px'
+            });
+
             $(this).html(text);
-            $(this).append($('<span />', {'class': 'float-right'}).text(num));
+            $(this).append(span);
         });
     });
 })(jQuery);
