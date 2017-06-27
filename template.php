@@ -491,7 +491,7 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
   }
 
   dpm($nid);
-  $dpm($cards);
+  dpm($cards);
 
   $form['#submit'][] = 'hardwood_from_node_submit';
 }
