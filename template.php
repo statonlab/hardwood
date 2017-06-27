@@ -495,7 +495,7 @@ function hardwood_from_node_submit(&$form, &$form_state) {
 
   $cards = variable_get('hardwood_page_cards');
 
-  if (!isset($values['theme_options']['display_card'])) {
+  if ($values['theme_options']['display_card']) {
     if (is_array($cards)) {
       $cards[$nid] = $nid;
     }
