@@ -459,8 +459,7 @@ function hardwood_progress_bar($variables) {
   return $output;
 }
 
-function hardwood_form_node_form_alter(&$form, &$form_State, $form_id) {
-  dpm(variable_get('hardwood_page_cards'));
+function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
   $form['theme_options'] = [
     '#type' => 'fieldset',
     '#title' => t('Theme Options'),
@@ -469,6 +468,18 @@ function hardwood_form_node_form_alter(&$form, &$form_State, $form_id) {
     '#group' => 'additional_settings',
     '#tree' => TRUE,
   ];
+
+  $nid = $form['#node']->nid;
+  $cards = variable_get('hardwood_page_cards');
+
+  if (is_array($cards)) {
+    foreach ($cards as $key => $card) {
+      if ($card === $nid) {
+        unset($cards[$key]);
+        break;
+      }
+    }
+  }
 
   $form['theme_options']['display_card'] = [
     '#type' => 'checkbox',
