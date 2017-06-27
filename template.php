@@ -460,6 +460,7 @@ function hardwood_progress_bar($variables) {
 }
 
 function hardwood_form_node_form_alter(&$form, &$form_State, $form_id) {
+  dpm(variable_get('hardwood_page_cards'));
   $form['theme_options'] = [
     '#type' => 'fieldset',
     '#title' => t('Theme Options'),
