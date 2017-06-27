@@ -493,6 +493,8 @@ function hardwood_from_node_submit(&$form, &$form_state) {
   $values = $form_state['values'];
   $nid = $form['#node']->nid;
 
+  dpm($values['theme_options']);
+
   $cards = variable_get('hardwood_page_cards');
 
   if (!$values['theme_options']['display_card']) {
