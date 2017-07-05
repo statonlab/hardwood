@@ -475,7 +475,7 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
     '#default_value' => FALSE,
   ];
 
-  $nid = $form['#node']->nid;
+  $nid = isset($form['#node']->nid) ? $form['#node']->nid : -1;
   $cards = variable_get('hardwood_page_cards');
 
   if (is_array($cards)) {
