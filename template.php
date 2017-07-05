@@ -460,7 +460,7 @@ function hardwood_progress_bar($variables) {
 }
 
 function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
-  if(isset($form['#node']->nid)) {
+  if(!isset($form['#node']->nid)) {
     return;
   }
 
