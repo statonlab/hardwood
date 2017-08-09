@@ -6933,13 +6933,6 @@ fieldset.collapsible.collapsed legend:before {
       font-weight: bold;
       color: #444; }
 
-.form-group {
-  position: relative; }
-  .form-group::after {
-    display: block;
-    content: "";
-    clear: both; }
-
 .ajax-progress,
 .ajax-progress-throbber {
   position: absolute;
