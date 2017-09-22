@@ -6902,6 +6902,16 @@ a.tabledrag-handle {
       font-weight: bold;
       margin: 10px 0; }
 
+#es-search-results-table h3 {
+  font-size: 1rem !important;
+  font-weight: bold !important; }
+
+#es-search-results-table p {
+  font-size: 0.9rem; }
+
+#es-search-results-table tbody > tr:first-of-type > td {
+  border-top: 0; }
+
 .collapsed > .fieldset-wrapper {
   display: none; }
 

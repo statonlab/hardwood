@@ -57,3 +57,17 @@
   }
 }
 
+#es-search-results-table {
+  h3 {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  tbody > tr:first-of-type > td {
+    border-top: 0;
+  }
+}
