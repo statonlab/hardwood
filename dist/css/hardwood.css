@@ -6598,6 +6598,11 @@ body {
 .text-xs {
   font-size: 0.75rem; }
 
+.es-category-item__all {
+  color: #777; }
+  .es-category-item__all.active {
+    color: #000; }
+
 .margin-top-1 {
   margin-top: 5rem; }
 
