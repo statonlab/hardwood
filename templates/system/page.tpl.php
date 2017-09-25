@@ -97,28 +97,22 @@
               <?php if ($title): ?>
                   <div class="section page-header">
                       <div class="container">
-                          <div class="row">
-                              <div class="col-12">
+                          <div class="row flex-center">
+                              <div class="col-md-7">
                                 <?php print render($title_prefix); ?>
-                                  <h1 class="title"
-                                      id="page-title"><?php print $title; ?></h1>
+                                  <h1 class="title" id="page-title">
+                                    <?php print $title; ?>
+                                  </h1>
                                 <?php print render($title_suffix); ?>
+                              </div>
+                              <div class="col-md-5 es-search-form-in-title">
+                                <?php if ($page['front_search'] && strstr(current_path(), 'tripal_elasticsearch/search_website') === FALSE): ?>
+                                  <?php print render($page['front_search']); ?>
+                                <?php endif; ?>
                               </div>
                           </div>
                       </div>
                   </div><!-- /.section -->
-              <?php endif; ?>
-
-              <?php if ($page['front_search'] && strstr(current_path(), 'tripal_elasticsearch/search_website') === FALSE): ?>
-                  <div class="section section-sm bg-gray">
-                      <div class="container">
-                          <div class="row">
-                              <div class="col-12 col-sm-8 col-md-6 offset-md-3 offset-sm-2">
-                                <?php print render($page['front_search']); ?>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               <?php endif; ?>
 
                 <div class="section">
@@ -144,21 +138,16 @@
                               <?php endif; ?>
 
                               <?php if ($page['front_search'] && strstr(current_path(), 'tripal_elasticsearch/search_website') !== FALSE): ?>
-                                  <div class="section section-sm">
+                                  <div class="mb-1">
                                     <?php print render($page['front_search']); ?>
                                   </div>
                               <?php endif; ?>
 
-                                <div class="<?php $hardwood_set_page_card === TRUE ? print 'card' : '' ?>">
-                                    <div class="<?php $hardwood_set_page_card === TRUE ? print 'card-block' : '' ?>">
-                                      <?php if ($messages): ?>
-                                        <?php print $messages; ?>
-                                      <?php endif; ?>
+                              <?php if ($messages): ?>
+                                <?php print $messages; ?>
+                              <?php endif; ?>
 
-                                      <?php print render($page['content']); ?>
-
-                                    </div>
-                                </div>
+                              <?php print render($page['content']); ?>
 
                               <?php print $feed_icons; ?>
                             </div>
