@@ -18,5 +18,22 @@
         color: #444;
       }
     }
+
+    &.first {
+      &,
+      > a {
+        margin-left: 0;
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+      }
+    }
+
+    &.last {
+      &,
+      > a {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+    }
   }
 }

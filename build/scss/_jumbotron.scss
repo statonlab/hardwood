@@ -9,6 +9,9 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    h1, p {
+      text-shadow: 0 0 5px rgba(#000, 1);
+    }
     .jumbotron-inner {
       padding: 6rem 0;
     }

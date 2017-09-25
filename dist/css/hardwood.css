@@ -6508,6 +6508,10 @@ body {
 .form-group label {
   font-weight: bold; }
 
+.card, .admin-panel {
+  border: 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.125); }
+
 .main-header {
   background-color: #fff;
   border-top: 6px solid #5cb85c;
@@ -6587,6 +6591,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
+    .jumbotron.front-page h1, .jumbotron.front-page p {
+      text-shadow: 0 0 5px black; }
     .jumbotron.front-page .jumbotron-inner {
       padding: 6rem 0; }
   .jumbotron .jumbotron-inner {
@@ -6838,6 +6844,17 @@ tr .ajax-progress .throbber {
     background: #fff; }
   .pager > li.pager-current, .pager > li.pager-current:hover, .pager > li.pager-ellipsis, .pager > li.pager-ellipsis:hover {
     color: #444; }
+
+.pager > li.first,
+.pager > li.first > a {
+  margin-left: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem; }
+
+.pager > li.last,
+.pager > li.last > a {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem; }
 
 .submitted {
   margin-bottom: 1rem; }
@@ -7153,3 +7170,8 @@ select.progress-disabled {
 .container-inline .form-group {
   float: left;
   margin-right: 5px; }
+
+.form-group .form-control + .input-group-btn .btn, .form-group #edit-search-box + .input-group-btn .btn, .form-group .container-inline select + .input-group-btn .btn, .container-inline .form-group select + .input-group-btn .btn, .form-group .form-control + .input-group-btn #edit-cancel, .form-group #edit-search-box + .input-group-btn #edit-cancel, .form-group .container-inline select + .input-group-btn #edit-cancel, .container-inline .form-group select + .input-group-btn #edit-cancel, .form-group .form-control + .input-group-btn #edit-search-submit, .form-group #edit-search-box + .input-group-btn #edit-search-submit, .form-group .container-inline select + .input-group-btn #edit-search-submit, .container-inline .form-group select + .input-group-btn #edit-search-submit {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+  margin-right: 0 !important; }
