@@ -71,6 +71,7 @@
  *
  * @ingroup themeable
  */
+
 ?>
 
 <div id="page-wrapper">
@@ -108,7 +109,7 @@
                   </div><!-- /.section -->
               <?php endif; ?>
 
-              <?php if ($page['front_search']): ?>
+              <?php if ($page['front_search'] && strstr(current_path(), 'tripal_elasticsearch/search_website') === FALSE): ?>
                   <div class="section section-sm bg-gray">
                       <div class="container">
                           <div class="row">
@@ -140,6 +141,12 @@
 
                               <?php if ($action_links): ?>
                                   <ul class="action-links"><?php print render($action_links); ?></ul>
+                              <?php endif; ?>
+
+                              <?php if ($page['front_search'] && strstr(current_path(), 'tripal_elasticsearch/search_website') !== FALSE): ?>
+                                  <div class="section section-sm">
+                                    <?php print render($page['front_search']); ?>
+                                  </div>
                               <?php endif; ?>
 
                                 <div class="<?php $hardwood_set_page_card === TRUE ? print 'card' : '' ?>">

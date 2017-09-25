@@ -3,85 +3,103 @@
  * and allow for a show more button.
  */
 (function ($) {
-    $(function () {
-        $('#elasticsearch_hits_table tr td:nth-of-type(2)').each(function () {
-            var text = $(this).html();
-            var array = text.split('<br>');
+  $(function () {
+    $('#elasticsearch_hits_table tr td:nth-of-type(2)').each(function () {
+      var text  = $(this).html();
+      var array = text.split('<br>');
 
-            if (array.length > 2) {
-                var div = $('<div />', {});
-                div.append(array.shift() + '<br>' + array.shift());
-                var hidden = $('<div />', {'class': 'hidden-hit'}).css('display', 'none');
-                hidden.append(array.join('<br>'));
-                div.append(hidden);
-                div.append('<br>');
-                var btn = $('<button />', {
-                    'type': 'button',
-                    'class': 'btn btn-secondary btn-sm'
-                }).html('Show More')
-                    .click(function (e) {
-                        e.preventDefault();
+      if (array.length > 2) {
+        var div = $('<div />', {});
+        div.append(array.shift() + '<br>' + array.shift());
+        var hidden = $('<div />', {'class': 'hidden-hit'}).css('display', 'none');
+        hidden.append(array.join('<br>'));
+        div.append(hidden);
+        div.append('<br>');
+        var btn = $('<button />', {
+          'type' : 'button',
+          'class': 'btn btn-secondary btn-sm'
+        }).html('Show More')
+            .click(function (e) {
+              e.preventDefault();
 
-                        var hidden_hit = hidden;
-                        if (hidden_hit.hasClass('is_open')) {
-                            hidden_hit.removeClass('is_open');
-                            hidden_hit.slideUp();
-                            btn.html('Show More');
-                        } else {
-                            hidden_hit.slideDown();
-                            hidden_hit.addClass('is_open');
-                            btn.html('Show Less');
-                        }
-                    });
-                div.append(btn);
-                $(this).html(div);
-            }
-        });
-
-        // Add table responsive to divs that contain tables as a direct child
-        $('div').has('table').last().addClass('table-responsive');
-
-        $('#block-tripal-elasticsearch-website-search-category a').each(function () {
-            $(this).css('position', 'relative');
-            var text = $(this).text().split(' ');
-            var num = text.pop();
-            text = text.join(' ').split('_').join(' ');
-            var span = $('<span />', {'class': 'float-right'}).text(num);
-            span.css({
-                position: 'absolute',
-                right: 0,
-                top: 0,
-                backgroundColor: '#fff'
+              var hidden_hit = hidden;
+              if (hidden_hit.hasClass('is_open')) {
+                hidden_hit.removeClass('is_open');
+                hidden_hit.slideUp();
+                btn.html('Show More');
+              }
+              else {
+                hidden_hit.slideDown();
+                hidden_hit.addClass('is_open');
+                btn.html('Show Less');
+              }
             });
-
-            $(this).html(text);
-            $(this).append(span);
-        });
+        div.append(btn);
+        $(this).html(div);
+      }
     });
+
+    // Add table responsive to divs that contain tables as a direct child
+    $('div').has('table').last().addClass('table-responsive');
+
+    $('#block-tripal-elasticsearch-website-search-category .es-category-item').each(function () {
+      $(this).css('position', 'relative');
+      var text = $(this).text().split(' ');
+      var num  = text.pop();
+      text     = text.join(' ').split('_').join(' ');
+      var span = $('<span />', {'class': 'float-right'}).text(num.replace('(', '').replace(')', ''));
+      span.css({
+        position       : 'absolute',
+        right          : 0,
+        top            : 0,
+        backgroundColor: '#fff'
+      });
+
+      if ($(this).hasClass('active')) {
+        $(this).css('color', '#000');
+        span.html('<i class="fa fa-check"></i>');
+      }
+      else {
+        span.css({
+          backgroundColor: '#e6e6e6',
+          borderRadius   : 10,
+          paddingTop     : 2,
+          paddingBottom  : 2,
+          paddingLeft    : 7,
+          paddingRight   : 7,
+          fontSize       : 12,
+          color          : '#999'
+        });
+      }
+
+      $(this).html(text);
+      $(this).append(span);
+    });
+  });
 })(jQuery);
 
 /**
  * Allow dropdown menus to open by hover on bigger devices.
  */
 (function ($) {
-    $(function () {
-        $('.navbar .dropdown > .nav-link').click(function (e) {
-            if ($(window).width() > 992) {
-                var href = $(this).attr('href');
-                if (href !== '#') {
-                    return window.location.href = href;
-                }
-            }
-        });
-
-        $('.navbar .dropdown').hover(function () {
-            if ($(window).width() > 992) {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
-            }
-        }, function () {
-            if ($(window).width() > 992) {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
-            }
-        });
+  $(function () {
+    $('.navbar .dropdown > .nav-link').click(function (e) {
+      if ($(window).width() > 992) {
+        var href = $(this).attr('href');
+        if (href !== '#') {
+          return window.location.href = href;
+        }
+      }
     });
+
+    $('.navbar .dropdown').hover(function () {
+      if ($(window).width() > 992) {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
+      }
+    }, function () {
+      if ($(window).width() > 992) {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
+      }
+    });
+  });
 })(jQuery);
