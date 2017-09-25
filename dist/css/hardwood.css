@@ -1484,7 +1484,7 @@ pre {
   .table-responsive.table-bordered {
     border: 0; }
 
-.form-control, #edit-search-box {
+.form-control, #edit-search-box, .container-inline select {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -1497,27 +1497,27 @@ pre {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
-  .form-control::-ms-expand, #edit-search-box::-ms-expand {
+  .form-control::-ms-expand, #edit-search-box::-ms-expand, .container-inline select::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus, #edit-search-box:focus {
+  .form-control:focus, #edit-search-box:focus, .container-inline select:focus {
     color: #464a4c;
     background-color: #fff;
     border-color: #b5dfb5;
     outline: none; }
-  .form-control::placeholder, #edit-search-box::placeholder {
+  .form-control::placeholder, #edit-search-box::placeholder, .container-inline select::placeholder {
     color: #aaa;
     opacity: 1; }
-  .form-control:disabled, #edit-search-box:disabled, .form-control[readonly], [readonly]#edit-search-box {
+  .form-control:disabled, #edit-search-box:disabled, .container-inline select:disabled, .form-control[readonly], [readonly]#edit-search-box, .container-inline select[readonly] {
     background-color: #eceeef;
     opacity: 1; }
-  .form-control:disabled, #edit-search-box:disabled {
+  .form-control:disabled, #edit-search-box:disabled, .container-inline select:disabled {
     cursor: not-allowed; }
 
-select.form-control:not([size]):not([multiple]), select#edit-search-box:not([size]):not([multiple]) {
+select.form-control:not([size]):not([multiple]), select#edit-search-box:not([size]):not([multiple]), .container-inline select:not([size]):not([multiple]) {
   height: calc(2.25rem + 2px); }
 
-select.form-control:focus::-ms-value, select#edit-search-box:focus::-ms-value {
+select.form-control:focus::-ms-value, select#edit-search-box:focus::-ms-value, .container-inline select:focus::-ms-value {
   color: #464a4c;
   background-color: #fff; }
 
@@ -1553,11 +1553,11 @@ select.form-control:focus::-ms-value, select#edit-search-box:focus::-ms-value {
   line-height: 1.25;
   border: solid transparent;
   border-width: 1px 0; }
-  .form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control, .input-group-sm > .form-control-static#edit-search-box,
+  .form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control, .input-group-sm > .form-control-static#edit-search-box, .container-inline .input-group-sm > select.form-control-static,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn,
   .input-group-sm > .input-group-btn > .form-control-static#edit-cancel,
-  .input-group-sm > .input-group-btn > .form-control-static#edit-search-submit, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .input-group-lg > .form-control-static#edit-search-box,
+  .input-group-sm > .input-group-btn > .form-control-static#edit-search-submit, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .input-group-lg > .form-control-static#edit-search-box, .container-inline .input-group-lg > select.form-control-static,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn,
   .input-group-lg > .input-group-btn > .form-control-static#edit-cancel,
@@ -1565,7 +1565,7 @@ select.form-control:focus::-ms-value, select#edit-search-box:focus::-ms-value {
     padding-right: 0;
     padding-left: 0; }
 
-.form-control-sm, .input-group-sm > .form-control, .input-group-sm > #edit-search-box,
+.form-control-sm, .input-group-sm > .form-control, .input-group-sm > #edit-search-box, .container-inline .input-group-sm > select,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > #edit-cancel,
@@ -1574,14 +1574,14 @@ select.form-control:focus::-ms-value, select#edit-search-box:focus::-ms-value {
   font-size: 0.875rem;
   border-radius: 0.2rem; }
 
-select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select#edit-search-box:not([size]):not([multiple]),
+select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select#edit-search-box:not([size]):not([multiple]), .container-inline .input-group-sm > select:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select#edit-cancel:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select#edit-search-submit:not([size]):not([multiple]) {
   height: 1.8125rem; }
 
-.form-control-lg, .input-group-lg > .form-control, .input-group-lg > #edit-search-box,
+.form-control-lg, .input-group-lg > .form-control, .input-group-lg > #edit-search-box, .container-inline .input-group-lg > select,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > #edit-cancel,
@@ -1590,7 +1590,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > select#edit-search-box:not([size]):not([multiple]),
+select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > select#edit-search-box:not([size]):not([multiple]), .container-inline .input-group-lg > select:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select#edit-cancel:not([size]):not([multiple]),
@@ -1649,7 +1649,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .has-success .custom-control {
   color: #5cb85c; }
 
-.has-success .form-control, .has-success #edit-search-box {
+.has-success .form-control, .has-success #edit-search-box, .has-success .container-inline select, .container-inline .has-success select {
   border-color: #5cb85c; }
 
 .has-success .input-group-addon {
@@ -1667,7 +1667,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .has-warning .custom-control {
   color: #f0ad4e; }
 
-.has-warning .form-control, .has-warning #edit-search-box {
+.has-warning .form-control, .has-warning #edit-search-box, .has-warning .container-inline select, .container-inline .has-warning select {
   border-color: #f0ad4e; }
 
 .has-warning .input-group-addon {
@@ -1685,7 +1685,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .has-danger .custom-control {
   color: #d9534f; }
 
-.has-danger .form-control, .has-danger #edit-search-box {
+.has-danger .form-control, .has-danger #edit-search-box, .has-danger .container-inline select, .container-inline .has-danger select {
   border-color: #d9534f; }
 
 .has-danger .input-group-addon {
@@ -1714,7 +1714,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
       flex-flow: row wrap;
       align-items: center;
       margin-bottom: 0; }
-    .form-inline .form-control, .form-inline #edit-search-box {
+    .form-inline .form-control, .form-inline #edit-search-box, .form-inline .container-inline select, .container-inline .form-inline select {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -2358,26 +2358,30 @@ tbody.collapse.show {
   position: relative;
   display: flex;
   width: 100%; }
-  .input-group .form-control, .input-group #edit-search-box {
+  .input-group .form-control, .input-group #edit-search-box, .input-group .container-inline select, .container-inline .input-group select {
     position: relative;
     z-index: 2;
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group .form-control:focus, .input-group #edit-search-box:focus, .input-group .form-control:active, .input-group #edit-search-box:active, .input-group .form-control:hover, .input-group #edit-search-box:hover {
+    .input-group .form-control:focus, .input-group #edit-search-box:focus, .input-group .container-inline select:focus, .container-inline .input-group select:focus, .input-group .form-control:active, .input-group #edit-search-box:active, .input-group .container-inline select:active, .container-inline .input-group select:active, .input-group .form-control:hover, .input-group #edit-search-box:hover, .input-group .container-inline select:hover, .container-inline .input-group select:hover {
       z-index: 3; }
 
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control,
-.input-group #edit-search-box {
+.input-group #edit-search-box,
+.input-group .container-inline select, .container-inline
+.input-group select {
   display: flex;
   flex-direction: column;
   justify-content: center; }
   .input-group-addon:not(:first-child):not(:last-child),
   .input-group-btn:not(:first-child):not(:last-child),
   .input-group .form-control:not(:first-child):not(:last-child),
-  .input-group #edit-search-box:not(:first-child):not(:last-child) {
+  .input-group #edit-search-box:not(:first-child):not(:last-child),
+  .input-group .container-inline select:not(:first-child):not(:last-child), .container-inline
+  .input-group select:not(:first-child):not(:last-child) {
     border-radius: 0; }
 
 .input-group-addon,
@@ -2396,7 +2400,7 @@ tbody.collapse.show {
   background-color: #eceeef;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem; }
-  .input-group-addon.form-control-sm, .input-group-sm > .input-group-addon#edit-search-box,
+  .input-group-addon.form-control-sm, .input-group-sm > .input-group-addon#edit-search-box, .container-inline .input-group-sm > select.input-group-addon,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn,
   .input-group-sm > .input-group-btn > .input-group-addon#edit-cancel,
@@ -2404,7 +2408,7 @@ tbody.collapse.show {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     border-radius: 0.2rem; }
-  .input-group-addon.form-control-lg, .input-group-lg > .input-group-addon#edit-search-box,
+  .input-group-addon.form-control-lg, .input-group-lg > .input-group-addon#edit-search-box, .container-inline .input-group-lg > select.input-group-addon,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn,
   .input-group-lg > .input-group-btn > .input-group-addon#edit-cancel,
@@ -2416,7 +2420,7 @@ tbody.collapse.show {
   .input-group-addon input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group .form-control:not(:last-child), .input-group #edit-search-box:not(:last-child),
+.input-group .form-control:not(:last-child), .input-group #edit-search-box:not(:last-child), .input-group .container-inline select:not(:last-child), .container-inline .input-group select:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > #edit-cancel,
@@ -2437,7 +2441,7 @@ tbody.collapse.show {
 .input-group-addon:not(:last-child) {
   border-right: 0; }
 
-.input-group .form-control:not(:first-child), .input-group #edit-search-box:not(:first-child),
+.input-group .form-control:not(:first-child), .input-group #edit-search-box:not(:first-child), .input-group .container-inline select:not(:first-child), .container-inline .input-group select:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > #edit-cancel,
@@ -2455,7 +2459,7 @@ tbody.collapse.show {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
-.form-control + .input-group-addon:not(:first-child), #edit-search-box + .input-group-addon:not(:first-child) {
+.form-control + .input-group-addon:not(:first-child), #edit-search-box + .input-group-addon:not(:first-child), .container-inline select + .input-group-addon:not(:first-child) {
   border-left: 0; }
 
 .input-group-btn {
@@ -6603,7 +6607,7 @@ body {
   .es-category-item__all.active {
     color: #000; }
 
-.margin-top-1 {
+.margin-top-1, .es-search-form-in-home {
   margin-top: 5rem; }
 
 .remove-margin {
@@ -6737,6 +6741,97 @@ tr .ajax-progress .throbber {
 .ajax-progress-bar {
   width: 16em; }
 
+.es-search-form-in-home .form-wrapper,
+.es-search-form-in-title .form-wrapper {
+  margin-bottom: 0 !important;
+  position: relative; }
+
+.es-search-form-in-home .form-control, .es-search-form-in-home #edit-search-box, .es-search-form-in-home .container-inline select, .container-inline .es-search-form-in-home select,
+.es-search-form-in-title .form-control,
+.es-search-form-in-title #edit-search-box,
+.es-search-form-in-title .container-inline select, .container-inline
+.es-search-form-in-title select {
+  border-radius: 10px !important;
+  border: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125); }
+  .es-search-form-in-home .form-control:focus, .es-search-form-in-home #edit-search-box:focus, .es-search-form-in-home .container-inline select:focus, .container-inline .es-search-form-in-home select:focus, .es-search-form-in-home .form-control:hover, .es-search-form-in-home #edit-search-box:hover, .es-search-form-in-home .container-inline select:hover, .container-inline .es-search-form-in-home select:hover,
+  .es-search-form-in-title .form-control:focus,
+  .es-search-form-in-title #edit-search-box:focus,
+  .es-search-form-in-title .container-inline select:focus, .container-inline
+  .es-search-form-in-title select:focus,
+  .es-search-form-in-title .form-control:hover,
+  .es-search-form-in-title #edit-search-box:hover,
+  .es-search-form-in-title .container-inline select:hover, .container-inline
+  .es-search-form-in-title select:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+    .es-search-form-in-home .form-control:focus + .input-group-btn .btn, .es-search-form-in-home #edit-search-box:focus + .input-group-btn .btn, .es-search-form-in-home .container-inline select:focus + .input-group-btn .btn, .container-inline .es-search-form-in-home select:focus + .input-group-btn .btn, .es-search-form-in-home .form-control:focus + .input-group-btn #edit-cancel, .es-search-form-in-home #edit-search-box:focus + .input-group-btn #edit-cancel, .es-search-form-in-home .container-inline select:focus + .input-group-btn #edit-cancel, .container-inline .es-search-form-in-home select:focus + .input-group-btn #edit-cancel, .es-search-form-in-home .form-control:focus + .input-group-btn #edit-search-submit, .es-search-form-in-home #edit-search-box:focus + .input-group-btn #edit-search-submit, .es-search-form-in-home .container-inline select:focus + .input-group-btn #edit-search-submit, .container-inline .es-search-form-in-home select:focus + .input-group-btn #edit-search-submit, .es-search-form-in-home .form-control:hover + .input-group-btn .btn, .es-search-form-in-home #edit-search-box:hover + .input-group-btn .btn, .es-search-form-in-home .container-inline select:hover + .input-group-btn .btn, .container-inline .es-search-form-in-home select:hover + .input-group-btn .btn, .es-search-form-in-home .form-control:hover + .input-group-btn #edit-cancel, .es-search-form-in-home #edit-search-box:hover + .input-group-btn #edit-cancel, .es-search-form-in-home .container-inline select:hover + .input-group-btn #edit-cancel, .container-inline .es-search-form-in-home select:hover + .input-group-btn #edit-cancel, .es-search-form-in-home .form-control:hover + .input-group-btn #edit-search-submit, .es-search-form-in-home #edit-search-box:hover + .input-group-btn #edit-search-submit, .es-search-form-in-home .container-inline select:hover + .input-group-btn #edit-search-submit, .container-inline .es-search-form-in-home select:hover + .input-group-btn #edit-search-submit,
+    .es-search-form-in-title .form-control:focus + .input-group-btn .btn,
+    .es-search-form-in-title #edit-search-box:focus + .input-group-btn .btn,
+    .es-search-form-in-title .container-inline select:focus + .input-group-btn .btn, .container-inline
+    .es-search-form-in-title select:focus + .input-group-btn .btn,
+    .es-search-form-in-title .form-control:focus + .input-group-btn #edit-cancel,
+    .es-search-form-in-title #edit-search-box:focus + .input-group-btn #edit-cancel,
+    .es-search-form-in-title .container-inline select:focus + .input-group-btn #edit-cancel, .container-inline
+    .es-search-form-in-title select:focus + .input-group-btn #edit-cancel,
+    .es-search-form-in-title .form-control:focus + .input-group-btn #edit-search-submit,
+    .es-search-form-in-title #edit-search-box:focus + .input-group-btn #edit-search-submit,
+    .es-search-form-in-title .container-inline select:focus + .input-group-btn #edit-search-submit, .container-inline
+    .es-search-form-in-title select:focus + .input-group-btn #edit-search-submit,
+    .es-search-form-in-title .form-control:hover + .input-group-btn .btn,
+    .es-search-form-in-title #edit-search-box:hover + .input-group-btn .btn,
+    .es-search-form-in-title .container-inline select:hover + .input-group-btn .btn, .container-inline
+    .es-search-form-in-title select:hover + .input-group-btn .btn,
+    .es-search-form-in-title .form-control:hover + .input-group-btn #edit-cancel,
+    .es-search-form-in-title #edit-search-box:hover + .input-group-btn #edit-cancel,
+    .es-search-form-in-title .container-inline select:hover + .input-group-btn #edit-cancel, .container-inline
+    .es-search-form-in-title select:hover + .input-group-btn #edit-cancel,
+    .es-search-form-in-title .form-control:hover + .input-group-btn #edit-search-submit,
+    .es-search-form-in-title #edit-search-box:hover + .input-group-btn #edit-search-submit,
+    .es-search-form-in-title .container-inline select:hover + .input-group-btn #edit-search-submit, .container-inline
+    .es-search-form-in-title select:hover + .input-group-btn #edit-search-submit {
+      background-color: #5cb85c;
+      border-color: #5cb85c;
+      color: #fff; }
+
+.es-search-form-in-home .input-group-btn,
+.es-search-form-in-title .input-group-btn {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  z-index: 1000; }
+  .es-search-form-in-home .input-group-btn .btn, .es-search-form-in-home .input-group-btn #edit-cancel, .es-search-form-in-home .input-group-btn #edit-search-submit,
+  .es-search-form-in-title .input-group-btn .btn,
+  .es-search-form-in-title .input-group-btn #edit-cancel,
+  .es-search-form-in-title .input-group-btn #edit-search-submit {
+    border-radius: 10px;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    padding: 0;
+    background-color: #e6e6e6;
+    color: #777;
+    border-color: #e6e6e6;
+    cursor: pointer; }
+
+.es-search-form-in-title .form-control, .es-search-form-in-title #edit-search-box, .es-search-form-in-title .container-inline select, .container-inline .es-search-form-in-title select {
+  transition: max-width 250ms linear;
+  max-width: 300px;
+  margin-left: auto; }
+  .es-search-form-in-title .form-control:focus, .es-search-form-in-title #edit-search-box:focus, .es-search-form-in-title .container-inline select:focus, .container-inline .es-search-form-in-title select:focus {
+    max-width: 100%; }
+
+.es-search-form-in-home .input-group-btn {
+  right: 4px;
+  top: 3px; }
+  .es-search-form-in-home .input-group-btn .btn, .es-search-form-in-home .input-group-btn #edit-cancel, .es-search-form-in-home .input-group-btn #edit-search-submit {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #5cb85c;
+    background-color: #fff;
+    border-color: #fff; }
+
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
   .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
@@ -6781,7 +6876,7 @@ table {
     white-space: nowrap; }
   table.tripal-organism-data-table th {
     min-width: 10px; }
-  table .form-control, table #edit-search-box,
+  table .form-control, table #edit-search-box, table .container-inline select, .container-inline table select,
   table .form-group {
     display: inline-block; }
 
@@ -6968,7 +7063,7 @@ fieldset.collapsible.collapsed legend:before {
   .ajax-progress-throbber .message {
     display: none; }
 
-.form-control.progress-disabled, .progress-disabled#edit-search-box {
+.form-control.progress-disabled, .progress-disabled#edit-search-box, .container-inline select.progress-disabled {
   float: none !important; }
 
 select.progress-disabled {
@@ -7042,3 +7137,19 @@ select.progress-disabled {
 [id^="edit-modules-"] table tbody > tr > td.permissions,
 [id^="edit-modules-"] table tbody > tr > td.configure {
   font-size: 12px; }
+
+.flex-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+.container-inline .form-group {
+  float: left;
+  margin-right: 5px; }

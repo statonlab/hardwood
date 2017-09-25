@@ -2,6 +2,7 @@
 @import "variables";
 // Bootsrtap 4
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "flex-mixins";
 // Custom Components
 @import "main";
 @import "main_header";
@@ -19,3 +20,5 @@
 @import "progress";
 @import "download-page";
 @import "admin";
+@import "flex-control";
+@import "form";

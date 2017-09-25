@@ -75,6 +75,16 @@
       $(this).html(text);
       $(this).append(span);
     });
+
+    $('.es-search-form-in-title .btn, .es-search-form-in-home .btn').each(function () {
+      var attributes = {};
+      for (var i = 0; i < this.attributes.length; i++) {
+        attributes[this.attributes[i].nodeName] = this.attributes[i].nodeValue;
+      }
+
+      var searchButton = $('<button />', attributes).html('<i class="fa fa-search"></i>');
+      $(this).replaceWith(searchButton);
+    });
   });
 })(jQuery);
 

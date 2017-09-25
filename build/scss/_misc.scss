@@ -186,3 +186,73 @@ tr .ajax-progress .throbber {
 .ajax-progress-bar {
   width: 16em;
 }
+
+.es-search-form-in-home,
+.es-search-form-in-title {
+  .form-wrapper {
+    margin-bottom: 0 !important;
+    position: relative;
+  }
+
+  .form-control {
+    border-radius: 10px!important;
+    border: 0;
+    box-shadow: 0 2px 5px rgba(#000, .125);
+    &:focus,
+    &:hover {
+      box-shadow: 0 4px 10px rgba(#000, .2);
+      + .input-group-btn .btn {
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+        color: #fff;
+      }
+    }
+  }
+
+  .input-group-btn {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    z-index: 1000;
+    .btn {
+      border-radius: 10px;
+      width: 33px;
+      height: 33px;
+      line-height: 33px;
+      text-align: center;
+      padding: 0;
+      background-color: #e6e6e6;
+      color: #777;
+      border-color: #e6e6e6;
+      cursor: pointer;
+    }
+  }
+}
+
+.es-search-form-in-title {
+  .form-control {
+    transition: max-width 250ms linear;
+    max-width: 300px;
+    margin-left: auto;
+    &:focus {
+      max-width: 100%;
+    }
+  }
+}
+
+.es-search-form-in-home {
+  @extend .margin-top-1;
+
+  .input-group-btn {
+    right: 4px;
+    top: 3px;
+    .btn {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      color: $brand-primary;
+      background-color: #fff;
+      border-color: #fff;
+    }
+  }
+}

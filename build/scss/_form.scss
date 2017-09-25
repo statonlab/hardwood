@@ -1,0 +1,9 @@
+.container-inline {
+  .form-group {
+    float: left;
+    margin-right: 5px;
+  }
+  select {
+    @extend .form-control;
+  }
+}
