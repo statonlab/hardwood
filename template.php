@@ -274,6 +274,9 @@ function hardwood_status_messages($variables) {
       case 'status':
         $cc = 'alert-info';
         break;
+      default:
+        $cc = 'alert-info';
+        break;
     }
     $output .= "<div class=\"alert $cc\">\n";
     if (!empty($status_heading[$type])) {
@@ -460,7 +463,7 @@ function hardwood_progress_bar($variables) {
 }
 
 function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
-  if(!isset($form['#node']->nid)) {
+  if (!isset($form['#node']->nid)) {
     return;
   }
 
@@ -490,7 +493,7 @@ function hardwood_form_node_form_alter(&$form, &$form_state, $form_id) {
 }
 
 function hardwood_from_node_submit(&$form, &$form_state) {
-  if(!isset($form['#node']->nid)) {
+  if (!isset($form['#node']->nid)) {
     return;
   }
 

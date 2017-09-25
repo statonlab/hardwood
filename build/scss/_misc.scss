@@ -1,5 +1,5 @@
 .margin-top-1 {
-  margin-top: 5rem;
+  margin-top: 2.5rem;
 }
 
 .remove-margin {
@@ -205,6 +205,9 @@ tr .ajax-progress .throbber {
         background-color: $brand-primary;
         border-color: $brand-primary;
         color: #fff;
+        &:hover {
+          background-color: darken($brand-primary, 10%);
+        }
       }
     }
   }
@@ -221,10 +224,10 @@ tr .ajax-progress .throbber {
       line-height: 33px;
       text-align: center;
       padding: 0;
-      background-color: #e6e6e6;
-      color: #777;
-      border-color: #e6e6e6;
       cursor: pointer;
+      color: $brand-primary;
+      background-color: #fff;
+      border-color: #fff;
     }
   }
 }
@@ -250,9 +253,10 @@ tr .ajax-progress .throbber {
       width: 45px;
       height: 45px;
       line-height: 45px;
-      color: $brand-primary;
-      background-color: #fff;
-      border-color: #fff;
     }
   }
+}
+
+#es-search-results-table {
+  margin-bottom: 0;
 }

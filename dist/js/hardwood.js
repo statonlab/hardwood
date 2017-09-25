@@ -85,6 +85,11 @@
       var searchButton = $('<button />', attributes).html('<i class="fa fa-search"></i>');
       $(this).replaceWith(searchButton);
     });
+
+    $(document).on('elasticsearch.completed', function (event) {
+      console.log(event);
+      $('.elastic-result-block-footer a').attr('class', 'btn btn-primary');
+    });
   });
 })(jQuery);
 

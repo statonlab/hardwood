@@ -1,8 +1,16 @@
-.container-inline {
+.es-cross-site-search-form {
+  padding: 0!important;
+  border-width: 0 !important;
+
+  > .fieldset-wrapper {
+    padding: 0;
+  }
+
   .form-group {
     float: left;
     margin-right: 5px;
   }
+
   select {
     @extend .form-control;
   }
