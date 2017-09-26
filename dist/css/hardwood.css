@@ -6213,124 +6213,6 @@ tr .ajax-progress .throbber {
 .ajax-progress-bar {
   width: 16em; }
 
-.es-search-form-in-home .form-wrapper,
-.es-search-form-in-title .form-wrapper {
-  margin-bottom: 0 !important;
-  position: relative; }
-
-.es-search-form-in-home .form-control, .es-search-form-in-home #edit-search-box, .es-search-form-in-home .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-home select,
-.es-search-form-in-title .form-control,
-.es-search-form-in-title #edit-search-box,
-.es-search-form-in-title .es-cross-site-search-form select, .es-cross-site-search-form
-.es-search-form-in-title select {
-  border-radius: 10px !important;
-  border: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125); }
-  .es-search-form-in-home .form-control:focus, .es-search-form-in-home #edit-search-box:focus, .es-search-form-in-home .es-cross-site-search-form select:focus, .es-cross-site-search-form .es-search-form-in-home select:focus, .es-search-form-in-home .form-control:hover, .es-search-form-in-home #edit-search-box:hover, .es-search-form-in-home .es-cross-site-search-form select:hover, .es-cross-site-search-form .es-search-form-in-home select:hover,
-  .es-search-form-in-title .form-control:focus,
-  .es-search-form-in-title #edit-search-box:focus,
-  .es-search-form-in-title .es-cross-site-search-form select:focus, .es-cross-site-search-form
-  .es-search-form-in-title select:focus,
-  .es-search-form-in-title .form-control:hover,
-  .es-search-form-in-title #edit-search-box:hover,
-  .es-search-form-in-title .es-cross-site-search-form select:hover, .es-cross-site-search-form
-  .es-search-form-in-title select:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-    .es-search-form-in-home .form-control:focus + .input-group-btn .btn, .es-search-form-in-home #edit-search-box:focus + .input-group-btn .btn, .es-search-form-in-home .es-cross-site-search-form select:focus + .input-group-btn .btn, .es-cross-site-search-form .es-search-form-in-home select:focus + .input-group-btn .btn, .es-search-form-in-home .form-control:focus + .input-group-btn #edit-cancel, .es-search-form-in-home #edit-search-box:focus + .input-group-btn #edit-cancel, .es-search-form-in-home .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel, .es-cross-site-search-form .es-search-form-in-home select:focus + .input-group-btn #edit-cancel, .es-search-form-in-home .form-control:focus + .input-group-btn #edit-search-submit, .es-search-form-in-home #edit-search-box:focus + .input-group-btn #edit-search-submit, .es-search-form-in-home .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit, .es-cross-site-search-form .es-search-form-in-home select:focus + .input-group-btn #edit-search-submit, .es-search-form-in-home .form-control:hover + .input-group-btn .btn, .es-search-form-in-home #edit-search-box:hover + .input-group-btn .btn, .es-search-form-in-home .es-cross-site-search-form select:hover + .input-group-btn .btn, .es-cross-site-search-form .es-search-form-in-home select:hover + .input-group-btn .btn, .es-search-form-in-home .form-control:hover + .input-group-btn #edit-cancel, .es-search-form-in-home #edit-search-box:hover + .input-group-btn #edit-cancel, .es-search-form-in-home .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel, .es-cross-site-search-form .es-search-form-in-home select:hover + .input-group-btn #edit-cancel, .es-search-form-in-home .form-control:hover + .input-group-btn #edit-search-submit, .es-search-form-in-home #edit-search-box:hover + .input-group-btn #edit-search-submit, .es-search-form-in-home .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit, .es-cross-site-search-form .es-search-form-in-home select:hover + .input-group-btn #edit-search-submit,
-    .es-search-form-in-title .form-control:focus + .input-group-btn .btn,
-    .es-search-form-in-title #edit-search-box:focus + .input-group-btn .btn,
-    .es-search-form-in-title .es-cross-site-search-form select:focus + .input-group-btn .btn, .es-cross-site-search-form
-    .es-search-form-in-title select:focus + .input-group-btn .btn,
-    .es-search-form-in-title .form-control:focus + .input-group-btn #edit-cancel,
-    .es-search-form-in-title #edit-search-box:focus + .input-group-btn #edit-cancel,
-    .es-search-form-in-title .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel, .es-cross-site-search-form
-    .es-search-form-in-title select:focus + .input-group-btn #edit-cancel,
-    .es-search-form-in-title .form-control:focus + .input-group-btn #edit-search-submit,
-    .es-search-form-in-title #edit-search-box:focus + .input-group-btn #edit-search-submit,
-    .es-search-form-in-title .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit, .es-cross-site-search-form
-    .es-search-form-in-title select:focus + .input-group-btn #edit-search-submit,
-    .es-search-form-in-title .form-control:hover + .input-group-btn .btn,
-    .es-search-form-in-title #edit-search-box:hover + .input-group-btn .btn,
-    .es-search-form-in-title .es-cross-site-search-form select:hover + .input-group-btn .btn, .es-cross-site-search-form
-    .es-search-form-in-title select:hover + .input-group-btn .btn,
-    .es-search-form-in-title .form-control:hover + .input-group-btn #edit-cancel,
-    .es-search-form-in-title #edit-search-box:hover + .input-group-btn #edit-cancel,
-    .es-search-form-in-title .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel, .es-cross-site-search-form
-    .es-search-form-in-title select:hover + .input-group-btn #edit-cancel,
-    .es-search-form-in-title .form-control:hover + .input-group-btn #edit-search-submit,
-    .es-search-form-in-title #edit-search-box:hover + .input-group-btn #edit-search-submit,
-    .es-search-form-in-title .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit, .es-cross-site-search-form
-    .es-search-form-in-title select:hover + .input-group-btn #edit-search-submit {
-      background-color: #28a745;
-      border-color: #28a745;
-      color: #fff; }
-      .es-search-form-in-home .form-control:focus + .input-group-btn .btn:hover, .es-search-form-in-home #edit-search-box:focus + .input-group-btn .btn:hover, .es-search-form-in-home .es-cross-site-search-form select:focus + .input-group-btn .btn:hover, .es-cross-site-search-form .es-search-form-in-home select:focus + .input-group-btn .btn:hover, .es-search-form-in-home .form-control:focus + .input-group-btn #edit-cancel:hover, .es-search-form-in-home #edit-search-box:focus + .input-group-btn #edit-cancel:hover, .es-search-form-in-home .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel:hover, .es-cross-site-search-form .es-search-form-in-home select:focus + .input-group-btn #edit-cancel:hover, .es-search-form-in-home .form-control:focus + .input-group-btn #edit-search-submit:hover, .es-search-form-in-home #edit-search-box:focus + .input-group-btn #edit-search-submit:hover, .es-search-form-in-home .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit:hover, .es-cross-site-search-form .es-search-form-in-home select:focus + .input-group-btn #edit-search-submit:hover, .es-search-form-in-home .form-control:hover + .input-group-btn .btn:hover, .es-search-form-in-home #edit-search-box:hover + .input-group-btn .btn:hover, .es-search-form-in-home .es-cross-site-search-form select:hover + .input-group-btn .btn:hover, .es-cross-site-search-form .es-search-form-in-home select:hover + .input-group-btn .btn:hover, .es-search-form-in-home .form-control:hover + .input-group-btn #edit-cancel:hover, .es-search-form-in-home #edit-search-box:hover + .input-group-btn #edit-cancel:hover, .es-search-form-in-home .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel:hover, .es-cross-site-search-form .es-search-form-in-home select:hover + .input-group-btn #edit-cancel:hover, .es-search-form-in-home .form-control:hover + .input-group-btn #edit-search-submit:hover, .es-search-form-in-home #edit-search-box:hover + .input-group-btn #edit-search-submit:hover, .es-search-form-in-home .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit:hover, .es-cross-site-search-form .es-search-form-in-home select:hover + .input-group-btn #edit-search-submit:hover,
-      .es-search-form-in-title .form-control:focus + .input-group-btn .btn:hover,
-      .es-search-form-in-title #edit-search-box:focus + .input-group-btn .btn:hover,
-      .es-search-form-in-title .es-cross-site-search-form select:focus + .input-group-btn .btn:hover, .es-cross-site-search-form
-      .es-search-form-in-title select:focus + .input-group-btn .btn:hover,
-      .es-search-form-in-title .form-control:focus + .input-group-btn #edit-cancel:hover,
-      .es-search-form-in-title #edit-search-box:focus + .input-group-btn #edit-cancel:hover,
-      .es-search-form-in-title .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel:hover, .es-cross-site-search-form
-      .es-search-form-in-title select:focus + .input-group-btn #edit-cancel:hover,
-      .es-search-form-in-title .form-control:focus + .input-group-btn #edit-search-submit:hover,
-      .es-search-form-in-title #edit-search-box:focus + .input-group-btn #edit-search-submit:hover,
-      .es-search-form-in-title .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit:hover, .es-cross-site-search-form
-      .es-search-form-in-title select:focus + .input-group-btn #edit-search-submit:hover,
-      .es-search-form-in-title .form-control:hover + .input-group-btn .btn:hover,
-      .es-search-form-in-title #edit-search-box:hover + .input-group-btn .btn:hover,
-      .es-search-form-in-title .es-cross-site-search-form select:hover + .input-group-btn .btn:hover, .es-cross-site-search-form
-      .es-search-form-in-title select:hover + .input-group-btn .btn:hover,
-      .es-search-form-in-title .form-control:hover + .input-group-btn #edit-cancel:hover,
-      .es-search-form-in-title #edit-search-box:hover + .input-group-btn #edit-cancel:hover,
-      .es-search-form-in-title .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel:hover, .es-cross-site-search-form
-      .es-search-form-in-title select:hover + .input-group-btn #edit-cancel:hover,
-      .es-search-form-in-title .form-control:hover + .input-group-btn #edit-search-submit:hover,
-      .es-search-form-in-title #edit-search-box:hover + .input-group-btn #edit-search-submit:hover,
-      .es-search-form-in-title .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit:hover, .es-cross-site-search-form
-      .es-search-form-in-title select:hover + .input-group-btn #edit-search-submit:hover {
-        background-color: #1e7e34; }
-
-.es-search-form-in-home .input-group-btn,
-.es-search-form-in-title .input-group-btn {
-  position: absolute;
-  right: 4px;
-  top: 2px;
-  z-index: 1000; }
-  .es-search-form-in-home .input-group-btn .btn, .es-search-form-in-home .input-group-btn #edit-cancel, .es-search-form-in-home .input-group-btn #edit-search-submit,
-  .es-search-form-in-title .input-group-btn .btn,
-  .es-search-form-in-title .input-group-btn #edit-cancel,
-  .es-search-form-in-title .input-group-btn #edit-search-submit {
-    border-radius: 10px;
-    width: 33px;
-    height: 33px;
-    line-height: 33px;
-    text-align: center;
-    padding: 0;
-    cursor: pointer;
-    color: #28a745;
-    background-color: #fff;
-    border-color: #fff; }
-
-.es-search-form-in-title .form-control, .es-search-form-in-title #edit-search-box, .es-search-form-in-title .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-title select {
-  transition: max-width 250ms linear;
-  max-width: 300px;
-  margin-left: auto; }
-  .es-search-form-in-title .form-control:focus, .es-search-form-in-title #edit-search-box:focus, .es-search-form-in-title .es-cross-site-search-form select:focus, .es-cross-site-search-form .es-search-form-in-title select:focus {
-    max-width: 100%; }
-
-.es-search-form-in-home .input-group-btn {
-  right: 4px;
-  top: 3px; }
-  .es-search-form-in-home .input-group-btn .btn, .es-search-form-in-home .input-group-btn #edit-cancel, .es-search-form-in-home .input-group-btn #edit-search-submit {
-    width: 45px;
-    height: 45px;
-    line-height: 45px; }
-
-#es-search-results-table {
-  margin-bottom: 0;
-  table-layout: fixed !important; }
-
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
   .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
@@ -6485,30 +6367,6 @@ a.tabledrag-handle {
 .contextual-links-wrapper {
   top: -20px; }
 
-.elasticsearch-search-input {
-  margin-bottom: 10px; }
-  .elasticsearch-search-input .form-control, .elasticsearch-search-input #edit-search-box, .elasticsearch-search-input .es-cross-site-search-form select, .es-cross-site-search-form .elasticsearch-search-input select {
-    height: 46px !important;
-    border: 0;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125);
-    border-radius: 8px !important; }
-    .elasticsearch-search-input .form-control:focus, .elasticsearch-search-input #edit-search-box:focus, .elasticsearch-search-input .es-cross-site-search-form select:focus, .es-cross-site-search-form .elasticsearch-search-input select:focus, .elasticsearch-search-input .form-control:hover, .elasticsearch-search-input #edit-search-box:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover {
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.125); }
-      .elasticsearch-search-input .form-control:focus + .input-group-btn .btn, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn .btn, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn .btn, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn .btn, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input .form-control:hover + .input-group-btn .btn, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn .btn, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn .btn, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn .btn, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-search-submit, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-search-submit, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-search-submit {
-        background-color: #28a745;
-        border-color: #28a745;
-        color: #fff; }
-  .elasticsearch-search-input .btn, .elasticsearch-search-input #edit-cancel, .elasticsearch-search-input #edit-search-submit {
-    position: absolute;
-    z-index: 2000 !important;
-    right: 4px;
-    border-radius: 8px !important;
-    margin: 0;
-    height: 40px;
-    background-color: transparent;
-    border-color: transparent;
-    color: #28a745; }
-
 #edit-search {
   border: none !important;
   width: 100% !important;
@@ -6538,6 +6396,88 @@ a.tabledrag-handle {
     #block-tripal-elasticsearch-website-search-category ul li a.active {
       font-weight: bold;
       margin: 10px 0; }
+
+.elasticsearch-search-input {
+  margin-bottom: 2rem;
+  position: relative; }
+  .elasticsearch-search-input .form-control, .elasticsearch-search-input #edit-search-box, .elasticsearch-search-input .es-cross-site-search-form select, .es-cross-site-search-form .elasticsearch-search-input select {
+    height: 48px;
+    border-radius: 10px !important;
+    border: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125); }
+    .elasticsearch-search-input .form-control:focus, .elasticsearch-search-input #edit-search-box:focus, .elasticsearch-search-input .es-cross-site-search-form select:focus, .es-cross-site-search-form .elasticsearch-search-input select:focus, .elasticsearch-search-input .form-control:hover, .elasticsearch-search-input #edit-search-box:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover {
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.125); }
+      .elasticsearch-search-input .form-control:focus + .input-group-btn .btn, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn .btn, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn .btn, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn .btn, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input .form-control:hover + .input-group-btn .btn, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn .btn, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn .btn, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn .btn, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-search-submit, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-search-submit, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-search-submit {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: #fff; }
+        .elasticsearch-search-input .form-control:focus + .input-group-btn .btn:hover, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn .btn:hover, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn .btn:hover, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn .btn:hover, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel:hover, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit:hover, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input .form-control:hover + .input-group-btn .btn:hover, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn .btn:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn .btn:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn .btn:hover, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-search-submit:hover {
+          background-color: #1e7e34; }
+  .elasticsearch-search-input .input-group-btn {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    z-index: 1000; }
+    .elasticsearch-search-input .input-group-btn .btn, .elasticsearch-search-input .input-group-btn #edit-cancel, .elasticsearch-search-input .input-group-btn #edit-search-submit {
+      border-radius: 10px;
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      padding: 0;
+      cursor: pointer;
+      color: #28a745;
+      background-color: #fff;
+      border-color: #fff; }
+
+.es-search-form-in-home .elasticsearch-search-input,
+.es-search-form-in-title .elasticsearch-search-input {
+  margin: 0 !important; }
+
+.es-search-form-in-home .form-control, .es-search-form-in-home #edit-search-box, .es-search-form-in-home .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-home select,
+.es-search-form-in-title .form-control,
+.es-search-form-in-title #edit-search-box,
+.es-search-form-in-title .es-cross-site-search-form select, .es-cross-site-search-form
+.es-search-form-in-title select {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125); }
+  .es-search-form-in-home .form-control:focus, .es-search-form-in-home #edit-search-box:focus, .es-search-form-in-home .es-cross-site-search-form select:focus, .es-cross-site-search-form .es-search-form-in-home select:focus, .es-search-form-in-home .form-control:hover, .es-search-form-in-home #edit-search-box:hover, .es-search-form-in-home .es-cross-site-search-form select:hover, .es-cross-site-search-form .es-search-form-in-home select:hover,
+  .es-search-form-in-title .form-control:focus,
+  .es-search-form-in-title #edit-search-box:focus,
+  .es-search-form-in-title .es-cross-site-search-form select:focus, .es-cross-site-search-form
+  .es-search-form-in-title select:focus,
+  .es-search-form-in-title .form-control:hover,
+  .es-search-form-in-title #edit-search-box:hover,
+  .es-search-form-in-title .es-cross-site-search-form select:hover, .es-cross-site-search-form
+  .es-search-form-in-title select:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+
+.es-search-form-in-title .form-control, .es-search-form-in-title #edit-search-box, .es-search-form-in-title .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-title select {
+  transition: max-width 250ms linear;
+  max-width: 300px;
+  margin-left: auto;
+  height: 38px; }
+  .es-search-form-in-title .form-control:focus, .es-search-form-in-title #edit-search-box:focus, .es-search-form-in-title .es-cross-site-search-form select:focus, .es-cross-site-search-form .es-search-form-in-title select:focus {
+    max-width: 100%; }
+
+.es-search-form-in-title .input-group-btn .btn, .es-search-form-in-title .input-group-btn #edit-cancel, .es-search-form-in-title .input-group-btn #edit-search-submit {
+  height: 33px;
+  width: 33px;
+  line-height: 33px; }
+
+.es-search-form-in-home .form-control, .es-search-form-in-home #edit-search-box, .es-search-form-in-home .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-home select {
+  height: 51px; }
+
+.es-search-form-in-home .input-group-btn {
+  right: 4px;
+  top: 3px; }
+  .es-search-form-in-home .input-group-btn .btn, .es-search-form-in-home .input-group-btn #edit-cancel, .es-search-form-in-home .input-group-btn #edit-search-submit {
+    width: 45px;
+    height: 45px;
+    line-height: 45px; }
+
+#es-search-results-table {
+  margin-bottom: 0;
+  table-layout: fixed !important; }
 
 #es-search-results-table h3 {
   font-size: 1rem !important;
