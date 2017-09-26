@@ -6328,7 +6328,8 @@ tr .ajax-progress .throbber {
     line-height: 45px; }
 
 #es-search-results-table {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  table-layout: fixed !important; }
 
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }

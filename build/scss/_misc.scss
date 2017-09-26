@@ -1,11 +1,9 @@
 .margin-top-1 {
   margin-top: 2.5rem;
 }
-
 .remove-margin {
   margin: 0;
 }
-
 .main-search-form {
   .input-group-addon {
     background: #fff;
@@ -15,31 +13,24 @@
     //border-color: #fff;
   }
 }
-
 .bg-gray {
   background-color: #f7f7f7;
 }
-
 .bg-inverse {
   background: #2a2730 !important;
 }
-
 .img-max-h100 {
   max-height: 100px;
 }
-
 .textarea-lg {
   min-height: 200px;
 }
-
 .btn {
   margin-right: 5px;
 }
-
 .node-teaser {
   margin-bottom: 3rem;
 }
-
 .element-invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -47,7 +38,6 @@
   overflow: hidden;
   height: 1px;
 }
-
 .links.inline {
   margin-left: 0;
   padding-left: 0;
@@ -56,18 +46,15 @@
     margin-right: $spacer;
   }
 }
-
 textarea.form-control {
   min-height: 150px;
 }
-
 fieldset {
   border: 1px groove $card-border-color !important;
   padding: 0 $spacer $spacer $spacer !important;
   margin: 0 0 $spacer 0 !important;
   box-shadow: none;
 }
-
 legend {
   width: inherit;
   font-size: 1.2em !important;
@@ -75,52 +62,41 @@ legend {
   text-align: left !important;
   padding: $spacer;
 }
-
 .fieldset-wrapper {
   padding: 10px 15px;
 }
-
 .form-file {
   + .btn {
     margin-top: 10px;
   }
 }
-
 #edit-cancel {
   @extend .btn;
   @extend .btn-link;
 }
-
 .tripal-contents-table-td.tripal-contents-table-td-toc {
   border-right: 1px solid $table-border-color !important;
   border-top: 0 !important;
 }
-
 #page-title {
   font-size: 1.6rem;
 }
-
 #edit-submit-d7-organism {
   margin-top: 32px;
 }
-
 .collapse.in {
   display: block;
 }
-
 .card {
   @extend .mb-3;
 }
-
 .font-normal {
   font-weight: normal;
 }
-
 .marker {
   @extend .badge;
   @extend .badge-success;
 }
-
 #autocomplete {
   position: absolute;
   background: #fff;
@@ -146,13 +122,11 @@ legend {
     }
   }
 }
-
 pre {
   background-color: #f4f4f4;
   padding: 1rem;
   border-radius: $border-radius;
 }
-
 .form-type-select,
 .form-select {
   label {
@@ -160,17 +134,14 @@ pre {
     margin-bottom: 0.5rem;
   }
 }
-
 .progress-disabled {
   float: left;
   display: inline;
 }
-
 .ajax-progress {
   float: none;
   display: inline-block !important;
 }
-
 .ajax-progress .throbber {
   float: left;
   height: 15px;
@@ -178,15 +149,12 @@ pre {
   width: 15px;
   display: inline-block !important;
 }
-
 tr .ajax-progress .throbber {
   margin: 0 2px;
 }
-
 .ajax-progress-bar {
   width: 16em;
 }
-
 .es-search-form-in-home,
 .es-search-form-in-title {
   .form-wrapper {
@@ -195,7 +163,7 @@ tr .ajax-progress .throbber {
   }
 
   .form-control {
-    border-radius: 10px!important;
+    border-radius: 10px !important;
     border: 0;
     box-shadow: 0 2px 5px rgba(#000, .125);
     &:focus,
@@ -231,7 +199,6 @@ tr .ajax-progress .throbber {
     }
   }
 }
-
 .es-search-form-in-title {
   .form-control {
     transition: max-width 250ms linear;
@@ -242,7 +209,6 @@ tr .ajax-progress .throbber {
     }
   }
 }
-
 .es-search-form-in-home {
   @extend .margin-top-1;
 
@@ -256,11 +222,10 @@ tr .ajax-progress .throbber {
     }
   }
 }
-
 #es-search-results-table {
   margin-bottom: 0;
+  table-layout: fixed !important;
 }
-
 .card-block {
   @extend .card-body;
 }
