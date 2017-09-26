@@ -25,3 +25,22 @@
     }
   }
 }
+
+.btn {
+  cursor: pointer;
+}
+
+.btn-outline-secondary {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-default {
+  background-color: #fff;
+  color: #888;
+  border-color: $gray-500;
+  &:hover {
+    background-color: $gray-200;
+    color: #666;
+  }
+}

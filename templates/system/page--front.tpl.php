@@ -129,7 +129,6 @@
                                 <?php endif; ?>
 
                                 <?php print render($page['content']); ?>
-
                               </div>
 
                               <div class="col-sm-4 col-md-3">

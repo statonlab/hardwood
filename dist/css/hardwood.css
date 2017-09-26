@@ -6673,3 +6673,18 @@ select.progress-disabled {
   border-top-right-radius: 0.25rem !important;
   border-bottom-right-radius: 0.25rem !important;
   margin-right: 0 !important; }
+
+.btn, #edit-cancel, #edit-search-submit {
+  cursor: pointer; }
+
+.btn-outline-secondary {
+  border-color: #fff;
+  color: #fff; }
+
+.btn-default {
+  background-color: #fff;
+  color: #888;
+  border-color: #adb5bd; }
+  .btn-default:hover {
+    background-color: #e9ecef;
+    color: #666; }
