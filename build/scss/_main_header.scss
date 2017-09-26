@@ -1,7 +1,7 @@
 // Main Header Component
 .main-header {
   background-color: #fff;
-  border-top: 6px solid $brand-success;
+  border-top: 6px solid theme-color(success);
   box-shadow: 0 2px 3px rgba(#000, .125);
 
   .nav-link {
@@ -16,10 +16,10 @@
     font-size: 30px;
     display: block;
     float: left;
-    color: $brand-success;
+    color: theme-color(success);
     height: 48px;
     line-height: 48px;
-    border: 2px solid $brand-success;
+    border: 2px solid theme-color(success);
     padding: 0 5px;
     border-radius: $border-radius;
     @include media-breakpoint-down(xs) {

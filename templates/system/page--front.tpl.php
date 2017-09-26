@@ -92,8 +92,8 @@
                             </p>
 
                           <?php if ($page['front_search']): ?>
-                              <div class="row">
-                                  <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3 input-group-lg es-search-form-in-home">
+                              <div class="row justify-content-center">
+                                  <div class="col-12 col-md-8 col-xl-6 input-group-lg es-search-form-in-home">
                                     <?php print render($page['front_search']); ?>
                                   </div>
                               </div>
@@ -129,25 +129,23 @@
                                 <?php endif; ?>
 
                                 <?php print render($page['content']); ?>
-
                               </div>
 
                               <div class="col-sm-4 col-md-3">
                                 <?php if ($page['sidebar_first']): ?>
                                     <div class="card">
-                                        <div class="card-block">
+                                        <div class="card-body">
                                             <div id="sidebar-first"
                                                  class="column sidebar">
                                               <?php print render($page['sidebar_first']); ?>
                                             </div> <!-- /#sidebar-first -->
                                         </div>
                                     </div>
-
                                 <?php endif; ?>
 
                                 <?php if ($page['sidebar_second']): ?>
                                     <div class="card">
-                                        <div class="card-block">
+                                        <div class="card-body">
                                             <div id="sidebar-second"
                                                  class="column sidebar">
                                               <?php print render($page['sidebar_second']); ?>

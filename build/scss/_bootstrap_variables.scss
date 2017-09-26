@@ -62,15 +62,15 @@ $gray-900: #212529 !default;
 $black:  #000 !default;
 
 $grays: (
-        100: $gray-100,
-        200: $gray-200,
-        300: $gray-300,
-        400: $gray-400,
-        500: $gray-500,
-        600: $gray-600,
-        700: $gray-700,
-        800: $gray-800,
-        900: $gray-900
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
 ) !default;
 
 $blue:    #007bff !default;
@@ -85,30 +85,30 @@ $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
 $colors: (
-        blue: $blue,
-        indigo: $indigo,
-        purple: $purple,
-        pink: $pink,
-        red: $red,
-        orange: $orange,
-        yellow: $yellow,
-        green: $green,
-        teal: $teal,
-        cyan: $cyan,
-        white: $white,
-        gray: $gray-600,
-        gray-dark: $gray-800
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-600,
+  gray-dark: $gray-800
 ) !default;
 
 $theme-colors: (
-        primary: $green,
-        secondary: $gray-600,
-        success: $green,
-        info: $cyan,
-        warning: $yellow,
-        danger: $red,
-        light: $gray-100,
-        dark: $gray-800
+  primary: $blue,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
 ) !default;
 
 // Set a specific jump point for requesting color jumps
@@ -136,20 +136,20 @@ $enable-print-styles:       true !default;
 
 $spacer: 1rem !default;
 $spacers: (
-        0: 0,
-        1: ($spacer * .25),
-        2: ($spacer * .5),
-        3: $spacer,
-        4: ($spacer * 1.5),
-        5: ($spacer * 3)
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
 ) !default;
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
-        25: 25%,
-        50: 50%,
-        75: 75%,
-        100: 100%
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
 ) !default;
 
 // Body
@@ -181,11 +181,11 @@ $paragraph-margin-bottom: 1rem;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
@@ -196,10 +196,10 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-        sm: 765px,
-        md: 991px,
-        lg: 1130px,
-        xl: 1280px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -239,15 +239,13 @@ $transition-collapse:    height .35s ease !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:  "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-$font-size-root: 14px;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
-$font-size-xs:   .75rem !default;
 
 $font-weight-light: 300 !default;
 $font-weight-normal: normal !default;
@@ -484,12 +482,12 @@ $custom-file-box-shadow:    $input-box-shadow !default;
 $custom-file-button-color:  $custom-file-color !default;
 $custom-file-button-bg:     $input-group-addon-bg !default;
 $custom-file-text: (
-        placeholder: (
-                en: "Choose file..."
-        ),
-        button-label: (
-                en: "Browse"
-        )
+  placeholder: (
+    en: "Choose file..."
+  ),
+  button-label: (
+    en: "Browse"
+  )
 ) !default;
 
 
@@ -543,7 +541,6 @@ $zindex-tooltip:            1070 !default;
 
 $nav-link-padding-y:            .5rem !default;
 $nav-link-padding-x:            1rem !default;
-$nav-link-padding:              $nav-link-padding-y $nav-link-padding-x;
 $nav-link-disabled-color:       $gray-600 !default;
 
 $nav-tabs-border-color:                       #ddd !default;
@@ -851,26 +848,3 @@ $kbd-bg:                      $gray-900 !default;
 
 $pre-color:                   $gray-900 !default;
 $pre-scrollable-max-height:   340px !default;
-
-
-// NOT INCLUDED IN BS
-// Form states and alerts
-//
-// Define colors for form feedback states and, by default, alerts.
-
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken($state-success-bg, 5%) !default;
-
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken($state-info-bg, 7%) !default;
-
-$state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
-$mark-bg:                        $state-warning-bg !default;
-$state-warning-border:           darken($state-warning-bg, 5%) !default;
-
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken($state-danger-bg, 5%) !default;

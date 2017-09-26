@@ -4,7 +4,6 @@
   @extend .btn;
   margin: 0 !important;
 }
-
 #edit-search-box {
   @extend .form-control;
   &,
@@ -12,18 +11,18 @@
     border-right: 0;
   }
 }
-
+.contextual-links-wrapper {
+  top: -20px;
+}
 #edit-search {
   border: none !important;
   width: 100% !important;
   margin: 0 !important;
 }
-
 #block-tripal-elasticsearch-main-search-box {
   margin: 0 !important;
   width: 100% !important;
 }
-
 #block-tripal-elasticsearch-website-search-category {
   a {
     display: block;
@@ -56,7 +55,102 @@
     }
   }
 }
+.elasticsearch-search-input {
+  margin-bottom: 2rem;
+  position: relative;
+  .form-control {
+    height: 48px;
+    border-radius: 10px !important;
+    border: 0;
+    box-shadow: 0 0 1px rgba(#000, 0.2), 0 2px 2px rgba(#000, .125);
+    &:focus,
+    &:hover {
+      box-shadow: 0 0 1px rgba(#000, 0.2), 0 3px 6px rgba(#000, .125);
+      + .input-group-btn .btn {
+        background-color: theme-color(primary);
+        border-color: theme-color(primary);
+        color: #fff;
+        &:hover {
+          background-color: darken(theme-color(primary), 10%);
+        }
+      }
+    }
+  }
+  .input-group-btn {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    z-index: 1000;
+    .btn {
+      border-radius: 10px;
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      padding: 0;
+      cursor: pointer;
+      color: theme-color(primary);
+      background-color: #fff;
+      border-color: #fff;
+    }
+  }
+}
+.es-search-form-in-home,
+.es-search-form-in-title {
+  .elasticsearch-search-input {
+    margin: 0 !important;
+  }
 
+  .form-control {
+    box-shadow: 0 2px 5px rgba(#000, .125);
+    &:focus,
+    &:hover {
+      box-shadow: 0 4px 10px rgba(#000, .2);
+    }
+  }
+}
+.es-search-form-in-title {
+  .form-control {
+    transition: max-width 250ms linear;
+    max-width: 300px;
+    margin-left: auto;
+    height: 38px;
+    &:focus {
+      max-width: 100%;
+    }
+  }
+  .input-group-btn {
+    .btn {
+      height: 33px;
+      width: 33px;
+      line-height: 33px;
+    }
+  }
+}
+.es-search-form-in-home {
+  @extend .margin-top-1;
+
+  .form-control {
+    height: 51px;
+  }
+
+  .input-group-btn {
+    right: 4px;
+    top: 3px;
+    .btn {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+}
+#es-search-results-table {
+  margin-bottom: 0;
+  table-layout: fixed !important;
+}
+.card-block {
+  @extend .card-body;
+}
 #es-search-results-table {
   h3 {
     font-size: 1rem !important;

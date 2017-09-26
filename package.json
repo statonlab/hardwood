@@ -10,11 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.2.1",
+    "popper.js": "^1.12.5",
     "sass": "1.0.0-beta.2",
     "tether": "^1.4.0"
   },
   "devDependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0-beta",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-concat-util": "^0.5.5",

@@ -143,7 +143,7 @@
                                   </div>
                               <?php endif; ?>
                                 <div class="elevated-card<?php $hardwood_set_page_card === TRUE ? print ' card' : '' ?>">
-                                    <div class="<?php $hardwood_set_page_card === TRUE ? print 'card-block' : '' ?>">
+                                    <div class="<?php $hardwood_set_page_card === TRUE ? print 'card-body' : '' ?>">
                                       <?php if ($messages): ?>
                                         <?php print $messages; ?>
                                       <?php endif; ?>
@@ -159,7 +159,7 @@
                             <div class="col-sm-4 col-md-3">
                               <?php if ($page['sidebar_first']): ?>
                                   <div class="card">
-                                      <div class="card-block">
+                                      <div class="card-body">
                                           <div id="sidebar-first"
                                                class="column sidebar">
                                             <?php print render($page['sidebar_first']); ?>
@@ -171,7 +171,7 @@
 
                               <?php if ($page['sidebar_second']): ?>
                                   <div class="card">
-                                      <div class="card-block">
+                                      <div class="card-body">
                                           <div id="sidebar-second"
                                                class="column sidebar">
                                             <?php print render($page['sidebar_second']); ?>
