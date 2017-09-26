@@ -6398,7 +6398,7 @@ a.tabledrag-handle {
       margin: 10px 0; }
 
 .elasticsearch-search-input {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   position: relative; }
   .elasticsearch-search-input .form-control, .elasticsearch-search-input #edit-search-box, .elasticsearch-search-input .es-cross-site-search-form select, .es-cross-site-search-form .elasticsearch-search-input select {
     height: 48px;
@@ -6413,16 +6413,18 @@ a.tabledrag-handle {
         color: #fff; }
         .elasticsearch-search-input .form-control:focus + .input-group-btn .btn:hover, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn .btn:hover, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn .btn:hover, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn .btn:hover, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel:hover, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit:hover, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input .form-control:hover + .input-group-btn .btn:hover, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn .btn:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn .btn:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn .btn:hover, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-cancel:hover, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-search-submit:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-search-submit:hover {
           background-color: #1e7e34; }
+    .elasticsearch-search-input .form-control:focus, .elasticsearch-search-input #edit-search-box:focus, .elasticsearch-search-input .es-cross-site-search-form select:focus, .es-cross-site-search-form .elasticsearch-search-input select:focus {
+      border: 1px solid #34ce57; }
   .elasticsearch-search-input .input-group-btn {
     position: absolute;
-    right: 4px;
-    top: 2px;
-    z-index: 1000; }
+    right: 6px;
+    top: 4px;
+    z-index: 200; }
     .elasticsearch-search-input .input-group-btn .btn, .elasticsearch-search-input .input-group-btn #edit-cancel, .elasticsearch-search-input .input-group-btn #edit-search-submit {
       border-radius: 10px;
-      width: 44px;
-      height: 44px;
-      line-height: 44px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
       text-align: center;
       padding: 0;
       cursor: pointer;
@@ -6449,7 +6451,14 @@ a.tabledrag-handle {
   .es-search-form-in-title #edit-search-box:hover,
   .es-search-form-in-title .es-cross-site-search-form select:hover, .es-cross-site-search-form
   .es-search-form-in-title select:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 0; }
+
+@media (max-width: 991px) {
+  .es-search-form-in-title .elasticsearch-search-input {
+    margin-top: 1rem !important; }
+    .es-search-form-in-title .elasticsearch-search-input .form-control, .es-search-form-in-title .elasticsearch-search-input #edit-search-box, .es-search-form-in-title .elasticsearch-search-input .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-title .elasticsearch-search-input select {
+      max-width: 100%; } }
 
 .es-search-form-in-title .form-control, .es-search-form-in-title #edit-search-box, .es-search-form-in-title .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-title select {
   transition: max-width 250ms linear;
@@ -6460,6 +6469,8 @@ a.tabledrag-handle {
     max-width: 100%; }
 
 .es-search-form-in-title .input-group-btn .btn, .es-search-form-in-title .input-group-btn #edit-cancel, .es-search-form-in-title .input-group-btn #edit-search-submit {
+  top: -2px;
+  right: -2px;
   height: 33px;
   width: 33px;
   line-height: 33px; }
