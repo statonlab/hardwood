@@ -6648,10 +6648,10 @@ select.progress-disabled {
   border-color: #fff;
   color: #fff; }
 
-.btn-default {
+.btn-secondary {
   background-color: #fff;
   color: #888;
   border-color: #adb5bd; }
-  .btn-default:hover {
+  .btn-secondary:hover {
     background-color: #e9ecef;
     color: #666; }
