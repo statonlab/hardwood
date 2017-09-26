@@ -1,6 +1,6 @@
 <?php if ($main_menu || $secondary_menu): ?>
     <nav id="navigation"
-         class="main-header navbar navbar-light bg-faded navbar-full navbar-expand-md">
+         class="main-header navbar navbar-light bg-faded navbar-full navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <span class="logo-icon"><i class="fa fa-leaf"></i></span>
