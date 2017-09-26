@@ -6486,7 +6486,7 @@ a.tabledrag-handle {
   top: -20px; }
 
 .elasticsearch-search-input {
-  padding: 10px 0; }
+  margin-bottom: 10px; }
   .elasticsearch-search-input .form-control, .elasticsearch-search-input #edit-search-box, .elasticsearch-search-input .es-cross-site-search-form select, .es-cross-site-search-form .elasticsearch-search-input select {
     height: 46px !important;
     border: 0;
