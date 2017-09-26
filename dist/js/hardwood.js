@@ -76,7 +76,7 @@
       $(this).append(span);
     });
 
-    $('.es-search-form-in-title .btn, .es-search-form-in-home .btn').each(function () {
+    $('.es-search-form-in-title .btn, .es-search-form-in-home .btn, .elasticsearch-search-input .btn').each(function () {
       var attributes = {};
       for (var i = 0; i < this.attributes.length; i++) {
         attributes[this.attributes[i].nodeName] = this.attributes[i].nodeValue;
@@ -86,10 +86,13 @@
       $(this).replaceWith(searchButton);
     });
 
+    $('.elasticsearch-search-input .form-control').attr('style', "");
+
     $(document).on('elasticsearch.completed', function (event) {
       console.log(event);
       $('.elastic-result-block-footer a').attr('class', 'btn btn-primary');
     });
+
   });
 })(jQuery);
 

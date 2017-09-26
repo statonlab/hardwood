@@ -13,6 +13,40 @@
   }
 }
 
+.contextual-links-wrapper {
+  top: -20px;
+}
+
+.elasticsearch-search-input {
+  padding: 10px 0;
+  .form-control {
+    height: 46px !important;
+    border: 0;
+    box-shadow: 0 0 1px rgba(#000, 0.2), 0 2px 2px rgba(#000, .125);
+    border-radius: 8px!important;
+    &:focus,
+    &:hover {
+      box-shadow: 0 0 1px rgba(#000, 0.2), 0 3px 6px rgba(#000, .125);
+      + .input-group-btn .btn {
+        background-color: theme-color(primary);
+        border-color: theme-color(primary);
+        color: #fff;
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    z-index: 2000!important;
+    right: 4px;
+    border-radius: 8px!important;
+    margin: 0;
+    height: 40px;
+    background-color: transparent;
+    border-color: transparent;
+    color: theme-color(primary);
+  }
+}
+
 #edit-search {
   border: none !important;
   width: 100% !important;
