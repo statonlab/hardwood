@@ -63,8 +63,8 @@ textarea.form-control {
 
 fieldset {
   border: 1px groove $card-border-color !important;
-  padding: 0 $spacer-x $spacer-y $spacer-x !important;
-  margin: 0 0 $spacer-y 0 !important;
+  padding: 0 $spacer $spacer $spacer !important;
+  margin: 0 0 $spacer 0 !important;
   box-shadow: none;
 }
 
@@ -73,7 +73,7 @@ legend {
   font-size: 1.2em !important;
   font-weight: bold !important;
   text-align: left !important;
-  padding: $spacer-x;
+  padding: $spacer;
 }
 
 .fieldset-wrapper {
@@ -124,7 +124,7 @@ legend {
 #autocomplete {
   position: absolute;
   background: #fff;
-  border: 1px solid $gray-lighter;
+  border: 1px solid $gray-200;
   border-radius: $border-radius;
   ul, ol {
     padding: 10px 0;
@@ -137,10 +137,10 @@ legend {
       margin: 0 10px 5px 10px;
       cursor: pointer;
       border-radius: $border-radius;
-      background-color: $gray-lighter;
+      background-color: $gray-200;
       color: #666;
       &:hover {
-        background: $brand-primary;
+        background: theme-color(primary);
         color: #fff;
       }
     }
@@ -202,11 +202,11 @@ tr .ajax-progress .throbber {
     &:hover {
       box-shadow: 0 4px 10px rgba(#000, .2);
       + .input-group-btn .btn {
-        background-color: $brand-primary;
-        border-color: $brand-primary;
+        background-color: theme-color(primary);
+        border-color: theme-color(primary);
         color: #fff;
         &:hover {
-          background-color: darken($brand-primary, 10%);
+          background-color: darken(theme-color(primary), 10%);
         }
       }
     }
@@ -225,7 +225,7 @@ tr .ajax-progress .throbber {
       text-align: center;
       padding: 0;
       cursor: pointer;
-      color: $brand-primary;
+      color: theme-color(primary);
       background-color: #fff;
       border-color: #fff;
     }

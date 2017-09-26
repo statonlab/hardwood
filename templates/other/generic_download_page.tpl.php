@@ -36,8 +36,8 @@ $info = $variables['download_args']['type_info'];
    </div>
    <div class="progress-pane"></div>
 
-    <div class="row">
-     <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-4">
+    <div class="row justify-content-center">
+     <div class="col-lg-4 col-md-6">
        <?php print l(
          '<i class="fa fa-download"></i> ' . t('Download'),
          $variables['file_download_url'],

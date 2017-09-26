@@ -48,7 +48,7 @@ body {
     margin-top: 10px;
     content: ' ';
     height: 3px;
-    background: $brand-success;
+    background: theme-color(success);
   }
 
   &:not(:first-of-type) {
@@ -67,7 +67,7 @@ body {
   }
 }
 .page-header {
-  background: darken($brand-success, 7.5%);
+  background: darken(theme-color(success), 7.5%);
   color: #eee;
 
   h1,

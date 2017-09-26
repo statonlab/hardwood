@@ -33,7 +33,7 @@ stylesheets[all][] = dist/css/font-awesome.min.css
 
 ; Hardwood Javascript
 ; ---------------------
-scripts[] = dist/js/tether.min.js
+scripts[] = dist/js/popper.min.js
 scripts[] = dist/js/bootstrap.min.js
 scripts[] = dist/js/hardwood.js
 scripts[] = dist/js/_progress.js

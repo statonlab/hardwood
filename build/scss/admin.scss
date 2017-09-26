@@ -46,7 +46,7 @@
           color: #292b2c;
         }
         &:hover:not(.active) {
-          color: $brand-primary;
+          color: theme-color(primary);
         }
       }
     }

@@ -10,7 +10,7 @@ fieldset.collapsible {
       font-family: FontAwesome;
       position: absolute;
       content: '\f0d7'; // Left caret
-      color: $brand-primary;
+      color: theme-color(primary);
       right: 1rem;
     }
   }
