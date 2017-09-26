@@ -89,7 +89,6 @@
     $('.elasticsearch-search-input .form-control').attr('style', "");
 
     $(document).on('elasticsearch.completed', function (event) {
-      console.log(event);
       $('.elastic-result-block-footer a').attr('class', 'btn btn-primary');
     });
 
