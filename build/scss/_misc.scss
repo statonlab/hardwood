@@ -260,3 +260,7 @@ tr .ajax-progress .throbber {
 #es-search-results-table {
   margin-bottom: 0;
 }
+
+.card-block {
+  @extend .card-body;
+}
