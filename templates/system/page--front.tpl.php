@@ -220,7 +220,7 @@
                                       <div class="tool-card-content">
                                           <h4 class="card-title">JBrowse</h4>
                                           <p>
-                                              Use our interactive heat map to visualize expressions
+                                              View specific sequence contigs, annotate genes, and view comparisons to other genomes
                                           </p>
                                           <a href="/content/jbrowse"
                                              class="btn btn-outline-primary btn-sm">Try JBrowse</a>
@@ -235,7 +235,7 @@
                                       <div class="tool-card-content">
                                           <h4 class="card-title">Blast</h4>
                                           <p>
-                                              Use our interactive heat map to visualize expressions
+                                              Basic Local Alignment Search Tool
                                           </p>
                                           <a href="/blast"
                                              class="btn btn-outline-primary btn-sm">Try Blast</a>
@@ -250,7 +250,7 @@
                                       <div class="tool-card-content">
                                           <h4 class="card-title">Explore Available Trees</h4>
                                           <p>
-                                              Use our interactive heat map to visualize expressions
+                                              View a list of available hardwood trees
                                           </p>
                                           <a href="/organisms"
                                              class="btn btn-outline-primary btn-sm">Explore Available Trees</a>

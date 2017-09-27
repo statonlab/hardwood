@@ -1,13 +1,21 @@
 .tools-container {
   margin-left: -$grid-gutter-width / 2;
   margin-right: -$grid-gutter-width / 2;
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
-
 .tool-card {
   text-align: center;
   @include flex(1);
   margin: 0 $grid-gutter-width / 2 1rem $grid-gutter-width / 2;
   min-width: 30%;
+
+  @include media-breakpoint-down(sm) {
+    min-width: 100%;
+    margin: 0 0 1rem 0;
+  }
 
   .card-title {
     font-size: 1rem;
@@ -28,6 +36,9 @@
   }
 
   p {
-    color: $gray-700;
+    color: darken($gray-600, 5%);
+    @include media-breakpoint-up(sm) {
+      min-height: 50px;
+    }
   }
 }

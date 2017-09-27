@@ -6673,6 +6673,10 @@ select.progress-disabled {
 .tools-container {
   margin-left: -15px;
   margin-right: -15px; }
+  @media (max-width: 767px) {
+    .tools-container {
+      margin-right: 0;
+      margin-left: 0; } }
 
 .tool-card {
   text-align: center;
@@ -6684,6 +6688,10 @@ select.progress-disabled {
   flex: 1;
   margin: 0 15px 1rem 15px;
   min-width: 30%; }
+  @media (max-width: 767px) {
+    .tool-card {
+      min-width: 100%;
+      margin: 0 0 1rem 0; } }
   .tool-card .card-title {
     font-size: 1rem;
     font-weight: bold; }
@@ -6699,4 +6707,7 @@ select.progress-disabled {
     font-size: 2rem;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
   .tool-card p {
-    color: #495057; }
+    color: #78818a; }
+    @media (min-width: 576px) {
+      .tool-card p {
+        min-height: 50px; } }
