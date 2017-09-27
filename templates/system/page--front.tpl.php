@@ -265,6 +265,8 @@
                       <div class="container">
                           <div class="row">
                               <div class="col-12">
+                                  <h2 class="section-header">About Hardwood Genomics Project</h2>
+
                                   The Hardwood Genomics Web serves forest tree scientists by providing online access to hardwood tree genomic and genetic data, including assembled reference genomes, transcriptomes, and genetic mapping information.
                                   <br/><br/>
                                   Interested in contributing data? <a href="/contact">Please contact us!</a>
