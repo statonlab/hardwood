@@ -6705,7 +6705,8 @@ select.progress-disabled {
     background: #28a745;
     color: #f8f9fa;
     font-size: 2rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
   .tool-card p {
     color: #78818a; }
     @media (min-width: 576px) {
