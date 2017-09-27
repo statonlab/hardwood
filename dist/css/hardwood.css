@@ -6733,7 +6733,8 @@ select.progress-disabled {
 .entity-tripalentity .ds-left {
   margin-top: 10px;
   margin-right: 1rem;
-  width: auto; }
+  width: auto;
+  min-width: 100px; }
   .entity-tripalentity .ds-left > .field {
     border-radius: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.1); }

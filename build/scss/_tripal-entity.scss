@@ -17,6 +17,7 @@
     margin-top: 10px;
     margin-right: $spacer;
     width: auto;
+    min-width: 100px;
 
     > .field {
       border-radius: $border-radius;
