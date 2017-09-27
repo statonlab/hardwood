@@ -142,15 +142,15 @@
                                     <?php print render($page['front_search']); ?>
                                   </div>
                               <?php endif; ?>
-                                <div class="elevated-card<?php $hardwood_set_page_card === TRUE ? print ' card' : '' ?>">
-                                    <div class="<?php $hardwood_set_page_card === TRUE ? print 'card-body' : '' ?>">
+                                <!--div class="elevated-card<?php $hardwood_set_page_card === TRUE ? print ' card' : '' ?>">
+                                    <div class="<?php $hardwood_set_page_card === TRUE ? print 'card-body' : '' ?>"-->
                                       <?php if ($messages): ?>
                                         <?php print $messages; ?>
                                       <?php endif; ?>
 
                                       <?php print render($page['content']); ?>
-                                    </div>
-                                </div>
+                                    <!--/div>
+                                </div-->
                               <?php print $feed_icons; ?>
                             </div>
 

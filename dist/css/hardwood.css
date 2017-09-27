@@ -4154,7 +4154,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .rounded-0 {
   border-radius: 0; }
 
-.clearfix::after {
+.clearfix::after, .entity-tripalentity .tripal_pane-fieldset-buttons::after {
   display: block;
   clear: both;
   content: ""; }
@@ -4177,7 +4177,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex {
+.d-flex, .entity-tripalentity {
   display: flex !important; }
 
 .d-inline-flex {
@@ -4363,7 +4363,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .align-items-stretch {
   align-items: stretch !important; }
 
-.align-content-start {
+.align-content-start, .entity-tripalentity {
   align-content: flex-start !important; }
 
 .align-content-end {
@@ -4410,7 +4410,7 @@ a.bg-dark:focus, a.bg-dark:hover {
     flex-direction: column-reverse !important; }
   .flex-sm-wrap {
     flex-wrap: wrap !important; }
-  .flex-sm-nowrap {
+  .flex-sm-nowrap, .entity-tripalentity {
     flex-wrap: nowrap !important; }
   .flex-sm-wrap-reverse {
     flex-wrap: wrap-reverse !important; }
@@ -6403,7 +6403,7 @@ a.tabledrag-handle {
     height: 48px;
     border-radius: 10px !important;
     border: 0;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125); }
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.125); }
     .elasticsearch-search-input .form-control:focus, .elasticsearch-search-input #edit-search-box:focus, .elasticsearch-search-input .es-cross-site-search-form select:focus, .es-cross-site-search-form .elasticsearch-search-input select:focus, .elasticsearch-search-input .form-control:hover, .elasticsearch-search-input #edit-search-box:hover, .elasticsearch-search-input .es-cross-site-search-form select:hover, .es-cross-site-search-form .elasticsearch-search-input select:hover {
       box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.125); }
       .elasticsearch-search-input .form-control:focus + .input-group-btn .btn, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn .btn, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn .btn, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn .btn, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-cancel, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-cancel, .elasticsearch-search-input .form-control:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input #edit-search-box:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input .es-cross-site-search-form select:focus + .input-group-btn #edit-search-submit, .es-cross-site-search-form .elasticsearch-search-input select:focus + .input-group-btn #edit-search-submit, .elasticsearch-search-input .form-control:hover + .input-group-btn .btn, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn .btn, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn .btn, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn .btn, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-cancel, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-cancel, .elasticsearch-search-input .form-control:hover + .input-group-btn #edit-search-submit, .elasticsearch-search-input #edit-search-box:hover + .input-group-btn #edit-search-submit, .elasticsearch-search-input .es-cross-site-search-form select:hover + .input-group-btn #edit-search-submit, .es-cross-site-search-form .elasticsearch-search-input select:hover + .input-group-btn #edit-search-submit {
@@ -6712,3 +6712,98 @@ select.progress-disabled {
     @media (min-width: 576px) {
       .tool-card p {
         min-height: 50px; } }
+
+.entity-tripalentity .ds-left,
+.entity-tripalentity .ds-right {
+  float: none !important; }
+
+.entity-tripalentity .ds-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -moz-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2; }
+
+.entity-tripalentity .ds-left {
+  margin-top: 10px;
+  margin-right: 1rem;
+  width: auto; }
+  .entity-tripalentity .ds-left > .field {
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.entity-tripalentity .tripal_pane-toc-list-item-link {
+  position: relative;
+  padding: .75rem 40px .75rem .75rem;
+  display: block;
+  color: #868e96;
+  border-left: 3px transparent solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .entity-tripalentity .tripal_pane-toc-list-item-link:hover, .entity-tripalentity .tripal_pane-toc-list-item-link:active, .entity-tripalentity .tripal_pane-toc-list-item-link.active {
+    text-decoration: none;
+    color: #28a745;
+    border-left-color: #28a745; }
+  .entity-tripalentity .tripal_pane-toc-list-item-link.active:before {
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -11px;
+    content: '\f054'; }
+
+.entity-tripalentity .tripal_pane {
+  position: relative;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 0 1rem 0;
+  border-radius: 0.25rem;
+  color: #444; }
+  .entity-tripalentity .tripal_pane table tr:first-of-type > td,
+  .entity-tripalentity .tripal_pane table tr:first-of-type > th,
+  .entity-tripalentity .tripal_pane table tbody > tr:first-of-type > td,
+  .entity-tripalentity .tripal_pane table tbody > tr:first-of-type > th,
+  .entity-tripalentity .tripal_pane table thead > tr:first-of-type > td,
+  .entity-tripalentity .tripal_pane table thead > tr:first-of-type > th {
+    border-top: 0; }
+
+.entity-tripalentity .field-group-format-title {
+  text-shadow: none;
+  border: 0;
+  padding: .5rem;
+  margin: 0;
+  color: #000;
+  font-weight: bold;
+  background-color: #f2f4f6;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem; }
+  .entity-tripalentity .field-group-format-title + div {
+    padding: .5rem; }
+
+.entity-tripalentity .tripal_pane-fieldset-buttons {
+  float: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+  width: auto; }
+
+.entity-tripalentity .tripal-pane-button {
+  clip: inherit !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: auto;
+  right: .5rem;
+  top: .25rem;
+  color: #868e96;
+  text-shadow: none; }
+  .entity-tripalentity .tripal-pane-button:hover {
+    color: #495057; }
+  .entity-tripalentity .tripal-pane-button .fa-window-close-o:before {
+    content: '\f00d'; }
