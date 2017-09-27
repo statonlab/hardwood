@@ -113,109 +113,6 @@
 
         <div id="main-wrapper">
             <div id="main" class="clearfix">
-
-                <div class="section bg-gray">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <h2 class="section-header">Available Tools</h2>
-                            </div>
-                        </div>
-                        <div class="tools-container d-flex align-items-stretch flex-wrap">
-                            <div class="card tool-card mb-1">
-                                <div class="card-body">
-                                    <span class="icon">
-                                        <i class="fa fa-server"></i>
-                                    </span>
-                                    <div class="tool-card-content">
-                                        <h4 class="card-title">Cross Site Search</h4>
-                                        <p>
-                                            Search across multiple websites in our network all at once
-                                        </p>
-                                        <a href="/cross-site-search"
-                                           class="btn btn-outline-primary btn-sm">Try Cross Site Search</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card tool-card mb-1">
-                                <div class="card-body">
-                                    <span class="icon">
-                                        <i class="fa fa-search"></i>
-                                    </span>
-                                    <div class="tool-card-content">
-                                        <h4 class="card-title">Transcript Search</h4>
-                                        <p>
-                                            Filter transcripts by organism, description or sequence name
-                                        </p>
-                                        <a href="/tripal_elasticsearch/search_table"
-                                           class="btn btn-outline-primary btn-sm">Try Transcript Search</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card tool-card mb-1">
-                                <div class="card-body">
-                                    <span class="icon">
-                                        <i class="fa fa-bar-chart"></i>
-                                    </span>
-                                    <div class="tool-card-content">
-                                        <h4 class="card-title">Expression Visualization</h4>
-                                        <p>
-                                            Use our interactive heat map to visualize expressions
-                                        </p>
-                                        <a href="/content/expression-visualization"
-                                           class="btn btn-outline-primary btn-sm">Try Expression Visualization</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card tool-card mb-1">
-                                <div class="card-body">
-                                    <span class="icon">
-                                        <i class="fa fa-align-center"></i>
-                                    </span>
-                                    <div class="tool-card-content">
-                                        <h4 class="card-title">JBrowse</h4>
-                                        <p>
-                                            Use our interactive heat map to visualize expressions
-                                        </p>
-                                        <a href="/content/jbrowse"
-                                           class="btn btn-outline-primary btn-sm">Try JBrowse</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card tool-card mb-1">
-                                <div class="card-body">
-                                    <span class="icon">
-                                        <i class="fa fa-database"></i>
-                                    </span>
-                                    <div class="tool-card-content">
-                                        <h4 class="card-title">Blast</h4>
-                                        <p>
-                                            Use our interactive heat map to visualize expressions
-                                        </p>
-                                        <a href="/blast"
-                                           class="btn btn-outline-primary btn-sm">Try Blast</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card tool-card mb-1">
-                                <div class="card-body">
-                                    <span class="icon">
-                                        <i class="fa fa-tree"></i>
-                                    </span>
-                                    <div class="tool-card-content">
-                                        <h4 class="card-title">Explore Available Trees</h4>
-                                        <p>
-                                            Use our interactive heat map to visualize expressions
-                                        </p>
-                                        <a href="/organisms"
-                                           class="btn btn-outline-primary btn-sm">Explore Available Trees</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
               <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) ? 'col-sm-8 col-md-9' : 'col-12'; ?>
               <?php if ($page['content']): ?>
                   <div class="section">
@@ -258,6 +155,108 @@
                                 <?php endif; ?>
                               </div>
 
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="section bg-gray">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-12">
+                                  <h2 class="section-header">Available Tools</h2>
+                              </div>
+                          </div>
+                          <div class="tools-container d-flex align-items-stretch flex-wrap">
+                              <div class="card tool-card mb-1">
+                                  <div class="card-body">
+                                      <span class="icon">
+                                          <i class="fa fa-server"></i>
+                                      </span>
+                                      <div class="tool-card-content">
+                                          <h4 class="card-title">Cross Site Search</h4>
+                                          <p>
+                                              Search across multiple websites in our network all at once
+                                          </p>
+                                          <a href="/cross-site-search"
+                                             class="btn btn-outline-primary btn-sm">Try Cross Site Search</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card tool-card mb-1">
+                                  <div class="card-body">
+                                      <span class="icon">
+                                          <i class="fa fa-search"></i>
+                                      </span>
+                                      <div class="tool-card-content">
+                                          <h4 class="card-title">Transcript Search</h4>
+                                          <p>
+                                              Filter transcripts by organism, description or sequence name
+                                          </p>
+                                          <a href="/tripal_elasticsearch/search_table"
+                                             class="btn btn-outline-primary btn-sm">Try Transcript Search</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card tool-card mb-1">
+                                  <div class="card-body">
+                                      <span class="icon">
+                                          <i class="fa fa-bar-chart"></i>
+                                      </span>
+                                      <div class="tool-card-content">
+                                          <h4 class="card-title">Expression Visualization</h4>
+                                          <p>
+                                              Use our interactive heat map to visualize expressions
+                                          </p>
+                                          <a href="/content/expression-visualization"
+                                             class="btn btn-outline-primary btn-sm">Try Expression Visualization</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card tool-card mb-1">
+                                  <div class="card-body">
+                                      <span class="icon">
+                                          <i class="fa fa-align-center"></i>
+                                      </span>
+                                      <div class="tool-card-content">
+                                          <h4 class="card-title">JBrowse</h4>
+                                          <p>
+                                              Use our interactive heat map to visualize expressions
+                                          </p>
+                                          <a href="/content/jbrowse"
+                                             class="btn btn-outline-primary btn-sm">Try JBrowse</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card tool-card mb-1">
+                                  <div class="card-body">
+                                      <span class="icon">
+                                          <i class="fa fa-database"></i>
+                                      </span>
+                                      <div class="tool-card-content">
+                                          <h4 class="card-title">Blast</h4>
+                                          <p>
+                                              Use our interactive heat map to visualize expressions
+                                          </p>
+                                          <a href="/blast"
+                                             class="btn btn-outline-primary btn-sm">Try Blast</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card tool-card mb-1">
+                                  <div class="card-body">
+                                      <span class="icon">
+                                          <i class="fa fa-tree"></i>
+                                      </span>
+                                      <div class="tool-card-content">
+                                          <h4 class="card-title">Explore Available Trees</h4>
+                                          <p>
+                                              Use our interactive heat map to visualize expressions
+                                          </p>
+                                          <a href="/organisms"
+                                             class="btn btn-outline-primary btn-sm">Explore Available Trees</a>
+                                      </div>
+                                  </div>
+                              </div>
                           </div>
                       </div>
                   </div>
