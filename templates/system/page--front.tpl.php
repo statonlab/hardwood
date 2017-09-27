@@ -159,136 +159,17 @@
                       </div>
                   </div>
 
-                  <div class="section bg-gray">
-                      <div class="container">
-                          <div class="row">
-                              <div class="col-12">
-                                  <h2 class="section-header">Available Tools</h2>
-                              </div>
-                          </div>
-                          <div class="tools-container d-flex align-items-stretch flex-wrap">
-                              <div class="card tool-card mb-1">
-                                  <div class="card-body">
-                                      <span class="icon">
-                                          <i class="fa fa-server"></i>
-                                      </span>
-                                      <div class="tool-card-content">
-                                          <h4 class="card-title">Cross Site Search</h4>
-                                          <p>
-                                              Search across multiple websites in our network all at once
-                                          </p>
-                                          <a href="/cross-site-search"
-                                             class="btn btn-outline-primary btn-sm">Try Cross Site Search</a>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="card tool-card mb-1">
-                                  <div class="card-body">
-                                      <span class="icon">
-                                          <i class="fa fa-search"></i>
-                                      </span>
-                                      <div class="tool-card-content">
-                                          <h4 class="card-title">Transcript Search</h4>
-                                          <p>
-                                              Filter transcripts by organism, description or sequence name
-                                          </p>
-                                          <a href="/tripal_elasticsearch/search_table"
-                                             class="btn btn-outline-primary btn-sm">Try Transcript Search</a>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="card tool-card mb-1">
-                                  <div class="card-body">
-                                      <span class="icon">
-                                          <i class="fa fa-bar-chart"></i>
-                                      </span>
-                                      <div class="tool-card-content">
-                                          <h4 class="card-title">Expression Visualization</h4>
-                                          <p>
-                                              Use our interactive heat map to visualize expressions
-                                          </p>
-                                          <a href="/content/expression-visualization"
-                                             class="btn btn-outline-primary btn-sm">Try Expression Visualization</a>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="card tool-card mb-1">
-                                  <div class="card-body">
-                                      <span class="icon">
-                                          <i class="fa fa-align-center"></i>
-                                      </span>
-                                      <div class="tool-card-content">
-                                          <h4 class="card-title">JBrowse</h4>
-                                          <p>
-                                              View specific sequence contigs, annotate genes, and view comparisons to other genomes
-                                          </p>
-                                          <a href="/content/jbrowse"
-                                             class="btn btn-outline-primary btn-sm">Try JBrowse</a>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="card tool-card mb-1">
-                                  <div class="card-body">
-                                      <span class="icon">
-                                          <i class="fa fa-database"></i>
-                                      </span>
-                                      <div class="tool-card-content">
-                                          <h4 class="card-title">Blast</h4>
-                                          <p>
-                                              Basic Local Alignment Search Tool
-                                          </p>
-                                          <a href="/blast"
-                                             class="btn btn-outline-primary btn-sm">Try Blast</a>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="card tool-card mb-1">
-                                  <div class="card-body">
-                                      <span class="icon">
-                                          <i class="fa fa-tree"></i>
-                                      </span>
-                                      <div class="tool-card-content">
-                                          <h4 class="card-title">Explore Available Trees</h4>
-                                          <p>
-                                              View a list of available hardwood trees
-                                          </p>
-                                          <a href="/organisms"
-                                             class="btn btn-outline-primary btn-sm">Explore Available Trees</a>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                <?php if ($page['front_middle']): ?>
+                      <div class="section bg-gray">
+                        <?php print render($page['front_middle']) ?>
                       </div>
-                  </div>
+                <?php endif; ?>
 
-                  <div class="section">
-                      <div class="container">
-                          <div class="row">
-                              <div class="col-12">
-                                  <h2 class="section-header">Project Details</h2>
-                                  <p>
-                                      The Hardwood Genomics Web serves forest tree scientists by providing online access to hardwood tree genomic and genetic data, including assembled reference genomes, transcriptomes, and genetic mapping information.
-                                  </p>
-                                  <p>
-                                      Interested in contributing data?
-                                      <a href="/contact">Please contact us!</a>
-                                  </p>
-                                  <p>
-                                      This website was originally developed for the NSF grant
-                                      <a href="/content/about">Comparative Genomics of Environmental Stress Responses in North American Hardwoods</a>, which has now ended. We are expanding to a larger set of tree genomic resources with the support of two NSF grants:
-                                  </p>
-                                  <ul>
-                                      <li>
-                                          <a href="http://nsf.gov/awardsearch/showAward?AWD_ID=1443040">CIF21 DIBBS: Tripal Gateway, a Platform for Next-Generation Data Analysis and Sharing</a> (PI Stephen Ficklin, Washington State University)
-                                      </li>
-                                      <li>
-                                          <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1444573">Standards and Cyberinfrastructure that Enable "Big-Data" Driven Discovery for Tree Crop Research</a> (PI Dorrie Main, Washington State Unviersity)
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
+                <?php if ($page['front_footer']): ?>
+                      <div class="section">
+                        <?php print render($page['front_footer']) ?>
                       </div>
-                  </div>
+                <?php endif; ?>
               <?php endif; ?>
             </div>
         </div> <!-- /#main, /#main-wrapper -->
