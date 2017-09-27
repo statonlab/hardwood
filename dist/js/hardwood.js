@@ -101,6 +101,13 @@
       $('.ds-left').find('.tripal_pane-toc-list-item-link.active').removeClass('active');
     });
 
+    $('.tripal_pane').not('.hideTripalPane').each(function () {
+      var c = $(this).attr('class');
+      var field = c.match(/^tripal_pane-fieldset-(.*$)/) || [];
+      if(field.length === 2) {
+        $('#' + field[1].split(' ')[0]).addClass('active')
+      }
+    });
   });
 })(jQuery);
 

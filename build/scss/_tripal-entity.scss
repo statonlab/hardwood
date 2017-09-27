@@ -55,7 +55,8 @@
   .tripal_pane {
     position: relative;
     padding: 0;
-    border: 1px solid rgba(#000, .1);
+    box-shadow: 0 0 1px rgba(#000, .25), 0 2px 4px rgba(#000, .125);
+    border: 0;
     margin: 0 0 $spacer 0;
     border-radius: $border-radius;
     color: #444;
@@ -77,15 +78,12 @@
     border: 0;
     padding: .5rem;
     margin: 0;
+    border-bottom: 1px solid rgba(#000, .1);
     color: #000;
     font-weight: bold;
-    background-color: darken($gray-100, 2%);
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-
-    + div {
-      padding: .5rem;
-    }
+    text-transform: uppercase;
+    background-color: $gray-100;
+    font-size: .9rem;
   }
 
   .tripal_pane-fieldset-buttons {
@@ -103,9 +101,9 @@
     width: auto!important;
     height: auto!important;
     overflow: auto;
-    right: .5rem;
-    top: .25rem;
-    color: $gray-600;
+    right: .75rem;
+    top: .3rem;
+    color: $gray-500;
     text-shadow: none;
 
     &:hover {

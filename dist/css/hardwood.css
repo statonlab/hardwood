@@ -6761,7 +6761,8 @@ select.progress-disabled {
 .entity-tripalentity .tripal_pane {
   position: relative;
   padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.125);
+  border: 0;
   margin: 0 0 1rem 0;
   border-radius: 0.25rem;
   color: #444; }
@@ -6778,13 +6779,12 @@ select.progress-disabled {
   border: 0;
   padding: .5rem;
   margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   color: #000;
   font-weight: bold;
-  background-color: #f2f4f6;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem; }
-  .entity-tripalentity .field-group-format-title + div {
-    padding: .5rem; }
+  text-transform: uppercase;
+  background-color: #f8f9fa;
+  font-size: .9rem; }
 
 .entity-tripalentity .tripal_pane-fieldset-buttons {
   float: none;
@@ -6799,9 +6799,9 @@ select.progress-disabled {
   width: auto !important;
   height: auto !important;
   overflow: auto;
-  right: .5rem;
-  top: .25rem;
-  color: #868e96;
+  right: .75rem;
+  top: .3rem;
+  color: #adb5bd;
   text-shadow: none; }
   .entity-tripalentity .tripal-pane-button:hover {
     color: #495057; }
