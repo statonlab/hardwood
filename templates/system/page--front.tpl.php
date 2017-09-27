@@ -113,7 +113,6 @@
 
         <div id="main-wrapper">
             <div id="main" class="clearfix">
-
               <?php $main_content_classes = !empty($page['sidebar_first']) || !empty($page['sidebar_second']) ? 'col-sm-8 col-md-9' : 'col-12'; ?>
               <?php if ($page['content']): ?>
                   <div class="section">
@@ -159,6 +158,18 @@
                           </div>
                       </div>
                   </div>
+
+                <?php if ($page['front_middle']): ?>
+                      <div class="section bg-gray">
+                        <?php print render($page['front_middle']) ?>
+                      </div>
+                <?php endif; ?>
+
+                <?php if ($page['front_footer']): ?>
+                      <div class="section">
+                        <?php print render($page['front_footer']) ?>
+                      </div>
+                <?php endif; ?>
               <?php endif; ?>
             </div>
         </div> <!-- /#main, /#main-wrapper -->

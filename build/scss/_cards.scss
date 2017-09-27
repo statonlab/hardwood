@@ -1,0 +1,45 @@
+.tools-container {
+  margin-left: -$grid-gutter-width / 2;
+  margin-right: -$grid-gutter-width / 2;
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.tool-card {
+  text-align: center;
+  @include flex(1);
+  margin: 0 $grid-gutter-width / 2 1rem $grid-gutter-width / 2;
+  min-width: 30%;
+
+  @include media-breakpoint-down(sm) {
+    min-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 22px auto;
+    line-height: 60px;
+    border-radius: 5px;
+    background: theme-color(primary);
+    color: $gray-100;
+    font-size: 2rem;
+    box-shadow: 0 1px 2px rgba(#000, 0.2);
+    text-shadow: 0 1px 2px rgba(#000, .3);
+  }
+
+  p {
+    color: darken($gray-600, 5%);
+    @include media-breakpoint-up(sm) {
+      min-height: 50px;
+    }
+  }
+}
