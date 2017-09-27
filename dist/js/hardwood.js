@@ -111,11 +111,11 @@
 
     $('.navbar .dropdown').hover(function () {
       if ($(window).width() > 992) {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
+        $(this).find('.dropdown-menu').fadeIn(100);
       }
     }, function () {
       if ($(window).width() > 992) {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
+        $(this).find('.dropdown-menu').fadeOut(100);
       }
     });
   });

@@ -6008,7 +6008,6 @@ body {
   .main-header .logo-wrapper {
     margin-left: 50px; }
   .main-header .logo-text {
-    letter-spacing: 2px;
     font-weight: bold; }
     @media (max-width: 575px) {
       .main-header .logo-text {

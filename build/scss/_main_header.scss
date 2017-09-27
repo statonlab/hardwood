@@ -34,7 +34,7 @@
   }
 
   .logo-text {
-    letter-spacing: 2px;
+    //letter-spacing: 2px;
     font-weight: bold;
     @include media-breakpoint-down(xs) {
       margin-top: 7px;
