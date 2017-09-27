@@ -260,6 +260,23 @@
                           </div>
                       </div>
                   </div>
+
+                  <div class="section">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-12">
+                                  The Hardwood Genomics Web serves forest tree scientists by providing online access to hardwood tree genomic and genetic data, including assembled reference genomes, transcriptomes, and genetic mapping information.
+                                  <br/><br/>
+                                  Interested in contributing data? <a href="/contact">Please contact us!</a>
+                                  <br/><br/>
+                                  This website was originally developed for the NSF grant <a href="/content/about">Comparative Genomics of Environmental Stress Responses in North American Hardwoods</a>, which has now ended. We are expanding to a larger set of tree genomic resources with the support of two NSF grants:
+                                  <ul><li> <a href="http://nsf.gov/awardsearch/showAward?AWD_ID=1443040">CIF21 DIBBS: Tripal Gateway, a Platform for Next-Generation Data Analysis and Sharing</a> (PI Stephen Ficklin, Washington State University)</li>
+                                      <li><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1444573">Standards and Cyberinfrastructure that Enable "Big-Data" Driven Discovery for Tree Crop Research</a> (PI Dorrie Main, Washington State Unviersity)</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               <?php endif; ?>
             </div>
         </div> <!-- /#main, /#main-wrapper -->
