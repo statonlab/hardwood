@@ -85,6 +85,9 @@
     text-transform: uppercase;
     background-color: $gray-100;
     font-size: .9rem;
+    + div > .field {
+      padding: .5rem;
+    }
   }
 
   .tripal_pane-fieldset-buttons {

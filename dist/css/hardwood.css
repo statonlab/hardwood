@@ -6786,6 +6786,8 @@ select.progress-disabled {
   text-transform: uppercase;
   background-color: #f8f9fa;
   font-size: .9rem; }
+  .entity-tripalentity .field-group-format-title + div > .field {
+    padding: .5rem; }
 
 .entity-tripalentity .tripal_pane-fieldset-buttons {
   float: none;
