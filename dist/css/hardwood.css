@@ -6489,7 +6489,6 @@ a.tabledrag-handle {
     line-height: 45px; }
 
 #es-search-results-table {
-  margin-bottom: 0;
   table-layout: fixed !important; }
   #es-search-results-table tbody > tr > td {
     word-break: break-all;
