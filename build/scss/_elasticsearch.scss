@@ -159,21 +159,25 @@
     }
   }
 }
-#es-search-results-table {
-  margin-bottom: 0;
-  table-layout: fixed !important;
-}
 .card-block {
   @extend .card-body;
 }
-#es-search-results-table {
-  h3 {
-    font-size: 1rem !important;
-    font-weight: bold !important;
-  }
 
-  p {
-    font-size: 0.9rem;
+#es-search-results-table {
+  margin-bottom: 0;
+  table-layout: fixed !important;
+
+  tbody > tr > td {
+    word-break: break-all;
+    h3 {
+      font-size: 1rem !important;
+      font-weight: bold !important;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $gray-700;
+    }
   }
 
   tbody > tr:first-of-type > td {

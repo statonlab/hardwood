@@ -73,7 +73,7 @@
 
 ?>
 
-<div id="page-wrapper">
+<div id="page-wrapper" class="front-page">
     <div id="page">
 
       <?php include_once "navbar.inc.php"; ?>

@@ -1,16 +1,18 @@
 .entity-tripalentity {
   @extend .d-flex;
   @extend .flex-sm-nowrap;
-  @extend .align-content-start;
+  @extend .align-content-stretch;
+  @include media-breakpoint-down(md) {
+    @include flex-direction(column);
+
+    .ds-right {
+      width: 100%;
+    }
+  }
 
   .ds-left,
   .ds-right {
     float: none !important;
-  }
-
-  .ds-right {
-    @include flex(1);
-    @include flex-grow(2);
   }
 
   .ds-left {
@@ -19,7 +21,11 @@
     width: auto;
     min-width: 200px;
 
-    > .field {
+    @include media-breakpoint-down(md) {
+      margin-right: 0;
+    }
+
+      > .field {
       border-radius: $border-radius;
       border: 1px solid rgba(#000, .1);
     }

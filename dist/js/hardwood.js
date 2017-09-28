@@ -4,6 +4,11 @@
  */
 (function ($) {
   $(function () {
+    var window_height = $(window).height() || 0,
+        header_height = $('#navigation').outerHeight() || 0,
+        footer_height = ($('#footer').outerHeight() || 0) + ($('.main-footer').outerHeight() || 0);
+    $('#main').css('min-height', window_height - (header_height + footer_height) - 30);
+
     $('#elasticsearch_hits_table tr td:nth-of-type(2)').each(function () {
       var text  = $(this).html();
       var array = text.split('<br>');
@@ -102,11 +107,17 @@
     });
 
     $('.tripal_pane').not('.hideTripalPane').each(function () {
-      var c = $(this).attr('class');
+      var c     = $(this).attr('class');
       var field = c.match(/^tripal_pane-fieldset-(.*$)/) || [];
-      if(field.length === 2) {
-        $('#' + field[1].split(' ')[0]).addClass('active')
+      if (field.length === 2) {
+        $('#' + field[1].split(' ')[0]).addClass('active');
       }
+    });
+
+    $(document).on('tripal_ds_pane_expanded', function () {
+      setTimeout(function () {
+        $(window).resize();
+      }, 500);
     });
   });
 })(jQuery);

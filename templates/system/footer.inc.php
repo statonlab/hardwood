@@ -1,4 +1,4 @@
-<div class="section bg-inverse">
+<div class="section bg-inverse main-footer">
  <div class="container">
   <div class="row">
    <div class="col-sm-4">

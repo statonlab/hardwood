@@ -4363,7 +4363,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .align-items-stretch {
   align-items: stretch !important; }
 
-.align-content-start, .entity-tripalentity {
+.align-content-start {
   align-content: flex-start !important; }
 
 .align-content-end {
@@ -4378,7 +4378,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .align-content-around {
   align-content: space-around !important; }
 
-.align-content-stretch {
+.align-content-stretch, .entity-tripalentity {
   align-content: stretch !important; }
 
 .align-self-auto {
@@ -5892,6 +5892,9 @@ body {
   background: #2a2730;
   font-size: 14px; }
 
+#main {
+  background-color: #fff; }
+
 .secondary-footer {
   padding: 20px 0;
   background: #2a2730; }
@@ -6488,16 +6491,16 @@ a.tabledrag-handle {
 #es-search-results-table {
   margin-bottom: 0;
   table-layout: fixed !important; }
-
-#es-search-results-table h3 {
-  font-size: 1rem !important;
-  font-weight: bold !important; }
-
-#es-search-results-table p {
-  font-size: 0.9rem; }
-
-#es-search-results-table tbody > tr:first-of-type > td {
-  border-top: 0; }
+  #es-search-results-table tbody > tr > td {
+    word-break: break-all; }
+    #es-search-results-table tbody > tr > td h3 {
+      font-size: 1rem !important;
+      font-weight: bold !important; }
+    #es-search-results-table tbody > tr > td p {
+      font-size: 0.9rem;
+      color: #495057; }
+  #es-search-results-table tbody > tr:first-of-type > td {
+    border-top: 0; }
 
 .collapsed > .fieldset-wrapper {
   display: none; }
@@ -6713,28 +6716,29 @@ select.progress-disabled {
       .tool-card p {
         min-height: 50px; } }
 
+@media (max-width: 991px) {
+  .entity-tripalentity {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .entity-tripalentity .ds-right {
+      width: 100%; } }
+
 .entity-tripalentity .ds-left,
 .entity-tripalentity .ds-right {
   float: none !important; }
-
-.entity-tripalentity .ds-right {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -moz-box-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-box-flex: 2;
-  -webkit-flex-grow: 2;
-  -moz-flex-grow: 2;
-  -ms-flex-positive: 2;
-  flex-grow: 2; }
 
 .entity-tripalentity .ds-left {
   margin-top: 10px;
   margin-right: 1rem;
   width: auto;
   min-width: 200px; }
+  @media (max-width: 991px) {
+    .entity-tripalentity .ds-left {
+      margin-right: 0; } }
   .entity-tripalentity .ds-left > .field {
     border-radius: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.1); }
