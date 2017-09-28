@@ -115,9 +115,14 @@
     });
 
     $(document).on('tripal_ds_pane_expanded', function () {
-      setTimeout(function () {
-        $(window).resize();
-      }, 500);
+      if(typeof Event !== 'undefined') {
+        window.dispatchEvent(new Event('resize'));
+      } else {
+        // Support IE
+        var event = window.document.createEvent('UIEvents');
+        event.initUIEvent('resize', true, false, window, 0);
+        window.dispatchEvent(event);
+      }
     });
   });
 })(jQuery);
