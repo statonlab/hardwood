@@ -10,6 +10,10 @@
     }
   }
 
+  .ds-right {
+    @include flex(1);
+  }
+
   .ds-left,
   .ds-right {
     float: none !important;
