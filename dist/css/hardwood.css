@@ -6492,7 +6492,8 @@ a.tabledrag-handle {
   margin-bottom: 0;
   table-layout: fixed !important; }
   #es-search-results-table tbody > tr > td {
-    word-break: break-all; }
+    word-break: break-all;
+    padding: .5rem 0 0 0; }
     #es-search-results-table tbody > tr > td h3 {
       font-size: 1rem !important;
       font-weight: bold !important; }
