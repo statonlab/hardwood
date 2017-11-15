@@ -12,7 +12,6 @@
         $('.tripal_pane-toc-list-item-link').each(function () {
             var id = '.tripal_pane-fieldset-' + $(this).attr('id');
             if ($(id).length === 0) {
-                console.log($(this));
                 $(this).parents('.views-row').first().remove();
             }
         });
