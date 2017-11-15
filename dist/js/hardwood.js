@@ -11,8 +11,8 @@
 
         $('.tripal_pane-toc-list-item-link').each(function () {
             var id = '.tripal_pane-fieldset-' + $(this).attr('id');
-            console.log(id, $(id));
             if (!$(id)) {
+                console.log($(this))
                 $(this).parents('.views-row').first().remove();
             }
         });
