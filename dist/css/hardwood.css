@@ -4154,7 +4154,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .rounded-0 {
   border-radius: 0; }
 
-.clearfix::after, .entity-tripalentity .tripal_pane-fieldset-buttons::after {
+.clearfix::after {
   display: block;
   clear: both;
   content: ""; }
@@ -6802,23 +6802,4 @@ select.progress-disabled {
     padding: .5rem; }
 
 .entity-tripalentity .tripal_pane-fieldset-buttons {
-  float: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: auto;
-  width: auto; }
-
-.entity-tripalentity .tripal-pane-button {
-  clip: inherit !important;
-  width: auto !important;
-  height: auto !important;
-  overflow: auto;
-  right: .75rem;
-  top: .3rem;
-  color: #adb5bd;
-  text-shadow: none; }
-  .entity-tripalentity .tripal-pane-button:hover {
-    color: #495057; }
-  .entity-tripalentity .tripal-pane-button .fa-window-close-o:before {
-    content: '\f00d'; }
+  display: none; }

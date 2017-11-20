@@ -9,12 +9,6 @@
             footer_height = ($('#footer').outerHeight() || 0) + ($('.main-footer').outerHeight() || 0);
         $('#main').css('min-height', window_height - (header_height + footer_height) - 30);
 
-        $('.tripal_pane-toc-list-item-link').each(function () {
-            var id = '.tripal_pane-fieldset-' + $(this).attr('id');
-            if ($(id).length === 0) {
-                $(this).parents('.views-row').first().remove();
-            }
-        });
 
         $('#elasticsearch_hits_table tr td:nth-of-type(2)').each(function () {
             var text = $(this).html();
@@ -104,15 +98,6 @@
             $('.elastic-result-block-footer a').attr('class', 'btn btn-primary');
         });
 
-        $('.tripal_pane-toc-list-item-link').on('click', function (event) {
-            $(this).parents('.ds-left').find('.tripal_pane-toc-list-item-link.active').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        $('.tripal-pane-button .fa').on('click', function (event) {
-            $('.ds-left').find('.tripal_pane-toc-list-item-link.active').removeClass('active');
-        });
-
         $('.tripal_pane').not('.hideTripalPane').each(function () {
             var c = $(this).attr('class');
             var field = c.match(/^tripal_pane-fieldset-(.*$)/) || [];
@@ -155,6 +140,39 @@
         }, function () {
             if ($(window).width() > 992) {
                 $(this).find('.dropdown-menu').fadeOut(100);
+            }
+        });
+    });
+})(jQuery);
+
+/**
+ * Re-implement Tripal DS
+ */
+(function ($) {
+    $(function () {
+        var links = $('.tripal_pane-toc-list-item-link');
+
+        $('.tripal-pane-button .fa').on('click', function (event) {
+            $('.ds-left').find('.tripal_pane-toc-list-item-link.active').removeClass('active');
+        });
+
+        links.each(function () {
+            var id = '.tripal_pane-fieldset-' + $(this).attr('id');
+            if ($(id).length === 0) {
+                $(this).parents('.views-row').first().remove();
+            }
+        });
+
+        links.unbind('click');
+        links.on('click', function (e) {
+            e.preventDefault();
+            $(this).parents('.ds-left').find('.tripal_pane-toc-list-item-link.active').removeClass('active');
+            $(this).addClass('active');
+
+            var pane = $('.tripal_pane-fieldset-' + $(this).attr('id'));
+            if (pane.is('.hideTripalPane')) {
+                $('.tripal_pane').not('.hideTripalPane').addClass('hideTripalPane');
+                pane.removeClass('hideTripalPane');
             }
         });
     });

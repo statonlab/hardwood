@@ -29,7 +29,7 @@
       margin-right: 0;
     }
 
-      > .field {
+    > .field {
       border-radius: $border-radius;
       border: 1px solid rgba(#000, .1);
     }
@@ -101,31 +101,32 @@
   }
 
   .tripal_pane-fieldset-buttons {
-    @extend .clearfix;
-    float: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: auto;
-    width: auto;
+    display: none;
+    //@extend .clearfix;
+    //float: none;
+    //position: absolute;
+    //top: 0;
+    //right: 0;
+    //height: auto;
+    //width: auto;
   }
 
-  .tripal-pane-button {
-    clip: inherit!important;
-    width: auto!important;
-    height: auto!important;
-    overflow: auto;
-    right: .75rem;
-    top: .3rem;
-    color: $gray-500;
-    text-shadow: none;
-
-    &:hover {
-      color: $gray-700;
-    }
-
-    .fa-window-close-o:before {
-      content: '\f00d';
-    }
-  }
+  //.tripal-pane-button {
+  //  clip: inherit!important;
+  //  width: auto!important;
+  //  height: auto!important;
+  //  overflow: auto;
+  //  right: .75rem;
+  //  top: .3rem;
+  //  color: $gray-500;
+  //  text-shadow: none;
+  //
+  //  &:hover {
+  //    color: $gray-700;
+  //  }
+  //
+  //  .fa-window-close-o:before {
+  //    content: '\f00d';
+  //  }
+  //}
 }
