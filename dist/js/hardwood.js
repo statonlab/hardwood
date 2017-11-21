@@ -173,6 +173,8 @@
             if (pane.is('.hideTripalPane')) {
                 $('.tripal_pane').not('.hideTripalPane').addClass('hideTripalPane');
                 pane.removeClass('hideTripalPane');
+                var event = $.Event('tripal_ds_pane_expanded');
+                $.trigger(event);
             }
         });
     });
