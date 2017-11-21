@@ -154,6 +154,7 @@
 
         links.each(function () {
             var id = '.tripal_pane-fieldset-' + $(this).attr('id');
+            console.log($(id) ? $(id).children().not('.field-group-format-title').text() : null);
             if ($(id).length === 0) {
                 $(this).parents('.views-row').first().remove();
                 return;
