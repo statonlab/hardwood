@@ -154,13 +154,13 @@
 
         links.each(function () {
             var id = '.tripal_pane-fieldset-' + $(this).attr('id');
-            console.log($(id) ? $(id).children().not('.field-group-format-title').text() : null);
+            console.log($(id) ? $(id).children().not('.field-group-format-title').text().trim() : null);
             if ($(id).length === 0) {
                 $(this).parents('.views-row').first().remove();
                 return;
             }
 
-            if ($(id).children().not('.field-group-format-title').text().length === 0) {
+            if ($(id).children().not('.field-group-format-title').text().trim().length === 0) {
                 $(this).parents('.views-row').first().remove();
             }
         });
