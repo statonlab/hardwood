@@ -124,6 +124,7 @@
  */
 (function ($) {
     $(function () {
+        $('.navbar .last > .dropdown-menu').addClass('dropdown-menu-right');
         $('.navbar .dropdown > .nav-link').click(function (e) {
             if ($(window).width() > 992) {
                 var href = $(this).attr('href');
