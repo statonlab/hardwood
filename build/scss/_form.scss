@@ -44,3 +44,19 @@
     color: #666;
   }
 }
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  + label {
+    margin-bottom: 0!important;
+    font-weight: normal;
+  }
+}
+
+.form-radios,
+.form-checkboxes {
+  .form-group {
+    margin-bottom: 5px;
+  }
+}

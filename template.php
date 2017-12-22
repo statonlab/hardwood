@@ -196,6 +196,10 @@ function hardwood_form_element($variables) {
     $element['#title_display'] = 'none';
   }
 
+  if (!isset($element['#title_display'])) {
+    $element['#title_display'] = 'before';
+  }
+
   $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span>' : '';
   $suffix = isset($element['#field_suffix']) ? '<span class="field-prefix">' . $element['#field_suffix'] . '</span>' : '';
 
@@ -203,12 +207,24 @@ function hardwood_form_element($variables) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
+      if (!empty($element['#description']) && isset($element['#type']) && in_array($element['#type'], [
+          'radios',
+          'checkboxes',
+        ])) {
+        $output .= '<div class="form-text text-muted mb-2">' . $element['#description'] . "</div>\n";
+      }
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
 
     case 'after':
       $output .= ' ' . $prefix . $element['#children'] . $suffix;
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
+      if (!empty($element['#description']) && isset($element['#type']) && in_array($element['#type'], [
+          'radios',
+          'checkboxes',
+        ])) {
+        $output .= '<div class="form-text text-muted mb-2">' . $element['#description'] . "</div>\n";
+      }
       break;
 
     case 'none':
@@ -218,7 +234,10 @@ function hardwood_form_element($variables) {
       break;
   }
 
-  if (!empty($element['#description'])) {
+  if (!empty($element['#description']) && (!isset($element['#type']) || !in_array($element['#type'], [
+        'radios',
+        'checkboxes',
+      ]))) {
     $output .= '<div class="form-text text-muted">' . $element['#description'] . "</div>\n";
   }
 
