@@ -173,8 +173,8 @@
 
             var pane = $('.tripal_pane-fieldset-' + $(this).attr('id'));
             if (pane.is('.hideTripalPane')) {
-                $('.tripal_pane').not('.hideTripalPane').addClass('hideTripalPane');
-                pane.removeClass('hideTripalPane');
+                //$('.tripal_pane').not('.hideTripalPane').addClass('hideTripalPane');
+                //pane.removeClass('hideTripalPane');
                 var event = $.Event('tripal_ds_pane_expanded');
                 $(this).trigger(event);
             }
