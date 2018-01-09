@@ -156,12 +156,12 @@
         links.each(function () {
             var id = '.tripal_pane-fieldset-' + $(this).attr('id');
             if ($(id).length === 0) {
-                $(this).parents('.views-row').first().remove();
+                //$(this).parents('.views-row').first().remove();
                 return;
             }
 
             if ($(id).children().not('.field-group-format-title').text().trim().length === 0) {
-                $(this).parents('.views-row').first().remove();
+                //$(this).parents('.views-row').first().remove();
             }
         });
 
