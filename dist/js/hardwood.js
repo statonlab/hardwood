@@ -165,7 +165,7 @@
             }
         });
 
-        links.unbind('click');
+        //links.unbind('click');
         links.on('click', function (e) {
             e.preventDefault();
             $(this).parents('.ds-left').find('.tripal_pane-toc-list-item-link.active').removeClass('active');
