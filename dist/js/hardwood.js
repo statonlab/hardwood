@@ -156,16 +156,16 @@
         links.each(function () {
             var id = '.tripal_pane-fieldset-' + $(this).attr('id');
             if ($(id).length === 0) {
-                //$(this).parents('.views-row').first().remove();
+                $(this).parents('.views-row').first().remove();
                 return;
             }
 
             if ($(id).children().not('.field-group-format-title').text().trim().length === 0) {
-                //$(this).parents('.views-row').first().remove();
+                $(this).parents('.views-row').first().remove();
             }
         });
 
-        //links.unbind('click');
+        links.unbind('click');
         links.on('click', function (e) {
             e.preventDefault();
             $(this).parents('.ds-left').find('.tripal_pane-toc-list-item-link.active').removeClass('active');
@@ -173,8 +173,8 @@
 
             var pane = $('.tripal_pane-fieldset-' + $(this).attr('id'));
             if (pane.is('.hideTripalPane')) {
-                //$('.tripal_pane').not('.hideTripalPane').addClass('hideTripalPane');
-                //pane.removeClass('hideTripalPane');
+                $('.tripal_pane').not('.hideTripalPane').addClass('hideTripalPane');
+                pane.removeClass('hideTripalPane');
                 var event = $.Event('tripal_ds_pane_expanded');
                 $(this).trigger(event);
             }
