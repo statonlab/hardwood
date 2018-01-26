@@ -194,18 +194,11 @@
                 <div class="row">
                     <div class="col-12">
                       <?php print render($page['footer']); ?>
-                        Copyright &copy; <?php print date('Y') ?>
-                        <a href="https://ag.tennessee.edu/EPP/Pages/default.aspx">
-                            University of Tennessee, Knoxville Department of
-                            Entomology and Plant Pathology
-                        </a>.
-                        Learn more about our <a href="/policy">Data Policy</a>.
                     </div>
                 </div>
             </div>
         </div> <!-- /#footer -->
 
       <?php include_once "footer.inc.php"; ?>
-
     </div>
 </div> <!-- /#page, /#page-wrapper -->
