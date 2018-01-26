@@ -85,10 +85,14 @@
                     <div class="row">
                         <div class="col-12">
                             <h1 class="text-center">
-                                Welcome to the Hardwood Genomics Project
+                                Hardwood Genomics Project
                             </h1>
-                            <p class="lead text-center">
-                                Genomic resources for hardwood trees
+                            <p class="lead text-center" style="margin-top: 40px">
+                                An open-source database for comparative and
+                                functional genomics in forest trees and woody
+                                plant species. Available data include genomes,
+                                gene models, transcriptomes, gene expression,
+                                functional annotation, and genetic markers.
                             </p>
 
                           <?php if ($page['front_search']): ?>
@@ -103,7 +107,8 @@
                                 <a href="/contact"
                                    class="btn btn-success">Contribute Data</a>
                                 <a href="/contact"
-                                   class="btn btn-outline-secondary">Contact Us</a>
+                                   class="btn btn-outline-secondary">Contact
+                                    Us</a>
                             </div>
                         </div>
                     </div>
