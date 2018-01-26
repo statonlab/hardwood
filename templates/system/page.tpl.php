@@ -144,13 +144,13 @@
                               <?php endif; ?>
                                 <!--div class="elevated-card<?php $hardwood_set_page_card === TRUE ? print ' card' : '' ?>">
                                     <div class="<?php $hardwood_set_page_card === TRUE ? print 'card-body' : '' ?>"-->
-                                      <?php if ($messages): ?>
-                                        <?php print $messages; ?>
-                                      <?php endif; ?>
+                              <?php if ($messages): ?>
+                                <?php print $messages; ?>
+                              <?php endif; ?>
 
-                                      <?php print render($page['content']); ?>
-                                    <!--/div>
-                                </div-->
+                              <?php print render($page['content']); ?>
+                                <!--/div>
+                            </div-->
                               <?php print $feed_icons; ?>
                             </div>
 
@@ -194,6 +194,12 @@
                 <div class="row">
                     <div class="col-12">
                       <?php print render($page['footer']); ?>
+                        Copyright &copy; <?php print date('Y') ?>
+                        <a href="https://ag.tennessee.edu/EPP/Pages/default.aspx">
+                            University of Tennessee, Knoxville Department of
+                            Entomology and Plant Pathology
+                        </a>.
+                        Learn more about our <a href="/policy">Data Policy</a>.
                     </div>
                 </div>
             </div>
