@@ -18,6 +18,16 @@ function hardwood_preprocess_page(&$variables) {
     $variables['primary_nav']['#theme_wrappers'] = ['menu_tree__primary'];
   }
 
+  // Secondary nav.
+  $variables['secondary_nav'] = FALSE;
+  if (!empty($variables['secondary_menu'])) {
+    // Build links.
+    $variables['secondary_nav'] = menu_tree(variable_get('menu_secondary_links_source', 'user-menu'));
+    // Provide default theme wrapper function.
+    $variables['secondary_nav']['#theme_wrappers'] = ['menu_tree__secondary'];
+  }
+
+  // Manage display of cards
   $cards = variable_get('hardwood_page_cards');
 
   $variables['hardwood_set_page_card'] = TRUE;

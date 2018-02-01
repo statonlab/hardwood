@@ -329,6 +329,17 @@ function hardwood_menu_tree__primary(array &$variables) {
 }
 
 /**
+ * Add the secondary menu wrapper.
+ *
+ * @param array $variables
+ *
+ * @return string
+ */
+function hardwood_menu_tree__secondary(array &$variables) {
+  return '<ul class="navbar-nav mr-md-auto mr-lg-0">' . $variables['tree'] . '</ul>';
+}
+
+/**
  * Returns HTML for a menu link and submenu.
  *
  * @param array $variables
@@ -377,6 +388,10 @@ function hardwood_menu_link__main_menu(array $variables) {
   }
 
   return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
+}
+
+function hardwood_menu_link__user_menu(array &$variables) {
+  return hardwood_menu_link__main_menu($variables);
 }
 
 /**
