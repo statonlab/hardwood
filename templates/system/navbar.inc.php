@@ -26,10 +26,24 @@
           if (!empty($primary_nav)):
             print render($primary_nav);
           endif;
+          ?>
+
+          <?php
           if (!empty($secondary_nav)):
             print render($secondary_nav);
           endif;
           ?>
+
+          <?php if (!user_is_logged_in()): ?>
+              <ul class="navbar-nav mr-md-auto mr-lg-0">
+                  <li class="leaf nav-item">
+                      <a href="/user/login" class="nav-link">Login</a>
+                  </li>
+                  <li class="leaf nav-item">
+                      <a href="/user/register" class="nav-link">Register</a>
+                  </li>
+              </ul>
+          <?php endif; ?>
         </div>
     </div>
 </nav> <!-- /.section, /#navigation -->

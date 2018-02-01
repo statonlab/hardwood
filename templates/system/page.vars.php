@@ -28,12 +28,14 @@ function hardwood_preprocess_page(&$variables) {
   }
 
   // Manage display of cards
-  $cards = variable_get('hardwood_page_cards');
+  $cards = variable_get('hardwood_page_cards', FALSE);
 
   $variables['hardwood_set_page_card'] = TRUE;
-  if (isset($variables['node'])) {
-    if (is_array($cards) && isset($cards[$variables['node']->nid])) {
-      $variables['hardwood_set_page_card'] = FALSE;
+  if ($cards) {
+    if (isset($variables['node'])) {
+      if (is_array($cards) && isset($cards[$variables['node']->nid])) {
+        $variables['hardwood_set_page_card'] = FALSE;
+      }
     }
   }
 }
