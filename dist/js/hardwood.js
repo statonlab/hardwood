@@ -203,12 +203,10 @@
      */
     TripalDS.prototype.openDefaultPane = function () {
       var params = this.getURLParameters().filter(function (param) {
-        return param.name.toLowerCase() !== 'tripal_pane';
+        return param.name.toLowerCase() === 'tripal_pane';
       });
 
       var pane_id = params.length > 0 ? params[0].value : null;
-
-      console.log(params);
 
       if (!pane_id) {
         // We are done here
