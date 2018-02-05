@@ -202,9 +202,7 @@
      * Show the pane that's selected in the url.
      */
     TripalDS.prototype.openDefaultPane = function () {
-      var params = this.getURLParameters();
-
-      params.filter(function (param) {
+      var params = this.getURLParameters().filter(function (param) {
         return param.name.toLowerCase() !== 'tripal_pane';
       });
 
