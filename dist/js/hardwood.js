@@ -208,6 +208,8 @@
 
       var pane_id = params.length > 0 ? params[0].value : null;
 
+      console.log(params);
+
       if (!pane_id) {
         // We are done here
         return;
