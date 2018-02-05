@@ -297,11 +297,13 @@
         });
       }
 
-      var query = '';
+      var query = [];
       for (i = 0; i < params.length; i++) {
         var param = params[i];
-        query += param.name + '=' + param.value;
+        query.push(param.name + '=' + param.value);
       }
+
+      query = query.join('&');
 
       if (window.history) {
         var state = window.history.state;
