@@ -284,7 +284,7 @@
       var params = this.getURLParameters();
       var added = false;
       for (var i = 0; i < params.length; i++) {
-        if (params[i].name === 'tripal_pane') {
+        if (params[i] && params[i].name === 'tripal_pane') {
           params[i].value = id;
           added = true;
         }
@@ -299,7 +299,7 @@
 
       var query = '';
       for (i = 0; i < params.length; i++) {
-        var param = params[0];
+        var param = params[i];
         query += param.name + '=' + param.value;
       }
 
