@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Experimental design",
   "main": "index.js",
+  "repository": "https://github.com/statonlab/hardwood.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +16,7 @@
     "tether": "^1.4.0"
   },
   "devDependencies": {
-    "bootstrap": "^4.0.0-beta",
+    "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-concat-util": "^0.5.5",

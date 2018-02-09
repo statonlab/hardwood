@@ -484,12 +484,7 @@ $custom-file-box-shadow:    $input-box-shadow !default;
 $custom-file-button-color:  $custom-file-color !default;
 $custom-file-button-bg:     $input-group-addon-bg !default;
 $custom-file-text: (
-        placeholder: (
-                en: "Choose file..."
-        ),
-        button-label: (
-                en: "Browse"
-        )
+        en: "Choose file..."
 ) !default;
 
 
@@ -541,7 +536,7 @@ $zindex-tooltip:            1070 !default;
 
 // Navs
 
-$nav-link-padding-y:            .5rem !default;
+$nav-link-padding-y:            .75rem !default;
 $nav-link-padding-x:            1rem !default;
 $nav-link-padding:              $nav-link-padding-y $nav-link-padding-x;
 $nav-link-disabled-color:       $gray-600 !default;
@@ -874,3 +869,5 @@ $state-warning-border:           darken($state-warning-bg, 5%) !default;
 $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken($state-danger-bg, 5%) !default;
+
+$box-shadow: 0 0 1px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .125);
