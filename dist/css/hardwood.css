@@ -6766,7 +6766,7 @@ ul.tabs {
 .nav.flex-column, ul.flex-column.tabs, ul.tabs.action-links, ul.tabs.tripal-toc-pane, .action-links, .tripal-toc-pane, #block-system-management .menu,
 #block-system-management .menu ul {
   border-radius: 0.25rem;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125); }
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125); }
   .nav.flex-column .nav-link, ul.flex-column.tabs .nav-link, ul.tabs.action-links .nav-link, ul.tabs.tripal-toc-pane .nav-link, .action-links .nav-link, .tripal-toc-pane .nav-link, #block-system-management .menu .nav-link, .nav.flex-column ul.tabs > li > a, ul.flex-column.tabs ul.tabs > li > a, .action-links ul.tabs > li > a, .tripal-toc-pane ul.tabs > li > a, .nav.flex-column .action-links > li > a, ul.flex-column.tabs .action-links > li > a, ul.tabs.action-links .action-links > li > a, .action-links > li > a, .tripal-toc-pane .action-links > li > a, #block-system-management .menu .action-links > li > a,
   #block-system-management .menu ul .action-links > li > a, .nav.flex-column .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column .tripal_toc_list_item_link, .tripal-toc-pane .tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu .tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li > a, #block-system-management ul.flex-column.tabs .menu > li > a, #block-system-management ul.tabs.menu .menu > li > a, #block-system-management .action-links .menu > li > a, #block-system-management .tripal-toc-pane .menu > li > a, #block-system-management .menu > li > a, #block-system-management .menu ul .menu > li > a,
   #block-system-management .menu .nav.flex-column ul > li > a, #block-system-management .menu ul.tabs ul > li > a,
@@ -6802,7 +6802,7 @@ ul.tabs {
     border-bottom-left-radius: 0.25rem; }
 
 .help-tab-pane {
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125);
   padding: 1rem;
   border-radius: 0.25rem; }
   .help-tab-pane img {
