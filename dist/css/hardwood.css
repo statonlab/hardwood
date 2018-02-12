@@ -6962,8 +6962,8 @@ a.tabledrag-handle {
       border: 1px solid #34ce57; }
   .elasticsearch-search-input .input-group-btn {
     position: absolute;
-    right: 0;
-    top: 3px;
+    right: -2px;
+    top: 2px;
     z-index: 200; }
     .elasticsearch-search-input .input-group-btn .btn, .elasticsearch-search-input .input-group-btn #edit-cancel, .elasticsearch-search-input .input-group-btn #edit-search-submit {
       border-radius: 10px;
