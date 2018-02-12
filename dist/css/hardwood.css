@@ -6803,7 +6803,8 @@ ul.tabs {
 
 .help-tab-pane {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125);
-  padding: .75rem; }
+  padding: 1rem;
+  border-radius: 0.25rem; }
   .help-tab-pane img {
     max-width: 100%;
     height: auto; }

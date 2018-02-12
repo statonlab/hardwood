@@ -74,7 +74,8 @@ ul.tabs {
 
 .help-tab-pane {
   box-shadow: $box-shadow;
-  padding: .75rem;
+  padding: 1rem;
+  border-radius: $border-radius;
 
   img {
     max-width: 100%;
