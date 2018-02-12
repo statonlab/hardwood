@@ -76,6 +76,11 @@ ul.tabs {
   box-shadow: $box-shadow;
   padding: .75rem;
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .tab-pane-title {
     color: $gray-700;
   }
