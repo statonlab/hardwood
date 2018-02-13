@@ -134,7 +134,7 @@ body {
   right: 100px;
   width: 80px;
   box-shadow: -1px -1px 4px rgba(0, 0, 0, .2);
-  transition: width .3s linear;
+  transition: width .1s linear;
 
   &,
   .help-button-trigger {
@@ -145,6 +145,9 @@ body {
   &.open {
     width: 230px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    .help-button-trigger {
+      background-color: $info;
+    }
   }
 }
 

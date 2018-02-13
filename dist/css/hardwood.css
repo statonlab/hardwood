@@ -6488,7 +6488,7 @@ body {
   right: 100px;
   width: 80px;
   box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.2);
-  transition: width .3s linear; }
+  transition: width .1s linear; }
   .help-button-block,
   .help-button-block .help-button-trigger {
     border-top-left-radius: 0.25rem;
@@ -6496,6 +6496,8 @@ body {
   .help-button-block.open {
     width: 230px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+    .help-button-block.open .help-button-trigger {
+      background-color: #17a2b8; }
 
 .help-button-trigger {
   padding: 0.5rem 0.75rem;
