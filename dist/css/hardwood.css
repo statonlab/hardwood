@@ -6488,7 +6488,7 @@ body {
   right: 100px;
   width: 80px;
   box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.2);
-  transition: width .1s linear; }
+  transition: width .2s linear; }
   .help-button-block,
   .help-button-block .help-button-trigger {
     border-top-left-radius: 0.25rem;
