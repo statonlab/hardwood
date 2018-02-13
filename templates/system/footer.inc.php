@@ -28,7 +28,7 @@
     <div class="help-button-block">
         <a href="#" class="help-button-trigger">
             <i class="fa fa-hand-o-up"></i>
-            Need Help?
+             Help
         </a>
         <div class="help-button-content">
           <?php foreach ($help_items as $item): ?>

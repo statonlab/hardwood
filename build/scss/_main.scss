@@ -132,9 +132,10 @@ body {
   z-index: 1000;
   bottom: 0;
   right: 100px;
-  width: 230px;
+  width: 60px;
   box-shadow: -1px -1px 4px rgba(0, 0, 0, .2);
-
+  transition: width .3s linear;
+  
   &,
   .help-button-trigger {
     border-top-left-radius: $border-radius;
@@ -142,6 +143,7 @@ body {
   }
 
   &.open {
+    width: 230px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
   }
 }
