@@ -316,3 +316,25 @@
     return new TripalDS();
   });
 })(jQuery);
+
+(function ($) {
+  $(function () {
+    $('.help-button-trigger').click(function (e) {
+      e.preventDefault();
+
+      var parent = $(this).parents('.help-button-block').first();
+      var content = parent.find('.help-button-content');
+
+      if (parent.hasClass('open')) {
+        content.slideUp(function () {
+          parent.removeClass('open');
+        });
+
+        return;
+      }
+
+      parent.addClass('open');
+      content.slideDown();
+    });
+  });
+})(jQuery);
