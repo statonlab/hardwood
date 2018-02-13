@@ -552,3 +552,9 @@ function hardwood_from_node_submit(&$form, &$form_state) {
 
   variable_set('hardwood_page_cards', $cards);
 }
+
+function hardwood_add_help_variables(&$variables) {
+  if (function_exists('hardwoods_help_get_help_menu_items')) {
+    $variables['help_items'] = hardwoods_help_get_help_menu_items();
+  }
+}

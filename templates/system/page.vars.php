@@ -38,4 +38,8 @@ function hardwood_preprocess_page(&$variables) {
       }
     }
   }
+
+
+  // Add help content
+  hardwood_add_help_variables($variables);
 }

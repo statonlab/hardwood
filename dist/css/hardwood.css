@@ -6479,6 +6479,45 @@ body {
   border: 0;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.125); }
 
+.help-button-block {
+  display: none;
+  background: #fff;
+  color: #343a40;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  right: 100px;
+  width: 300px;
+  box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.2); }
+  .help-button-block,
+  .help-button-block .help-button-trigger {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; }
+  .help-button-block.open {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+.help-button-trigger {
+  padding: 0.5rem 0.75rem;
+  background: #17a2b8;
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.125); }
+  .help-button-trigger:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #1592a6; }
+
+.help-button-content {
+  padding: .75rem;
+  background-color: #f8f9fa; }
+  .help-button-content .help-node-title {
+    color: #495057; }
+  .help-button-content .help-tab-title {
+    color: #868e96; }
+
 .main-header {
   background-color: #fff;
   border-top: 6px solid #28a745;
@@ -6804,12 +6843,32 @@ ul.tabs {
 .help-tab-pane {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125);
   padding: 1rem;
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem;
+  color: #343a40; }
   .help-tab-pane img {
     max-width: 100%;
-    height: auto; }
-  .help-tab-pane .tab-pane-title {
-    color: #495057; }
+    height: auto;
+    margin: 0 0 .5rem 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 2px 3px rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem; }
+  .help-tab-pane .tab-pane-title,
+  .help-tab-pane h1,
+  .help-tab-pane h2,
+  .help-tab-pane h3,
+  .help-tab-pane h4,
+  .help-tab-pane h5,
+  .help-tab-pane h6 {
+    color: #343a40;
+    font-weight: 300; }
+  .help-tab-pane h3,
+  .help-tab-pane h4,
+  .help-tab-pane h5,
+  .help-tab-pane h6 {
+    margin-top: 1.75rem; }
+  .help-tab-pane .tab-pane-title h2,
+  .help-tab-pane .tab-pane-title h3,
+  .help-tab-pane .tab-pane-title h4 {
+    margin-top: 0; }
 
 table {
   max-width: 100% !important; }
