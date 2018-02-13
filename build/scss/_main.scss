@@ -131,10 +131,10 @@ body {
   position: fixed;
   z-index: 1000;
   bottom: 0;
-  right: 100px;
+  right: 30px;
   width: 80px;
   box-shadow: -1px -1px 4px rgba(0, 0, 0, .2);
-  transition: width .2s linear;
+  // transition: width .2s linear;
 
   &,
   .help-button-trigger {

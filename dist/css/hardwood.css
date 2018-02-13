@@ -6485,10 +6485,9 @@ body {
   position: fixed;
   z-index: 1000;
   bottom: 0;
-  right: 100px;
+  right: 30px;
   width: 80px;
-  box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.2);
-  transition: width .2s linear; }
+  box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.2); }
   .help-button-block,
   .help-button-block .help-button-trigger {
     border-top-left-radius: 0.25rem;
