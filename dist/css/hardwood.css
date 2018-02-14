@@ -6828,6 +6828,12 @@ ul.tabs {
     #block-system-management .menu .tripal-toc-pane ul > li > a.active, #block-system-management .menu ul > li > a.active {
       border-left-color: #28a745;
       color: #28a745; }
+    .nav.flex-column .nav-link:hover, ul.flex-column.tabs .nav-link:hover, ul.tabs.action-links .nav-link:hover, ul.tabs.tripal-toc-pane .nav-link:hover, .action-links .nav-link:hover, .tripal-toc-pane .nav-link:hover, #block-system-management .menu .nav-link:hover, .nav.flex-column ul.tabs > li > a:hover, ul.flex-column.tabs ul.tabs > li > a:hover, .action-links ul.tabs > li > a:hover, .tripal-toc-pane ul.tabs > li > a:hover, .nav.flex-column .action-links > li > a:hover, ul.flex-column.tabs .action-links > li > a:hover, ul.tabs.action-links .action-links > li > a:hover, .action-links > li > a:hover, .tripal-toc-pane .action-links > li > a:hover, #block-system-management .menu .action-links > li > a:hover,
+    #block-system-management .menu ul .action-links > li > a:hover, .nav.flex-column .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .nav.flex-column .tripal_toc_list_item_link:hover, .tripal-toc-pane .tripal_toc_list_item_link:hover, #block-system-management .menu .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane #block-system-management .menu .tripal_toc_list_item_link:hover, #block-system-management .nav.flex-column .menu > li > a:hover, #block-system-management ul.flex-column.tabs .menu > li > a:hover, #block-system-management ul.tabs.menu .menu > li > a:hover, #block-system-management .action-links .menu > li > a:hover, #block-system-management .tripal-toc-pane .menu > li > a:hover, #block-system-management .menu > li > a:hover, #block-system-management .menu ul .menu > li > a:hover,
+    #block-system-management .menu .nav.flex-column ul > li > a:hover, #block-system-management .menu ul.tabs ul > li > a:hover,
+    #block-system-management .menu .action-links ul > li > a:hover,
+    #block-system-management .menu .tripal-toc-pane ul > li > a:hover, #block-system-management .menu ul > li > a:hover {
+      background-color: #f8f9fa; }
   .nav.flex-column li:first-of-type > .nav-link, ul.flex-column.tabs li:first-of-type > .nav-link, ul.tabs.action-links li:first-of-type > .nav-link, ul.tabs.tripal-toc-pane li:first-of-type > .nav-link, .action-links li:first-of-type > .nav-link, .tripal-toc-pane li:first-of-type > .nav-link, #block-system-management .menu li:first-of-type > .nav-link,
   #block-system-management .menu ul li:first-of-type > .nav-link, .nav.flex-column ul.tabs > li:first-of-type > a, ul.flex-column.tabs ul.tabs > li:first-of-type > a, .action-links ul.tabs > li:first-of-type > a, .tripal-toc-pane ul.tabs > li:first-of-type > a, .nav.flex-column .action-links > li:first-of-type > a, ul.flex-column.tabs .action-links > li:first-of-type > a, ul.tabs.action-links .action-links > li:first-of-type > a, .action-links > li:first-of-type > a, .tripal-toc-pane .action-links > li:first-of-type > a, #block-system-management .menu .action-links > li:first-of-type > a,
   #block-system-management .menu ul .action-links > li:first-of-type > a, .nav.flex-column .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column li:first-of-type > .tripal_toc_list_item_link, ul.flex-column.tabs .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane ul.flex-column.tabs li:first-of-type > .tripal_toc_list_item_link, ul.tabs.tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .action-links .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .action-links li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane
@@ -6874,6 +6880,12 @@ ul.tabs {
   .help-tab-pane .tab-pane-title h3,
   .help-tab-pane .tab-pane-title h4 {
     margin-top: 0; }
+
+.link-darker {
+  color: #495057; }
+
+.link-dark {
+  color: #868e96; }
 
 table {
   max-width: 100% !important; }

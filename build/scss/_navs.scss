@@ -54,6 +54,10 @@ ul.tabs {
         border-left-color: theme-color();
         color: theme-color();
       }
+
+      &:hover {
+        background-color: $gray-100;
+      }
     }
 
     li {
@@ -81,7 +85,7 @@ ul.tabs {
     max-width: 100%;
     height: auto;
     margin: 0 0 .5rem 0;
-    box-shadow: 0 0 2px rgba(0,0,0,.2), 0 2px 3px rgba(0,0,0,0.125);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2), 0 2px 3px rgba(0, 0, 0, 0.125);
     border-radius: $border-radius;
   }
 
@@ -110,4 +114,12 @@ ul.tabs {
       margin-top: 0;
     }
   }
+}
+
+.link-darker {
+  color: $gray-700;
+}
+
+.link-dark {
+  color: $gray-600;
 }
