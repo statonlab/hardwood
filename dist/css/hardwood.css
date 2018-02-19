@@ -7329,6 +7329,9 @@ input[type="checkbox"] {
   border-width: 0;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.3); }
 
+.card-footer {
+  border-top-color: rgba(0, 0, 0, 0.05); }
+
 .tools-container {
   margin-left: -15px;
   margin-right: -15px; }
