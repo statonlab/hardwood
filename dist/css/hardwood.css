@@ -6634,7 +6634,7 @@ body {
   border-color: rgba(0, 0, 0, 0.15); }
 
 .bg-gray {
-  background-color: #f9f9f9; }
+  background-color: #f8f9fa; }
 
 .bg-inverse {
   background: #2a2730 !important; }
@@ -6757,6 +6757,27 @@ tr .ajax-progress .throbber {
 
 .ajax-progress-bar {
   width: 16em; }
+
+.genomic-data-container .card, .genomic-data-container .admin-panel {
+  flex-grow: 1;
+  width: calc(100% * (1 / 4) - 10px);
+  margin: 10px; }
+  .genomic-data-container .card:first-of-type, .genomic-data-container .admin-panel:first-of-type {
+    margin-left: 0; }
+  .genomic-data-container .card:last-of-type, .genomic-data-container .admin-panel:last-of-type {
+    margin-right: 0; }
+  .genomic-data-container .card p, .genomic-data-container .admin-panel p {
+    color: #868e96; }
+
+.genomic-data-container .card-footer {
+  background-color: #fff; }
+
+@media (max-width: 991.98px) {
+  .genomic-data-container {
+    flex-wrap: wrap !important; }
+    .genomic-data-container .card, .genomic-data-container .admin-panel {
+      width: auto !important;
+      margin: 0; } }
 
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }

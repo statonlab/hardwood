@@ -87,7 +87,8 @@
                             <h1 class="text-center">
                                 Hardwood Genomics Project
                             </h1>
-                            <p class="lead text-center" style="margin-top: 40px">
+                            <p class="lead text-center"
+                               style="margin-top: 40px">
                                 An open-source database for comparative and
                                 functional genomics in forest trees and woody
                                 plant species. Available data include genomes,
@@ -156,7 +157,6 @@
                                             </div> <!-- /#sidebar-second -->
                                         </div>
                                     </div>
-
                                 <?php endif; ?>
                               </div>
 

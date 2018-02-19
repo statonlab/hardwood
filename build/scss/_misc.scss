@@ -14,7 +14,7 @@
   }
 }
 .bg-gray {
-  background-color: #f9f9f9;
+  background-color: $gray-100;
 }
 .bg-inverse {
   background: #2a2730 !important;
@@ -155,4 +155,36 @@ tr .ajax-progress .throbber {
 }
 .ajax-progress-bar {
   width: 16em;
+}
+.genomic-data-container {
+  .card {
+    flex-grow: 1;
+    width: calc(100% * (1 / 4) - 10px);
+    margin: 10px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    p {
+      color: $gray-600;
+    }
+  }
+
+  .card-footer {
+    background-color: #fff;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap !important;
+
+    .card {
+      width: auto!important;
+      margin: 0;
+    }
+  }
 }
