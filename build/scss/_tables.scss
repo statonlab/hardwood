@@ -122,3 +122,11 @@ a.tabledrag-handle {
     display: none;
   }
 }
+
+.table table {
+  margin: 0;
+  th,
+  td {
+    padding: 0;
+  }
+}
