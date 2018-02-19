@@ -175,10 +175,6 @@ tr .ajax-progress .throbber {
     }
   }
 
-  .card-footer {
-    background-color: #fff;
-  }
-
   @include media-breakpoint-down(md) {
     flex-wrap: wrap !important;
 
