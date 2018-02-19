@@ -6996,6 +6996,15 @@ a.tabledrag-handle {
 .table th p:empty, table th p:empty {
   display: none; }
 
+.table td table, table td table,
+.table th table, table th table {
+  margin: 0; }
+  .table td table th, table td table th,
+  .table td table td, table td table td,
+  .table th table th, table th table th,
+  .table th table td, table th table td {
+    padding: 0; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 
