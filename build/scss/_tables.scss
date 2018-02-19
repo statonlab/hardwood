@@ -115,15 +115,14 @@ a.tabledrag-handle {
     margin-left: 10px;
   }
 }
-
 .table td,
 .table th {
   p:empty {
     display: none;
   }
 }
-
-.table table {
+.table td table,
+.table th table {
   margin: 0;
   th,
   td {
