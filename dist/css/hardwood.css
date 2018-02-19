@@ -6992,6 +6992,10 @@ a.tabledrag-handle {
   .table > thead > tr > th > a > img, table > thead > tr > th > a > img {
     margin-left: 10px; }
 
+.table td p:empty, table td p:empty,
+.table th p:empty, table th p:empty {
+  display: none; }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 
