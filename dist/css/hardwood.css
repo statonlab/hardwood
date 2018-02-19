@@ -6486,7 +6486,7 @@ body {
   z-index: 1000;
   bottom: 0;
   right: 30px;
-  width: 80px;
+  width: 120px;
   box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.2); }
   .help-button-block,
   .help-button-block .help-button-trigger {
@@ -6500,7 +6500,7 @@ body {
 
 .help-button-trigger {
   padding: 0.5rem 0.75rem;
-  background-color: #adb5bd;
+  background-color: #17a2b8;
   display: block;
   width: 100%;
   color: #fff;

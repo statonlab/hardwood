@@ -190,6 +190,5 @@
         </div> <!-- /#footer -->
 
       <?php include_once "footer.inc.php"; ?>
-
     </div>
 </div> <!-- /#page, /#page-wrapper -->
