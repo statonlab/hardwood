@@ -173,6 +173,11 @@ tr .ajax-progress .throbber {
     p {
       color: $gray-600;
     }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: $font-weight-bold;
+    }
   }
 
   @include media-breakpoint-down(md) {

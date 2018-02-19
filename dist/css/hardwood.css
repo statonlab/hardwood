@@ -6768,6 +6768,9 @@ tr .ajax-progress .throbber {
     margin-right: 0; }
   .genomic-data-container .card p, .genomic-data-container .admin-panel p {
     color: #868e96; }
+  .genomic-data-container .card .card-title, .genomic-data-container .admin-panel .card-title {
+    font-size: 1rem;
+    font-weight: bold; }
 
 @media (max-width: 991.98px) {
   .genomic-data-container {
