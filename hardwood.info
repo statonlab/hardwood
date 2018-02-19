@@ -20,7 +20,7 @@ regions[footer] = Footer
 regions[font_jumbotron] = Front Page Jumbotron
 regions[front_search] = Front Page Search Block
 regions[front_middle] = Front Page Middle Section
-regions[front_footer] = Front Page Last Section
+regions[front_footer] = Front Page Last Section (Before Footer)
 
 ; Admin Regions
 ;----------------------

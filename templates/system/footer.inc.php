@@ -53,4 +53,4 @@
           <?php endforeach; ?>
         </div><!-- /.help-button-content -->
     </div><!-- /.help-button-block -->
-<?php endif;
+<?php endif; ?>
