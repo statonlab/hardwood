@@ -7372,6 +7372,9 @@ input[type="checkbox"] {
       .tool-card p {
         min-height: 50px; } }
 
+.tool-card-footer {
+  padding: 0 1rem 1rem 1rem; }
+
 @media (max-width: 991.98px) {
   .entity-tripalentity {
     -webkit-box-direction: normal;
