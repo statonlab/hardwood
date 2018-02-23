@@ -6779,6 +6779,19 @@ tr .ajax-progress .throbber {
       width: auto !important;
       margin: 0; } }
 
+#expression_heat_map_canvas .js-plotly-plot .plotly [data-title] {
+  /**
+       * tooltip body
+       */ }
+  #expression_heat_map_canvas .js-plotly-plot .plotly [data-title]:after {
+    background: #e9ecef !important;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: normal;
+    border-radius: 0.25rem; }
+
 .pager > li.pager-current, .pager > li.pager-ellipsis {
   cursor: default; }
   .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
@@ -7004,6 +7017,9 @@ a.tabledrag-handle {
   .table th table th, table th table th,
   .table th table td, table th table td {
     padding: 0; }
+
+table.table-layout-fixed {
+  table-layout: fixed !important; }
 
 .alignment-subrow {
   font-size: 0.875rem; }

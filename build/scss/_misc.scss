@@ -184,8 +184,26 @@ tr .ajax-progress .throbber {
     flex-wrap: wrap !important;
 
     .card {
-      width: auto!important;
+      width: auto !important;
       margin: 0;
+    }
+  }
+}
+#expression_heat_map_canvas {
+  .js-plotly-plot .plotly {
+    [data-title] {
+      /**
+       * tooltip body
+       */
+      &:after {
+        background: $gray-200!important;
+        color: $gray-700;
+        padding: 0.5rem 1rem;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        white-space: normal;
+        border-radius: $border-radius;
+      }
     }
   }
 }
