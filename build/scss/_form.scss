@@ -60,3 +60,11 @@ input[type="checkbox"] {
     margin-bottom: 5px;
   }
 }
+
+form label {
+  font-weight: $font-weight-bold;
+}
+
+.form-required {
+  color: theme-color(danger);
+}
