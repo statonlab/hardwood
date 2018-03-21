@@ -7354,6 +7354,12 @@ input[type="checkbox"] {
 .form-checkboxes .form-group {
   margin-bottom: 5px; }
 
+form label {
+  font-weight: bold; }
+
+.form-required {
+  color: #dc3545; }
+
 .dropdown-menu {
   border-width: 0;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.3); }
