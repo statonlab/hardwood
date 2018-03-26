@@ -16,6 +16,10 @@ if ($blast_job->blastdb->linkout->none === FALSE) {
 
   // Check that we can determine the linkout URL.
   // (ie: that the function specified to do so, exists).
+  if(is_array($blast_job->blastdb->linkout->url_function)) {
+    $blast_job->blastdb->linkout->url_function = end($blast_job->blastdb->linkout->url_function);
+  }
+  
   if (function_exists($blast_job->blastdb->linkout->url_function)) {
     $url_function = $blast_job->blastdb->linkout->url_function;
     $linkout = TRUE;
@@ -298,7 +302,6 @@ $no_hits = TRUE;
               $range_start = 1;
             }
 
-
             // Call the function to generate the hit image.
             $hit_img = generate_blast_hit_image(
               $target_name,
@@ -309,7 +312,6 @@ $no_hits = TRUE;
               $q_name,
               $hit_name_short
             );
-
 
             // State what should be in the alignment row for theme_table() later.
             $alignment_row = array(
