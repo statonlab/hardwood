@@ -19,7 +19,7 @@ if ($blast_job->blastdb->linkout->none === FALSE) {
   if(is_array($blast_job->blastdb->linkout->url_function)) {
     $blast_job->blastdb->linkout->url_function = end($blast_job->blastdb->linkout->url_function);
   }
-  
+
   if (function_exists($blast_job->blastdb->linkout->url_function)) {
     $url_function = $blast_job->blastdb->linkout->url_function;
     $linkout = TRUE;
