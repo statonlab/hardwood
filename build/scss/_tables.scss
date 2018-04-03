@@ -133,3 +133,9 @@ a.tabledrag-handle {
 table.table-layout-fixed {
   table-layout: fixed!important;
 }
+
+table caption {
+  caption-side: top;
+  color: #444;
+  text-after-overflow: center;
+}
