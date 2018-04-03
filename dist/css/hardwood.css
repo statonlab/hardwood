@@ -7024,8 +7024,7 @@ table.table-layout-fixed {
 table caption {
   caption-side: top;
   color: #444;
-  font-weight: bold;
-  text-align: center; }
+  font-weight: bold; }
 
 .alignment-subrow {
   font-size: 0.875rem; }
