@@ -6816,6 +6816,14 @@ tr .ajax-progress .throbber {
 .field-type-image {
   margin: 1rem 0; }
 
+blockquote {
+  padding: 1rem 2rem;
+  border-left: 4px solid #ced4da;
+  font-size: 0.95rem;
+  background: #f8f9fa; }
+  blockquote > p:last-of-type {
+    margin-bottom: 0; }
+
 ul.tabs {
   margin-bottom: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.125);
