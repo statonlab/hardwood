@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -57,7 +57,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 @-ms-viewport {
   width: device-width; }
@@ -204,7 +204,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem; }
+  margin-bottom: 0.5rem; }
 
 button {
   border-radius: 0; }
@@ -1056,7 +1056,8 @@ pre {
   margin-bottom: 1rem;
   background-color: transparent; }
   .table th, table th,
-  .table td, table td {
+  .table td,
+  table td {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #e9ecef; }
@@ -1069,7 +1070,8 @@ pre {
     background-color: #fff; }
 
 .table-sm th, #menu-overview th,
-.table-sm td, #menu-overview td {
+.table-sm td,
+#menu-overview td {
   padding: 0.3rem; }
 
 .table-bordered {
@@ -1080,6 +1082,12 @@ pre {
   .table-bordered thead th,
   .table-bordered thead td {
     border-bottom-width: 2px; }
+
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead th,
+.table-borderless tbody + tbody {
+  border: 0; }
 
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.05); }
@@ -1271,6 +1279,9 @@ pre {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .form-control, #edit-search-box, .es-cross-site-search-form select {
+      transition: none; } }
   .form-control::-ms-expand, #edit-search-box::-ms-expand, .es-cross-site-search-form select::-ms-expand {
     background-color: transparent;
     border: 0; }
@@ -1283,7 +1294,7 @@ pre {
   .form-control::placeholder, #edit-search-box::placeholder, .es-cross-site-search-form select::placeholder {
     color: #868e96;
     opacity: 1; }
-  .form-control:disabled, #edit-search-box:disabled, .es-cross-site-search-form select:disabled, .form-control[readonly], [readonly]#edit-search-box, .es-cross-site-search-form select[readonly] {
+  .form-control:disabled, #edit-search-box:disabled, .es-cross-site-search-form select:disabled, .form-control[readonly], #edit-search-box[readonly], .es-cross-site-search-form select[readonly] {
     background-color: #e9ecef;
     opacity: 1; }
 
@@ -1325,38 +1336,27 @@ select.form-control:focus::-ms-value, select#edit-search-box:focus::-ms-value, .
   padding-bottom: 0.5rem;
   margin-bottom: 0;
   line-height: 1.25;
+  color: #212529;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
   .form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control, .input-group-sm > .form-control-plaintext#edit-search-box, .es-cross-site-search-form .input-group-sm > select.form-control-plaintext,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
-  .input-group-sm > .input-group-prepend > .form-control-plaintext.btn,
-  .input-group-sm > .input-group-prepend > .form-control-plaintext#edit-cancel,
-  .input-group-sm > .input-group-prepend > .form-control-plaintext#edit-search-submit,
-  .input-group-sm > .input-group-append > .form-control-plaintext.btn,
-  .input-group-sm > .input-group-append > .form-control-plaintext#edit-cancel,
-  .input-group-sm > .input-group-append > .form-control-plaintext#edit-search-submit, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .input-group-lg > .form-control-plaintext#edit-search-box, .es-cross-site-search-form .input-group-lg > select.form-control-plaintext,
+  .input-group-sm > .input-group-prepend > .form-control-plaintext.btn, .input-group-sm > .input-group-prepend > .form-control-plaintext#edit-cancel, .input-group-sm > .input-group-prepend > .form-control-plaintext#edit-search-submit,
+  .input-group-sm > .input-group-append > .form-control-plaintext.btn, .input-group-sm > .input-group-append > .form-control-plaintext#edit-cancel, .input-group-sm > .input-group-append > .form-control-plaintext#edit-search-submit, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .input-group-lg > .form-control-plaintext#edit-search-box, .es-cross-site-search-form .input-group-lg > select.form-control-plaintext,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
-  .input-group-lg > .input-group-prepend > .form-control-plaintext.btn,
-  .input-group-lg > .input-group-prepend > .form-control-plaintext#edit-cancel,
-  .input-group-lg > .input-group-prepend > .form-control-plaintext#edit-search-submit,
-  .input-group-lg > .input-group-append > .form-control-plaintext.btn,
-  .input-group-lg > .input-group-append > .form-control-plaintext#edit-cancel,
-  .input-group-lg > .input-group-append > .form-control-plaintext#edit-search-submit {
+  .input-group-lg > .input-group-prepend > .form-control-plaintext.btn, .input-group-lg > .input-group-prepend > .form-control-plaintext#edit-cancel, .input-group-lg > .input-group-prepend > .form-control-plaintext#edit-search-submit,
+  .input-group-lg > .input-group-append > .form-control-plaintext.btn, .input-group-lg > .input-group-append > .form-control-plaintext#edit-cancel, .input-group-lg > .input-group-append > .form-control-plaintext#edit-search-submit {
     padding-right: 0;
     padding-left: 0; }
 
 .form-control-sm, .input-group-sm > .form-control, .input-group-sm > #edit-search-box, .es-cross-site-search-form .input-group-sm > select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
-.input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-prepend > #edit-cancel,
-.input-group-sm > .input-group-prepend > #edit-search-submit,
-.input-group-sm > .input-group-append > .btn,
-.input-group-sm > .input-group-append > #edit-cancel,
-.input-group-sm > .input-group-append > #edit-search-submit {
+.input-group-sm > .input-group-prepend > .btn, .input-group-sm > .input-group-prepend > #edit-cancel, .input-group-sm > .input-group-prepend > #edit-search-submit,
+.input-group-sm > .input-group-append > .btn, .input-group-sm > .input-group-append > #edit-cancel, .input-group-sm > .input-group-append > #edit-search-submit {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1365,23 +1365,15 @@ select.form-control:focus::-ms-value, select#edit-search-box:focus::-ms-value, .
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select#edit-search-box:not([size]):not([multiple]), .es-cross-site-search-form .input-group-sm > select:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select#edit-cancel:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select#edit-search-submit:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select#edit-cancel:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select#edit-search-submit:not([size]):not([multiple]) {
+.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select#edit-cancel:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select#edit-search-submit:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-append > select#edit-cancel:not([size]):not([multiple]), .input-group-sm > .input-group-append > select#edit-search-submit:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
 
 .form-control-lg, .input-group-lg > .form-control, .input-group-lg > #edit-search-box, .es-cross-site-search-form .input-group-lg > select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
-.input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-prepend > #edit-cancel,
-.input-group-lg > .input-group-prepend > #edit-search-submit,
-.input-group-lg > .input-group-append > .btn,
-.input-group-lg > .input-group-append > #edit-cancel,
-.input-group-lg > .input-group-append > #edit-search-submit {
+.input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-prepend > #edit-cancel, .input-group-lg > .input-group-prepend > #edit-search-submit,
+.input-group-lg > .input-group-append > .btn, .input-group-lg > .input-group-append > #edit-cancel, .input-group-lg > .input-group-append > #edit-search-submit {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -1390,12 +1382,8 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > select#edit-search-box:not([size]):not([multiple]), .es-cross-site-search-form .input-group-lg > select:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select#edit-cancel:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select#edit-search-submit:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select#edit-cancel:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select#edit-search-submit:not([size]):not([multiple]) {
+.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-lg > .input-group-prepend > select#edit-cancel:not([size]):not([multiple]), .input-group-lg > .input-group-prepend > select#edit-search-submit:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]), .input-group-lg > .input-group-append > select#edit-cancel:not([size]):not([multiple]), .input-group-lg > .input-group-append > select#edit-search-submit:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px); }
 
 .form-group {
@@ -1474,9 +1462,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .was-validated .form-control:valid ~ .valid-feedback, .was-validated #edit-search-box:valid ~ .valid-feedback, .was-validated .es-cross-site-search-form select:valid ~ .valid-feedback, .es-cross-site-search-form .was-validated select:valid ~ .valid-feedback,
   .was-validated .form-control:valid ~ .valid-tooltip,
   .was-validated #edit-search-box:valid ~ .valid-tooltip,
-  .was-validated .es-cross-site-search-form select:valid ~ .valid-tooltip, .es-cross-site-search-form
-  .was-validated select:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .is-valid#edit-search-box ~ .valid-feedback, .es-cross-site-search-form select.is-valid ~ .valid-feedback,
-  .form-control.is-valid ~ .valid-tooltip, .is-valid#edit-search-box ~ .valid-tooltip, .es-cross-site-search-form select.is-valid ~ .valid-tooltip, .was-validated
+  .was-validated .es-cross-site-search-form select:valid ~ .valid-tooltip,
+  .es-cross-site-search-form .was-validated select:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .is-valid#edit-search-box ~ .valid-feedback, .es-cross-site-search-form select.is-valid ~ .valid-feedback,
+  .form-control.is-valid ~ .valid-tooltip,
+  .is-valid#edit-search-box ~ .valid-tooltip,
+  .es-cross-site-search-form select.is-valid ~ .valid-tooltip, .was-validated
   .custom-select:valid ~ .valid-feedback,
   .was-validated
   .custom-select:valid ~ .valid-tooltip,
@@ -1554,9 +1544,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated #edit-search-box:invalid ~ .invalid-feedback, .was-validated .es-cross-site-search-form select:invalid ~ .invalid-feedback, .es-cross-site-search-form .was-validated select:invalid ~ .invalid-feedback,
   .was-validated .form-control:invalid ~ .invalid-tooltip,
   .was-validated #edit-search-box:invalid ~ .invalid-tooltip,
-  .was-validated .es-cross-site-search-form select:invalid ~ .invalid-tooltip, .es-cross-site-search-form
-  .was-validated select:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .is-invalid#edit-search-box ~ .invalid-feedback, .es-cross-site-search-form select.is-invalid ~ .invalid-feedback,
-  .form-control.is-invalid ~ .invalid-tooltip, .is-invalid#edit-search-box ~ .invalid-tooltip, .es-cross-site-search-form select.is-invalid ~ .invalid-tooltip, .was-validated
+  .was-validated .es-cross-site-search-form select:invalid ~ .invalid-tooltip,
+  .es-cross-site-search-form .was-validated select:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .is-invalid#edit-search-box ~ .invalid-feedback, .es-cross-site-search-form select.is-invalid ~ .invalid-feedback,
+  .form-control.is-invalid ~ .invalid-tooltip,
+  .is-invalid#edit-search-box ~ .invalid-tooltip,
+  .es-cross-site-search-form select.is-invalid ~ .invalid-tooltip, .was-validated
   .custom-select:invalid ~ .invalid-feedback,
   .was-validated
   .custom-select:invalid ~ .invalid-tooltip,
@@ -1625,7 +1617,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
       vertical-align: middle; }
     .form-inline .form-control-plaintext {
       display: inline-block; }
-    .form-inline .input-group {
+    .form-inline .input-group,
+    .form-inline .custom-select {
       width: auto; }
     .form-inline .form-check {
       display: flex;
@@ -1657,6 +1650,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   line-height: 1.25;
   border-radius: 0.25rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .btn, #edit-cancel, #edit-search-submit {
+      transition: none; } }
   .btn:hover, #edit-cancel:hover, #edit-search-submit:hover, .btn:focus, #edit-cancel:focus, #edit-search-submit:focus {
     text-decoration: none; }
   .btn:focus, #edit-cancel:focus, #edit-search-submit:focus, .btn.focus, .focus#edit-cancel, .focus#edit-search-submit {
@@ -2057,7 +2053,8 @@ fieldset:disabled a#edit-search-submit {
     border-color: transparent;
     box-shadow: none; }
   .btn-link:disabled, #edit-cancel:disabled, .btn-link.disabled, .disabled#edit-cancel {
-    color: #868e96; }
+    color: #868e96;
+    pointer-events: none; }
 
 .btn-lg, .btn-group-lg > .btn, .btn-group-lg > #edit-cancel, .btn-group-lg > #edit-search-submit {
   padding: 0.5rem 1rem;
@@ -2083,30 +2080,29 @@ input[type="button"].btn-block {
   width: 100%; }
 
 .fade {
-  opacity: 0;
   transition: opacity 0.15s linear; }
-  .fade.show {
-    opacity: 1; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .fade {
+      transition: none; } }
+  .fade:not(.show) {
+    opacity: 0; }
 
-.collapse {
+.collapse:not(.show) {
   display: none; }
-  .collapse.show {
-    display: block; }
-
-tr.collapse.show {
-  display: table-row; }
-
-tbody.collapse.show {
-  display: table-row-group; }
 
 .collapsing {
   position: relative;
   height: 0;
   overflow: hidden;
   transition: height 0.35s ease; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .collapsing {
+      transition: none; } }
 
 .dropup,
-.dropdown {
+.dropright,
+.dropdown,
+.dropleft {
   position: relative; }
 
 .dropdown-toggle::after {
@@ -2143,7 +2139,13 @@ tbody.collapse.show {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem; }
 
+.dropdown-menu-right {
+  right: 0;
+  left: auto; }
+
 .dropup .dropdown-menu {
+  top: auto;
+  bottom: 100%;
   margin-top: 0;
   margin-bottom: 0.125rem; }
 
@@ -2163,6 +2165,9 @@ tbody.collapse.show {
   margin-left: 0; }
 
 .dropright .dropdown-menu {
+  top: 0;
+  right: auto;
+  left: 100%;
   margin-top: 0;
   margin-left: 0.125rem; }
 
@@ -2174,6 +2179,7 @@ tbody.collapse.show {
   vertical-align: 0.255em;
   content: "";
   border-top: 0.3em solid transparent;
+  border-right: 0;
   border-bottom: 0.3em solid transparent;
   border-left: 0.3em solid; }
 
@@ -2184,6 +2190,9 @@ tbody.collapse.show {
   vertical-align: 0; }
 
 .dropleft .dropdown-menu {
+  top: 0;
+  right: 100%;
+  left: auto;
   margin-top: 0;
   margin-right: 0.125rem; }
 
@@ -2214,6 +2223,10 @@ tbody.collapse.show {
 
 .dropleft .dropdown-toggle::before {
   vertical-align: 0; }
+
+.dropdown-menu[x-placement^="top"], .dropdown-menu[x-placement^="right"], .dropdown-menu[x-placement^="bottom"], .dropdown-menu[x-placement^="left"] {
+  right: auto;
+  bottom: auto; }
 
 .dropdown-divider {
   height: 0;
@@ -2254,6 +2267,11 @@ tbody.collapse.show {
   font-size: 0.875rem;
   color: #868e96;
   white-space: nowrap; }
+
+.dropdown-item-text {
+  display: block;
+  padding: 0.25rem 1.5rem;
+  color: #212529; }
 
 .btn-group,
 .btn-group-vertical {
@@ -2335,8 +2353,12 @@ tbody.collapse.show {
 .dropdown-toggle-split {
   padding-right: 0.5625rem;
   padding-left: 0.5625rem; }
-  .dropdown-toggle-split::after {
+  .dropdown-toggle-split::after,
+  .dropup .dropdown-toggle-split::after,
+  .dropright .dropdown-toggle-split::after {
     margin-left: 0; }
+  .dropleft .dropdown-toggle-split::before {
+    margin-right: 0; }
 
 .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > #edit-cancel + .dropdown-toggle-split, .btn-group-sm > #edit-search-submit + .dropdown-toggle-split {
   padding-right: 0.375rem;
@@ -2414,19 +2436,19 @@ tbody.collapse.show {
       z-index: 3; }
     .input-group > .form-control + .form-control, .input-group > #edit-search-box + .form-control, .es-cross-site-search-form .input-group > select + .form-control, .input-group > .form-control + #edit-search-box, .input-group > #edit-search-box + #edit-search-box, .es-cross-site-search-form .input-group > select + #edit-search-box, .es-cross-site-search-form .input-group > .form-control + select, .es-cross-site-search-form .input-group > #edit-search-box + select, .es-cross-site-search-form .input-group > select + select,
     .input-group > .form-control + .custom-select,
-    .input-group > #edit-search-box + .custom-select, .es-cross-site-search-form
-    .input-group > select + .custom-select,
+    .input-group > #edit-search-box + .custom-select,
+    .es-cross-site-search-form .input-group > select + .custom-select,
     .input-group > .form-control + .custom-file,
-    .input-group > #edit-search-box + .custom-file, .es-cross-site-search-form
-    .input-group > select + .custom-file,
+    .input-group > #edit-search-box + .custom-file,
+    .es-cross-site-search-form .input-group > select + .custom-file,
     .input-group > .custom-select + .form-control,
-    .input-group > .custom-select + #edit-search-box, .es-cross-site-search-form
-    .input-group > .custom-select + select,
+    .input-group > .custom-select + #edit-search-box,
+    .es-cross-site-search-form .input-group > .custom-select + select,
     .input-group > .custom-select + .custom-select,
     .input-group > .custom-select + .custom-file,
     .input-group > .custom-file + .form-control,
-    .input-group > .custom-file + #edit-search-box, .es-cross-site-search-form
-    .input-group > .custom-file + select,
+    .input-group > .custom-file + #edit-search-box,
+    .es-cross-site-search-form .input-group > .custom-file + select,
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
@@ -2442,11 +2464,11 @@ tbody.collapse.show {
     display: flex;
     align-items: center; }
     .input-group > .custom-file:not(:last-child) .custom-file-label,
-    .input-group > .custom-file:not(:last-child) .custom-file-label::before {
+    .input-group > .custom-file:not(:last-child) .custom-file-label::after {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0; }
     .input-group > .custom-file:not(:first-child) .custom-file-label,
-    .input-group > .custom-file:not(:first-child) .custom-file-label::before {
+    .input-group > .custom-file:not(:first-child) .custom-file-label::after {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0; }
 
@@ -2676,10 +2698,10 @@ tbody.collapse.show {
   height: calc(2.25rem + 2px);
   margin: 0;
   opacity: 0; }
-  .custom-file-input:focus ~ .custom-file-control {
+  .custom-file-input:focus ~ .custom-file-label {
     border-color: #71dd8a;
     box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #28a745; }
-    .custom-file-input:focus ~ .custom-file-control::before {
+    .custom-file-input:focus ~ .custom-file-label::after {
       border-color: #71dd8a; }
   .custom-file-input:lang(en) ~ .custom-file-label::after {
     content: "Choose file..."; }
@@ -2713,6 +2735,84 @@ tbody.collapse.show {
     border-left: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0 0.25rem 0.25rem 0; }
 
+.custom-range {
+  width: 100%;
+  padding-left: 0;
+  background-color: transparent;
+  appearance: none; }
+  .custom-range:focus {
+    outline: none; }
+  .custom-range::-moz-focus-outer {
+    border: 0; }
+  .custom-range::-webkit-slider-thumb {
+    width: 1rem;
+    height: 1rem;
+    margin-top: -0.25rem;
+    background-color: #28a745;
+    border: 0;
+    border-radius: 1rem;
+    appearance: none; }
+    .custom-range::-webkit-slider-thumb:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
+    .custom-range::-webkit-slider-thumb:active {
+      background-color: #9be7ac; }
+  .custom-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.5rem;
+    color: transparent;
+    cursor: pointer;
+    background-color: #dee2e6;
+    border-color: transparent;
+    border-radius: 1rem; }
+  .custom-range::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    background-color: #28a745;
+    border: 0;
+    border-radius: 1rem;
+    appearance: none; }
+    .custom-range::-moz-range-thumb:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
+    .custom-range::-moz-range-thumb:active {
+      background-color: #9be7ac; }
+  .custom-range::-moz-range-track {
+    width: 100%;
+    height: 0.5rem;
+    color: transparent;
+    cursor: pointer;
+    background-color: #dee2e6;
+    border-color: transparent;
+    border-radius: 1rem; }
+  .custom-range::-ms-thumb {
+    width: 1rem;
+    height: 1rem;
+    background-color: #28a745;
+    border: 0;
+    border-radius: 1rem;
+    appearance: none; }
+    .custom-range::-ms-thumb:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
+    .custom-range::-ms-thumb:active {
+      background-color: #9be7ac; }
+  .custom-range::-ms-track {
+    width: 100%;
+    height: 0.5rem;
+    color: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    border-width: 0.5rem; }
+  .custom-range::-ms-fill-lower {
+    background-color: #dee2e6;
+    border-radius: 1rem; }
+  .custom-range::-ms-fill-upper {
+    margin-right: 15px;
+    background-color: #dee2e6;
+    border-radius: 1rem; }
+
 .nav, ul.tabs, .action-links, .tripal-toc-pane, #block-system-management .menu,
 #block-system-management .menu ul {
   display: flex;
@@ -2735,114 +2835,91 @@ tbody.collapse.show {
 
 .nav-tabs {
   border-bottom: 1px solid #ddd; }
-  .nav-tabs .nav-item, .nav-tabs ul.tabs > li, .nav-tabs .action-links > li, .nav-tabs .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane .nav-tabs .tripal_toc_list_item, .nav-tabs #block-system-management .menu > li, #block-system-management .nav-tabs .menu > li, .nav-tabs
-  #block-system-management .menu ul > li,
-  #block-system-management .menu .nav-tabs ul > li {
+  .nav-tabs .nav-item, .nav-tabs ul.tabs > li, .nav-tabs .action-links > li, .nav-tabs .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane .nav-tabs .tripal_toc_list_item, .nav-tabs #block-system-management .menu > li, #block-system-management .nav-tabs .menu > li,
+  .nav-tabs #block-system-management .menu ul > li, #block-system-management .menu .nav-tabs ul > li {
     margin-bottom: -1px; }
-  .nav-tabs .nav-link, .nav-tabs ul.tabs > li > a, .nav-tabs .action-links > li > a, .nav-tabs .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .nav-tabs .tripal_toc_list_item_link, .nav-tabs #block-system-management .menu > li > a, #block-system-management .nav-tabs .menu > li > a, .nav-tabs
-  #block-system-management .menu ul > li > a,
-  #block-system-management .menu .nav-tabs ul > li > a {
+  .nav-tabs .nav-link, .nav-tabs ul.tabs > li > a, .nav-tabs .action-links > li > a, .nav-tabs .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .nav-tabs .tripal_toc_list_item_link, .nav-tabs #block-system-management .menu > li > a, #block-system-management .nav-tabs .menu > li > a,
+  .nav-tabs #block-system-management .menu ul > li > a, #block-system-management .menu .nav-tabs ul > li > a {
     border: 1px solid transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
-    .nav-tabs .nav-link:hover, .nav-tabs ul.tabs > li > a:hover, .nav-tabs .action-links > li > a:hover, .nav-tabs .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .nav-tabs .tripal_toc_list_item_link:hover, .nav-tabs #block-system-management .menu > li > a:hover, #block-system-management .nav-tabs .menu > li > a:hover, .nav-tabs
-    #block-system-management .menu ul > li > a:hover,
-    #block-system-management .menu .nav-tabs ul > li > a:hover, .nav-tabs .nav-link:focus, .nav-tabs ul.tabs > li > a:focus, .nav-tabs .action-links > li > a:focus, .nav-tabs .tripal-toc-pane .tripal_toc_list_item_link:focus, .tripal-toc-pane .nav-tabs .tripal_toc_list_item_link:focus, .nav-tabs #block-system-management .menu > li > a:focus, #block-system-management .nav-tabs .menu > li > a:focus, .nav-tabs
-    #block-system-management .menu ul > li > a:focus,
-    #block-system-management .menu .nav-tabs ul > li > a:focus {
+    .nav-tabs .nav-link:hover, .nav-tabs ul.tabs > li > a:hover, .nav-tabs .action-links > li > a:hover, .nav-tabs .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .nav-tabs .tripal_toc_list_item_link:hover, .nav-tabs #block-system-management .menu > li > a:hover, #block-system-management .nav-tabs .menu > li > a:hover,
+    .nav-tabs #block-system-management .menu ul > li > a:hover, #block-system-management .menu .nav-tabs ul > li > a:hover, .nav-tabs .nav-link:focus, .nav-tabs ul.tabs > li > a:focus, .nav-tabs .action-links > li > a:focus, .nav-tabs .tripal-toc-pane .tripal_toc_list_item_link:focus, .tripal-toc-pane .nav-tabs .tripal_toc_list_item_link:focus, .nav-tabs #block-system-management .menu > li > a:focus, #block-system-management .nav-tabs .menu > li > a:focus,
+    .nav-tabs #block-system-management .menu ul > li > a:focus, #block-system-management .menu .nav-tabs ul > li > a:focus {
       border-color: #e9ecef; }
-    .nav-tabs .nav-link.disabled, .nav-tabs ul.tabs > li > a.disabled, .nav-tabs .action-links > li > a.disabled, .nav-tabs .tripal-toc-pane .disabled.tripal_toc_list_item_link, .tripal-toc-pane .nav-tabs .disabled.tripal_toc_list_item_link, .nav-tabs #block-system-management .menu > li > a.disabled, #block-system-management .nav-tabs .menu > li > a.disabled, .nav-tabs
-    #block-system-management .menu ul > li > a.disabled,
-    #block-system-management .menu .nav-tabs ul > li > a.disabled {
+    .nav-tabs .nav-link.disabled, .nav-tabs ul.tabs > li > a.disabled, .nav-tabs .action-links > li > a.disabled, .nav-tabs .tripal-toc-pane .disabled.tripal_toc_list_item_link, .tripal-toc-pane .nav-tabs .disabled.tripal_toc_list_item_link, .nav-tabs #block-system-management .menu > li > a.disabled, #block-system-management .nav-tabs .menu > li > a.disabled,
+    .nav-tabs #block-system-management .menu ul > li > a.disabled, #block-system-management .menu .nav-tabs ul > li > a.disabled {
       color: #868e96;
       background-color: transparent;
       border-color: transparent; }
-  .nav-tabs .nav-link.active, .nav-tabs ul.tabs > li > a.active, .nav-tabs .action-links > li > a.active, .nav-tabs .tripal-toc-pane .active.tripal_toc_list_item_link, .tripal-toc-pane .nav-tabs .active.tripal_toc_list_item_link, .nav-tabs #block-system-management .menu > li > a.active, #block-system-management .nav-tabs .menu > li > a.active, .nav-tabs
-  #block-system-management .menu ul > li > a.active,
-  #block-system-management .menu .nav-tabs ul > li > a.active,
+  .nav-tabs .nav-link.active, .nav-tabs ul.tabs > li > a.active, .nav-tabs .action-links > li > a.active, .nav-tabs .tripal-toc-pane .active.tripal_toc_list_item_link, .tripal-toc-pane .nav-tabs .active.tripal_toc_list_item_link, .nav-tabs #block-system-management .menu > li > a.active, #block-system-management .nav-tabs .menu > li > a.active,
+  .nav-tabs #block-system-management .menu ul > li > a.active, #block-system-management .menu .nav-tabs ul > li > a.active,
   .nav-tabs .nav-item.show .nav-link,
   .nav-tabs ul.tabs > li.show .nav-link,
   .nav-tabs .action-links > li.show .nav-link,
-  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item .nav-link, .tripal-toc-pane
-  .nav-tabs .show.tripal_toc_list_item .nav-link,
-  .nav-tabs #block-system-management .menu > li.show .nav-link, #block-system-management
-  .nav-tabs .menu > li.show .nav-link,
-  .nav-tabs
-  #block-system-management .menu ul > li.show .nav-link,
-  #block-system-management .menu
-  .nav-tabs ul > li.show .nav-link,
+  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item .nav-link,
+  .tripal-toc-pane .nav-tabs .show.tripal_toc_list_item .nav-link,
+  .nav-tabs #block-system-management .menu > li.show .nav-link,
+  #block-system-management .nav-tabs .menu > li.show .nav-link,
+  .nav-tabs #block-system-management .menu ul > li.show .nav-link,
+  #block-system-management .menu .nav-tabs ul > li.show .nav-link,
   .nav-tabs .nav-item.show ul.tabs > li > a,
   .nav-tabs ul.tabs > li.show ul.tabs > li > a,
   .nav-tabs .action-links > li.show ul.tabs > li > a,
-  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item ul.tabs > li > a, .tripal-toc-pane
-  .nav-tabs .show.tripal_toc_list_item ul.tabs > li > a,
+  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item ul.tabs > li > a,
+  .tripal-toc-pane .nav-tabs .show.tripal_toc_list_item ul.tabs > li > a,
   .nav-tabs .nav-item.show .action-links > li > a,
   .nav-tabs ul.tabs > li.show .action-links > li > a,
   .nav-tabs .action-links > li.show .action-links > li > a,
-  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item .action-links > li > a, .tripal-toc-pane
-  .nav-tabs .show.tripal_toc_list_item .action-links > li > a,
-  .nav-tabs #block-system-management .menu > li.show .action-links > li > a, #block-system-management
-  .nav-tabs .menu > li.show .action-links > li > a,
-  .nav-tabs
-  #block-system-management .menu ul > li.show .action-links > li > a,
-  #block-system-management .menu
-  .nav-tabs ul > li.show .action-links > li > a,
-  .nav-tabs .nav-item.show .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane
-  .nav-tabs .nav-item.show .tripal_toc_list_item_link,
-  .nav-tabs ul.tabs > li.show .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane
-  .nav-tabs ul.tabs > li.show .tripal_toc_list_item_link,
-  .nav-tabs .action-links > li.show .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane
-  .nav-tabs .action-links > li.show .tripal_toc_list_item_link,
-  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item .tripal_toc_list_item_link, .tripal-toc-pane
-  .nav-tabs .show.tripal_toc_list_item .tripal_toc_list_item_link,
-  .nav-tabs #block-system-management .menu > li.show .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane
-  .nav-tabs #block-system-management .menu > li.show .tripal_toc_list_item_link, #block-system-management
-  .nav-tabs .menu > li.show .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management
-  .nav-tabs .menu > li.show .tripal_toc_list_item_link,
-  .nav-tabs
-  #block-system-management .menu ul > li.show .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane
-  .nav-tabs
-  #block-system-management .menu ul > li.show .tripal_toc_list_item_link,
-  #block-system-management .menu
-  .nav-tabs ul > li.show .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane
-  #block-system-management .menu
-  .nav-tabs ul > li.show .tripal_toc_list_item_link,
-  .nav-tabs .nav-item.show #block-system-management .menu > li > a, #block-system-management
-  .nav-tabs .nav-item.show .menu > li > a,
-  .nav-tabs ul.tabs > li.show #block-system-management .menu > li > a, #block-system-management
-  .nav-tabs ul.tabs > li.show .menu > li > a,
-  .nav-tabs .action-links > li.show #block-system-management .menu > li > a, #block-system-management
-  .nav-tabs .action-links > li.show .menu > li > a,
-  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item #block-system-management .menu > li > a, #block-system-management
-  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item .menu > li > a, .tripal-toc-pane
-  .nav-tabs .show.tripal_toc_list_item #block-system-management .menu > li > a, #block-system-management .tripal-toc-pane
-  .nav-tabs .show.tripal_toc_list_item .menu > li > a,
-  .nav-tabs #block-system-management .menu > li.show .menu > li > a, #block-system-management
-  .nav-tabs .menu > li.show .menu > li > a,
-  .nav-tabs #block-system-management .menu ul > li.show .menu > li > a, #block-system-management .menu
-  .nav-tabs ul > li.show .menu > li > a,
-  .nav-tabs .nav-item.show
-  #block-system-management .menu ul > li > a,
-  #block-system-management .menu
-  .nav-tabs .nav-item.show ul > li > a,
-  .nav-tabs ul.tabs > li.show
-  #block-system-management .menu ul > li > a,
-  .nav-tabs .action-links > li.show
-  #block-system-management .menu ul > li > a,
-  #block-system-management .menu
-  .nav-tabs .action-links > li.show ul > li > a,
-  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item
-  #block-system-management .menu ul > li > a,
-  #block-system-management .menu
-  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item ul > li > a, .tripal-toc-pane
-  .nav-tabs .show.tripal_toc_list_item
-  #block-system-management .menu ul > li > a,
-  #block-system-management .menu .tripal-toc-pane
-  .nav-tabs .show.tripal_toc_list_item ul > li > a,
-  .nav-tabs #block-system-management .menu > li.show ul > li > a, #block-system-management
-  .nav-tabs .menu > li.show ul > li > a,
-  .nav-tabs #block-system-management .menu ul > li.show ul > li > a, #block-system-management .menu
-  .nav-tabs ul > li.show ul > li > a {
+  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item .action-links > li > a,
+  .tripal-toc-pane .nav-tabs .show.tripal_toc_list_item .action-links > li > a,
+  .nav-tabs #block-system-management .menu > li.show .action-links > li > a,
+  #block-system-management .nav-tabs .menu > li.show .action-links > li > a,
+  .nav-tabs #block-system-management .menu ul > li.show .action-links > li > a,
+  #block-system-management .menu .nav-tabs ul > li.show .action-links > li > a,
+  .nav-tabs .nav-item.show .tripal-toc-pane .tripal_toc_list_item_link,
+  .tripal-toc-pane .nav-tabs .nav-item.show .tripal_toc_list_item_link,
+  .nav-tabs ul.tabs > li.show .tripal-toc-pane .tripal_toc_list_item_link,
+  .tripal-toc-pane .nav-tabs ul.tabs > li.show .tripal_toc_list_item_link,
+  .nav-tabs .action-links > li.show .tripal-toc-pane .tripal_toc_list_item_link,
+  .tripal-toc-pane .nav-tabs .action-links > li.show .tripal_toc_list_item_link,
+  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item .tripal_toc_list_item_link,
+  .tripal-toc-pane .nav-tabs .show.tripal_toc_list_item .tripal_toc_list_item_link,
+  .nav-tabs #block-system-management .menu > li.show .tripal-toc-pane .tripal_toc_list_item_link,
+  .tripal-toc-pane .nav-tabs #block-system-management .menu > li.show .tripal_toc_list_item_link,
+  #block-system-management .nav-tabs .menu > li.show .tripal-toc-pane .tripal_toc_list_item_link,
+  .tripal-toc-pane #block-system-management .nav-tabs .menu > li.show .tripal_toc_list_item_link,
+  .nav-tabs #block-system-management .menu ul > li.show .tripal-toc-pane .tripal_toc_list_item_link,
+  .tripal-toc-pane .nav-tabs #block-system-management .menu ul > li.show .tripal_toc_list_item_link,
+  #block-system-management .menu .nav-tabs ul > li.show .tripal-toc-pane .tripal_toc_list_item_link,
+  .tripal-toc-pane #block-system-management .menu .nav-tabs ul > li.show .tripal_toc_list_item_link,
+  .nav-tabs .nav-item.show #block-system-management .menu > li > a,
+  #block-system-management .nav-tabs .nav-item.show .menu > li > a,
+  .nav-tabs ul.tabs > li.show #block-system-management .menu > li > a,
+  #block-system-management .nav-tabs ul.tabs > li.show .menu > li > a,
+  .nav-tabs .action-links > li.show #block-system-management .menu > li > a,
+  #block-system-management .nav-tabs .action-links > li.show .menu > li > a,
+  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item #block-system-management .menu > li > a,
+  #block-system-management .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item .menu > li > a,
+  .tripal-toc-pane .nav-tabs .show.tripal_toc_list_item #block-system-management .menu > li > a,
+  #block-system-management .tripal-toc-pane .nav-tabs .show.tripal_toc_list_item .menu > li > a,
+  .nav-tabs #block-system-management .menu > li.show .menu > li > a,
+  #block-system-management .nav-tabs .menu > li.show .menu > li > a,
+  .nav-tabs #block-system-management .menu ul > li.show .menu > li > a,
+  #block-system-management .menu .nav-tabs ul > li.show .menu > li > a,
+  .nav-tabs .nav-item.show #block-system-management .menu ul > li > a,
+  #block-system-management .menu .nav-tabs .nav-item.show ul > li > a,
+  .nav-tabs ul.tabs > li.show #block-system-management .menu ul > li > a,
+  .nav-tabs .action-links > li.show #block-system-management .menu ul > li > a,
+  #block-system-management .menu .nav-tabs .action-links > li.show ul > li > a,
+  .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item #block-system-management .menu ul > li > a,
+  #block-system-management .menu .nav-tabs .tripal-toc-pane .show.tripal_toc_list_item ul > li > a,
+  .tripal-toc-pane .nav-tabs .show.tripal_toc_list_item #block-system-management .menu ul > li > a,
+  #block-system-management .menu .tripal-toc-pane .nav-tabs .show.tripal_toc_list_item ul > li > a,
+  .nav-tabs #block-system-management .menu > li.show ul > li > a,
+  #block-system-management .nav-tabs .menu > li.show ul > li > a,
+  .nav-tabs #block-system-management .menu ul > li.show ul > li > a,
+  #block-system-management .menu .nav-tabs ul > li.show ul > li > a {
     color: #495057;
     background-color: #fff;
     border-color: #ddd; }
@@ -2851,54 +2928,60 @@ tbody.collapse.show {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.nav-pills .nav-link, ul.tabs .nav-link, .action-links .nav-link, .tripal-toc-pane .nav-link, .nav-pills ul.tabs > li > a, ul.tabs > li > a, .action-links ul.tabs > li > a, .tripal-toc-pane ul.tabs > li > a, .nav-pills .action-links > li > a, ul.tabs .action-links > li > a, .action-links > li > a, .tripal-toc-pane .action-links > li > a, .tripal-toc-pane .tripal_toc_list_item_link, .nav-pills #block-system-management .menu > li > a, #block-system-management .nav-pills .menu > li > a, ul.tabs #block-system-management .menu > li > a, #block-system-management ul.tabs .menu > li > a, .action-links #block-system-management .menu > li > a, #block-system-management .action-links .menu > li > a, .tripal-toc-pane #block-system-management .menu > li > a, #block-system-management .tripal-toc-pane .menu > li > a, .nav-pills
-#block-system-management .menu ul > li > a,
-#block-system-management .menu .nav-pills ul > li > a, ul.tabs
-#block-system-management .menu ul > li > a,
-#block-system-management .menu ul.tabs ul > li > a, .action-links
-#block-system-management .menu ul > li > a,
-#block-system-management .menu .action-links ul > li > a, .tripal-toc-pane
-#block-system-management .menu ul > li > a,
-#block-system-management .menu .tripal-toc-pane ul > li > a {
+.nav-pills .nav-link, ul.tabs .nav-link, .action-links .nav-link, .tripal-toc-pane .nav-link, .nav-pills ul.tabs > li > a, ul.tabs > li > a, .action-links ul.tabs > li > a, .tripal-toc-pane ul.tabs > li > a, .nav-pills .action-links > li > a, ul.tabs .action-links > li > a, .action-links > li > a, .tripal-toc-pane .action-links > li > a, .tripal-toc-pane .tripal_toc_list_item_link, .nav-pills #block-system-management .menu > li > a, #block-system-management .nav-pills .menu > li > a, ul.tabs #block-system-management .menu > li > a, #block-system-management ul.tabs .menu > li > a, .action-links #block-system-management .menu > li > a, #block-system-management .action-links .menu > li > a, .tripal-toc-pane #block-system-management .menu > li > a, #block-system-management .tripal-toc-pane .menu > li > a,
+.nav-pills #block-system-management .menu ul > li > a, #block-system-management .menu .nav-pills ul > li > a,
+ul.tabs #block-system-management .menu ul > li > a, #block-system-management .menu ul.tabs ul > li > a,
+.action-links #block-system-management .menu ul > li > a, #block-system-management .menu .action-links ul > li > a,
+.tripal-toc-pane #block-system-management .menu ul > li > a, #block-system-management .menu .tripal-toc-pane ul > li > a {
   border-radius: 0.25rem; }
 
-.nav-pills .nav-link.active, ul.tabs .nav-link.active, .action-links .nav-link.active, .tripal-toc-pane .nav-link.active, .nav-pills ul.tabs > li > a.active, ul.tabs > li > a.active, .action-links ul.tabs > li > a.active, .tripal-toc-pane ul.tabs > li > a.active, .nav-pills .action-links > li > a.active, ul.tabs .action-links > li > a.active, .action-links > li > a.active, .tripal-toc-pane .action-links > li > a.active, .tripal-toc-pane .active.tripal_toc_list_item_link, .nav-pills #block-system-management .menu > li > a.active, #block-system-management .nav-pills .menu > li > a.active, ul.tabs #block-system-management .menu > li > a.active, #block-system-management ul.tabs .menu > li > a.active, .action-links #block-system-management .menu > li > a.active, #block-system-management .action-links .menu > li > a.active, .tripal-toc-pane #block-system-management .menu > li > a.active, #block-system-management .tripal-toc-pane .menu > li > a.active, .nav-pills
-#block-system-management .menu ul > li > a.active,
-#block-system-management .menu .nav-pills ul > li > a.active, ul.tabs
-#block-system-management .menu ul > li > a.active,
-#block-system-management .menu ul.tabs ul > li > a.active, .action-links
-#block-system-management .menu ul > li > a.active,
-#block-system-management .menu .action-links ul > li > a.active, .tripal-toc-pane
-#block-system-management .menu ul > li > a.active,
-#block-system-management .menu .tripal-toc-pane ul > li > a.active,
-.nav-pills .show > .nav-link, ul.tabs .show > .nav-link, .action-links .show > .nav-link, .tripal-toc-pane .show > .nav-link,
-.nav-pills ul.tabs > li.show > a, ul.tabs > li.show > a, .action-links ul.tabs > li.show > a, .tripal-toc-pane ul.tabs > li.show > a,
-.nav-pills .action-links > li.show > a, ul.tabs .action-links > li.show > a, .action-links > li.show > a, .tripal-toc-pane .action-links > li.show > a, .tripal-toc-pane
-.nav-pills .show > .tripal_toc_list_item_link, .tripal-toc-pane ul.tabs .show > .tripal_toc_list_item_link, .tripal-toc-pane .action-links .show > .tripal_toc_list_item_link, .tripal-toc-pane .show > .tripal_toc_list_item_link,
-.nav-pills #block-system-management .menu > li.show > a, #block-system-management
-.nav-pills .menu > li.show > a, ul.tabs #block-system-management .menu > li.show > a, #block-system-management ul.tabs .menu > li.show > a, .action-links #block-system-management .menu > li.show > a, #block-system-management .action-links .menu > li.show > a, .tripal-toc-pane #block-system-management .menu > li.show > a, #block-system-management .tripal-toc-pane .menu > li.show > a,
-.nav-pills
-#block-system-management .menu ul > li.show > a,
-#block-system-management .menu
-.nav-pills ul > li.show > a, ul.tabs
-#block-system-management .menu ul > li.show > a,
-#block-system-management .menu ul.tabs ul > li.show > a, .action-links
-#block-system-management .menu ul > li.show > a,
-#block-system-management .menu .action-links ul > li.show > a, .tripal-toc-pane
-#block-system-management .menu ul > li.show > a,
+.nav-pills .nav-link.active, ul.tabs .nav-link.active, .action-links .nav-link.active, .tripal-toc-pane .nav-link.active, .nav-pills ul.tabs > li > a.active, ul.tabs > li > a.active, .action-links ul.tabs > li > a.active, .tripal-toc-pane ul.tabs > li > a.active, .nav-pills .action-links > li > a.active, ul.tabs .action-links > li > a.active, .action-links > li > a.active, .tripal-toc-pane .action-links > li > a.active, .tripal-toc-pane .active.tripal_toc_list_item_link, .nav-pills #block-system-management .menu > li > a.active, #block-system-management .nav-pills .menu > li > a.active, ul.tabs #block-system-management .menu > li > a.active, #block-system-management ul.tabs .menu > li > a.active, .action-links #block-system-management .menu > li > a.active, #block-system-management .action-links .menu > li > a.active, .tripal-toc-pane #block-system-management .menu > li > a.active, #block-system-management .tripal-toc-pane .menu > li > a.active,
+.nav-pills #block-system-management .menu ul > li > a.active, #block-system-management .menu .nav-pills ul > li > a.active,
+ul.tabs #block-system-management .menu ul > li > a.active, #block-system-management .menu ul.tabs ul > li > a.active,
+.action-links #block-system-management .menu ul > li > a.active, #block-system-management .menu .action-links ul > li > a.active,
+.tripal-toc-pane #block-system-management .menu ul > li > a.active, #block-system-management .menu .tripal-toc-pane ul > li > a.active,
+.nav-pills .show > .nav-link,
+ul.tabs .show > .nav-link,
+.action-links .show > .nav-link,
+.tripal-toc-pane .show > .nav-link,
+.nav-pills ul.tabs > li.show > a,
+ul.tabs > li.show > a,
+.action-links ul.tabs > li.show > a,
+.tripal-toc-pane ul.tabs > li.show > a,
+.nav-pills .action-links > li.show > a,
+ul.tabs .action-links > li.show > a,
+.action-links > li.show > a,
+.tripal-toc-pane .action-links > li.show > a,
+.tripal-toc-pane .nav-pills .show > .tripal_toc_list_item_link,
+.tripal-toc-pane ul.tabs .show > .tripal_toc_list_item_link,
+.tripal-toc-pane .action-links .show > .tripal_toc_list_item_link,
+.tripal-toc-pane .show > .tripal_toc_list_item_link,
+.nav-pills #block-system-management .menu > li.show > a,
+#block-system-management .nav-pills .menu > li.show > a,
+ul.tabs #block-system-management .menu > li.show > a,
+#block-system-management ul.tabs .menu > li.show > a,
+.action-links #block-system-management .menu > li.show > a,
+#block-system-management .action-links .menu > li.show > a,
+.tripal-toc-pane #block-system-management .menu > li.show > a,
+#block-system-management .tripal-toc-pane .menu > li.show > a,
+.nav-pills #block-system-management .menu ul > li.show > a,
+#block-system-management .menu .nav-pills ul > li.show > a,
+ul.tabs #block-system-management .menu ul > li.show > a,
+#block-system-management .menu ul.tabs ul > li.show > a,
+.action-links #block-system-management .menu ul > li.show > a,
+#block-system-management .menu .action-links ul > li.show > a,
+.tripal-toc-pane #block-system-management .menu ul > li.show > a,
 #block-system-management .menu .tripal-toc-pane ul > li.show > a {
   color: #fff;
   background-color: #28a745; }
 
-.nav-fill .nav-item, .nav-fill ul.tabs > li, .nav-fill .action-links > li, .nav-fill .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane .nav-fill .tripal_toc_list_item, .nav-fill #block-system-management .menu > li, #block-system-management .nav-fill .menu > li, .nav-fill
-#block-system-management .menu ul > li,
-#block-system-management .menu .nav-fill ul > li {
+.nav-fill .nav-item, .nav-fill ul.tabs > li, .nav-fill .action-links > li, .nav-fill .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane .nav-fill .tripal_toc_list_item, .nav-fill #block-system-management .menu > li, #block-system-management .nav-fill .menu > li,
+.nav-fill #block-system-management .menu ul > li, #block-system-management .menu .nav-fill ul > li {
   flex: 1 1 auto;
   text-align: center; }
 
-.nav-justified .nav-item, .nav-justified ul.tabs > li, .nav-justified .action-links > li, .nav-justified .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane .nav-justified .tripal_toc_list_item, .nav-justified #block-system-management .menu > li, #block-system-management .nav-justified .menu > li, .nav-justified
-#block-system-management .menu ul > li,
-#block-system-management .menu .nav-justified ul > li {
+.nav-justified .nav-item, .nav-justified ul.tabs > li, .nav-justified .action-links > li, .nav-justified .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane .nav-justified .tripal_toc_list_item, .nav-justified #block-system-management .menu > li, #block-system-management .nav-justified .menu > li,
+.nav-justified #block-system-management .menu ul > li, #block-system-management .menu .nav-justified ul > li {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center; }
@@ -2940,9 +3023,8 @@ tbody.collapse.show {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
-  .navbar-nav .nav-link, .navbar-nav ul.tabs > li > a, .navbar-nav .action-links > li > a, .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-nav .tripal_toc_list_item_link, .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-nav .menu > li > a, .navbar-nav
-  #block-system-management .menu ul > li > a,
-  #block-system-management .menu .navbar-nav ul > li > a {
+  .navbar-nav .nav-link, .navbar-nav ul.tabs > li > a, .navbar-nav .action-links > li > a, .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-nav .tripal_toc_list_item_link, .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-nav .menu > li > a,
+  .navbar-nav #block-system-management .menu ul > li > a, #block-system-management .menu .navbar-nav ul > li > a {
     padding-right: 0;
     padding-left: 0; }
   .navbar-nav .dropdown-menu {
@@ -2994,12 +3076,8 @@ tbody.collapse.show {
       flex-direction: row; }
       .navbar-expand-sm .navbar-nav .dropdown-menu {
         position: absolute; }
-      .navbar-expand-sm .navbar-nav .dropdown-menu-right {
-        right: 0;
-        left: auto; }
-      .navbar-expand-sm .navbar-nav .nav-link, .navbar-expand-sm .navbar-nav ul.tabs > li > a, .navbar-expand-sm .navbar-nav .action-links > li > a, .navbar-expand-sm .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand-sm .navbar-nav .tripal_toc_list_item_link, .navbar-expand-sm .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand-sm .navbar-nav .menu > li > a, .navbar-expand-sm .navbar-nav
-      #block-system-management .menu ul > li > a,
-      #block-system-management .menu .navbar-expand-sm .navbar-nav ul > li > a {
+      .navbar-expand-sm .navbar-nav .nav-link, .navbar-expand-sm .navbar-nav ul.tabs > li > a, .navbar-expand-sm .navbar-nav .action-links > li > a, .navbar-expand-sm .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand-sm .navbar-nav .tripal_toc_list_item_link, .navbar-expand-sm .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand-sm .navbar-nav .menu > li > a,
+      .navbar-expand-sm .navbar-nav #block-system-management .menu ul > li > a, #block-system-management .menu .navbar-expand-sm .navbar-nav ul > li > a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
     .navbar-expand-sm > .container,
@@ -3009,10 +3087,7 @@ tbody.collapse.show {
       display: flex !important;
       flex-basis: auto; }
     .navbar-expand-sm .navbar-toggler {
-      display: none; }
-    .navbar-expand-sm .dropup .dropdown-menu {
-      top: auto;
-      bottom: 100%; } }
+      display: none; } }
 
 @media (max-width: 767.98px) {
   .navbar-expand-md > .container,
@@ -3028,12 +3103,8 @@ tbody.collapse.show {
       flex-direction: row; }
       .navbar-expand-md .navbar-nav .dropdown-menu {
         position: absolute; }
-      .navbar-expand-md .navbar-nav .dropdown-menu-right {
-        right: 0;
-        left: auto; }
-      .navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .navbar-nav ul.tabs > li > a, .navbar-expand-md .navbar-nav .action-links > li > a, .navbar-expand-md .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand-md .navbar-nav .tripal_toc_list_item_link, .navbar-expand-md .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand-md .navbar-nav .menu > li > a, .navbar-expand-md .navbar-nav
-      #block-system-management .menu ul > li > a,
-      #block-system-management .menu .navbar-expand-md .navbar-nav ul > li > a {
+      .navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .navbar-nav ul.tabs > li > a, .navbar-expand-md .navbar-nav .action-links > li > a, .navbar-expand-md .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand-md .navbar-nav .tripal_toc_list_item_link, .navbar-expand-md .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand-md .navbar-nav .menu > li > a,
+      .navbar-expand-md .navbar-nav #block-system-management .menu ul > li > a, #block-system-management .menu .navbar-expand-md .navbar-nav ul > li > a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
     .navbar-expand-md > .container,
@@ -3043,10 +3114,7 @@ tbody.collapse.show {
       display: flex !important;
       flex-basis: auto; }
     .navbar-expand-md .navbar-toggler {
-      display: none; }
-    .navbar-expand-md .dropup .dropdown-menu {
-      top: auto;
-      bottom: 100%; } }
+      display: none; } }
 
 @media (max-width: 991.98px) {
   .navbar-expand-lg > .container,
@@ -3062,12 +3130,8 @@ tbody.collapse.show {
       flex-direction: row; }
       .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute; }
-      .navbar-expand-lg .navbar-nav .dropdown-menu-right {
-        right: 0;
-        left: auto; }
-      .navbar-expand-lg .navbar-nav .nav-link, .navbar-expand-lg .navbar-nav ul.tabs > li > a, .navbar-expand-lg .navbar-nav .action-links > li > a, .navbar-expand-lg .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand-lg .navbar-nav .tripal_toc_list_item_link, .navbar-expand-lg .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand-lg .navbar-nav .menu > li > a, .navbar-expand-lg .navbar-nav
-      #block-system-management .menu ul > li > a,
-      #block-system-management .menu .navbar-expand-lg .navbar-nav ul > li > a {
+      .navbar-expand-lg .navbar-nav .nav-link, .navbar-expand-lg .navbar-nav ul.tabs > li > a, .navbar-expand-lg .navbar-nav .action-links > li > a, .navbar-expand-lg .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand-lg .navbar-nav .tripal_toc_list_item_link, .navbar-expand-lg .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand-lg .navbar-nav .menu > li > a,
+      .navbar-expand-lg .navbar-nav #block-system-management .menu ul > li > a, #block-system-management .menu .navbar-expand-lg .navbar-nav ul > li > a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
     .navbar-expand-lg > .container,
@@ -3077,10 +3141,7 @@ tbody.collapse.show {
       display: flex !important;
       flex-basis: auto; }
     .navbar-expand-lg .navbar-toggler {
-      display: none; }
-    .navbar-expand-lg .dropup .dropdown-menu {
-      top: auto;
-      bottom: 100%; } }
+      display: none; } }
 
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,
@@ -3096,12 +3157,8 @@ tbody.collapse.show {
       flex-direction: row; }
       .navbar-expand-xl .navbar-nav .dropdown-menu {
         position: absolute; }
-      .navbar-expand-xl .navbar-nav .dropdown-menu-right {
-        right: 0;
-        left: auto; }
-      .navbar-expand-xl .navbar-nav .nav-link, .navbar-expand-xl .navbar-nav ul.tabs > li > a, .navbar-expand-xl .navbar-nav .action-links > li > a, .navbar-expand-xl .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand-xl .navbar-nav .tripal_toc_list_item_link, .navbar-expand-xl .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand-xl .navbar-nav .menu > li > a, .navbar-expand-xl .navbar-nav
-      #block-system-management .menu ul > li > a,
-      #block-system-management .menu .navbar-expand-xl .navbar-nav ul > li > a {
+      .navbar-expand-xl .navbar-nav .nav-link, .navbar-expand-xl .navbar-nav ul.tabs > li > a, .navbar-expand-xl .navbar-nav .action-links > li > a, .navbar-expand-xl .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand-xl .navbar-nav .tripal_toc_list_item_link, .navbar-expand-xl .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand-xl .navbar-nav .menu > li > a,
+      .navbar-expand-xl .navbar-nav #block-system-management .menu ul > li > a, #block-system-management .menu .navbar-expand-xl .navbar-nav ul > li > a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
     .navbar-expand-xl > .container,
@@ -3111,10 +3168,7 @@ tbody.collapse.show {
       display: flex !important;
       flex-basis: auto; }
     .navbar-expand-xl .navbar-toggler {
-      display: none; }
-    .navbar-expand-xl .dropup .dropdown-menu {
-      top: auto;
-      bottom: 100%; } }
+      display: none; } }
 
 .navbar-expand {
   flex-flow: row nowrap;
@@ -3127,12 +3181,8 @@ tbody.collapse.show {
     flex-direction: row; }
     .navbar-expand .navbar-nav .dropdown-menu {
       position: absolute; }
-    .navbar-expand .navbar-nav .dropdown-menu-right {
-      right: 0;
-      left: auto; }
-    .navbar-expand .navbar-nav .nav-link, .navbar-expand .navbar-nav ul.tabs > li > a, .navbar-expand .navbar-nav .action-links > li > a, .navbar-expand .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand .navbar-nav .tripal_toc_list_item_link, .navbar-expand .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand .navbar-nav .menu > li > a, .navbar-expand .navbar-nav
-    #block-system-management .menu ul > li > a,
-    #block-system-management .menu .navbar-expand .navbar-nav ul > li > a {
+    .navbar-expand .navbar-nav .nav-link, .navbar-expand .navbar-nav ul.tabs > li > a, .navbar-expand .navbar-nav .action-links > li > a, .navbar-expand .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-expand .navbar-nav .tripal_toc_list_item_link, .navbar-expand .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-expand .navbar-nav .menu > li > a,
+    .navbar-expand .navbar-nav #block-system-management .menu ul > li > a, #block-system-management .menu .navbar-expand .navbar-nav ul > li > a {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
   .navbar-expand > .container,
@@ -3143,66 +3193,52 @@ tbody.collapse.show {
     flex-basis: auto; }
   .navbar-expand .navbar-toggler {
     display: none; }
-  .navbar-expand .dropup .dropdown-menu {
-    top: auto;
-    bottom: 100%; }
 
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9); }
   .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
     color: rgba(0, 0, 0, 0.9); }
 
-.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav ul.tabs > li > a, .navbar-light .navbar-nav .action-links > li > a, .navbar-light .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-light .navbar-nav .tripal_toc_list_item_link, .navbar-light .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-light .navbar-nav .menu > li > a, .navbar-light .navbar-nav
-#block-system-management .menu ul > li > a,
-#block-system-management .menu .navbar-light .navbar-nav ul > li > a {
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav ul.tabs > li > a, .navbar-light .navbar-nav .action-links > li > a, .navbar-light .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-light .navbar-nav .tripal_toc_list_item_link, .navbar-light .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-light .navbar-nav .menu > li > a,
+.navbar-light .navbar-nav #block-system-management .menu ul > li > a, #block-system-management .menu .navbar-light .navbar-nav ul > li > a {
   color: rgba(0, 0, 0, 0.5); }
-  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav ul.tabs > li > a:hover, .navbar-light .navbar-nav .action-links > li > a:hover, .navbar-light .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .navbar-light .navbar-nav .tripal_toc_list_item_link:hover, .navbar-light .navbar-nav #block-system-management .menu > li > a:hover, #block-system-management .navbar-light .navbar-nav .menu > li > a:hover, .navbar-light .navbar-nav
-  #block-system-management .menu ul > li > a:hover,
-  #block-system-management .menu .navbar-light .navbar-nav ul > li > a:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav ul.tabs > li > a:focus, .navbar-light .navbar-nav .action-links > li > a:focus, .navbar-light .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link:focus, .tripal-toc-pane .navbar-light .navbar-nav .tripal_toc_list_item_link:focus, .navbar-light .navbar-nav #block-system-management .menu > li > a:focus, #block-system-management .navbar-light .navbar-nav .menu > li > a:focus, .navbar-light .navbar-nav
-  #block-system-management .menu ul > li > a:focus,
-  #block-system-management .menu .navbar-light .navbar-nav ul > li > a:focus {
+  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav ul.tabs > li > a:hover, .navbar-light .navbar-nav .action-links > li > a:hover, .navbar-light .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .navbar-light .navbar-nav .tripal_toc_list_item_link:hover, .navbar-light .navbar-nav #block-system-management .menu > li > a:hover, #block-system-management .navbar-light .navbar-nav .menu > li > a:hover,
+  .navbar-light .navbar-nav #block-system-management .menu ul > li > a:hover, #block-system-management .menu .navbar-light .navbar-nav ul > li > a:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav ul.tabs > li > a:focus, .navbar-light .navbar-nav .action-links > li > a:focus, .navbar-light .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link:focus, .tripal-toc-pane .navbar-light .navbar-nav .tripal_toc_list_item_link:focus, .navbar-light .navbar-nav #block-system-management .menu > li > a:focus, #block-system-management .navbar-light .navbar-nav .menu > li > a:focus,
+  .navbar-light .navbar-nav #block-system-management .menu ul > li > a:focus, #block-system-management .menu .navbar-light .navbar-nav ul > li > a:focus {
     color: rgba(0, 0, 0, 0.7); }
-  .navbar-light .navbar-nav .nav-link.disabled, .navbar-light .navbar-nav ul.tabs > li > a.disabled, .navbar-light .navbar-nav .action-links > li > a.disabled, .navbar-light .navbar-nav .tripal-toc-pane .disabled.tripal_toc_list_item_link, .tripal-toc-pane .navbar-light .navbar-nav .disabled.tripal_toc_list_item_link, .navbar-light .navbar-nav #block-system-management .menu > li > a.disabled, #block-system-management .navbar-light .navbar-nav .menu > li > a.disabled, .navbar-light .navbar-nav
-  #block-system-management .menu ul > li > a.disabled,
-  #block-system-management .menu .navbar-light .navbar-nav ul > li > a.disabled {
+  .navbar-light .navbar-nav .nav-link.disabled, .navbar-light .navbar-nav ul.tabs > li > a.disabled, .navbar-light .navbar-nav .action-links > li > a.disabled, .navbar-light .navbar-nav .tripal-toc-pane .disabled.tripal_toc_list_item_link, .tripal-toc-pane .navbar-light .navbar-nav .disabled.tripal_toc_list_item_link, .navbar-light .navbar-nav #block-system-management .menu > li > a.disabled, #block-system-management .navbar-light .navbar-nav .menu > li > a.disabled,
+  .navbar-light .navbar-nav #block-system-management .menu ul > li > a.disabled, #block-system-management .menu .navbar-light .navbar-nav ul > li > a.disabled {
     color: rgba(0, 0, 0, 0.3); }
 
-.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav ul.tabs > li.show > a, .navbar-light .navbar-nav .action-links > li.show > a, .navbar-light .navbar-nav .tripal-toc-pane .show > .tripal_toc_list_item_link, .tripal-toc-pane .navbar-light .navbar-nav .show > .tripal_toc_list_item_link, .navbar-light .navbar-nav #block-system-management .menu > li.show > a, #block-system-management .navbar-light .navbar-nav .menu > li.show > a, .navbar-light .navbar-nav
-#block-system-management .menu ul > li.show > a,
-#block-system-management .menu .navbar-light .navbar-nav ul > li.show > a,
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav ul.tabs > li.show > a, .navbar-light .navbar-nav .action-links > li.show > a, .navbar-light .navbar-nav .tripal-toc-pane .show > .tripal_toc_list_item_link, .tripal-toc-pane .navbar-light .navbar-nav .show > .tripal_toc_list_item_link, .navbar-light .navbar-nav #block-system-management .menu > li.show > a, #block-system-management .navbar-light .navbar-nav .menu > li.show > a,
+.navbar-light .navbar-nav #block-system-management .menu ul > li.show > a, #block-system-management .menu .navbar-light .navbar-nav ul > li.show > a,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav ul.tabs > li.active > a,
 .navbar-light .navbar-nav .action-links > li.active > a,
-.navbar-light .navbar-nav .tripal-toc-pane .active > .tripal_toc_list_item_link, .tripal-toc-pane
-.navbar-light .navbar-nav .active > .tripal_toc_list_item_link,
-.navbar-light .navbar-nav #block-system-management .menu > li.active > a, #block-system-management
-.navbar-light .navbar-nav .menu > li.active > a,
-.navbar-light .navbar-nav
-#block-system-management .menu ul > li.active > a,
-#block-system-management .menu
-.navbar-light .navbar-nav ul > li.active > a,
+.navbar-light .navbar-nav .tripal-toc-pane .active > .tripal_toc_list_item_link,
+.tripal-toc-pane .navbar-light .navbar-nav .active > .tripal_toc_list_item_link,
+.navbar-light .navbar-nav #block-system-management .menu > li.active > a,
+#block-system-management .navbar-light .navbar-nav .menu > li.active > a,
+.navbar-light .navbar-nav #block-system-management .menu ul > li.active > a,
+#block-system-management .menu .navbar-light .navbar-nav ul > li.active > a,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav ul.tabs > li > a.show,
 .navbar-light .navbar-nav .action-links > li > a.show,
-.navbar-light .navbar-nav .tripal-toc-pane .show.tripal_toc_list_item_link, .tripal-toc-pane
-.navbar-light .navbar-nav .show.tripal_toc_list_item_link,
-.navbar-light .navbar-nav #block-system-management .menu > li > a.show, #block-system-management
-.navbar-light .navbar-nav .menu > li > a.show,
-.navbar-light .navbar-nav
-#block-system-management .menu ul > li > a.show,
-#block-system-management .menu
-.navbar-light .navbar-nav ul > li > a.show,
+.navbar-light .navbar-nav .tripal-toc-pane .show.tripal_toc_list_item_link,
+.tripal-toc-pane .navbar-light .navbar-nav .show.tripal_toc_list_item_link,
+.navbar-light .navbar-nav #block-system-management .menu > li > a.show,
+#block-system-management .navbar-light .navbar-nav .menu > li > a.show,
+.navbar-light .navbar-nav #block-system-management .menu ul > li > a.show,
+#block-system-management .menu .navbar-light .navbar-nav ul > li > a.show,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav ul.tabs > li > a.active,
 .navbar-light .navbar-nav .action-links > li > a.active,
-.navbar-light .navbar-nav .tripal-toc-pane .active.tripal_toc_list_item_link, .tripal-toc-pane
-.navbar-light .navbar-nav .active.tripal_toc_list_item_link,
-.navbar-light .navbar-nav #block-system-management .menu > li > a.active, #block-system-management
-.navbar-light .navbar-nav .menu > li > a.active,
-.navbar-light .navbar-nav
-#block-system-management .menu ul > li > a.active,
-#block-system-management .menu
-.navbar-light .navbar-nav ul > li > a.active {
+.navbar-light .navbar-nav .tripal-toc-pane .active.tripal_toc_list_item_link,
+.tripal-toc-pane .navbar-light .navbar-nav .active.tripal_toc_list_item_link,
+.navbar-light .navbar-nav #block-system-management .menu > li > a.active,
+#block-system-management .navbar-light .navbar-nav .menu > li > a.active,
+.navbar-light .navbar-nav #block-system-management .menu ul > li > a.active,
+#block-system-management .menu .navbar-light .navbar-nav ul > li > a.active {
   color: rgba(0, 0, 0, 0.9); }
 
 .navbar-light .navbar-toggler {
@@ -3224,57 +3260,46 @@ tbody.collapse.show {
   .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
     color: white; }
 
-.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-nav ul.tabs > li > a, .navbar-dark .navbar-nav .action-links > li > a, .navbar-dark .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-dark .navbar-nav .tripal_toc_list_item_link, .navbar-dark .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-dark .navbar-nav .menu > li > a, .navbar-dark .navbar-nav
-#block-system-management .menu ul > li > a,
-#block-system-management .menu .navbar-dark .navbar-nav ul > li > a {
+.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-nav ul.tabs > li > a, .navbar-dark .navbar-nav .action-links > li > a, .navbar-dark .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .navbar-dark .navbar-nav .tripal_toc_list_item_link, .navbar-dark .navbar-nav #block-system-management .menu > li > a, #block-system-management .navbar-dark .navbar-nav .menu > li > a,
+.navbar-dark .navbar-nav #block-system-management .menu ul > li > a, #block-system-management .menu .navbar-dark .navbar-nav ul > li > a {
   color: rgba(255, 255, 255, 0.5); }
-  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav ul.tabs > li > a:hover, .navbar-dark .navbar-nav .action-links > li > a:hover, .navbar-dark .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .navbar-dark .navbar-nav .tripal_toc_list_item_link:hover, .navbar-dark .navbar-nav #block-system-management .menu > li > a:hover, #block-system-management .navbar-dark .navbar-nav .menu > li > a:hover, .navbar-dark .navbar-nav
-  #block-system-management .menu ul > li > a:hover,
-  #block-system-management .menu .navbar-dark .navbar-nav ul > li > a:hover, .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav ul.tabs > li > a:focus, .navbar-dark .navbar-nav .action-links > li > a:focus, .navbar-dark .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link:focus, .tripal-toc-pane .navbar-dark .navbar-nav .tripal_toc_list_item_link:focus, .navbar-dark .navbar-nav #block-system-management .menu > li > a:focus, #block-system-management .navbar-dark .navbar-nav .menu > li > a:focus, .navbar-dark .navbar-nav
-  #block-system-management .menu ul > li > a:focus,
-  #block-system-management .menu .navbar-dark .navbar-nav ul > li > a:focus {
+  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav ul.tabs > li > a:hover, .navbar-dark .navbar-nav .action-links > li > a:hover, .navbar-dark .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .navbar-dark .navbar-nav .tripal_toc_list_item_link:hover, .navbar-dark .navbar-nav #block-system-management .menu > li > a:hover, #block-system-management .navbar-dark .navbar-nav .menu > li > a:hover,
+  .navbar-dark .navbar-nav #block-system-management .menu ul > li > a:hover, #block-system-management .menu .navbar-dark .navbar-nav ul > li > a:hover, .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav ul.tabs > li > a:focus, .navbar-dark .navbar-nav .action-links > li > a:focus, .navbar-dark .navbar-nav .tripal-toc-pane .tripal_toc_list_item_link:focus, .tripal-toc-pane .navbar-dark .navbar-nav .tripal_toc_list_item_link:focus, .navbar-dark .navbar-nav #block-system-management .menu > li > a:focus, #block-system-management .navbar-dark .navbar-nav .menu > li > a:focus,
+  .navbar-dark .navbar-nav #block-system-management .menu ul > li > a:focus, #block-system-management .menu .navbar-dark .navbar-nav ul > li > a:focus {
     color: rgba(255, 255, 255, 0.75); }
-  .navbar-dark .navbar-nav .nav-link.disabled, .navbar-dark .navbar-nav ul.tabs > li > a.disabled, .navbar-dark .navbar-nav .action-links > li > a.disabled, .navbar-dark .navbar-nav .tripal-toc-pane .disabled.tripal_toc_list_item_link, .tripal-toc-pane .navbar-dark .navbar-nav .disabled.tripal_toc_list_item_link, .navbar-dark .navbar-nav #block-system-management .menu > li > a.disabled, #block-system-management .navbar-dark .navbar-nav .menu > li > a.disabled, .navbar-dark .navbar-nav
-  #block-system-management .menu ul > li > a.disabled,
-  #block-system-management .menu .navbar-dark .navbar-nav ul > li > a.disabled {
+  .navbar-dark .navbar-nav .nav-link.disabled, .navbar-dark .navbar-nav ul.tabs > li > a.disabled, .navbar-dark .navbar-nav .action-links > li > a.disabled, .navbar-dark .navbar-nav .tripal-toc-pane .disabled.tripal_toc_list_item_link, .tripal-toc-pane .navbar-dark .navbar-nav .disabled.tripal_toc_list_item_link, .navbar-dark .navbar-nav #block-system-management .menu > li > a.disabled, #block-system-management .navbar-dark .navbar-nav .menu > li > a.disabled,
+  .navbar-dark .navbar-nav #block-system-management .menu ul > li > a.disabled, #block-system-management .menu .navbar-dark .navbar-nav ul > li > a.disabled {
     color: rgba(255, 255, 255, 0.25); }
 
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav ul.tabs > li.show > a, .navbar-dark .navbar-nav .action-links > li.show > a, .navbar-dark .navbar-nav .tripal-toc-pane .show > .tripal_toc_list_item_link, .tripal-toc-pane .navbar-dark .navbar-nav .show > .tripal_toc_list_item_link, .navbar-dark .navbar-nav #block-system-management .menu > li.show > a, #block-system-management .navbar-dark .navbar-nav .menu > li.show > a, .navbar-dark .navbar-nav
-#block-system-management .menu ul > li.show > a,
-#block-system-management .menu .navbar-dark .navbar-nav ul > li.show > a,
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav ul.tabs > li.show > a, .navbar-dark .navbar-nav .action-links > li.show > a, .navbar-dark .navbar-nav .tripal-toc-pane .show > .tripal_toc_list_item_link, .tripal-toc-pane .navbar-dark .navbar-nav .show > .tripal_toc_list_item_link, .navbar-dark .navbar-nav #block-system-management .menu > li.show > a, #block-system-management .navbar-dark .navbar-nav .menu > li.show > a,
+.navbar-dark .navbar-nav #block-system-management .menu ul > li.show > a, #block-system-management .menu .navbar-dark .navbar-nav ul > li.show > a,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav ul.tabs > li.active > a,
 .navbar-dark .navbar-nav .action-links > li.active > a,
-.navbar-dark .navbar-nav .tripal-toc-pane .active > .tripal_toc_list_item_link, .tripal-toc-pane
-.navbar-dark .navbar-nav .active > .tripal_toc_list_item_link,
-.navbar-dark .navbar-nav #block-system-management .menu > li.active > a, #block-system-management
-.navbar-dark .navbar-nav .menu > li.active > a,
-.navbar-dark .navbar-nav
-#block-system-management .menu ul > li.active > a,
-#block-system-management .menu
-.navbar-dark .navbar-nav ul > li.active > a,
+.navbar-dark .navbar-nav .tripal-toc-pane .active > .tripal_toc_list_item_link,
+.tripal-toc-pane .navbar-dark .navbar-nav .active > .tripal_toc_list_item_link,
+.navbar-dark .navbar-nav #block-system-management .menu > li.active > a,
+#block-system-management .navbar-dark .navbar-nav .menu > li.active > a,
+.navbar-dark .navbar-nav #block-system-management .menu ul > li.active > a,
+#block-system-management .menu .navbar-dark .navbar-nav ul > li.active > a,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav ul.tabs > li > a.show,
 .navbar-dark .navbar-nav .action-links > li > a.show,
-.navbar-dark .navbar-nav .tripal-toc-pane .show.tripal_toc_list_item_link, .tripal-toc-pane
-.navbar-dark .navbar-nav .show.tripal_toc_list_item_link,
-.navbar-dark .navbar-nav #block-system-management .menu > li > a.show, #block-system-management
-.navbar-dark .navbar-nav .menu > li > a.show,
-.navbar-dark .navbar-nav
-#block-system-management .menu ul > li > a.show,
-#block-system-management .menu
-.navbar-dark .navbar-nav ul > li > a.show,
+.navbar-dark .navbar-nav .tripal-toc-pane .show.tripal_toc_list_item_link,
+.tripal-toc-pane .navbar-dark .navbar-nav .show.tripal_toc_list_item_link,
+.navbar-dark .navbar-nav #block-system-management .menu > li > a.show,
+#block-system-management .navbar-dark .navbar-nav .menu > li > a.show,
+.navbar-dark .navbar-nav #block-system-management .menu ul > li > a.show,
+#block-system-management .menu .navbar-dark .navbar-nav ul > li > a.show,
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav ul.tabs > li > a.active,
 .navbar-dark .navbar-nav .action-links > li > a.active,
-.navbar-dark .navbar-nav .tripal-toc-pane .active.tripal_toc_list_item_link, .tripal-toc-pane
-.navbar-dark .navbar-nav .active.tripal_toc_list_item_link,
-.navbar-dark .navbar-nav #block-system-management .menu > li > a.active, #block-system-management
-.navbar-dark .navbar-nav .menu > li > a.active,
-.navbar-dark .navbar-nav
-#block-system-management .menu ul > li > a.active,
-#block-system-management .menu
-.navbar-dark .navbar-nav ul > li > a.active {
+.navbar-dark .navbar-nav .tripal-toc-pane .active.tripal_toc_list_item_link,
+.tripal-toc-pane .navbar-dark .navbar-nav .active.tripal_toc_list_item_link,
+.navbar-dark .navbar-nav #block-system-management .menu > li > a.active,
+#block-system-management .navbar-dark .navbar-nav .menu > li > a.active,
+.navbar-dark .navbar-nav #block-system-management .menu ul > li > a.active,
+#block-system-management .menu .navbar-dark .navbar-nav ul > li > a.active {
   color: white; }
 
 .navbar-dark .navbar-toggler {
@@ -3463,10 +3488,28 @@ tbody.collapse.show {
 @media (min-width: 576px) {
   .card-columns {
     column-count: 3;
-    column-gap: 1.25rem; }
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1; }
     .card-columns .card, .card-columns .admin-panel {
       display: inline-block;
       width: 100%; } }
+
+.accordion .card:not(:first-of-type):not(:last-of-type), .accordion .admin-panel:not(:first-of-type):not(:last-of-type) {
+  border-bottom: 0;
+  border-radius: 0; }
+
+.accordion .card:not(:first-of-type) .card-header:first-child, .accordion .admin-panel:not(:first-of-type) .card-header:first-child {
+  border-radius: 0; }
+
+.accordion .card:first-of-type, .accordion .admin-panel:first-of-type {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.accordion .card:last-of-type, .accordion .admin-panel:last-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
 
 .breadcrumb {
   display: flex;
@@ -3477,12 +3520,13 @@ tbody.collapse.show {
   background-color: #e9ecef;
   border-radius: 0.25rem; }
 
-.breadcrumb-item + .breadcrumb-item::before {
-  display: inline-block;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  color: #868e96;
-  content: "/"; }
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem; }
+  .breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #868e96;
+    content: "/"; }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
   text-decoration: underline; }
@@ -3509,6 +3553,7 @@ tbody.collapse.show {
   background-color: #fff;
   border: 1px solid #ddd; }
   .page-link:hover, .pager > li > a:hover, .pager > li.pager-current:hover, .pager > li.pager-ellipsis:hover {
+    z-index: 2;
     color: #19692c;
     text-decoration: none;
     background-color: #e9ecef;
@@ -3609,7 +3654,7 @@ tbody.collapse.show {
 .badge-success, .marker {
   color: #fff;
   background-color: #28a745; }
-  .badge-success[href]:hover, [href].marker:hover, .badge-success[href]:focus, [href].marker:focus {
+  .badge-success[href]:hover, .marker[href]:hover, .badge-success[href]:focus, .marker[href]:focus {
     color: #fff;
     text-decoration: none;
     background-color: #1e7e34; }
@@ -3782,8 +3827,12 @@ tbody.collapse.show {
   justify-content: center;
   color: #fff;
   text-align: center;
+  white-space: nowrap;
   background-color: #28a745;
   transition: width 0.6s ease; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .progress-bar {
+      transition: none; } }
 
 .progress-bar-striped {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -3988,6 +4037,9 @@ button.close {
   .modal.fade .modal-dialog {
     transition: transform 0.3s ease-out;
     transform: translate(0, -25%); }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .modal.fade .modal-dialog {
+        transition: none; } }
   .modal.show .modal-dialog {
     transform: translate(0, 0); }
 
@@ -4201,12 +4253,15 @@ button.close {
   .bs-popover-top .arrow, .bs-popover-auto[x-placement^="top"] .arrow {
     bottom: calc((5px + 1px) * -1); }
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
-  .bs-popover-top .arrow::after, .bs-popover-auto[x-placement^="top"] .arrow::after {
+  .bs-popover-top .arrow::after,
+  .bs-popover-auto[x-placement^="top"] .arrow::after {
     border-width: 5px 5px 0; }
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
     bottom: 0;
     border-top-color: rgba(0, 0, 0, 0.25); }
-  .bs-popover-top .arrow::after, .bs-popover-auto[x-placement^="top"] .arrow::after {
+  
+  .bs-popover-top .arrow::after,
+  .bs-popover-auto[x-placement^="top"] .arrow::after {
     bottom: 1px;
     border-top-color: #fff; }
 
@@ -4218,12 +4273,15 @@ button.close {
     height: 10px;
     margin: 0.3rem 0; }
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before,
-  .bs-popover-right .arrow::after, .bs-popover-auto[x-placement^="right"] .arrow::after {
+  .bs-popover-right .arrow::after,
+  .bs-popover-auto[x-placement^="right"] .arrow::after {
     border-width: 5px 5px 5px 0; }
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
     left: 0;
     border-right-color: rgba(0, 0, 0, 0.25); }
-  .bs-popover-right .arrow::after, .bs-popover-auto[x-placement^="right"] .arrow::after {
+  
+  .bs-popover-right .arrow::after,
+  .bs-popover-auto[x-placement^="right"] .arrow::after {
     left: 1px;
     border-right-color: #fff; }
 
@@ -4232,12 +4290,15 @@ button.close {
   .bs-popover-bottom .arrow, .bs-popover-auto[x-placement^="bottom"] .arrow {
     top: calc((5px + 1px) * -1); }
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before,
-  .bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after {
+  .bs-popover-bottom .arrow::after,
+  .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     border-width: 0 5px 5px 5px; }
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
     top: 0;
     border-bottom-color: rgba(0, 0, 0, 0.25); }
-  .bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after {
+  
+  .bs-popover-bottom .arrow::after,
+  .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     top: 1px;
     border-bottom-color: #fff; }
   .bs-popover-bottom .popover-header::before, .bs-popover-auto[x-placement^="bottom"] .popover-header::before {
@@ -4258,12 +4319,15 @@ button.close {
     height: 10px;
     margin: 0.3rem 0; }
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before,
-  .bs-popover-left .arrow::after, .bs-popover-auto[x-placement^="left"] .arrow::after {
+  .bs-popover-left .arrow::after,
+  .bs-popover-auto[x-placement^="left"] .arrow::after {
     border-width: 5px 0 5px 5px; }
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before {
     right: 0;
     border-left-color: rgba(0, 0, 0, 0.25); }
-  .bs-popover-left .arrow::after, .bs-popover-auto[x-placement^="left"] .arrow::after {
+  
+  .bs-popover-left .arrow::after,
+  .bs-popover-auto[x-placement^="left"] .arrow::after {
     right: 1px;
     border-left-color: #fff; }
 
@@ -4299,6 +4363,9 @@ button.close {
   transition: transform 0.6s ease;
   backface-visibility: hidden;
   perspective: 1000px; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .carousel-item {
+      transition: none; } }
 
 .carousel-item.active,
 .carousel-item-next,
@@ -4333,6 +4400,34 @@ button.close {
     .carousel-item-prev,
     .active.carousel-item-left {
       transform: translate3d(-100%, 0, 0); } }
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: .6s;
+  transition-property: opacity; }
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+  opacity: 1; }
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+  opacity: 0; }
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+  transform: translateX(0); }
+  @supports (transform-style: preserve-3d) {
+    .carousel-fade .carousel-item-next,
+    .carousel-fade .carousel-item-prev,
+    .carousel-fade .carousel-item.active,
+    .carousel-fade .active.carousel-item-left,
+    .carousel-fade .active.carousel-item-prev {
+      transform: translate3d(0, 0, 0); } }
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -4783,6 +4878,21 @@ button.bg-dark:focus {
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important; }
 
+.flex-fill {
+  flex: 1 1 auto !important; }
+
+.flex-grow-0 {
+  flex-grow: 0 !important; }
+
+.flex-grow-1 {
+  flex-grow: 1 !important; }
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important; }
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important; }
+
 .justify-content-start {
   justify-content: flex-start !important; }
 
@@ -4864,6 +4974,16 @@ button.bg-dark:focus {
     flex-wrap: nowrap !important; }
   .flex-sm-wrap-reverse {
     flex-wrap: wrap-reverse !important; }
+  .flex-sm-fill {
+    flex: 1 1 auto !important; }
+  .flex-sm-grow-0 {
+    flex-grow: 0 !important; }
+  .flex-sm-grow-1 {
+    flex-grow: 1 !important; }
+  .flex-sm-shrink-0 {
+    flex-shrink: 0 !important; }
+  .flex-sm-shrink-1 {
+    flex-shrink: 1 !important; }
   .justify-content-sm-start {
     justify-content: flex-start !important; }
   .justify-content-sm-end {
@@ -4924,6 +5044,16 @@ button.bg-dark:focus {
     flex-wrap: nowrap !important; }
   .flex-md-wrap-reverse {
     flex-wrap: wrap-reverse !important; }
+  .flex-md-fill {
+    flex: 1 1 auto !important; }
+  .flex-md-grow-0 {
+    flex-grow: 0 !important; }
+  .flex-md-grow-1 {
+    flex-grow: 1 !important; }
+  .flex-md-shrink-0 {
+    flex-shrink: 0 !important; }
+  .flex-md-shrink-1 {
+    flex-shrink: 1 !important; }
   .justify-content-md-start {
     justify-content: flex-start !important; }
   .justify-content-md-end {
@@ -4984,6 +5114,16 @@ button.bg-dark:focus {
     flex-wrap: nowrap !important; }
   .flex-lg-wrap-reverse {
     flex-wrap: wrap-reverse !important; }
+  .flex-lg-fill {
+    flex: 1 1 auto !important; }
+  .flex-lg-grow-0 {
+    flex-grow: 0 !important; }
+  .flex-lg-grow-1 {
+    flex-grow: 1 !important; }
+  .flex-lg-shrink-0 {
+    flex-shrink: 0 !important; }
+  .flex-lg-shrink-1 {
+    flex-shrink: 1 !important; }
   .justify-content-lg-start {
     justify-content: flex-start !important; }
   .justify-content-lg-end {
@@ -5044,6 +5184,16 @@ button.bg-dark:focus {
     flex-wrap: nowrap !important; }
   .flex-xl-wrap-reverse {
     flex-wrap: wrap-reverse !important; }
+  .flex-xl-fill {
+    flex: 1 1 auto !important; }
+  .flex-xl-grow-0 {
+    flex-grow: 0 !important; }
+  .flex-xl-grow-1 {
+    flex-grow: 1 !important; }
+  .flex-xl-shrink-0 {
+    flex-shrink: 0 !important; }
+  .flex-xl-shrink-1 {
+    flex-shrink: 1 !important; }
   .justify-content-xl-start {
     justify-content: flex-start !important; }
   .justify-content-xl-end {
@@ -5173,7 +5323,6 @@ button.bg-dark:focus {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  clip-path: inset(50%);
   border: 0; }
 
 .sr-only-focusable:active, .sr-only-focusable:focus {
@@ -5182,8 +5331,19 @@ button.bg-dark:focus {
   height: auto;
   overflow: visible;
   clip: auto;
-  white-space: normal;
-  clip-path: none; }
+  white-space: normal; }
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
+
+.shadow {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125) !important; }
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
+
+.shadow-none {
+  box-shadow: none !important; }
 
 .w-25 {
   width: 25% !important; }
@@ -5197,6 +5357,9 @@ button.bg-dark:focus {
 .w-100 {
   width: 100% !important; }
 
+.w-auto {
+  width: auto !important; }
+
 .h-25 {
   height: 25% !important; }
 
@@ -5208,6 +5371,9 @@ button.bg-dark:focus {
 
 .h-100 {
   height: 100% !important; }
+
+.h-auto {
+  height: auto !important; }
 
 .mw-100 {
   max-width: 100% !important; }
@@ -6198,6 +6364,9 @@ button.bg-dark:focus {
   .mx-xl-auto {
     margin-left: auto !important; } }
 
+.text-monospace {
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
 .text-justify {
   text-align: justify !important; }
 
@@ -6322,8 +6491,17 @@ a.text-light:hover, a.text-light:focus {
 a.text-dark:hover, a.text-dark:focus {
   color: #1d2124 !important; }
 
+.text-body {
+  color: #212529 !important; }
+
 .text-muted, .submitted, td .description {
   color: #868e96 !important; }
+
+.text-black-50 {
+  color: rgba(0, 0, 0, 0.5) !important; }
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important; }
 
 .text-hide {
   font: 0/0 a;
@@ -6352,7 +6530,7 @@ a.text-dark:hover, a.text-dark:focus {
     white-space: pre-wrap !important; }
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #adb5bd;
     page-break-inside: avoid; }
   thead {
     display: table-header-group; }
@@ -6379,12 +6557,13 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #000; }
   .table, table {
     border-collapse: collapse !important; }
-    .table td, table td,
-    .table th, table th {
+    
+    .table td,
+    table td, .table th, table th {
       background-color: #fff !important; }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #ddd !important; } }
+    border: 1px solid #dee2e6 !important; } }
 
 body {
   background: #2a2730;
@@ -6527,13 +6706,11 @@ body {
   background-color: #fff;
   border-top: 6px solid #28a745;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125); }
-  .main-header .nav-link, .main-header ul.tabs > li > a, .main-header .action-links > li > a, .main-header .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .main-header .tripal_toc_list_item_link, .main-header #block-system-management .menu > li > a, #block-system-management .main-header .menu > li > a, .main-header
-  #block-system-management .menu ul > li > a,
-  #block-system-management .menu .main-header ul > li > a {
+  .main-header .nav-link, .main-header ul.tabs > li > a, .main-header .action-links > li > a, .main-header .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .main-header .tripal_toc_list_item_link, .main-header #block-system-management .menu > li > a, #block-system-management .main-header .menu > li > a,
+  .main-header #block-system-management .menu ul > li > a, #block-system-management .menu .main-header ul > li > a {
     padding: 1rem .4rem; }
-  .main-header .nav-item, .main-header ul.tabs > li, .main-header .action-links > li, .main-header .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane .main-header .tripal_toc_list_item, .main-header #block-system-management .menu > li, #block-system-management .main-header .menu > li, .main-header
-  #block-system-management .menu ul > li,
-  #block-system-management .menu .main-header ul > li {
+  .main-header .nav-item, .main-header ul.tabs > li, .main-header .action-links > li, .main-header .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane .main-header .tripal_toc_list_item, .main-header #block-system-management .menu > li, #block-system-management .main-header .menu > li,
+  .main-header #block-system-management .menu ul > li, #block-system-management .menu .main-header ul > li {
     margin: 0 !important; }
   .main-header .logo-icon {
     font-size: 30px;
@@ -6584,9 +6761,8 @@ body {
     width: 100%;
     display: block;
     float: none !important; }
-    [class*="navbar-toggleable"] > .navbar-nav .nav-item, [class*="navbar-toggleable"] > .navbar-nav ul.tabs > li, [class*="navbar-toggleable"] > .navbar-nav .action-links > li, [class*="navbar-toggleable"] > .navbar-nav .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane [class*="navbar-toggleable"] > .navbar-nav .tripal_toc_list_item, [class*="navbar-toggleable"] > .navbar-nav #block-system-management .menu > li, #block-system-management [class*="navbar-toggleable"] > .navbar-nav .menu > li, [class*="navbar-toggleable"] > .navbar-nav
-    #block-system-management .menu ul > li,
-    #block-system-management .menu [class*="navbar-toggleable"] > .navbar-nav ul > li {
+    [class*="navbar-toggleable"] > .navbar-nav .nav-item, [class*="navbar-toggleable"] > .navbar-nav ul.tabs > li, [class*="navbar-toggleable"] > .navbar-nav .action-links > li, [class*="navbar-toggleable"] > .navbar-nav .tripal-toc-pane .tripal_toc_list_item, .tripal-toc-pane [class*="navbar-toggleable"] > .navbar-nav .tripal_toc_list_item, [class*="navbar-toggleable"] > .navbar-nav #block-system-management .menu > li, #block-system-management [class*="navbar-toggleable"] > .navbar-nav .menu > li,
+    [class*="navbar-toggleable"] > .navbar-nav #block-system-management .menu ul > li, #block-system-management .menu [class*="navbar-toggleable"] > .navbar-nav ul > li {
       display: block;
       float: none; } }
 
@@ -6853,44 +7029,30 @@ ul.tabs {
 #block-system-management .menu ul {
   border-radius: 0.25rem;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.125); }
-  .nav.flex-column .nav-link, ul.flex-column.tabs .nav-link, ul.tabs.action-links .nav-link, ul.tabs.tripal-toc-pane .nav-link, .action-links .nav-link, .tripal-toc-pane .nav-link, #block-system-management .menu .nav-link, .nav.flex-column ul.tabs > li > a, ul.flex-column.tabs ul.tabs > li > a, .action-links ul.tabs > li > a, .tripal-toc-pane ul.tabs > li > a, .nav.flex-column .action-links > li > a, ul.flex-column.tabs .action-links > li > a, ul.tabs.action-links .action-links > li > a, .action-links > li > a, .tripal-toc-pane .action-links > li > a, #block-system-management .menu .action-links > li > a,
-  #block-system-management .menu ul .action-links > li > a, .nav.flex-column .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column .tripal_toc_list_item_link, .tripal-toc-pane .tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu .tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li > a, #block-system-management ul.flex-column.tabs .menu > li > a, #block-system-management ul.tabs.menu .menu > li > a, #block-system-management .action-links .menu > li > a, #block-system-management .tripal-toc-pane .menu > li > a, #block-system-management .menu > li > a, #block-system-management .menu ul .menu > li > a,
-  #block-system-management .menu .nav.flex-column ul > li > a, #block-system-management .menu ul.tabs ul > li > a,
-  #block-system-management .menu .action-links ul > li > a,
-  #block-system-management .menu .tripal-toc-pane ul > li > a, #block-system-management .menu ul > li > a {
+  .nav.flex-column .nav-link, ul.flex-column.tabs .nav-link, ul.tabs.action-links .nav-link, ul.tabs.tripal-toc-pane .nav-link, .action-links .nav-link, .tripal-toc-pane .nav-link, #block-system-management .menu .nav-link, .nav.flex-column ul.tabs > li > a, ul.flex-column.tabs ul.tabs > li > a, .action-links ul.tabs > li > a, .tripal-toc-pane ul.tabs > li > a, .nav.flex-column .action-links > li > a, ul.flex-column.tabs .action-links > li > a, ul.tabs.action-links .action-links > li > a, .action-links > li > a, .tripal-toc-pane .action-links > li > a, #block-system-management .menu .action-links > li > a, #block-system-management .menu ul .action-links > li > a, .nav.flex-column .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column .tripal_toc_list_item_link, .tripal-toc-pane .tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu .tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li > a, #block-system-management ul.flex-column.tabs .menu > li > a, #block-system-management ul.tabs.menu .menu > li > a, #block-system-management .action-links .menu > li > a, #block-system-management .tripal-toc-pane .menu > li > a, #block-system-management .menu > li > a, #block-system-management .menu ul .menu > li > a, #block-system-management .menu .nav.flex-column ul > li > a,
+  #block-system-management .menu ul.tabs ul > li > a, #block-system-management .menu .action-links ul > li > a, #block-system-management .menu .tripal-toc-pane ul > li > a,
+  #block-system-management .menu ul > li > a {
     min-width: 200px;
     border-left: 4px solid transparent;
     border-bottom: 1px solid #dee2e6;
     padding: 0.75rem 1rem;
     color: #868e96; }
-    .nav.flex-column .nav-link.active, ul.flex-column.tabs .nav-link.active, ul.tabs.action-links .nav-link.active, ul.tabs.tripal-toc-pane .nav-link.active, .action-links .nav-link.active, .tripal-toc-pane .nav-link.active, #block-system-management .menu .nav-link.active, .nav.flex-column ul.tabs > li > a.active, ul.flex-column.tabs ul.tabs > li > a.active, .action-links ul.tabs > li > a.active, .tripal-toc-pane ul.tabs > li > a.active, .nav.flex-column .action-links > li > a.active, ul.flex-column.tabs .action-links > li > a.active, ul.tabs.action-links .action-links > li > a.active, .action-links > li > a.active, .tripal-toc-pane .action-links > li > a.active, #block-system-management .menu .action-links > li > a.active,
-    #block-system-management .menu ul .action-links > li > a.active, .nav.flex-column .tripal-toc-pane .active.tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column .active.tripal_toc_list_item_link, .tripal-toc-pane .active.tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane .active.tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu .active.tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li > a.active, #block-system-management ul.flex-column.tabs .menu > li > a.active, #block-system-management ul.tabs.menu .menu > li > a.active, #block-system-management .action-links .menu > li > a.active, #block-system-management .tripal-toc-pane .menu > li > a.active, #block-system-management .menu > li > a.active, #block-system-management .menu ul .menu > li > a.active,
-    #block-system-management .menu .nav.flex-column ul > li > a.active, #block-system-management .menu ul.tabs ul > li > a.active,
-    #block-system-management .menu .action-links ul > li > a.active,
-    #block-system-management .menu .tripal-toc-pane ul > li > a.active, #block-system-management .menu ul > li > a.active {
+    .nav.flex-column .nav-link.active, ul.flex-column.tabs .nav-link.active, ul.tabs.action-links .nav-link.active, ul.tabs.tripal-toc-pane .nav-link.active, .action-links .nav-link.active, .tripal-toc-pane .nav-link.active, #block-system-management .menu .nav-link.active, .nav.flex-column ul.tabs > li > a.active, ul.flex-column.tabs ul.tabs > li > a.active, .action-links ul.tabs > li > a.active, .tripal-toc-pane ul.tabs > li > a.active, .nav.flex-column .action-links > li > a.active, ul.flex-column.tabs .action-links > li > a.active, ul.tabs.action-links .action-links > li > a.active, .action-links > li > a.active, .tripal-toc-pane .action-links > li > a.active, #block-system-management .menu .action-links > li > a.active, #block-system-management .menu ul .action-links > li > a.active, .nav.flex-column .tripal-toc-pane .active.tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column .active.tripal_toc_list_item_link, .tripal-toc-pane .active.tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane .active.tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu .active.tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li > a.active, #block-system-management ul.flex-column.tabs .menu > li > a.active, #block-system-management ul.tabs.menu .menu > li > a.active, #block-system-management .action-links .menu > li > a.active, #block-system-management .tripal-toc-pane .menu > li > a.active, #block-system-management .menu > li > a.active, #block-system-management .menu ul .menu > li > a.active, #block-system-management .menu .nav.flex-column ul > li > a.active,
+    #block-system-management .menu ul.tabs ul > li > a.active, #block-system-management .menu .action-links ul > li > a.active, #block-system-management .menu .tripal-toc-pane ul > li > a.active,
+    #block-system-management .menu ul > li > a.active {
       border-left-color: #28a745;
       color: #28a745; }
-    .nav.flex-column .nav-link:hover, ul.flex-column.tabs .nav-link:hover, ul.tabs.action-links .nav-link:hover, ul.tabs.tripal-toc-pane .nav-link:hover, .action-links .nav-link:hover, .tripal-toc-pane .nav-link:hover, #block-system-management .menu .nav-link:hover, .nav.flex-column ul.tabs > li > a:hover, ul.flex-column.tabs ul.tabs > li > a:hover, .action-links ul.tabs > li > a:hover, .tripal-toc-pane ul.tabs > li > a:hover, .nav.flex-column .action-links > li > a:hover, ul.flex-column.tabs .action-links > li > a:hover, ul.tabs.action-links .action-links > li > a:hover, .action-links > li > a:hover, .tripal-toc-pane .action-links > li > a:hover, #block-system-management .menu .action-links > li > a:hover,
-    #block-system-management .menu ul .action-links > li > a:hover, .nav.flex-column .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .nav.flex-column .tripal_toc_list_item_link:hover, .tripal-toc-pane .tripal_toc_list_item_link:hover, #block-system-management .menu .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane #block-system-management .menu .tripal_toc_list_item_link:hover, #block-system-management .nav.flex-column .menu > li > a:hover, #block-system-management ul.flex-column.tabs .menu > li > a:hover, #block-system-management ul.tabs.menu .menu > li > a:hover, #block-system-management .action-links .menu > li > a:hover, #block-system-management .tripal-toc-pane .menu > li > a:hover, #block-system-management .menu > li > a:hover, #block-system-management .menu ul .menu > li > a:hover,
-    #block-system-management .menu .nav.flex-column ul > li > a:hover, #block-system-management .menu ul.tabs ul > li > a:hover,
-    #block-system-management .menu .action-links ul > li > a:hover,
-    #block-system-management .menu .tripal-toc-pane ul > li > a:hover, #block-system-management .menu ul > li > a:hover {
+    .nav.flex-column .nav-link:hover, ul.flex-column.tabs .nav-link:hover, ul.tabs.action-links .nav-link:hover, ul.tabs.tripal-toc-pane .nav-link:hover, .action-links .nav-link:hover, .tripal-toc-pane .nav-link:hover, #block-system-management .menu .nav-link:hover, .nav.flex-column ul.tabs > li > a:hover, ul.flex-column.tabs ul.tabs > li > a:hover, .action-links ul.tabs > li > a:hover, .tripal-toc-pane ul.tabs > li > a:hover, .nav.flex-column .action-links > li > a:hover, ul.flex-column.tabs .action-links > li > a:hover, ul.tabs.action-links .action-links > li > a:hover, .action-links > li > a:hover, .tripal-toc-pane .action-links > li > a:hover, #block-system-management .menu .action-links > li > a:hover, #block-system-management .menu ul .action-links > li > a:hover, .nav.flex-column .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane .nav.flex-column .tripal_toc_list_item_link:hover, .tripal-toc-pane .tripal_toc_list_item_link:hover, #block-system-management .menu .tripal-toc-pane .tripal_toc_list_item_link:hover, .tripal-toc-pane #block-system-management .menu .tripal_toc_list_item_link:hover, #block-system-management .nav.flex-column .menu > li > a:hover, #block-system-management ul.flex-column.tabs .menu > li > a:hover, #block-system-management ul.tabs.menu .menu > li > a:hover, #block-system-management .action-links .menu > li > a:hover, #block-system-management .tripal-toc-pane .menu > li > a:hover, #block-system-management .menu > li > a:hover, #block-system-management .menu ul .menu > li > a:hover, #block-system-management .menu .nav.flex-column ul > li > a:hover,
+    #block-system-management .menu ul.tabs ul > li > a:hover, #block-system-management .menu .action-links ul > li > a:hover, #block-system-management .menu .tripal-toc-pane ul > li > a:hover,
+    #block-system-management .menu ul > li > a:hover {
       background-color: #f8f9fa; }
-  .nav.flex-column li:first-of-type > .nav-link, ul.flex-column.tabs li:first-of-type > .nav-link, ul.tabs.action-links li:first-of-type > .nav-link, ul.tabs.tripal-toc-pane li:first-of-type > .nav-link, .action-links li:first-of-type > .nav-link, .tripal-toc-pane li:first-of-type > .nav-link, #block-system-management .menu li:first-of-type > .nav-link,
-  #block-system-management .menu ul li:first-of-type > .nav-link, .nav.flex-column ul.tabs > li:first-of-type > a, ul.flex-column.tabs ul.tabs > li:first-of-type > a, .action-links ul.tabs > li:first-of-type > a, .tripal-toc-pane ul.tabs > li:first-of-type > a, .nav.flex-column .action-links > li:first-of-type > a, ul.flex-column.tabs .action-links > li:first-of-type > a, ul.tabs.action-links .action-links > li:first-of-type > a, .action-links > li:first-of-type > a, .tripal-toc-pane .action-links > li:first-of-type > a, #block-system-management .menu .action-links > li:first-of-type > a,
-  #block-system-management .menu ul .action-links > li:first-of-type > a, .nav.flex-column .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column li:first-of-type > .tripal_toc_list_item_link, ul.flex-column.tabs .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane ul.flex-column.tabs li:first-of-type > .tripal_toc_list_item_link, ul.tabs.tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .action-links .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .action-links li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane
-  #block-system-management .menu ul li:first-of-type > .tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li:first-of-type > a, #block-system-management ul.flex-column.tabs .menu > li:first-of-type > a, #block-system-management ul.tabs.menu .menu > li:first-of-type > a, #block-system-management .action-links .menu > li:first-of-type > a, #block-system-management .tripal-toc-pane .menu > li:first-of-type > a, #block-system-management .menu > li:first-of-type > a, #block-system-management .menu ul .menu > li:first-of-type > a,
-  #block-system-management .menu .nav.flex-column ul > li:first-of-type > a, #block-system-management .menu ul.tabs ul > li:first-of-type > a,
-  #block-system-management .menu .action-links ul > li:first-of-type > a,
-  #block-system-management .menu .tripal-toc-pane ul > li:first-of-type > a, #block-system-management .menu ul > li:first-of-type > a {
+  .nav.flex-column li:first-of-type > .nav-link, ul.flex-column.tabs li:first-of-type > .nav-link, ul.tabs.action-links li:first-of-type > .nav-link, ul.tabs.tripal-toc-pane li:first-of-type > .nav-link, .action-links li:first-of-type > .nav-link, .tripal-toc-pane li:first-of-type > .nav-link, #block-system-management .menu li:first-of-type > .nav-link, #block-system-management .menu ul li:first-of-type > .nav-link, .nav.flex-column ul.tabs > li:first-of-type > a, ul.flex-column.tabs ul.tabs > li:first-of-type > a, .action-links ul.tabs > li:first-of-type > a, .tripal-toc-pane ul.tabs > li:first-of-type > a, .nav.flex-column .action-links > li:first-of-type > a, ul.flex-column.tabs .action-links > li:first-of-type > a, ul.tabs.action-links .action-links > li:first-of-type > a, .action-links > li:first-of-type > a, .tripal-toc-pane .action-links > li:first-of-type > a, #block-system-management .menu .action-links > li:first-of-type > a, #block-system-management .menu ul .action-links > li:first-of-type > a, .nav.flex-column .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column li:first-of-type > .tripal_toc_list_item_link, ul.flex-column.tabs .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane ul.flex-column.tabs li:first-of-type > .tripal_toc_list_item_link, ul.tabs.tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .action-links .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .action-links li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu li:first-of-type > .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu ul li:first-of-type > .tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li:first-of-type > a, #block-system-management ul.flex-column.tabs .menu > li:first-of-type > a, #block-system-management ul.tabs.menu .menu > li:first-of-type > a, #block-system-management .action-links .menu > li:first-of-type > a, #block-system-management .tripal-toc-pane .menu > li:first-of-type > a, #block-system-management .menu > li:first-of-type > a, #block-system-management .menu ul .menu > li:first-of-type > a, #block-system-management .menu .nav.flex-column ul > li:first-of-type > a,
+  #block-system-management .menu ul.tabs ul > li:first-of-type > a, #block-system-management .menu .action-links ul > li:first-of-type > a, #block-system-management .menu .tripal-toc-pane ul > li:first-of-type > a,
+  #block-system-management .menu ul > li:first-of-type > a {
     border-top-left-radius: 0.25rem; }
-  .nav.flex-column li:last-of-type > .nav-link, ul.flex-column.tabs li:last-of-type > .nav-link, ul.tabs.action-links li:last-of-type > .nav-link, ul.tabs.tripal-toc-pane li:last-of-type > .nav-link, .action-links li:last-of-type > .nav-link, .tripal-toc-pane li:last-of-type > .nav-link, #block-system-management .menu li:last-of-type > .nav-link,
-  #block-system-management .menu ul li:last-of-type > .nav-link, .nav.flex-column ul.tabs > li:last-of-type > a, ul.flex-column.tabs ul.tabs > li:last-of-type > a, .action-links ul.tabs > li:last-of-type > a, .tripal-toc-pane ul.tabs > li:last-of-type > a, .nav.flex-column .action-links > li:last-of-type > a, ul.flex-column.tabs .action-links > li:last-of-type > a, ul.tabs.action-links .action-links > li:last-of-type > a, .action-links > li:last-of-type > a, .tripal-toc-pane .action-links > li:last-of-type > a, #block-system-management .menu .action-links > li:last-of-type > a,
-  #block-system-management .menu ul .action-links > li:last-of-type > a, .nav.flex-column .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column li:last-of-type > .tripal_toc_list_item_link, ul.flex-column.tabs .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane ul.flex-column.tabs li:last-of-type > .tripal_toc_list_item_link, ul.tabs.tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .action-links .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .action-links li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane
-  #block-system-management .menu ul li:last-of-type > .tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li:last-of-type > a, #block-system-management ul.flex-column.tabs .menu > li:last-of-type > a, #block-system-management ul.tabs.menu .menu > li:last-of-type > a, #block-system-management .action-links .menu > li:last-of-type > a, #block-system-management .tripal-toc-pane .menu > li:last-of-type > a, #block-system-management .menu > li:last-of-type > a, #block-system-management .menu ul .menu > li:last-of-type > a,
-  #block-system-management .menu .nav.flex-column ul > li:last-of-type > a, #block-system-management .menu ul.tabs ul > li:last-of-type > a,
-  #block-system-management .menu .action-links ul > li:last-of-type > a,
-  #block-system-management .menu .tripal-toc-pane ul > li:last-of-type > a, #block-system-management .menu ul > li:last-of-type > a {
+  .nav.flex-column li:last-of-type > .nav-link, ul.flex-column.tabs li:last-of-type > .nav-link, ul.tabs.action-links li:last-of-type > .nav-link, ul.tabs.tripal-toc-pane li:last-of-type > .nav-link, .action-links li:last-of-type > .nav-link, .tripal-toc-pane li:last-of-type > .nav-link, #block-system-management .menu li:last-of-type > .nav-link, #block-system-management .menu ul li:last-of-type > .nav-link, .nav.flex-column ul.tabs > li:last-of-type > a, ul.flex-column.tabs ul.tabs > li:last-of-type > a, .action-links ul.tabs > li:last-of-type > a, .tripal-toc-pane ul.tabs > li:last-of-type > a, .nav.flex-column .action-links > li:last-of-type > a, ul.flex-column.tabs .action-links > li:last-of-type > a, ul.tabs.action-links .action-links > li:last-of-type > a, .action-links > li:last-of-type > a, .tripal-toc-pane .action-links > li:last-of-type > a, #block-system-management .menu .action-links > li:last-of-type > a, #block-system-management .menu ul .action-links > li:last-of-type > a, .nav.flex-column .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .nav.flex-column li:last-of-type > .tripal_toc_list_item_link, ul.flex-column.tabs .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane ul.flex-column.tabs li:last-of-type > .tripal_toc_list_item_link, ul.tabs.tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .action-links .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane .action-links li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, #block-system-management .menu .tripal-toc-pane li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu li:last-of-type > .tripal_toc_list_item_link, .tripal-toc-pane #block-system-management .menu ul li:last-of-type > .tripal_toc_list_item_link, #block-system-management .nav.flex-column .menu > li:last-of-type > a, #block-system-management ul.flex-column.tabs .menu > li:last-of-type > a, #block-system-management ul.tabs.menu .menu > li:last-of-type > a, #block-system-management .action-links .menu > li:last-of-type > a, #block-system-management .tripal-toc-pane .menu > li:last-of-type > a, #block-system-management .menu > li:last-of-type > a, #block-system-management .menu ul .menu > li:last-of-type > a, #block-system-management .menu .nav.flex-column ul > li:last-of-type > a,
+  #block-system-management .menu ul.tabs ul > li:last-of-type > a, #block-system-management .menu .action-links ul > li:last-of-type > a, #block-system-management .menu .tripal-toc-pane ul > li:last-of-type > a,
+  #block-system-management .menu ul > li:last-of-type > a {
     border-bottom-left-radius: 0.25rem; }
 
 .help-tab-pane {
@@ -6955,7 +7117,8 @@ th.views-field.short-column {
   vertical-align: middle; }
 
 .table tr.no-border > td, table tr.no-border > td,
-.table tr.no-border > th, table tr.no-border > th {
+.table tr.no-border > th,
+table tr.no-border > th {
   border: 0; }
 
 .tripal-data-pane {
@@ -7014,16 +7177,21 @@ a.tabledrag-handle {
     margin-left: 10px; }
 
 .table td p:empty, table td p:empty,
-.table th p:empty, table th p:empty {
+.table th p:empty,
+table th p:empty {
   display: none; }
 
 .table td table, table td table,
-.table th table, table th table {
+.table th table,
+table th table {
   margin: 0; }
   .table td table th, table td table th,
-  .table td table td, table td table td,
-  .table th table th, table th table th,
-  .table th table td, table th table td {
+  .table td table td,
+  table td table td,
+  .table th table th,
+  table th table th,
+  .table th table td,
+  table th table td {
     padding: 0; }
 
 table.table-layout-fixed {
@@ -7127,18 +7295,18 @@ table caption {
 .es-search-form-in-home .form-control, .es-search-form-in-home #edit-search-box, .es-search-form-in-home .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-home select,
 .es-search-form-in-title .form-control,
 .es-search-form-in-title #edit-search-box,
-.es-search-form-in-title .es-cross-site-search-form select, .es-cross-site-search-form
-.es-search-form-in-title select {
+.es-search-form-in-title .es-cross-site-search-form select,
+.es-cross-site-search-form .es-search-form-in-title select {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125); }
   .es-search-form-in-home .form-control:focus, .es-search-form-in-home #edit-search-box:focus, .es-search-form-in-home .es-cross-site-search-form select:focus, .es-cross-site-search-form .es-search-form-in-home select:focus, .es-search-form-in-home .form-control:hover, .es-search-form-in-home #edit-search-box:hover, .es-search-form-in-home .es-cross-site-search-form select:hover, .es-cross-site-search-form .es-search-form-in-home select:hover,
   .es-search-form-in-title .form-control:focus,
   .es-search-form-in-title #edit-search-box:focus,
-  .es-search-form-in-title .es-cross-site-search-form select:focus, .es-cross-site-search-form
-  .es-search-form-in-title select:focus,
+  .es-search-form-in-title .es-cross-site-search-form select:focus,
+  .es-cross-site-search-form .es-search-form-in-title select:focus,
   .es-search-form-in-title .form-control:hover,
   .es-search-form-in-title #edit-search-box:hover,
-  .es-search-form-in-title .es-cross-site-search-form select:hover, .es-cross-site-search-form
-  .es-search-form-in-title select:hover {
+  .es-search-form-in-title .es-cross-site-search-form select:hover,
+  .es-cross-site-search-form .es-search-form-in-title select:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 0; }
 
@@ -7148,12 +7316,20 @@ table caption {
     .es-search-form-in-title .elasticsearch-search-input .form-control, .es-search-form-in-title .elasticsearch-search-input #edit-search-box, .es-search-form-in-title .elasticsearch-search-input .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-title .elasticsearch-search-input select {
       max-width: 100%; } }
 
-.es-search-form-in-title .form-control, .es-search-form-in-title #edit-search-box, .es-search-form-in-title .es-cross-site-search-form select, .es-cross-site-search-form .es-search-form-in-title select {
+
+.es-search-form-in-title .form-control,
+.es-search-form-in-title #edit-search-box,
+.es-search-form-in-title .es-cross-site-search-form select,
+.es-cross-site-search-form .es-search-form-in-title select {
   transition: max-width 250ms linear;
   max-width: 300px;
   margin-left: auto;
   height: 38px; }
-  .es-search-form-in-title .form-control:focus, .es-search-form-in-title #edit-search-box:focus, .es-search-form-in-title .es-cross-site-search-form select:focus, .es-cross-site-search-form .es-search-form-in-title select:focus {
+  
+  .es-search-form-in-title .form-control:focus,
+  .es-search-form-in-title #edit-search-box:focus,
+  .es-search-form-in-title .es-cross-site-search-form select:focus,
+  .es-cross-site-search-form .es-search-form-in-title select:focus {
     max-width: 100%; }
 
 .es-search-form-in-title .input-group-btn .btn, .es-search-form-in-title .input-group-btn #edit-cancel, .es-search-form-in-title .input-group-btn #edit-search-submit {
