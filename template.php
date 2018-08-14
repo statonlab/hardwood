@@ -3,7 +3,26 @@
 /**
  * Include all necessary files.
  */
-include_once drupal_get_path('theme', 'hardwood') . '/templates/system/page.vars.php';
+include_once __DIR__ . '/templates/system/page.vars.php';
+
+/**
+ * Implements hook_menu_alter().
+ *
+ * @param $items
+ */
+function hardwood_menu_alter(&$items) {
+  if (isset($items['user/%/galaxy-jobs'])) {
+    $items['user/%/galaxy-jobs']['title'] = t('My Galaxy Workflows');
+  }
+
+  if (isset($items['user/%/data-collections'])) {
+    $items['user/%/data-collections']['title'] = t('My Data Collections');
+  }
+
+  if (isset($items['user/%/files'])) {
+    $items['user/%/files']['title'] = t('My Files');
+  }
+}
 
 /**
  * Add `btn` class to all buttons.
@@ -15,7 +34,11 @@ function hardwood_preprocess_button(&$variables) {
   $variables['element']['#attributes']['class'][] = 'mb-2';
 
   if (is_array($variables['element']['#attributes']['class'])) {
-    if (in_array('btn-default', $variables['element']['#attributes']['class']) || in_array('btn-danger', $variables['element']['#attributes']['class']) || in_array('btn-warning', $variables['element']['#attributes']['class']) || in_array('btn-info', $variables['element']['#attributes']['class'])) {
+    if (in_array('btn-default',
+        $variables['element']['#attributes']['class']) || in_array('btn-danger',
+        $variables['element']['#attributes']['class']) || in_array('btn-warning',
+        $variables['element']['#attributes']['class']) || in_array('btn-info',
+        $variables['element']['#attributes']['class'])) {
       return;
     }
   }
@@ -207,10 +230,11 @@ function hardwood_form_element($variables) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-      if (!empty($element['#description']) && isset($element['#type']) && in_array($element['#type'], [
-          'radios',
-          'checkboxes',
-        ])) {
+      if (!empty($element['#description']) && isset($element['#type']) && in_array($element['#type'],
+          [
+            'radios',
+            'checkboxes',
+          ])) {
         $output .= '<div class="form-text text-muted mb-2">' . $element['#description'] . "</div>\n";
       }
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
@@ -219,10 +243,11 @@ function hardwood_form_element($variables) {
     case 'after':
       $output .= ' ' . $prefix . $element['#children'] . $suffix;
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
-      if (!empty($element['#description']) && isset($element['#type']) && in_array($element['#type'], [
-          'radios',
-          'checkboxes',
-        ])) {
+      if (!empty($element['#description']) && isset($element['#type']) && in_array($element['#type'],
+          [
+            'radios',
+            'checkboxes',
+          ])) {
         $output .= '<div class="form-text text-muted mb-2">' . $element['#description'] . "</div>\n";
       }
       break;
@@ -234,10 +259,11 @@ function hardwood_form_element($variables) {
       break;
   }
 
-  if (!empty($element['#description']) && (!isset($element['#type']) || !in_array($element['#type'], [
-        'radios',
-        'checkboxes',
-      ]))) {
+  if (!empty($element['#description']) && (!isset($element['#type']) || !in_array($element['#type'],
+        [
+          'radios',
+          'checkboxes',
+        ]))) {
     $output .= '<div class="form-text text-muted">' . $element['#description'] . "</div>\n";
   }
 
@@ -387,7 +413,8 @@ function hardwood_menu_link__main_menu(array $variables) {
     }
   }
 
-  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
+  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href,
+      $options) . $sub_menu . "</li>\n";
 }
 
 function hardwood_menu_link__user_menu(array &$variables) {
@@ -424,7 +451,8 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['trpdownload_page']['template'] = 'other/generic_download_page';
 
   foreach ($theme_registry as $key => $theme) {
-    if (isset($theme['template']) && strpos($theme['template'], 'node--chado-generic') !== FALSE) {
+    if (isset($theme['template']) && strpos($theme['template'],
+        'node--chado-generic') !== FALSE) {
       $theme_registry[$key]['path'] = $path . '/templates';
       $theme_registry[$key]['template'] = 'tripal/node--chado-generic';
     }
@@ -473,7 +501,8 @@ function hardwood_form_contact_site_form_alter(&$form, &$form_state) {
  */
 function hardwood_js_alter(&$javascript) {
   unset($javascript['misc/collapse.js']);
-  drupal_add_js(drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js', []);
+  drupal_add_js(drupal_get_path('theme', 'hardwood') . '/dist/js/collapse.js',
+    []);
 }
 
 /**
