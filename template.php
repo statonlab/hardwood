@@ -3,7 +3,7 @@
 /**
  * Include all necessary files.
  */
-include_once __DIR__.'/templates/system/page.vars.php';
+include_once __DIR__ . '/templates/system/page.vars.php';
 
 /**
  * Implements hook_menu_alter().
@@ -11,9 +11,17 @@ include_once __DIR__.'/templates/system/page.vars.php';
  * @param $items
  */
 function hardwood_menu_alter(&$items) {
-  $items['user/%/galaxy-jobs']['title'] = t('My Galaxy Workflows');
-  $items['user/%/data-collections']['title'] = t('My Data Collections');
-  $items['user/%/files']['title'] = t('My Files');
+  if (isset($items['user/%/galaxy-jobs'])) {
+    $items['user/%/galaxy-jobs']['title'] = t('My Galaxy Workflows');
+  }
+
+  if (isset($items['user/%/data-collections'])) {
+    $items['user/%/data-collections']['title'] = t('My Data Collections');
+  }
+
+  if (isset($items['user/%/files'])) {
+    $items['user/%/files']['title'] = t('My Files');
+  }
 }
 
 /**
