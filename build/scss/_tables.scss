@@ -129,11 +129,10 @@ a.tabledrag-handle {
     padding: 0;
   }
 }
-
-table.table-layout-fixed {
-  table-layout: fixed!important;
+table.table-layout-fixed,
+table.sticky-table {
+  table-layout: fixed !important;
 }
-
 table caption {
   caption-side: top;
   color: #444;
