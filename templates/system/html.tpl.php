@@ -53,6 +53,7 @@
       xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0"
       dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 <head profile="<?php print $grddl_profile; ?>">
+    <meta name="google-site-verification" content="V-vL6hZxiR3qQxSS2fj6-eg3gWciSKkuCzB_yUULvdU" />
   <?php print $head; ?>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
