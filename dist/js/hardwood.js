@@ -165,15 +165,16 @@
       var _that = this;
 
       links.each(function () {
-        var id = '.tripal_pane-fieldset-' + $(this).attr('id');
-        if ($(id).length === 0) {
-          //$(this).parents('.views-row').first().remove();
-          return;
-        }
+        console.log($(this))
+        // var id = '.tripal_pane-fieldset-' + $(this).attr('id');
+        // if ($(id).length === 0) {
+        //   $(this).parents('.views-row').first().remove();
+        //   return;
+        // }
 
-        if ($(id).children().not('.field-group-format-title').text().trim().length === 0) {
-          //$(this).parents('.views-row').first().remove();
-        }
+        // if ($(id).children().not('.field-group-format-title').text().trim().length === 0) {
+        //   $(this).parents('.views-row').first().remove();
+        // }
       });
 
       links.unbind('click');
@@ -317,6 +318,9 @@
   });
 })(jQuery);
 
+/**
+ * Help button
+ */
 (function ($) {
   $(function () {
     $('.help-button-trigger').click(function (e) {
@@ -338,8 +342,7 @@
     });
 
     $('.fieldset-wrapper').each(function (i, f) {
-      f = $(f);
-      //f.text().trim().length === 0 && f.parents('fieldset').first().remove();
+      $(f).text().trim().length === 0 && f.parents('fieldset').first().remove();
     });
   });
 })(jQuery);
