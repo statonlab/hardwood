@@ -11,7 +11,7 @@
 
 
     $('#elasticsearch_hits_table tr td:nth-of-type(2)').each(function () {
-      var text = $(this).html();
+      var text  = $(this).html();
       var array = text.split('<br>');
 
       if (array.length > 2) {
@@ -22,24 +22,24 @@
         div.append(hidden);
         div.append('<br>');
         var btn = $('<button />', {
-          'type': 'button',
+          'type' : 'button',
           'class': 'btn btn-secondary btn-sm'
         }).html('Show More')
-            .click(function (e) {
-              e.preventDefault();
+          .click(function (e) {
+            e.preventDefault();
 
-              var hidden_hit = hidden;
-              if (hidden_hit.hasClass('is_open')) {
-                hidden_hit.removeClass('is_open');
-                hidden_hit.slideUp();
-                btn.html('Show More');
-              }
-              else {
-                hidden_hit.slideDown();
-                hidden_hit.addClass('is_open');
-                btn.html('Show Less');
-              }
-            });
+            var hidden_hit = hidden;
+            if (hidden_hit.hasClass('is_open')) {
+              hidden_hit.removeClass('is_open');
+              hidden_hit.slideUp();
+              btn.html('Show More');
+            }
+            else {
+              hidden_hit.slideDown();
+              hidden_hit.addClass('is_open');
+              btn.html('Show Less');
+            }
+          });
         div.append(btn);
         $(this).html(div);
       }
@@ -51,13 +51,13 @@
     $('#block-tripal-elasticsearch-website-search-category .es-category-item').each(function () {
       $(this).css('position', 'relative');
       var text = $(this).text().split(' ');
-      var num = text.pop();
-      text = text.join(' ').split('_').join(' ');
+      var num  = text.pop();
+      text     = text.join(' ').split('_').join(' ');
       var span = $('<span />', {'class': 'float-right'}).text(num.replace('(', '').replace(')', ''));
       span.css({
-        position: 'absolute',
-        right: 0,
-        top: 0,
+        position       : 'absolute',
+        right          : 0,
+        top            : 0,
         backgroundColor: '#fff'
       });
 
@@ -68,13 +68,13 @@
       else {
         span.css({
           backgroundColor: '#e6e6e6',
-          borderRadius: 10,
-          paddingTop: 2,
-          paddingBottom: 2,
-          paddingLeft: 7,
-          paddingRight: 7,
-          fontSize: 12,
-          color: '#999'
+          borderRadius   : 10,
+          paddingTop     : 2,
+          paddingBottom  : 2,
+          paddingLeft    : 7,
+          paddingRight   : 7,
+          fontSize       : 12,
+          color          : '#999'
         });
       }
 
@@ -99,7 +99,7 @@
     });
 
     $('.tripal_pane').not('.hideTripalPane').each(function () {
-      var c = $(this).attr('class');
+      var c     = $(this).attr('class');
       var field = c.match(/^tripal_pane-fieldset-(.*$)/) || [];
       if (field.length === 2) {
         $('#' + field[1].split(' ')[0]).addClass('active');
@@ -182,8 +182,8 @@
 
         // Add active class to the element that was just clicked
         $(this).parents('.ds-left')
-            .find('.tripal_pane-toc-list-item-link.active')
-            .removeClass('active');
+          .find('.tripal_pane-toc-list-item-link.active')
+          .removeClass('active');
         $(this).addClass('active');
 
         var pane = $('.tripal_pane-fieldset-' + $(this).attr('id'));
@@ -226,8 +226,8 @@
 
       // Disable the active link
       $('.ds-left')
-          .find('.tripal_pane-toc-list-item-link.active')
-          .removeClass('active');
+        .find('.tripal_pane-toc-list-item-link.active')
+        .removeClass('active');
 
       // Hide the active pane
       $('.ds-right .showTripalPane').removeClass('showTripalPane').addClass('hideTripalPane');
@@ -256,13 +256,13 @@
           var broken = param.split('=');
           if (broken.length === 2) {
             return {
-              name: broken[0],
+              name : broken[0],
               value: broken[1]
             };
           }
           else if (broken.length === 1) {
             return {
-              name: broken[0],
+              name : broken[0],
               value: null
             };
           }
@@ -282,17 +282,17 @@
      */
     TripalDS.prototype.pushToHistory = function (id) {
       var params = this.getURLParameters();
-      var added = false;
+      var added  = false;
       for (var i = 0; i < params.length; i++) {
         if (params[i] && params[i].name === 'tripal_pane') {
           params[i].value = id;
-          added = true;
+          added           = true;
         }
       }
 
       if (!added) {
         params.push({
-          name: 'tripal_pane',
+          name : 'tripal_pane',
           value: id
         });
       }
@@ -308,7 +308,7 @@
       if (window.history) {
         var state = window.history.state;
         var title = document.title;
-        var path = window.location.pathname;
+        var path  = window.location.pathname;
         window.history.replaceState(state, title, path + '?' + query);
       }
     };
@@ -322,7 +322,7 @@
     $('.help-button-trigger').click(function (e) {
       e.preventDefault();
 
-      var parent = $(this).parents('.help-button-block').first();
+      var parent  = $(this).parents('.help-button-block').first();
       var content = parent.find('.help-button-content');
 
       if (parent.hasClass('open')) {
@@ -336,5 +336,59 @@
       parent.addClass('open');
       content.slideDown();
     });
+  });
+})(jQuery);
+
+(function ($) {
+  $(function () {
+    let opened = init();
+
+    if (!opened) {
+      $('#open-survey-modal').fadeIn();
+    }
+
+
+    function init() {
+      var ds = window.localStorage;
+      // ds.removeItem('hardwoods.survey');
+
+      if (!ds) {
+        return false;
+      }
+
+      $('#open-survey-modal').click(function () {
+        $('#survey-modal').modal('show');
+        $(this).fadeOut();
+      });
+
+      $('#give-feedback-btn').click(function () {
+        $('#survey-modal').modal('hide');
+      });
+
+      $('#survey-modal').on('hide.bs.modal', function () {
+        ds.setItem('hardwoods.survey', (new Date()).valueOf());
+        $('#open-survey-modal').fadeIn();
+      });
+
+      var item    = ds.getItem('hardwoods.survey');
+      // 30 days
+      var seconds = 1000 * 60 * 24 * 30;
+      if (item) {
+        item = parseInt(item);
+
+        if ((new Date()).valueOf() > (item + seconds)) {
+          ds.removeItem('hardwoods.survey');
+        }
+        else {
+          return false;
+        }
+      }
+
+      setTimeout(function () {
+        $('#survey-modal').modal('show');
+
+      }, 1000);
+      return true;
+    }
   });
 })(jQuery);
