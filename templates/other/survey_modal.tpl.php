@@ -23,7 +23,7 @@
                 <p class="lead">Help us improve your experience by taking a short survey!</p>
                 <p>
                     By clicking the Give Feedback button, you'll be redirected to
-                    a form to fill.
+                    the survey form.
                 </p>
             </div>
             <div class="modal-footer border-top-0 bg-gray rounded-bottom d-flex">
