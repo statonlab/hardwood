@@ -1,0 +1,19 @@
+#open-survey-modal {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+  display: none;
+  transition: padding-bottom .2s linear;
+  background: $danger;
+  color: #fff;
+  padding: .5rem 1.5rem;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+
+  &:hover {
+    text-decoration: none;
+    background-color: darken($danger, 9%);
+    padding-bottom: 1rem;
+  }
+}

@@ -432,6 +432,15 @@ function hardwood_menu_tree_link__sub_menu(array &$variables) {
   return '<div class="dropdown-menu">' . $variables['tree'] . '</div>';
 }
 
+function hardwood_theme($existing, $type, $theme, $path) {
+  return [
+    'survey_modal' => [
+      'template' => 'other/survey_modal',
+      'path' => $path . '/templates',
+    ],
+  ];
+}
+
 /**
  * Implements hook_theme_registry_alter().
  *

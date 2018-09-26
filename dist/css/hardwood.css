@@ -7743,3 +7743,20 @@ form label {
 
 .entity-tripalentity .tripal_pane-fieldset-buttons {
   display: none; }
+
+#open-survey-modal {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+  display: none;
+  transition: padding-bottom .2s linear;
+  background: #dc3545;
+  color: #fff;
+  padding: .5rem 1.5rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); }
+  #open-survey-modal:hover {
+    text-decoration: none;
+    background-color: #c22231;
+    padding-bottom: 1rem; }
