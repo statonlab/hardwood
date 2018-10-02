@@ -386,7 +386,6 @@
 
       setTimeout(function () {
         $('#survey-modal').modal('show');
-
       }, 1000);
       return true;
     }
