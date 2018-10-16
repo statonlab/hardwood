@@ -96,6 +96,14 @@
                                 functional annotation, and genetic markers.
                             </p>
 
+                            <a href="/cross-site-search" class="announcement mt-4 mx-auto align-items-center pl-2 pr-3 d-flex justify-content-between">
+                                <div>
+                                    <span class="announcement-subtext text-xs">NEW</span>
+                                    <span>Try searching across multiple genomic databases from a single page!</span>
+                                </div>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+
                           <?php if ($page['front_search']): ?>
                               <div class="row justify-content-center">
                                   <div class="col-12 col-md-8 col-xl-6 input-group-lg es-search-form-in-home">

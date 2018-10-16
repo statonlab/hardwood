@@ -1,0 +1,38 @@
+.announcement {
+  background-color: darken(theme-color(warning), 10%);
+  border-radius: 20px;
+  min-height: 40px;
+  max-width: 600px;
+  //overflow: hidden;
+  //white-space: nowrap;
+  font-weight: lighter;
+
+  > span {
+    margin-right: 10px;
+  }
+
+  &,
+  &:hover {
+    color: lighten(theme-color(warning), 56%);
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: darken(theme-color(warning), 20%);
+    .announcement-subtext {
+      background-color: darken(theme-color(warning), 30%);
+    }
+  }
+
+  &,
+  .announcement-subtext {
+    transition: background-color .2s linear;
+  }
+}
+
+.announcement-subtext {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: darken(theme-color(warning), 20%);
+}
