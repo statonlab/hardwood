@@ -7760,3 +7760,28 @@ form label {
     text-decoration: none;
     background-color: #c22231;
     padding-bottom: 1rem; }
+
+.announcement {
+  background-color: #d39e00;
+  border-radius: 20px;
+  min-height: 40px;
+  max-width: 600px;
+  font-weight: lighter; }
+  .announcement > span {
+    margin-right: 10px; }
+  .announcement, .announcement:hover {
+    color: white;
+    text-decoration: none; }
+  .announcement:hover {
+    background-color: #a07800; }
+    .announcement:hover .announcement-subtext {
+      background-color: #6d5200; }
+  .announcement,
+  .announcement .announcement-subtext {
+    transition: background-color .2s linear; }
+
+.announcement-subtext {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #a07800; }
