@@ -87,22 +87,22 @@
                             <h1 class="text-center">
                                 Hardwood Genomics Project
                             </h1>
-                            <p class="lead text-center"
-                               style="margin-top: 40px">
-                                An open-source database for comparative and
-                                functional genomics in forest trees and woody
-                                plant species. Available data include genomes,
-                                gene models, transcriptomes, gene expression,
-                                functional annotation, and genetic markers.
-                            </p>
 
-                            <a href="/cross-site-search" class="announcement mt-4 mx-auto align-items-center pl-2 pr-3 d-flex justify-content-between">
+                            <a href="/cross-site-search" class="announcement my-4 mx-auto align-items-center pl-2 pr-3 d-flex justify-content-between">
                                 <div>
                                     <span class="announcement-subtext text-xs">NEW</span>
                                     <span>Try searching across multiple genomic databases from a single page!</span>
                                 </div>
                                 <i class="fa fa-arrow-right"></i>
                             </a>
+
+                            <p class="lead text-center">
+                                An open-source database for comparative and
+                                functional genomics in forest trees and woody
+                                plant species. Available data include genomes,
+                                gene models, transcriptomes, gene expression,
+                                functional annotation, and genetic markers.
+                            </p>
 
                           <?php if ($page['front_search']): ?>
                               <div class="row justify-content-center">
