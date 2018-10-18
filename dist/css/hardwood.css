@@ -7655,6 +7655,8 @@ form label {
 
 .tool-card-footer {
   padding: 0 1rem 1rem 1rem; }
+  .tool-card-footer .btn, .tool-card-footer #edit-cancel, .tool-card-footer #edit-search-submit {
+    margin-right: 0 !important; }
 
 @media (max-width: 991.98px) {
   .entity-tripalentity {
