@@ -371,8 +371,8 @@
       });
 
       var item    = ds.getItem('hardwoods.survey');
-      // 3 days
-      var seconds = 1000 * 60 * 60 * 24 * 3;
+      // 30 days
+      var seconds = 1000 * 60 * 60 * 60 * 24 * 30;
       if (item) {
         item = parseInt(item);
 
