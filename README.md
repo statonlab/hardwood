@@ -1,3 +1,5 @@
+🚨**WARNING:** Although open source, this theme has been developed for the [hardwood genomics website](https://hardwoodgenomics.org) only! Attempting to use it elsewhere may result in unpredictible issues.
+
 ### Installation 
 - Download the file to your drupal installation ```sites/all/theme```. 
 - Enable and set as default from the admin control panel.
