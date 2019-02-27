@@ -417,6 +417,12 @@ function hardwood_menu_link__main_menu(array $variables) {
       $options) . $sub_menu . "</li>\n";
 }
 
+/**
+ * @param array $variables
+ *
+ * @return string
+ * @see \theme_menu_link()
+ */
 function hardwood_menu_link__user_menu(array &$variables) {
   return hardwood_menu_link__main_menu($variables);
 }
@@ -432,6 +438,20 @@ function hardwood_menu_tree_link__sub_menu(array &$variables) {
   return '<div class="dropdown-menu">' . $variables['tree'] . '</div>';
 }
 
+/**
+ * Create themeable objects.
+ *
+ * Implements hook_theme()
+ *
+ * @param array $existing
+ * @param string $type
+ * @param string $theme
+ * @param string $path
+ *
+ * @return array
+ *
+ * @see \hook_theme()
+ */
 function hardwood_theme($existing, $type, $theme, $path) {
   return [
     'survey_modal' => [
