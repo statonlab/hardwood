@@ -388,7 +388,7 @@
             var $this = $(this);
 
             if ($this.text().length > 40) {
-                $this.html($this.html().replace(/_/g, "_<wbr>"))
+                // $this.html($this.html().replace(/_/g, "_<wbr>"))
             }
         })
     });
