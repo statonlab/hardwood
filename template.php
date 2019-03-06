@@ -292,6 +292,7 @@ function hardwood_button($variables) {
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
+
 /**
  * Alter status messages to use bootstrap alerts.
  *
@@ -616,3 +617,4 @@ function hardwood_add_help_variables(&$variables) {
     $variables['help_items'] = hardwoods_help_get_help_menu_items();
   }
 }
+
