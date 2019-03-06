@@ -490,6 +490,14 @@ function hardwood_theme_registry_alter(&$theme_registry) {
 }
 
 /**
+ * @param $form
+ * @param $form_state
+ */
+function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
+   hardwood_form_tripal_elasticsearch_site_wide_search_form_alter($form, $form_state);
+}
+
+/**
  * Alter the search form to use Bootstrap fields.
  *
  * @param $form
