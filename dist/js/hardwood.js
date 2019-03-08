@@ -412,7 +412,9 @@
     $('td, th').each(function () {
       var $this = $(this)
       if ($this.text().length > 40) {
-        fix_styling($this)
+        $this.children().each(function() {
+          fix_styling($(this))
+        })
       }
     })
   })
