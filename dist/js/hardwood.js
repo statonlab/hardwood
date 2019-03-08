@@ -118,12 +118,13 @@
       }
     })
   })
-})(jQuery)
 
-/**
- * Allow dropdown menus to open by hover on bigger devices.
- */
-(function ($) {
+
+  /**
+   * Allow dropdown menus to open by hover on bigger devices.
+   */
+
+
   $(function () {
     $('.navbar .last > .dropdown-menu').addClass('dropdown-menu-right')
     $('.navbar .dropdown > .nav-link').click(function (e) {
@@ -145,12 +146,12 @@
       }
     })
   })
-})(jQuery)
 
-/**
- * Re-implement Tripal DS
- */
-(function ($) {
+
+  /**
+   * Re-implement Tripal DS
+   */
+
   $(function () {
     function TripalDS() {
       this.init()
@@ -315,9 +316,7 @@
 
     return new TripalDS()
   })
-})(jQuery);
 
-(function ($) {
   $(function () {
     $('.help-button-trigger').click(function (e) {
       e.preventDefault()
@@ -337,9 +336,7 @@
       content.slideDown()
     })
   })
-})(jQuery);
 
-(function ($) {
   $(function () {
     let opened = init()
 
