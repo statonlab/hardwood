@@ -387,8 +387,13 @@
       return true
     }
 
+    var visited = [];
     function fix_styling($item) {
-      console.log($item)
+      if(visited.indexOf($item)) {
+        return
+      }
+
+      visited.push($item)
       if ($item.siblings().length > 0) {
         $item.siblings().each(function () {
           fix_styling($(this))
