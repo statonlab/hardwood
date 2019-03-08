@@ -389,7 +389,7 @@
 
     var visited = [];
     function fix_styling($item) {
-      if(visited.indexOf($item)) {
+      if(visited.indexOf($item) > -1) {
         return
       }
 
