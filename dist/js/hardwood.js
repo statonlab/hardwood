@@ -388,17 +388,6 @@
     }
 
     function fix_styling($item) {
-      if ($item.visited) {
-        return
-      }
-
-      $item.visited = true
-      if ($item.siblings().length > 0) {
-        $item.siblings().each(function () {
-          fix_styling($(this))
-        })
-      }
-
       if ($item.children().length > 0) {
         $item.children().each(function () {
           fix_styling($(this))
