@@ -388,7 +388,11 @@
             var $this = $(this);
 
             if ($this.text().length > 40) {
-                // $this.html($this.html().replace(/_/g, "_<wbr>"))
+                var inner = $this
+                while(inner.children().length) {
+                    inner = inner.children()
+                }
+                inner.html(inner.html().replace(/_/g, "_<wbr>"))
             }
         })
     });
