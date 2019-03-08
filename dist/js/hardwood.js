@@ -390,13 +390,6 @@
       return true
     }
 
-    $('td, th').each(function () {
-      var $this = $(this)
-      if ($this.text().length > 40) {
-        fix_styling($this)
-      }
-    })
-
     function fix_styling($item) {
       if ($item.siblings().length > 0) {
         $item.siblings().each(function () {
@@ -413,5 +406,12 @@
         $item.html($item.html().replace(/_/g, '_<wbr>'))
       }
     }
+
+    $('td, th').each(function () {
+      var $this = $(this)
+      if ($this.text().length > 40) {
+        fix_styling($this)
+      }
+    })
   })
 })(jQuery)
