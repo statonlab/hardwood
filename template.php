@@ -480,8 +480,8 @@ function hardwood_theme_registry_alter(&$theme_registry) {
   $theme_registry['trpdownload_page']['path'] = $path . '/templates';
   $theme_registry['trpdownload_page']['template'] = 'other/generic_download_page';
 
-  $theme['analysis_expression_plot']['path'] = $path . '/templates';
-  $theme['analysis_expression_plot']['template'] = 'tripal/tripal_analysis_expression.analysis';
+  $theme_registry['analysis_expression_plot']['path'] = $path . '/templates';
+  $theme_registry['analysis_expression_plot']['template'] = 'tripal/tripal_analysis_expression.analysis';
 
   foreach ($theme_registry as $key => $theme) {
     if (isset($theme['template']) && strpos($theme['template'],
