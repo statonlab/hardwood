@@ -8112,7 +8112,7 @@ table caption {
   #es-search-results-table tbody > tr:first-of-type > td {
     border-top: 0; }
 
-.es-search-form-in-title .elasticsearch-input .input-group-btn {
+.es-search-form-in-title .elasticsearch-search-input .input-group-btn {
   right: -2px !important;
   top: 2px !important; }
 
