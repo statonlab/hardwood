@@ -8113,8 +8113,8 @@ table caption {
     border-top: 0; }
 
 .es-search-form-in-title .elasticsearch-input .input-group-btn {
-  right: -2px;
-  top: 2px; }
+  right: -2px !important;
+  top: 2px !important; }
 
 .collapsed > .fieldset-wrapper {
   display: none; }
