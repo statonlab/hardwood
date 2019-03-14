@@ -8297,6 +8297,10 @@ form label {
 .form-required {
   color: #dc3545; }
 
+.container-inline .form-group,
+.container-inline .form-item {
+  display: inline-block; }
+
 .dropdown-menu {
   border-width: 0;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.3); }
