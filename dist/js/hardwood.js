@@ -196,7 +196,7 @@
 
           var id = $(this).attr('id');
           _that.pushToHistory(id);
-          $('input[type="hidden"][name="tripal_pane"]').value(id);
+          $('input[type="hidden"][name="tripal_pane"]').attr('value', id);
         }
       });
     };
