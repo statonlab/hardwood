@@ -8022,7 +8022,7 @@ table caption {
   .elasticsearch-search-input .input-group-btn {
     position: absolute;
     right: -1px;
-    top: 2px;
+    top: 4px;
     z-index: 200; }
     .elasticsearch-search-input .input-group-btn .btn, .elasticsearch-search-input .input-group-btn #edit-cancel, .elasticsearch-search-input .input-group-btn #edit-search-submit {
       border-radius: 10px;
