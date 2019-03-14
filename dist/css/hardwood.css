@@ -8091,8 +8091,8 @@ table caption {
   height: 51px; }
 
 .es-search-form-in-home .input-group-btn {
-  right: 0;
-  top: 3px; }
+  right: -3px;
+  top: 1px; }
   .es-search-form-in-home .input-group-btn .btn, .es-search-form-in-home .input-group-btn #edit-cancel, .es-search-form-in-home .input-group-btn #edit-search-submit {
     width: 45px;
     height: 45px;
