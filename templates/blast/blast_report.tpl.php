@@ -249,7 +249,7 @@ $no_hits = TRUE;
                 ),
                 'number' => array('data' => $count, 'class' => array('number')),
                 'query' => array(
-                  'data' => $query_name,
+                  'data' => str_replace("No definition line", "User-provided sequence", $query_name),
                   'class' => array('query'),
                 ),
                 'hit' => array('data' => $hit_link, 'class' => array('hit')),
