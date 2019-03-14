@@ -184,3 +184,12 @@
     border-top: 0;
   }
 }
+
+.page-header{
+  .elasticsearch-input {
+    .input-group-btn {
+      right: -2px;
+      top: 2px;
+    }
+  }
+}
