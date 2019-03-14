@@ -8021,7 +8021,7 @@ table caption {
       border: 1px solid #34ce57; }
   .elasticsearch-search-input .input-group-btn {
     position: absolute;
-    right: -2px;
+    right: -1px;
     top: 2px;
     z-index: 200; }
     .elasticsearch-search-input .input-group-btn .btn, .elasticsearch-search-input .input-group-btn #edit-cancel, .elasticsearch-search-input .input-group-btn #edit-search-submit {
