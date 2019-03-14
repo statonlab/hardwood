@@ -8112,6 +8112,10 @@ table caption {
   #es-search-results-table tbody > tr:first-of-type > td {
     border-top: 0; }
 
+.page-header .elasticsearch-input .input-group-btn {
+  right: -2px;
+  top: 2px; }
+
 .collapsed > .fieldset-wrapper {
   display: none; }
 
