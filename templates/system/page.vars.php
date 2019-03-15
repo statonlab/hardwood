@@ -44,5 +44,7 @@ function hardwood_preprocess_page(&$variables) {
   hardwood_add_help_variables($variables);
 
   // Disable sticky header
-  drupal_add_js('Drupal.behaviors.tableHeader = function(){};', 'inline', 'footer');
+  drupal_add_js('Drupal.behaviors.tableHeader = function(){};',[
+    'type' => 'inline'
+  ]);
 }
