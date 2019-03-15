@@ -7958,6 +7958,11 @@ table caption {
   color: #444;
   font-weight: bold; }
 
+@media (max-width: 991.98px) {
+  .field-item {
+    max-width: 100%;
+    overflow-x: auto; } }
+
 .alignment-subrow {
   font-size: 0.875rem; }
 

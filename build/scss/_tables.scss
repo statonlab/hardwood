@@ -183,3 +183,10 @@ table caption {
   color: #444;
   font-weight: bold;
 }
+
+@include media-breakpoint-down(md) {
+  .field-item {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
