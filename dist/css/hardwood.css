@@ -7843,11 +7843,9 @@ table {
   table > thead > tr > th, table > thead > tr > td,
   table > tbody > tr > th,
   table > tbody > tr > td {
-    max-width: 0;
     overflow: hidden;
     text-overflow: ellipsis; }
   table > tr > th, table > tr > td {
-    max-width: 0;
     overflow: hidden;
     text-overflow: ellipsis; }
   table .tripal-contents-table-td {

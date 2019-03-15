@@ -5,7 +5,7 @@ table {
   > thead > tr,
   > tbody > tr {
     > th, > td {
-      max-width: 0;
+      //max-width: 0;
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -13,7 +13,7 @@ table {
 
   > tr {
     > th, > td {
-      max-width: 0;
+      //max-width: 0;
       overflow: hidden;
       text-overflow: ellipsis;
     }
