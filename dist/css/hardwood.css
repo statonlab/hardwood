@@ -7845,8 +7845,7 @@ table {
   table > tbody > tr > td {
     max-width: 0;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
+    text-overflow: ellipsis; }
   table > tr > th, table > tr > td {
     max-width: 0;
     overflow: hidden;
