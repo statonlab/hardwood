@@ -389,24 +389,24 @@
       return true;
     }
 
-    function fix_styling($item) {
-      if ($item.children().length > 0) {
-        $item.children().each(function () {
-          fix_styling($(this));
-        });
-      }
-      else {
-        $item.html($item.html().replace(/_/g, '_<wbr>'));
-      }
-    }
-
-    $('td, th').each(function () {
-      var $this = $(this);
-      if ($this.text().length > 40) {
-        $this.children().each(function () {
-          fix_styling($(this));
-        });
-      }
-    });
+    // function fix_styling($item) {
+    //   if ($item.children().length > 0) {
+    //     $item.children().each(function () {
+    //       fix_styling($(this));
+    //     });
+    //   }
+    //   else {
+    //     $item.html($item.html().replace(/_/g, '_<wbr>'));
+    //   }
+    // }
+    //
+    // $('td, th').each(function () {
+    //   var $this = $(this);
+    //   if ($this.text().length > 40) {
+    //     $this.children().each(function () {
+    //       fix_styling($(this));
+    //     });
+    //   }
+    // });
   });
 })(jQuery);

@@ -7840,6 +7840,17 @@ ul.tabs {
 
 table {
   max-width: 100% !important; }
+  table > thead > tr > th, table > thead > tr > td,
+  table > tbody > tr > th,
+  table > tbody > tr > td {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  table > tr > th, table > tr > td {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   table .tripal-contents-table-td {
     white-space: nowrap; }
   table.tripal-organism-data-table th {

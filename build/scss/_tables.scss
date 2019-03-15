@@ -2,6 +2,24 @@ table {
   @extend .table;
   max-width: 100% !important;
 
+  > thead > tr,
+  > tbody > tr {
+    > th, > td {
+      max-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  > tr {
+    > th, > td {
+      max-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
   .tripal-contents-table-td {
     white-space: nowrap;
   }
@@ -17,16 +35,19 @@ table {
     display: inline-block;
   }
 }
+
 td.views-field.extra-short-column,
 th.views-field.extra-short-column {
   width: 25px;
   word-wrap: normal;
 }
+
 td.views-field.short-column,
 th.views-field.short-column {
   width: 75px;
   word-wrap: normal;
 }
+
 .table-valign-middle {
   > tbody > tr > td,
   > tbody > tr > th,
@@ -34,31 +55,38 @@ th.views-field.short-column {
     vertical-align: middle;
   }
 }
+
 .table tr.no-border {
   > td,
   > th {
     border: 0;
   }
 }
+
 .tripal-data-pane {
   overflow-x: auto;
 }
+
 td.views-ui-path {
   max-width: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .download-td {
   font-size: 40px;
   width: 45px;
 }
+
 #menu-overview {
   @extend .table-sm;
+
   td, th {
     vertical-align: middle;
   }
 }
+
 .action-links {
   @extend .nav;
   @extend .nav-pills;
@@ -67,40 +95,51 @@ td.views-ui-path {
 
   > li {
     @extend .nav-item;
+
     > a {
       @extend .nav-link;
     }
   }
 }
+
 tr.error {
   background-color: $state-danger-bg;
 }
+
 tr.warning {
   background: $state-warning-bg;
 }
+
 .sticky-header th {
   background-color: #fff;
 }
+
 #elasticsearch_hits_table th {
   white-space: nowrap;
+
   img {
     margin-left: 5px;
   }
 }
+
 table.table {
   table-layout: auto !important;
 }
+
 #page-wrapper {
   overflow-x: hidden;
 }
+
 .indentation {
   display: inline-block !important;
   margin-right: 20px;
 }
+
 .main-content-wrapper {
   overflow-x: auto;
   width: 100%;
 }
+
 a.tabledrag-handle {
   cursor: move !important;
 
@@ -109,30 +148,37 @@ a.tabledrag-handle {
     width: 70%;
   }
 }
+
 .table > thead > tr > th > a {
   white-space: nowrap !important;
+
   > img {
     margin-left: 10px;
   }
 }
+
 .table td,
 .table th {
   p:empty {
     display: none;
   }
 }
+
 .table td table,
 .table th table {
   margin: 0;
+
   th,
   td {
     padding: 0;
   }
 }
+
 table.table-layout-fixed,
 table.sticky-table {
   table-layout: fixed !important;
 }
+
 table caption {
   caption-side: top;
   color: #444;
