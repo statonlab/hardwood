@@ -47,4 +47,9 @@ function hardwood_preprocess_page(&$variables) {
   drupal_add_js('Drupal.behaviors.tableHeader = function(){};',[
     'type' => 'inline'
   ]);
+
+  // Disable tripal ds
+  drupal_add_js('Drupal.behaviors.tripal_ds = function(){};',[
+    'type' => 'inline'
+  ]);
 }
