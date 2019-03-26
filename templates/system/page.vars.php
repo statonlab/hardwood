@@ -39,17 +39,16 @@ function hardwood_preprocess_page(&$variables) {
     }
   }
 
-
   // Add help content
   hardwood_add_help_variables($variables);
 
   // Disable sticky header
-  drupal_add_js('Drupal.behaviors.tableHeader = function(){};',[
-    'type' => 'inline'
+  drupal_add_js('Drupal.behaviors.tableHeader = function(){};', [
+    'type' => 'inline',
   ]);
 
   // Disable tripal ds
-  drupal_add_js('Drupal.behaviors.tripal_ds = function(){};',[
-    'type' => 'inline'
+  drupal_add_js('Drupal.behaviors.tripal_ds = function(){};', [
+    'type' => 'inline',
   ]);
 }
