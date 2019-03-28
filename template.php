@@ -645,6 +645,10 @@ function hardwood_form_blast_ui_per_blast_program_form_alter(&$form, &$form_stat
   $scaffolds = [];
 
   foreach ($options as $node_id => $option) {
+    if ($option === 'select a dataset') {
+      continue;
+    }
+
     $option = strtolower($option);
     if (strstr($option, 'transcript') !== FALSE || strstr($option, 'unigene') !== FALSE) {
       $transcripts[$node_id] = $option;
@@ -656,7 +660,7 @@ function hardwood_form_blast_ui_per_blast_program_form_alter(&$form, &$form_stat
 
   $form['B']['DB']['SELECT_DB']['#options'] = [
     'Full Genomes/Scaffolds' => $scaffolds,
-    'Transcripts/Unigenes' => $transcripts
+    'Transcripts/Unigenes' => $transcripts,
   ];
 }
 
