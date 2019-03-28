@@ -37,7 +37,7 @@
         <td rowspan="2">Nucleotide</td>
         <td>Nucleotide</td>
         <td><?php print l('blastn', './blast/nucleotide/nucleotide'); ?>:
-            Search a nucleotide database using a nucleotide query.
+            Search a nucleotide database (genome or transcripts) using a nucleotide query.
         </td>
         <td>
           <?php print l('Launch blastn', './blast/nucleotide/nucleotide', [
@@ -64,7 +64,7 @@
         <td rowspan="2">Protein</td>
         <td>Nucleotide</td>
         <td><?php print l('tblastn', './blast/protein/nucleotide'); ?>:
-            Search translated nucleotide database using a protein query.
+            Search translated nucleotide database (genome or transcripts) using a protein query.
         </td>
         <td>
           <?php print l('Launch tblastn', './blast/protein/nucleotide', [

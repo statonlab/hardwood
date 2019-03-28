@@ -497,7 +497,7 @@ function hardwood_theme_registry_alter(&$theme_registry) {
  * @param $form_state
  */
 function hardwood_form_website_search_box_form_alter(&$form, &$form_state) {
-   hardwood_form_tripal_elasticsearch_site_wide_search_form_alter($form, $form_state);
+  hardwood_form_tripal_elasticsearch_site_wide_search_form_alter($form, $form_state);
 }
 
 /**
@@ -627,5 +627,36 @@ function hardwood_add_help_variables(&$variables) {
   if (function_exists('hardwoods_help_get_help_menu_items')) {
     $variables['help_items'] = hardwoods_help_get_help_menu_items();
   }
+}
+
+function hardwood_form_blast_ui_per_blast_program_form_alter(&$form, &$form_state) {
+  $query_type = strtolower($form_state['build_info']['args'][0]);
+  if (strstr(strtolower($query_type), 'nucleotide') === FALSE) {
+    return;
+  }
+
+
+  $form['B']['DB']['#prefix'] = '<div id="blast-dbs-wrapper">';
+  $form['B']['DB']['#suffix'] = '</div>';
+
+  $options = $form['B']['DB']['SELECT_DB']['#options'];
+
+  $transcripts = [];
+  $scaffolds = [];
+
+  foreach ($options as $node_id => $option) {
+    $option = strtolower($option);
+    if (strstr($option, 'transcript') !== FALSE || strstr($option, 'unigene') !== FALSE) {
+      $transcripts[$node_id] = $option;
+    }
+    else {
+      $scaffolds[$node_id] = $option;
+    }
+  }
+
+  $form['B']['DB']['SELECT_DB']['#options'] = [
+    'Full Genomes/Scaffolds' => $scaffolds,
+    'Transcripts/Unigenes' => $transcripts
+  ];
 }
 
