@@ -630,7 +630,7 @@ function hardwood_add_help_variables(&$variables) {
 }
 
 function hardwood_form_blast_ui_per_blast_program_form_alter(&$form, &$form_state) {
-  $query_type = strtolower($form_state['build_info']['args'][0]);
+  $query_type = arg(2);//strtolower($form_state['build_info']['args'][0]);
   if (strstr(strtolower($query_type), 'nucleotide') === FALSE) {
     return;
   }
