@@ -1,13 +1,19 @@
 body {
   font-size: 16px;
 }
+
 .text-xs {
   font-size: $font-size-xs;
 }
 
 .es-category-item__all {
   color: #777;
+
   &.active {
     color: #000;
   }
+}
+
+.webform-component-fixed-value {
+  @extend .text-muted
 }
