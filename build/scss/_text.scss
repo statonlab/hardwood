@@ -15,5 +15,11 @@ body {
 }
 
 .webform-component-fixed-value {
-  @extend .text-muted
+  @extend .text-muted;
+}
+
+.webform-component-fixed-value::after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  border-bottom: 20px solid transparent;
 }
