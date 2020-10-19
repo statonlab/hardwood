@@ -4,6 +4,10 @@
     return
   }
 
+  if (typeof $.once !== 'function') {
+    return
+  }
+
   /**
    * Toggle the visibility of a fieldset using smooth animations.
    */
@@ -28,8 +32,7 @@
           Drupal.collapseScrollIntoView(fieldset)
         },
       })
-    }
-    else {
+    } else {
       $fieldset.trigger({type: 'collapsed', value: true})
       $('> .fieldset-wrapper', fieldset).slideUp('fast', function () {
         $fieldset
